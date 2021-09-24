@@ -1,4 +1,6 @@
-# Chinese Iconography
+![Chinese Iconography](projectlogo.png)
+
+# 
 
 The CIT brings together sinology, art history and information studies to create the first thesaurus of Chinese iconography.
 
