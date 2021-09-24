@@ -4,6 +4,12 @@ The CIT brings together sinology, art history and information studies to create 
 
 Traditionally considered a methodology rooted in European art history, iconography has been historically employed to index and access images related to Euro-American art. Because of the lack of alternative models for documenting non-western artefacts, Chinese art objects housed in European and North American collections have often been catalogued according to Eurocentric classifications. The CIT presents a unique opportunity to create an alternative classification scheme rooted in the specificity of Chinese visual culture and foster systematic comparison between Chinese and European art.
 
+# Contact
+
+The CIT welcomes suggestions for improvement.
+
+If you would like to contact the CIT, please email Jin Gao (j.gao@vam.ac.uk)
+
 ## Main Features
 
 The Chinese Iconography Thesaurus (CIT) is designed as both an indexing standard and image archive for Chinese iconography.
