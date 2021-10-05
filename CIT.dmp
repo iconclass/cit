@@ -466,6 +466,7 @@ R 空
 KW_ZH 香影
 TERM_PINYIN ying
 TERM_EN silhouette
+KW_EN shadow
 C 1.2.8.1
 ; 1.2.8.2
 ; 1.2.8.3
@@ -8703,6 +8704,7 @@ C 1.7.2.4.1
 ; 1.7.2.4.12
 ; 1.7.2.4.13
 ; 1.7.2.4.14
+; 1.7.2.4.15
 TYPE CIT
 ID cit_1_7_2_4
 TERM_ZH 石
@@ -8906,6 +8908,16 @@ ID cit_1_7_2_4_14
 TERM_ZH 鐘乳石
 CIT 1.7.2.4.14
 $
+N 1.7.2.4.15
+BROADER 石
+ID.INV THES293340
+TERM_PINYIN jiao shi
+TERM_EN reef
+TYPE CIT
+ID cit_1_7_2_4_15
+TERM_ZH 礁石
+CIT 1.7.2.4.15
+$
 N 1.7.2.5
 BROADER 陸地
 ID.INV CIT278509
@@ -9032,6 +9044,7 @@ TERM_PINYIN tan
 TERM_EN shoal
 KW_EN shallows
 C 1.7.2.7.3.1
+; 1.7.2.7.3.2
 TYPE CIT
 ID cit_1_7_2_7_3
 TERM_ZH 灘
@@ -9045,10 +9058,22 @@ KW_ZH 砂磧
 ; 沙磧
 ; 沙碛
 ; 沙岸
+TERM_PINYIN sha tan
+TERM_EN sandy shoal
 TYPE CIT
 ID cit_1_7_2_7_3_1
 TERM_ZH 沙灘
 CIT 1.7.2.7.3.1
+$
+N 1.7.2.7.3.2
+BROADER 灘
+ID.INV THES293334
+TERM_PINYIN shi tan
+TERM_EN rocky shoal
+TYPE CIT
+ID cit_1_7_2_7_3_2
+TERM_ZH 石灘
+CIT 1.7.2.7.3.2
 $
 N 1.7.2.7.4
 BROADER 水濱
@@ -11029,6 +11054,7 @@ C 1.8.2.1.2.1
 ; 1.8.2.1.2.3
 ; 1.8.2.1.2.4
 ; 1.8.2.1.2.5
+; 1.8.2.1.2.6
 TYPE CIT
 ID cit_1_8_2_1_2
 TERM_ZH 植物生命週期
@@ -11051,19 +11077,6 @@ CIT 1.8.2.1.2.1
 $
 N 1.8.2.1.2.1.1
 BROADER 植物年齡
-ID.INV CIT282223
-KW_ZH 年轮
-; 木年輪紋
-; 木年轮纹
-TERM_PINYIN nian lun
-TERM_EN annual ring
-TYPE CIT
-ID cit_1_8_2_1_2_1_1
-TERM_ZH 年輪
-CIT 1.8.2.1.2.1.1
-$
-N 1.8.2.1.2.1.2
-BROADER 植物年齡
 ID.INV CIT282225
 KW_ZH 木纹
 ; 木质纹
@@ -11071,8 +11084,21 @@ KW_ZH 木纹
 TERM_PINYIN mu wen
 TERM_EN grain of wood
 TYPE CIT
-ID cit_1_8_2_1_2_1_2
+ID cit_1_8_2_1_2_1_1
 TERM_ZH 木紋
+CIT 1.8.2.1.2.1.1
+$
+N 1.8.2.1.2.1.2
+BROADER 植物年齡
+ID.INV CIT282223
+KW_ZH 年轮
+; 木年輪紋
+; 木年轮纹
+TERM_PINYIN nian lun
+TERM_EN annual ring
+TYPE CIT
+ID cit_1_8_2_1_2_1_2
+TERM_ZH 年輪
 CIT 1.8.2.1.2.1.2
 $
 N 1.8.2.1.2.1.3
@@ -11318,6 +11344,49 @@ CIT 1.8.2.1.2.4.2
 $
 N 1.8.2.1.2.5
 BROADER 植物生命週期
+ID.INV THES293109
+TERM_PINYIN zhi wu bing hai
+TERM_EN plant diseases
+C 1.8.2.1.2.5.1
+; 1.8.2.1.2.5.2
+; 1.8.2.1.2.5.3
+TYPE CIT
+ID cit_1_8_2_1_2_5
+TERM_ZH 植物病害
+CIT 1.8.2.1.2.5
+$
+N 1.8.2.1.2.5.1
+BROADER 植物病害
+ID.INV THES293111
+TERM_PINYIN mu jie
+TERM_EN gnarl
+TYPE CIT
+ID cit_1_8_2_1_2_5_1
+TERM_ZH 木節
+CIT 1.8.2.1.2.5.1
+$
+N 1.8.2.1.2.5.2
+BROADER 植物病害
+ID.INV THES293112
+TERM_PINYIN shu dong
+TERM_EN hole in a tree
+TYPE CIT
+ID cit_1_8_2_1_2_5_2
+TERM_ZH 樹洞
+CIT 1.8.2.1.2.5.2
+$
+N 1.8.2.1.2.5.3
+BROADER 植物病害
+ID.INV THES293110
+TERM_PINYIN bing ye
+TERM_EN diseased leaf
+TYPE CIT
+ID cit_1_8_2_1_2_5_3
+TERM_ZH 病葉
+CIT 1.8.2.1.2.5.3
+$
+N 1.8.2.1.2.6
+BROADER 植物生命週期
 ID.INV CIT287523
 KW_ZH 老幹新枝
 ; 老干新枝
@@ -11325,9 +11394,9 @@ TERM_PINYIN zhi wu zai sheng
 TERM_EN rebirth of plants
 KW_EN new branches from the old trunk
 TYPE CIT
-ID cit_1_8_2_1_2_5
+ID cit_1_8_2_1_2_6
 TERM_ZH 植物再生
-CIT 1.8.2.1.2.5
+CIT 1.8.2.1.2.6
 $
 N 1.8.2.1.3
 BROADER 植物 (一般)
@@ -11343,7 +11412,6 @@ C 1.8.2.1.3.1
 ; 1.8.2.1.3.5
 ; 1.8.2.1.3.6
 ; 1.8.2.1.3.7
-; 1.8.2.1.3.8
 TYPE CIT
 ID cit_1_8_2_1_3
 TERM_ZH 姿勢 (植物)
@@ -11423,27 +11491,15 @@ $
 N 1.8.2.1.3.7
 BROADER 姿勢 (植物)
 DISCRIM 植物
-ID.INV THES285373
-KW_ZH 参差 (植物)
-TERM_PINYIN cen ci (zhi wu)
-TERM_EN mixture of different plants (plant)
-TYPE CIT
-ID cit_1_8_2_1_3_7
-TERM_ZH 參差 (植物)
-CIT 1.8.2.1.3.7
-$
-N 1.8.2.1.3.8
-BROADER 姿勢 (植物)
-DISCRIM 植物
 ID.INV CIT286892
 R 堅貞
 ; 高潔
 TERM_PINYIN ling shuang (zhi wu)
 TERM_EN withstanding frost (plant)
 TYPE CIT
-ID cit_1_8_2_1_3_8
+ID cit_1_8_2_1_3_7
 TERM_ZH 凌霜 (植物)
-CIT 1.8.2.1.3.8
+CIT 1.8.2.1.3.7
 $
 N 1.8.2.1.4
 BROADER 植物 (一般)
@@ -15160,7 +15216,7 @@ TERM_PINYIN hai tang
 KW_EN Malus spectabilis
 ; Chinese flowering apple
 ; flower of Chinese flowering crab apple
-TERM_EN Chinese flowering crab-apple
+TERM_EN Chinese flowering crabapple
 TYPE CIT
 ID cit_1_8_2_3_3_2_1_7_2
 TERM_ZH 海棠
@@ -16138,7 +16194,6 @@ N 1.8.2.3.3.2.10
 BROADER 雙子葉植物
 ID.INV CIT287402
 KW_ZH 杨柳科
-; 楊柳
 TERM_PINYIN yang liu ke
 KW_EN Salicaceae
 TERM_EN willow family
@@ -16155,6 +16210,7 @@ ID.INV CIT279158
 R 三月 (農曆)
 KW_ZH 柳樹
 ; 柳树
+; 楊柳
 TERM_PINYIN liu
 TERM_EN willow
 KW_EN Salix
@@ -16176,6 +16232,7 @@ ID.INV CIT279311
 KW_ZH 柳條
 ; 柳絲
 ; 千條
+; 楊枝
 TERM_PINYIN liu zhi
 TERM_EN willow branch
 KW_EN withy
@@ -16199,6 +16256,7 @@ $
 N 1.8.2.3.3.2.10.1.3
 BROADER 柳
 ID.INV THES292993
+KW_ZH 垂楊
 TERM_PINYIN chui liu
 TERM_EN weeping willow
 TYPE CIT
@@ -16241,6 +16299,7 @@ N 1.8.2.3.3.2.10.1.7
 BROADER 柳
 ID.INV THES288906
 KW_ZH 柳色
+; 綠楊
 TERM_PINYIN lü liu
 TERM_EN green willow
 TYPE CIT
@@ -16255,44 +16314,10 @@ KW_ZH 杨
 TERM_PINYIN yang
 KW_EN Populus
 TERM_EN poplar
-C 1.8.2.3.3.2.10.2.1
-; 1.8.2.3.3.2.10.2.2
-; 1.8.2.3.3.2.10.2.3
 TYPE CIT
 ID cit_1_8_2_3_3_2_10_2
 TERM_ZH 楊
 CIT 1.8.2.3.3.2.10.2
-$
-N 1.8.2.3.3.2.10.2.1
-BROADER 楊
-ID.INV THES292994
-TERM_PINYIN yang zhi
-TERM_EN poplar branch
-TYPE CIT
-ID cit_1_8_2_3_3_2_10_2_1
-TERM_ZH 楊枝
-CIT 1.8.2.3.3.2.10.2.1
-$
-N 1.8.2.3.3.2.10.2.2
-BROADER 楊
-ID.INV THES292995
-TERM_PINYIN chui yang
-TERM_EN weeping willow
-TYPE CIT
-ID cit_1_8_2_3_3_2_10_2_2
-TERM_ZH 垂楊
-CIT 1.8.2.3.3.2.10.2.2
-$
-N 1.8.2.3.3.2.10.2.3
-BROADER 楊
-ID.INV THES288918
-KW_ZH 绿杨
-TERM_PINYIN lü yang
-TERM_EN green poplar
-TYPE CIT
-ID cit_1_8_2_3_3_2_10_2_3
-TERM_ZH 綠楊
-CIT 1.8.2.3.3.2.10.2.3
 $
 N 1.8.2.3.3.2.11
 BROADER 雙子葉植物
@@ -19011,6 +19036,7 @@ TERM_PINYIN qiao dou ke
 KW_EN Fagaceae
 TERM_EN beech family
 C 1.8.2.3.3.2.51.1
+; 1.8.2.3.3.2.51.2
 TYPE CIT
 ID cit_1_8_2_3_3_2_51
 TERM_ZH 殼斗科
@@ -19032,6 +19058,17 @@ TYPE CIT
 ID cit_1_8_2_3_3_2_51_1
 TERM_ZH 栗
 CIT 1.8.2.3.3.2.51.1
+$
+N 1.8.2.3.3.2.51.2
+BROADER 殼斗科
+ID.INV THES293406
+TERM_PINYIN hu
+KW_EN Quercus dentata
+TERM_EN sweet oak
+TYPE CIT
+ID cit_1_8_2_3_3_2_51_2
+TERM_ZH 槲
+CIT 1.8.2.3.3.2.51.2
 $
 N 1.8.2.3.3.2.52
 BROADER 雙子葉植物
@@ -19942,6 +19979,7 @@ C 1.8.3.1.1
 ; 1.8.3.1.10
 ; 1.8.3.1.11
 ; 1.8.3.1.12
+; 1.8.3.1.13
 TYPE CIT
 ID cit_1_8_3_1
 TERM_ZH 動物 (一般)
@@ -20021,40 +20059,62 @@ CIT 1.8.3.1.3.2
 $
 N 1.8.3.1.4
 BROADER 動物 (一般)
+ID.INV THES293257
+TERM_PINYIN cong wu
+TERM_EN pet animal
+C 1.8.3.1.4.1
+TYPE CIT
+ID cit_1_8_3_1_4
+TERM_ZH 寵物
+CIT 1.8.3.1.4
+$
+N 1.8.3.1.4.1
+BROADER 寵物
+ID.INV THES293258
+TERM_PINYIN chong wu yong ju
+TERM_EN articles for pet animals
+TYPE CIT
+ID cit_1_8_3_1_4_1
+TERM_ZH 寵物用具
+CIT 1.8.3.1.4.1
+$
+N 1.8.3.1.5
+BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284583
 KW_ZH 动作 (动物)
 TERM_PINYIN dong zuo (dong wu)
 TERM_EN body movement (animal)
-C 1.8.3.1.4.1
-; 1.8.3.1.4.2
-; 1.8.3.1.4.3
-; 1.8.3.1.4.4
-; 1.8.3.1.4.5
-; 1.8.3.1.4.6
-; 1.8.3.1.4.7
-; 1.8.3.1.4.8
-; 1.8.3.1.4.9
-; 1.8.3.1.4.10
-; 1.8.3.1.4.11
-; 1.8.3.1.4.12
+C 1.8.3.1.5.1
+; 1.8.3.1.5.2
+; 1.8.3.1.5.3
+; 1.8.3.1.5.4
+; 1.8.3.1.5.5
+; 1.8.3.1.5.6
+; 1.8.3.1.5.7
+; 1.8.3.1.5.8
+; 1.8.3.1.5.9
+; 1.8.3.1.5.10
+; 1.8.3.1.5.11
+; 1.8.3.1.5.12
+; 1.8.3.1.5.13
 TYPE CIT
-ID cit_1_8_3_1_4
+ID cit_1_8_3_1_5
 TERM_ZH 動作 (動物)
-CIT 1.8.3.1.4
+CIT 1.8.3.1.5
 $
-N 1.8.3.1.4.1
+N 1.8.3.1.5.1
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV THES291802
 TERM_PINYIN tian zhang (dong wu)
 TERM_EN paw licking (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_1
+ID cit_1_8_3_1_5_1
 TERM_ZH 舔掌 (動物)
-CIT 1.8.3.1.4.1
+CIT 1.8.3.1.5.1
 $
-N 1.8.3.1.4.2
+N 1.8.3.1.5.2
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV THES285047
@@ -20064,11 +20124,11 @@ KW_ZH 采摘 (动物)
 TERM_PINYIN cai zhai (dong wu)
 TERM_EN picking (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_2
+ID cit_1_8_3_1_5_2
 TERM_ZH 採摘 (動物)
-CIT 1.8.3.1.4.2
+CIT 1.8.3.1.5.2
 $
-N 1.8.3.1.4.3
+N 1.8.3.1.5.3
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT284288
@@ -20081,11 +20141,11 @@ TERM_PINYIN bu zhuo (dong wu)
 TERM_EN catching (animal)
 KW_EN catch (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_3
+ID cit_1_8_3_1_5_3
 TERM_ZH 捕捉 (動物)
-CIT 1.8.3.1.4.3
+CIT 1.8.3.1.5.3
 $
-N 1.8.3.1.4.4
+N 1.8.3.1.5.4
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT287575
@@ -20094,11 +20154,11 @@ TERM_PINYIN bo dou (dong wu)
 TERM_EN wrestling (animal)
 KW_EN fighting (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_4
+ID cit_1_8_3_1_5_4
 TERM_ZH 搏鬥 (動物)
-CIT 1.8.3.1.4.4
+CIT 1.8.3.1.5.4
 $
-N 1.8.3.1.4.5
+N 1.8.3.1.5.5
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT283918
@@ -20108,11 +20168,40 @@ KW_ZH 攻击 (动物)
 TERM_PINYIN gong ji (dong wu)
 TERM_EN attacking (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_5
+ID cit_1_8_3_1_5_5
 TERM_ZH 攻擊 (動物)
-CIT 1.8.3.1.4.5
+CIT 1.8.3.1.5.5
 $
-N 1.8.3.1.4.6
+N 1.8.3.1.5.6
+BROADER 動作 (動物)
+DISCRIM 動物
+ID.INV CIT277954
+KW_ZH 跳跃 (动物)
+; 出水
+TERM_PINYIN tiao yue (dong wu)
+KW_EN jumping (animal)
+; bounding (animal)
+; hopping (animal)
+TERM_EN leaping (animal)
+TYPE CIT
+ID cit_1_8_3_1_5_6
+TERM_ZH 跳躍 (動物)
+CIT 1.8.3.1.5.6
+$
+N 1.8.3.1.5.7
+BROADER 動作 (動物)
+DISCRIM 動物
+ID.INV CIT279813
+KW_ZH 悬荡 (动物)
+; 猿挂
+TERM_PINYIN xuan dang (dong wu)
+TERM_EN swinging (animal)
+TYPE CIT
+ID cit_1_8_3_1_5_7
+TERM_ZH 懸蕩 (動物)
+CIT 1.8.3.1.5.7
+$
+N 1.8.3.1.5.8
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT278296
@@ -20137,40 +20226,22 @@ KW_ZH 游戏 (动物)
 TERM_PINYIN you xi (dong wu)
 TERM_EN playing (animals)
 TYPE CIT
-ID cit_1_8_3_1_4_6
+ID cit_1_8_3_1_5_8
 TERM_ZH 遊戲 (動物)
-CIT 1.8.3.1.4.6
+CIT 1.8.3.1.5.8
 $
-N 1.8.3.1.4.7
+N 1.8.3.1.5.9
 BROADER 動作 (動物)
 DISCRIM 動物
-ID.INV CIT277954
-KW_ZH 跳跃 (动物)
-; 出水
-TERM_PINYIN tiao yue (dong wu)
-KW_EN jumping (animal)
-; bounding (animal)
-; hopping (animal)
-TERM_EN leaping (animal)
+ID.INV THES293247
+TERM_PINYIN gun chen (dong wu)
+TERM_EN rolling on the ground (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_7
-TERM_ZH 跳躍 (動物)
-CIT 1.8.3.1.4.7
+ID cit_1_8_3_1_5_9
+TERM_ZH 滾塵 (動物)
+CIT 1.8.3.1.5.9
 $
-N 1.8.3.1.4.8
-BROADER 動作 (動物)
-DISCRIM 動物
-ID.INV CIT279813
-KW_ZH 悬荡 (动物)
-; 猿挂
-TERM_PINYIN xuan dang (dong wu)
-TERM_EN swinging (animal)
-TYPE CIT
-ID cit_1_8_3_1_4_8
-TERM_ZH 懸蕩 (動物)
-CIT 1.8.3.1.4.8
-$
-N 1.8.3.1.4.9
+N 1.8.3.1.5.10
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT283749
@@ -20183,22 +20254,22 @@ KW_EN rising (animal)
 ; ascending (animal)
 TERM_EN leaping up (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_9
+ID cit_1_8_3_1_5_10
 TERM_ZH 升騰 (動物)
-CIT 1.8.3.1.4.9
+CIT 1.8.3.1.5.10
 $
-N 1.8.3.1.4.10
+N 1.8.3.1.5.11
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV THES288689
 TERM_PINYIN ben pao (dong wu)
 TERM_EN running (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_10
+ID cit_1_8_3_1_5_11
 TERM_ZH 奔跑 (動物)
-CIT 1.8.3.1.4.10
+CIT 1.8.3.1.5.11
 $
-N 1.8.3.1.4.11
+N 1.8.3.1.5.12
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT287553
@@ -20226,16 +20297,16 @@ KW_ZH 飞动 (动物)
 ; 飛蝶
 TERM_PINYIN fei dong (dong wu)
 TERM_EN flying (animal)
-C 1.8.3.1.4.11.1
-; 1.8.3.1.4.11.2
-; 1.8.3.1.4.11.3
-; 1.8.3.1.4.11.4
+C 1.8.3.1.5.12.1
+; 1.8.3.1.5.12.2
+; 1.8.3.1.5.12.3
+; 1.8.3.1.5.12.4
 TYPE CIT
-ID cit_1_8_3_1_4_11
+ID cit_1_8_3_1_5_12
 TERM_ZH 飛動 (動物)
-CIT 1.8.3.1.4.11
+CIT 1.8.3.1.5.12
 $
-N 1.8.3.1.4.11.1
+N 1.8.3.1.5.12.1
 BROADER 飛動 (動物)
 DISCRIM 動物
 ID.INV CIT278058
@@ -20245,11 +20316,11 @@ KW_ZH 盘旋飞动 (动物)
 TERM_PINYIN pan xuan fei dong (dong wu)
 TERM_EN flying in circle (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_11_1
+ID cit_1_8_3_1_5_12_1
 TERM_ZH 盤旋飛動 (動物)
-CIT 1.8.3.1.4.11.1
+CIT 1.8.3.1.5.12.1
 $
-N 1.8.3.1.4.11.2
+N 1.8.3.1.5.12.2
 BROADER 飛動 (動物)
 DISCRIM 動物
 ID.INV CIT277877
@@ -20261,11 +20332,11 @@ TERM_PINYIN jiang luo (dong wu)
 TERM_EN descending (animal)
 KW_EN land (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_11_2
+ID cit_1_8_3_1_5_12_2
 TERM_ZH 降落 (動物)
-CIT 1.8.3.1.4.11.2
+CIT 1.8.3.1.5.12.2
 $
-N 1.8.3.1.4.11.3
+N 1.8.3.1.5.12.3
 BROADER 飛動 (動物)
 DISCRIM 動物
 ID.INV CIT278033
@@ -20275,11 +20346,11 @@ KW_ZH 飞去 (动物)
 TERM_PINYIN fei qu (dong wu)
 TERM_EN flying away (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_11_3
+ID cit_1_8_3_1_5_12_3
 TERM_ZH 飛去 (動物)
-CIT 1.8.3.1.4.11.3
+CIT 1.8.3.1.5.12.3
 $
-N 1.8.3.1.4.11.4
+N 1.8.3.1.5.12.4
 BROADER 飛動 (動物)
 DISCRIM 動物
 ID.INV CIT284369
@@ -20289,11 +20360,11 @@ KW_ZH 展翅 (动物)
 TERM_PINYIN zhan chi (dong wu)
 TERM_EN spreading wings (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_11_4
+ID cit_1_8_3_1_5_12_4
 TERM_ZH 展翅 (動物)
-CIT 1.8.3.1.4.11.4
+CIT 1.8.3.1.5.12.4
 $
-N 1.8.3.1.4.12
+N 1.8.3.1.5.13
 BROADER 動作 (動物)
 DISCRIM 動物
 ID.INV CIT284295
@@ -20307,27 +20378,27 @@ KW_ZH 浮游 (动物)
 TERM_PINYIN fu you (dong wu)
 TERM_EN swimming (animal)
 TYPE CIT
-ID cit_1_8_3_1_4_12
+ID cit_1_8_3_1_5_13
 TERM_ZH 浮遊 (動物)
-CIT 1.8.3.1.4.12
+CIT 1.8.3.1.5.13
 $
-N 1.8.3.1.5
+N 1.8.3.1.6
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV CIT288749
 KW_ZH 姿势 (动物)
 TERM_EN posture (animal)
 TERM_PINYIN zi shi (dong wu)
-C 1.8.3.1.5.1
-; 1.8.3.1.5.2
-; 1.8.3.1.5.3
-; 1.8.3.1.5.4
+C 1.8.3.1.6.1
+; 1.8.3.1.6.2
+; 1.8.3.1.6.3
+; 1.8.3.1.6.4
 TYPE CIT
-ID cit_1_8_3_1_5
+ID cit_1_8_3_1_6
 TERM_ZH 姿勢 (動物)
-CIT 1.8.3.1.5
+CIT 1.8.3.1.6
 $
-N 1.8.3.1.5.1
+N 1.8.3.1.6.1
 BROADER 姿勢 (動物)
 DISCRIM 動物
 ID.INV CIT278499
@@ -20339,11 +20410,11 @@ KW_ZH 站立 (动物)
 TERM_PINYIN zhan li (dong wu)
 TERM_EN standing (animal)
 TYPE CIT
-ID cit_1_8_3_1_5_1
+ID cit_1_8_3_1_6_1
 TERM_ZH 站立 (動物)
-CIT 1.8.3.1.5.1
+CIT 1.8.3.1.6.1
 $
-N 1.8.3.1.5.2
+N 1.8.3.1.6.2
 BROADER 姿勢 (動物)
 DISCRIM 動物
 ID.INV CIT280524
@@ -20357,11 +20428,11 @@ KW_EN lying prone on the ground (animal)
 ; lying on one's stomach (animal)
 TERM_EN lying prone (animal)
 TYPE CIT
-ID cit_1_8_3_1_5_2
+ID cit_1_8_3_1_6_2
 TERM_ZH 臥 (動物)
-CIT 1.8.3.1.5.2
+CIT 1.8.3.1.6.2
 $
-N 1.8.3.1.5.3
+N 1.8.3.1.6.3
 BROADER 姿勢 (動物)
 DISCRIM 動物
 ID.INV CIT283755
@@ -20370,11 +20441,11 @@ KW_ZH 蹲 (动物)
 TERM_PINYIN dun (dong wu)
 TERM_EN squatting (animal)
 TYPE CIT
-ID cit_1_8_3_1_5_3
+ID cit_1_8_3_1_6_3
 TERM_ZH 蹲 (動物)
-CIT 1.8.3.1.5.3
+CIT 1.8.3.1.6.3
 $
-N 1.8.3.1.5.4
+N 1.8.3.1.6.4
 BROADER 姿勢 (動物)
 DISCRIM 動物
 ID.INV CIT284174
@@ -20385,26 +20456,26 @@ TERM_PINYIN hui shou (dong wu)
 TERM_EN turning head (animal)
 KW_EN turning around (animal)
 TYPE CIT
-ID cit_1_8_3_1_5_4
+ID cit_1_8_3_1_6_4
 TERM_ZH 迴首 (動物)
-CIT 1.8.3.1.5.4
+CIT 1.8.3.1.6.4
 $
-N 1.8.3.1.6
+N 1.8.3.1.7
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284584
 KW_ZH 表情 (动物)
 TERM_PINYIN biao qing (dong wu)
 TERM_EN expression (animal)
-C 1.8.3.1.6.1
-; 1.8.3.1.6.2
-; 1.8.3.1.6.3
+C 1.8.3.1.7.1
+; 1.8.3.1.7.2
+; 1.8.3.1.7.3
 TYPE CIT
-ID cit_1_8_3_1_6
+ID cit_1_8_3_1_7
 TERM_ZH 表情 (動物)
-CIT 1.8.3.1.6
+CIT 1.8.3.1.7
 $
-N 1.8.3.1.6.1
+N 1.8.3.1.7.1
 BROADER 表情 (動物)
 DISCRIM 動物
 ID.INV CIT284293
@@ -20412,11 +20483,11 @@ KW_ZH 张嘴 (动物)
 TERM_PINYIN zhang zui (dong wu)
 TERM_EN mouth open (animal)
 TYPE CIT
-ID cit_1_8_3_1_6_1
+ID cit_1_8_3_1_7_1
 TERM_ZH 張嘴 (動物)
-CIT 1.8.3.1.6.1
+CIT 1.8.3.1.7.1
 $
-N 1.8.3.1.6.2
+N 1.8.3.1.7.2
 BROADER 表情 (動物)
 DISCRIM 動物
 ID.INV CIT286930
@@ -20438,11 +20509,11 @@ TERM_PINYIN ming jiao (dong wu)
 TERM_EN crying (animal)
 KW_EN singing (bird)
 TYPE CIT
-ID cit_1_8_3_1_6_2
+ID cit_1_8_3_1_7_2
 TERM_ZH 鳴叫 (動物)
-CIT 1.8.3.1.6.2
+CIT 1.8.3.1.7.2
 $
-N 1.8.3.1.6.3
+N 1.8.3.1.7.3
 BROADER 表情 (動物)
 DISCRIM 動物
 ID.INV CIT280532
@@ -20451,28 +20522,28 @@ TERM_PINYIN zi ru (dong wu)
 TERM_EN calmness (animal)
 KW_EN unhindered
 TYPE CIT
-ID cit_1_8_3_1_6_3
+ID cit_1_8_3_1_7_3
 TERM_ZH 自如 (動物)
-CIT 1.8.3.1.6.3
+CIT 1.8.3.1.7.3
 $
-N 1.8.3.1.7
+N 1.8.3.1.8
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284591
 KW_ZH 饮食 (动物)
 TERM_PINYIN yin shi (dong wu)
 TERM_EN eating and drinking (animal)
-C 1.8.3.1.7.1
-; 1.8.3.1.7.2
-; 1.8.3.1.7.3
-; 1.8.3.1.7.4
-; 1.8.3.1.7.5
+C 1.8.3.1.8.1
+; 1.8.3.1.8.2
+; 1.8.3.1.8.3
+; 1.8.3.1.8.4
+; 1.8.3.1.8.5
 TYPE CIT
-ID cit_1_8_3_1_7
+ID cit_1_8_3_1_8
 TERM_ZH 飲食 (動物)
-CIT 1.8.3.1.7
+CIT 1.8.3.1.8
 $
-N 1.8.3.1.7.1
+N 1.8.3.1.8.1
 BROADER 飲食 (動物)
 DISCRIM 動物
 ID.INV CIT284218
@@ -20482,11 +20553,11 @@ KW_ZH 饮 (动物)
 TERM_PINYIN yin (dong wu)
 TERM_EN drinking (anima)
 TYPE CIT
-ID cit_1_8_3_1_7_1
+ID cit_1_8_3_1_8_1
 TERM_ZH 飲 (動物)
-CIT 1.8.3.1.7.1
+CIT 1.8.3.1.8.1
 $
-N 1.8.3.1.7.2
+N 1.8.3.1.8.2
 BROADER 飲食 (動物)
 DISCRIM 動物
 ID.INV THES283410
@@ -20495,11 +20566,11 @@ KW_ZH 食 (动物)
 TERM_PINYIN shi (dong wu)
 TERM_EN eating (animal)
 TYPE CIT
-ID cit_1_8_3_1_7_2
+ID cit_1_8_3_1_8_2
 TERM_ZH 食 (動物)
-CIT 1.8.3.1.7.2
+CIT 1.8.3.1.8.2
 $
-N 1.8.3.1.7.3
+N 1.8.3.1.8.3
 BROADER 飲食 (動物)
 DISCRIM 動物
 ID.INV CIT288750
@@ -20507,11 +20578,11 @@ KW_ZH 待饲 (动物)
 TERM_PINYIN dai si (dong wu)
 TERM_EN waiting to be fed (animal)
 TYPE CIT
-ID cit_1_8_3_1_7_3
+ID cit_1_8_3_1_8_3
 TERM_ZH 待飼 (動物)
-CIT 1.8.3.1.7.3
+CIT 1.8.3.1.8.3
 $
-N 1.8.3.1.7.4
+N 1.8.3.1.8.4
 BROADER 飲食 (動物)
 DISCRIM 動物之間
 ID.INV THES285075
@@ -20519,11 +20590,11 @@ KW_ZH 饲食 (动物之间)
 TERM_PINYIN si shi (dong wu zhi jian)
 TERM_EN feeding (among animals)
 TYPE CIT
-ID cit_1_8_3_1_7_4
+ID cit_1_8_3_1_8_4
 TERM_ZH 飼食 (動物之間)
-CIT 1.8.3.1.7.4
+CIT 1.8.3.1.8.4
 $
-N 1.8.3.1.7.5
+N 1.8.3.1.8.5
 BROADER 飲食 (動物)
 DISCRIM 蠶
 ID.INV CIT278844
@@ -20531,25 +20602,25 @@ KW_ZH 食叶 (蚕)
 TERM_PINYIN shi ye (can)
 TERM_EN eating leaves (silkworm)
 TYPE CIT
-ID cit_1_8_3_1_7_5
+ID cit_1_8_3_1_8_5
 TERM_ZH 食葉 (蠶)
-CIT 1.8.3.1.7.5
+CIT 1.8.3.1.8.5
 $
-N 1.8.3.1.8
+N 1.8.3.1.9
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284586
 KW_ZH 感觉 (动物)
 TERM_PINYIN gan jue (dong wu)
 TERM_EN senses (animal)
-C 1.8.3.1.8.1
-; 1.8.3.1.8.2
+C 1.8.3.1.9.1
+; 1.8.3.1.9.2
 TYPE CIT
-ID cit_1_8_3_1_8
+ID cit_1_8_3_1_9
 TERM_ZH 感覺 (動物)
-CIT 1.8.3.1.8
+CIT 1.8.3.1.9
 $
-N 1.8.3.1.8.1
+N 1.8.3.1.9.1
 BROADER 感覺 (動物)
 DISCRIM 動物
 ID.INV CIT280229
@@ -20559,11 +20630,11 @@ KW_ZH 窥视 (动物)
 TERM_PINYIN kui shi (dong wu)
 TERM_EN peeping (animal)
 TYPE CIT
-ID cit_1_8_3_1_8_1
+ID cit_1_8_3_1_9_1
 TERM_ZH 窺視 (動物)
-CIT 1.8.3.1.8.1
+CIT 1.8.3.1.9.1
 $
-N 1.8.3.1.8.2
+N 1.8.3.1.9.2
 BROADER 感覺 (動物)
 DISCRIM 動物
 ID.INV CIT280146
@@ -20571,26 +20642,26 @@ KW_ZH 顾影 (动物)
 TERM_PINYIN gu ying (dong wu)
 TERM_EN looking at one's own reflection (animal)
 TYPE CIT
-ID cit_1_8_3_1_8_2
+ID cit_1_8_3_1_9_2
 TERM_ZH 顧影 (動物)
-CIT 1.8.3.1.8.2
+CIT 1.8.3.1.9.2
 $
-N 1.8.3.1.9
+N 1.8.3.1.10
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284602
 KW_ZH 意识 (动物)
 TERM_PINYIN yi shi (dong wu)
 TERM_EN consciousness (animal)
-C 1.8.3.1.9.1
-; 1.8.3.1.9.2
-; 1.8.3.1.9.3
+C 1.8.3.1.10.1
+; 1.8.3.1.10.2
+; 1.8.3.1.10.3
 TYPE CIT
-ID cit_1_8_3_1_9
+ID cit_1_8_3_1_10
 TERM_ZH 意識 (動物)
-CIT 1.8.3.1.9
+CIT 1.8.3.1.10
 $
-N 1.8.3.1.9.1
+N 1.8.3.1.10.1
 BROADER 意識 (動物)
 DISCRIM 動物
 ID.INV CIT277895
@@ -20599,11 +20670,11 @@ TERM_PINYIN pi juan (dong wu)
 TERM_EN fatigue (animal)
 KW_EN weary (animal)
 TYPE CIT
-ID cit_1_8_3_1_9_1
+ID cit_1_8_3_1_10_1
 TERM_ZH 疲倦 (動物)
-CIT 1.8.3.1.9.1
+CIT 1.8.3.1.10.1
 $
-N 1.8.3.1.9.2
+N 1.8.3.1.10.2
 BROADER 意識 (動物)
 DISCRIM 動物
 ID.INV CIT287084
@@ -20616,11 +20687,11 @@ KW_ZH 睡眠 (动物)
 TERM_PINYIN shui mian (dong wu)
 TERM_EN sleeping (animal)
 TYPE CIT
-ID cit_1_8_3_1_9_2
+ID cit_1_8_3_1_10_2
 TERM_ZH 睡眠 (動物)
-CIT 1.8.3.1.9.2
+CIT 1.8.3.1.10.2
 $
-N 1.8.3.1.9.3
+N 1.8.3.1.10.3
 BROADER 意識 (動物)
 DISCRIM 動物
 ID.INV THES284612
@@ -20629,24 +20700,24 @@ KW_ZH 梦 (动物)
 TERM_PINYIN meng (dong wu)
 TERM_EN dream (animal)
 TYPE CIT
-ID cit_1_8_3_1_9_3
+ID cit_1_8_3_1_10_3
 TERM_ZH 夢 (動物)
-CIT 1.8.3.1.9.3
+CIT 1.8.3.1.10.3
 $
-N 1.8.3.1.10
+N 1.8.3.1.11
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284605
 KW_ZH 亲子关系 (动物)
 TERM_PINYIN qin zi guan xi (dong wu)
 TERM_EN relationship between parents and children (animal)
-C 1.8.3.1.10.1
+C 1.8.3.1.11.1
 TYPE CIT
-ID cit_1_8_3_1_10
+ID cit_1_8_3_1_11
 TERM_ZH 親子關係 (動物)
-CIT 1.8.3.1.10
+CIT 1.8.3.1.11
 $
-N 1.8.3.1.10.1
+N 1.8.3.1.11.1
 BROADER 親子關係 (動物)
 DISCRIM 動物
 ID.INV CIT278299
@@ -20656,24 +20727,24 @@ KW_ZH 母子 (动物)
 TERM_PINYIN mu zi (dong wu)
 TERM_EN mother and child (animal)
 TYPE CIT
-ID cit_1_8_3_1_10_1
+ID cit_1_8_3_1_11_1
 TERM_ZH 母子 (動物)
-CIT 1.8.3.1.10.1
+CIT 1.8.3.1.11.1
 $
-N 1.8.3.1.11
+N 1.8.3.1.12
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284607
 KW_ZH 寿命 (动物)
 TERM_PINYIN shou ming (dong wu)
 TERM_EN life span (animal)
-C 1.8.3.1.11.1
+C 1.8.3.1.12.1
 TYPE CIT
-ID cit_1_8_3_1_11
+ID cit_1_8_3_1_12
 TERM_ZH 壽命 (動物)
-CIT 1.8.3.1.11
+CIT 1.8.3.1.12
 $
-N 1.8.3.1.11.1
+N 1.8.3.1.12.1
 BROADER 壽命 (動物)
 DISCRIM 動物
 ID.INV CIT288772
@@ -20685,24 +20756,24 @@ TERM_PINYIN chang shou (dong wu)
 TERM_EN long life (animal)
 KW_EN longevity (animal)
 TYPE CIT
-ID cit_1_8_3_1_11_1
+ID cit_1_8_3_1_12_1
 TERM_ZH 長壽 (動物)
-CIT 1.8.3.1.11.1
+CIT 1.8.3.1.12.1
 $
-N 1.8.3.1.12
+N 1.8.3.1.13
 BROADER 動物 (一般)
 DISCRIM 動物
 ID.INV THES284606
 KW_ZH 年龄 (动物)
 TERM_PINYIN nian ling (dong wu)
 TERM_EN age (animal)
-C 1.8.3.1.12.1
+C 1.8.3.1.13.1
 TYPE CIT
-ID cit_1_8_3_1_12
+ID cit_1_8_3_1_13
 TERM_ZH 年齡 (動物)
-CIT 1.8.3.1.12
+CIT 1.8.3.1.13
 $
-N 1.8.3.1.12.1
+N 1.8.3.1.13.1
 BROADER 年齡 (動物)
 ID.INV CIT278749
 KW_ZH 年幼动物
@@ -20721,9 +20792,9 @@ KW_ZH 年幼动物
 TERM_PINYIN nian you dong wu
 TERM_EN newborn animal
 TYPE CIT
-ID cit_1_8_3_1_12_1
+ID cit_1_8_3_1_13_1
 TERM_ZH 年幼動物
-CIT 1.8.3.1.12.1
+CIT 1.8.3.1.13.1
 $
 N 1.8.3.2
 BROADER 動物
@@ -22514,20 +22585,6 @@ CIT 1.8.3.5.3.2.2.4.1
 $
 N 1.8.3.5.3.2.2.5
 BROADER 雀科
-ID.INV CIT279973
-KW_ZH 灰眉岩鵐
-; 白道眉
-; 五道眉
-TERM_PINYIN hui mei yan wu
-KW_EN Emberiza godlewskii
-TERM_EN Godlewski's bunting
-TYPE CIT
-ID cit_1_8_3_5_3_2_2_5
-TERM_ZH 灰眉巖鵐
-CIT 1.8.3.5.3.2.2.5
-$
-N 1.8.3.5.3.2.2.6
-BROADER 雀科
 ID.INV CIT279774
 KW_ZH 燕爵
 TERM_PINYIN yan que
@@ -22536,35 +22593,49 @@ KW_EN brambling
 ; Fringilla
 TERM_EN chaffinch
 TYPE CIT
-ID cit_1_8_3_5_3_2_2_6
+ID cit_1_8_3_5_3_2_2_5
 TERM_ZH 燕雀
+CIT 1.8.3.5.3.2.2.5
+$
+N 1.8.3.5.3.2.2.6
+BROADER 雀科
+ID.INV CIT283707
+KW_ZH 高山岭雀
+; 西宁白
+; 西寧白
+; 五更鳴
+TERM_PINYIN gao shan ling que
+KW_EN Leucosticte brandti
+TERM_EN Brandt's rosy finch
+TYPE CIT
+ID cit_1_8_3_5_3_2_2_6
+TERM_ZH 高山嶺雀
 CIT 1.8.3.5.3.2.2.6
 $
 N 1.8.3.5.3.2.2.7
 BROADER 雀科
-ID.INV CIT284408
-KW_ZH 黄喉鵐
-; 黄道眉
-; 黃道眉
-TERM_PINYIN huang hou wu
-KW_EN Emberiza elegans
-TERM_EN yellow-throated bunting
+ID.INV CIT283856
+KW_ZH 黄嘴朱顶雀
+; 金铃
+; 金鈴
+TERM_PINYIN huang zui zhu ding que
+KW_EN Carduelis flavirostris
+TERM_EN twite
 TYPE CIT
 ID cit_1_8_3_5_3_2_2_7
-TERM_ZH 黃喉鵐
+TERM_ZH 黃嘴朱頂雀
 CIT 1.8.3.5.3.2.2.7
 $
 N 1.8.3.5.3.2.2.8
 BROADER 雀科
-ID.INV CIT279566
-KW_ZH 黄喉鵐母鸟
-; 淡黃道眉
-TERM_PINYIN huang hou wu mu niao
-KW_EN Emberiza elegans
-TERM_EN yellow-throated bunting
+ID.INV CIT278452
+KW_ZH 山花雀
+TERM_PINYIN shu wu
+KW_EN Emberiza calandra
+TERM_EN corn bunting
 TYPE CIT
 ID cit_1_8_3_5_3_2_2_8
-TERM_ZH 黃喉鵐母鳥
+TERM_ZH 黍鵐
 CIT 1.8.3.5.3.2.2.8
 $
 N 1.8.3.5.3.2.2.9
@@ -22582,43 +22653,44 @@ CIT 1.8.3.5.3.2.2.9
 $
 N 1.8.3.5.3.2.2.10
 BROADER 雀科
-ID.INV CIT283707
-KW_ZH 高山岭雀
-; 西宁白
-; 西寧白
-; 五更鳴
-TERM_PINYIN gao shan ling que
-KW_EN Leucosticte brandti
-TERM_EN Brandt's rosy finch
+ID.INV CIT284408
+KW_ZH 黄喉鵐
+; 黄道眉
+; 黃道眉
+; 黃喉鵐母鳥
+; 黄喉鵐母鸟
+; 淡黃道眉
+TERM_PINYIN huang hou wu
+KW_EN Emberiza elegans
+TERM_EN yellow-throated bunting
 TYPE CIT
 ID cit_1_8_3_5_3_2_2_10
-TERM_ZH 高山嶺雀
+TERM_ZH 黃喉鵐
 CIT 1.8.3.5.3.2.2.10
 $
 N 1.8.3.5.3.2.2.11
 BROADER 雀科
-ID.INV CIT283856
-KW_ZH 黄嘴朱顶雀
-; 金铃
-; 金鈴
-TERM_PINYIN huang zui zhu ding que
-KW_EN Carduelis flavirostris
-TERM_EN twite
+ID.INV THES293412
+TERM_PINYIN huang mei wu
+KW_EN Emberiza chrysophrys
+TERM_EN yellow-browed bunting
 TYPE CIT
 ID cit_1_8_3_5_3_2_2_11
-TERM_ZH 黃嘴朱頂雀
+TERM_ZH 黃眉鵐
 CIT 1.8.3.5.3.2.2.11
 $
 N 1.8.3.5.3.2.2.12
 BROADER 雀科
-ID.INV CIT278452
-KW_ZH 山花雀
-TERM_PINYIN shu wu
-KW_EN Emberiza calandra
-TERM_EN corn bunting
+ID.INV CIT279973
+KW_ZH 灰眉岩鵐
+; 白道眉
+; 五道眉
+TERM_PINYIN hui mei yan wu
+KW_EN Emberiza godlewskii
+TERM_EN Godlewski's bunting
 TYPE CIT
 ID cit_1_8_3_5_3_2_2_12
-TERM_ZH 黍鵐
+TERM_ZH 灰眉巖鵐
 CIT 1.8.3.5.3.2.2.12
 $
 N 1.8.3.5.3.2.3
@@ -23047,7 +23119,6 @@ C 1.8.3.5.3.2.10.1
 ; 1.8.3.5.3.2.10.3
 ; 1.8.3.5.3.2.10.4
 ; 1.8.3.5.3.2.10.5
-; 1.8.3.5.3.2.10.6
 TYPE CIT
 ID cit_1_8_3_5_3_2_10
 TERM_ZH 鴉科
@@ -23180,26 +23251,29 @@ KW_ZH 乌鸦
 TERM_PINYIN wu ya
 KW_EN Corvus
 TERM_EN crow
+C 1.8.3.5.3.2.10.4.1
 TYPE CIT
 ID cit_1_8_3_5_3_2_10_4
 TERM_ZH 烏鴉
 CIT 1.8.3.5.3.2.10.4
 $
-N 1.8.3.5.3.2.10.5
-BROADER 鴉科
+N 1.8.3.5.3.2.10.4.1
+BROADER 烏鴉
 ID.INV CIT278361
-KW_ZH 寒鸦
-; 慈烏
+KW_ZH 慈乌
 ; 飛鴉
-TERM_PINYIN han ya
+; 飞鸦
+; 寒鴉
+; 寒鴉
+TERM_PINYIN ci wu
 TERM_EN jackdaw
 KW_EN Corvus monedula
 TYPE CIT
-ID cit_1_8_3_5_3_2_10_5
-TERM_ZH 寒鴉
-CIT 1.8.3.5.3.2.10.5
+ID cit_1_8_3_5_3_2_10_4_1
+TERM_ZH 慈烏
+CIT 1.8.3.5.3.2.10.4.1
 $
-N 1.8.3.5.3.2.10.6
+N 1.8.3.5.3.2.10.5
 BROADER 鴉科
 ID.INV CIT279084
 KW_ZH 松鸦
@@ -23207,9 +23281,9 @@ TERM_PINYIN song ya
 KW_EN Garrulus glandarius
 TERM_EN jay
 TYPE CIT
-ID cit_1_8_3_5_3_2_10_6
+ID cit_1_8_3_5_3_2_10_5
 TERM_ZH 松鴉
-CIT 1.8.3.5.3.2.10.6
+CIT 1.8.3.5.3.2.10.5
 $
 N 1.8.3.5.3.2.11
 BROADER 雀 (形目)
@@ -23237,6 +23311,7 @@ C 1.8.3.5.3.2.11.1
 ; 1.8.3.5.3.2.11.17
 ; 1.8.3.5.3.2.11.18
 ; 1.8.3.5.3.2.11.19
+; 1.8.3.5.3.2.11.20
 TYPE CIT
 ID cit_1_8_3_5_3_2_11
 TERM_ZH 鶲科
@@ -23509,6 +23584,21 @@ TYPE CIT
 ID cit_1_8_3_5_3_2_11_19
 TERM_ZH 褐頭鳳鹛
 CIT 1.8.3.5.3.2.11.19
+$
+N 1.8.3.5.3.2.11.20
+BROADER 鶲科
+ID.INV CIT280323
+KW_ZH 粉红鹦嘴
+TERM_PINYIN fen hong ying zui
+KW_EN Sinosuthora webbiana
+; rufous-headed crowtit
+; vinous-breasted parrotbill
+; vinous-throated crowtit
+TERM_EN vinous-throated parrotbill
+TYPE CIT
+ID cit_1_8_3_5_3_2_11_20
+TERM_ZH 粉紅鸚嘴
+CIT 1.8.3.5.3.2.11.20
 $
 N 1.8.3.5.3.2.12
 BROADER 雀 (形目)
@@ -27154,13 +27244,14 @@ DISCRIM 一般
 ID.INV THES292608
 TERM_PINYIN xiang xiang de dong wu (yi ban)
 TERM_EN fabulous animal (general)
+C 1.8.3.6.1.1
 TYPE CIT
 ID cit_1_8_3_6_1
 TERM_ZH 想像的動物 (一般)
 CIT 1.8.3.6.1
 $
-N 1.8.3.6.2
-BROADER 想像的動物
+N 1.8.3.6.1.1
+BROADER 想像的動物 (一般)
 ID.INV CIT281423
 R 明君
 KW_ZH 灵兽
@@ -27170,112 +27261,11 @@ TERM_EN auspicious beast
 KW_EN efficacious beast
 ; miraculous beast
 TYPE CIT
-ID cit_1_8_3_6_2
+ID cit_1_8_3_6_1_1
 TERM_ZH 靈獸
-CIT 1.8.3.6.2
+CIT 1.8.3.6.1.1
 $
-N 1.8.3.6.3
-BROADER 想像的動物
-ID.INV CIT283765
-KW_ZH 闢邪
-; 辟邪旗
-TERM_PINYIN bi xie
-KW_EN ward-off-evil-spirits beast
-TERM_EN bixie
-TYPE CIT
-ID cit_1_8_3_6_3
-TERM_ZH 辟邪
-CIT 1.8.3.6.3
-$
-N 1.8.3.6.4
-BROADER 想像的動物
-ID.INV CIT278266
-KW_ZH 天鹿
-; 天禄
-; 天鹿旗
-TERM_PINYIN tian lu
-TERM_EN tianlu
-KW_EN heavenly deer
-TYPE CIT
-ID cit_1_8_3_6_4
-TERM_ZH 天祿
-CIT 1.8.3.6.4
-$
-N 1.8.3.6.5
-BROADER 想像的動物
-ID.INV CIT284390
-R 明君
-; 武一品
-KW_ZH 龍馬
-; 龙马
-; 游麟旗
-TERM_PINYIN qi lin
-TERM_EN qilin
-KW_EN Chinese unicorn
-C 1.8.3.6.5.1
-TYPE CIT
-ID cit_1_8_3_6_5
-TERM_ZH 麒麟
-CIT 1.8.3.6.5
-$
-N 1.8.3.6.5.1
-BROADER 麒麟
-ID.INV CIT284389
-KW_ZH 麟趾
-TERM_PINYIN lin zhi
-TERM_EN feet of the qilin
-TYPE CIT
-ID cit_1_8_3_6_5_1
-TERM_ZH 麐趾
-CIT 1.8.3.6.5.1
-$
-N 1.8.3.6.6
-BROADER 想像的動物
-ID.INV THES288532
-TERM_PINYIN xie zhi
-TERM_EN xiezhi
-TYPE CIT
-ID cit_1_8_3_6_6
-TERM_ZH 獬豸
-CIT 1.8.3.6.6
-$
-N 1.8.3.6.7
-BROADER 想像的動物
-ID.INV CIT289761
-R 明君
-KW_ZH 角端旗
-TERM_PINYIN jiao duan
-TERM_EN jiaoduan
-TYPE CIT
-ID cit_1_8_3_6_7
-TERM_ZH 角端
-CIT 1.8.3.6.7
-$
-N 1.8.3.6.8
-BROADER 想像的動物
-ID.INV CIT289760
-KW_ZH 白泽
-; 白澤旗
-TERM_PINYIN bai ze
-KW_EN beast of white marsh
-TERM_EN baize
-TYPE CIT
-ID cit_1_8_3_6_8
-TERM_ZH 白澤
-CIT 1.8.3.6.8
-$
-N 1.8.3.6.9
-BROADER 想像的動物
-ID.INV CIT289762
-KW_ZH 赤熊旗
-TERM_PINYIN chi xiong
-TERM_EN red bear
-TYPE CIT
-ID cit_1_8_3_6_9
-TERM_ZH 赤熊
-CIT 1.8.3.6.9
-$
-N 1.8.3.6.10
+N 1.8.3.6.2
 BROADER 想像的動物
 ID.INV CIT284420
 R 辰 (地支)
@@ -27288,38 +27278,38 @@ KW_ZH 龙
 ; 龍紋
 TERM_PINYIN long
 TERM_EN dragon
-C 1.8.3.6.10.1
-; 1.8.3.6.10.2
-; 1.8.3.6.10.3
-; 1.8.3.6.10.4
-; 1.8.3.6.10.5
-; 1.8.3.6.10.6
-; 1.8.3.6.10.7
-; 1.8.3.6.10.8
-; 1.8.3.6.10.9
-; 1.8.3.6.10.10
-; 1.8.3.6.10.11
-; 1.8.3.6.10.12
-; 1.8.3.6.10.13
-; 1.8.3.6.10.14
-; 1.8.3.6.10.15
+C 1.8.3.6.2.1
+; 1.8.3.6.2.2
+; 1.8.3.6.2.3
+; 1.8.3.6.2.4
+; 1.8.3.6.2.5
+; 1.8.3.6.2.6
+; 1.8.3.6.2.7
+; 1.8.3.6.2.8
+; 1.8.3.6.2.9
+; 1.8.3.6.2.10
+; 1.8.3.6.2.11
+; 1.8.3.6.2.12
+; 1.8.3.6.2.13
+; 1.8.3.6.2.14
+; 1.8.3.6.2.15
 TYPE CIT
-ID cit_1_8_3_6_10
+ID cit_1_8_3_6_2
 TERM_ZH 龍
-CIT 1.8.3.6.10
+CIT 1.8.3.6.2
 $
-N 1.8.3.6.10.1
+N 1.8.3.6.2.1
 BROADER 龍
 ID.INV CIT279347
 KW_ZH 虬龙
 TERM_PINYIN qiu long
 TERM_EN young horned dragon
 TYPE CIT
-ID cit_1_8_3_6_10_1
+ID cit_1_8_3_6_2_1
 TERM_ZH 虬龍
-CIT 1.8.3.6.10.1
+CIT 1.8.3.6.2.1
 $
-N 1.8.3.6.10.2
+N 1.8.3.6.2.2
 BROADER 龍
 ID.INV CIT283674
 KW_ZH 螭紋
@@ -27327,33 +27317,33 @@ TERM_PINYIN chi
 TERM_EN hornless dragon
 KW_EN wyverne
 TYPE CIT
-ID cit_1_8_3_6_10_2
+ID cit_1_8_3_6_2_2
 TERM_ZH 螭
-CIT 1.8.3.6.10.2
+CIT 1.8.3.6.2.2
 $
-N 1.8.3.6.10.3
+N 1.8.3.6.2.3
 BROADER 龍
 ID.INV CIT280497
 KW_ZH 翼龙
 TERM_PINYIN yi long
 TERM_EN winged dragon
 TYPE CIT
-ID cit_1_8_3_6_10_3
+ID cit_1_8_3_6_2_3
 TERM_ZH 翼龍
-CIT 1.8.3.6.10.3
+CIT 1.8.3.6.2.3
 $
-N 1.8.3.6.10.4
+N 1.8.3.6.2.4
 BROADER 龍
 ID.INV CIT284909
 KW_ZH 烛龙
 TERM_PINYIN zhu long
 TERM_EN torch dragon
 TYPE CIT
-ID cit_1_8_3_6_10_4
+ID cit_1_8_3_6_2_4
 TERM_ZH 燭龍
-CIT 1.8.3.6.10.4
+CIT 1.8.3.6.2.4
 $
-N 1.8.3.6.10.5
+N 1.8.3.6.2.5
 BROADER 龍
 ID.INV CIT277910
 KW_ZH 两尾龙
@@ -27362,11 +27352,11 @@ KW_ZH 两尾龙
 TERM_PINYIN liang wei long
 TERM_EN two-tailed dragon
 TYPE CIT
-ID cit_1_8_3_6_10_5
+ID cit_1_8_3_6_2_5
 TERM_ZH 兩尾龍
-CIT 1.8.3.6.10.5
+CIT 1.8.3.6.2.5
 $
-N 1.8.3.6.10.6
+N 1.8.3.6.2.6
 BROADER 龍
 ID.INV CIT278225
 KW_ZH 夔紋
@@ -27375,11 +27365,11 @@ KW_EN mythical beast similar to dragon but with only one foot
 ; uniped
 TERM_EN unipede
 TYPE CIT
-ID cit_1_8_3_6_10_6
+ID cit_1_8_3_6_2_6
 TERM_ZH 夔
-CIT 1.8.3.6.10.6
+CIT 1.8.3.6.2.6
 $
-N 1.8.3.6.10.7
+N 1.8.3.6.2.7
 BROADER 龍
 ID.INV CIT283633
 KW_ZH 起蛟
@@ -27388,36 +27378,11 @@ TERM_EN flood dragon
 KW_EN lamia
 ; water dragon
 TYPE CIT
-ID cit_1_8_3_6_10_7
+ID cit_1_8_3_6_2_7
 TERM_ZH 蛟
-CIT 1.8.3.6.10.7
+CIT 1.8.3.6.2.7
 $
-N 1.8.3.6.10.8
-BROADER 龍
-ID.INV CIT277925
-KW_ZH 六龙
-TERM_PINYIN liu long
-TERM_EN six dragons
-TYPE CIT
-ID cit_1_8_3_6_10_8
-TERM_ZH 六龍
-CIT 1.8.3.6.10.8
-$
-N 1.8.3.6.10.9
-BROADER 龍
-ID.INV CIT277793
-R 明君
-KW_ZH 九龙
-; 九龍曲蓋
-; 九龍蓋
-TERM_PINYIN jiu long
-TERM_EN nine dragons
-TYPE CIT
-ID cit_1_8_3_6_10_9
-TERM_ZH 九龍
-CIT 1.8.3.6.10.9
-$
-N 1.8.3.6.10.10
+N 1.8.3.6.2.8
 BROADER 龍
 ID.INV CIT286475
 R 東
@@ -27430,22 +27395,22 @@ TERM_PINYIN ｑｉｎｇ long
 KW_EN Azure Dragon
 TERM_EN Green Dragon
 TYPE CIT
-ID cit_1_8_3_6_10_10
+ID cit_1_8_3_6_2_8
 TERM_ZH 青龍
-CIT 1.8.3.6.10.10
+CIT 1.8.3.6.2.8
 $
-N 1.8.3.6.10.11
+N 1.8.3.6.2.9
 BROADER 龍
 ID.INV CIT283686
 KW_ZH 蟠龙
 TERM_PINYIN pan long
 TERM_EN coiled dragon
 TYPE CIT
-ID cit_1_8_3_6_10_11
+ID cit_1_8_3_6_2_9
 TERM_ZH 蟠龍
-CIT 1.8.3.6.10.11
+CIT 1.8.3.6.2.9
 $
-N 1.8.3.6.10.12
+N 1.8.3.6.2.10
 BROADER 龍
 ID.INV CIT278690
 KW_ZH 拐子龙
@@ -27454,22 +27419,22 @@ KW_ZH 拐子龙
 TERM_PINYIN guai zi long
 TERM_EN rectangularised dragon
 TYPE CIT
-ID cit_1_8_3_6_10_12
+ID cit_1_8_3_6_2_10
 TERM_ZH 拐子龍
-CIT 1.8.3.6.10.12
+CIT 1.8.3.6.2.10
 $
-N 1.8.3.6.10.13
+N 1.8.3.6.2.11
 BROADER 龍
 ID.INV CIT283701
 KW_ZH 行龙
 TERM_PINYIN xing long
 TERM_EN flying dragon
 TYPE CIT
-ID cit_1_8_3_6_10_13
+ID cit_1_8_3_6_2_11
 TERM_ZH 行龍
-CIT 1.8.3.6.10.13
+CIT 1.8.3.6.2.11
 $
-N 1.8.3.6.10.14
+N 1.8.3.6.2.12
 BROADER 龍
 ID.INV CIT284278
 KW_ZH 鱼龙变化
@@ -27478,35 +27443,60 @@ KW_ZH 鱼龙变化
 TERM_PINYIN yu long bian hua
 TERM_EN fish transforming into a dragon
 TYPE CIT
-ID cit_1_8_3_6_10_14
+ID cit_1_8_3_6_2_12
 TERM_ZH 魚龍變化
-CIT 1.8.3.6.10.14
+CIT 1.8.3.6.2.12
 $
-N 1.8.3.6.10.15
+N 1.8.3.6.2.13
+BROADER 龍
+ID.INV CIT277925
+KW_ZH 六龙
+TERM_PINYIN liu long
+TERM_EN six dragons
+TYPE CIT
+ID cit_1_8_3_6_2_13
+TERM_ZH 六龍
+CIT 1.8.3.6.2.13
+$
+N 1.8.3.6.2.14
+BROADER 龍
+ID.INV CIT277793
+R 明君
+KW_ZH 九龙
+; 九龍曲蓋
+; 九龍蓋
+TERM_PINYIN jiu long
+TERM_EN nine dragons
+TYPE CIT
+ID cit_1_8_3_6_2_14
+TERM_ZH 九龍
+CIT 1.8.3.6.2.14
+$
+N 1.8.3.6.2.15
 BROADER 龍
 ID.INV THES291761
 TERM_PINYIN long zhu
 TERM_EN dragon pearl
 TYPE CIT
-ID cit_1_8_3_6_10_15
+ID cit_1_8_3_6_2_15
 TERM_ZH 龍珠
-CIT 1.8.3.6.10.15
+CIT 1.8.3.6.2.15
 $
-N 1.8.3.6.11
+N 1.8.3.6.3
 BROADER 想像的動物
 ID.INV CIT284385
 KW_ZH 鸾凤
 ; 鸞鳳扇
 TERM_PINYIN luan feng
 TERM_EN simurgh and phoenix
-C 1.8.3.6.11.1
-; 1.8.3.6.11.2
+C 1.8.3.6.3.1
+; 1.8.3.6.3.2
 TYPE CIT
-ID cit_1_8_3_6_11
+ID cit_1_8_3_6_3
 TERM_ZH 鸞鳳
-CIT 1.8.3.6.11
+CIT 1.8.3.6.3
 $
-N 1.8.3.6.11.1
+N 1.8.3.6.3.1
 BROADER 鸞鳳
 ID.INV CIT284384
 KW_ZH 鸞
@@ -27519,11 +27509,11 @@ KW_EN mythical bird
 ; phoenix-like mythical bird
 TERM_EN simurgh
 TYPE CIT
-ID cit_1_8_3_6_11_1
+ID cit_1_8_3_6_3_1
 TERM_ZH 鸞鳥
-CIT 1.8.3.6.11.1
+CIT 1.8.3.6.3.1
 $
-N 1.8.3.6.11.2
+N 1.8.3.6.3.2
 BROADER 鸞鳳
 ID.INV CIT284304
 R 明君
@@ -27539,14 +27529,14 @@ KW_ZH 凤凰
 ; 儀鳳旗
 TERM_PINYIN feng huang
 TERM_EN phoenix
-C 1.8.3.6.11.2.1
-; 1.8.3.6.11.2.2
+C 1.8.3.6.3.2.1
+; 1.8.3.6.3.2.2
 TYPE CIT
-ID cit_1_8_3_6_11_2
+ID cit_1_8_3_6_3_2
 TERM_ZH 鳳凰
-CIT 1.8.3.6.11.2
+CIT 1.8.3.6.3.2
 $
-N 1.8.3.6.11.2.1
+N 1.8.3.6.3.2.1
 BROADER 鳳凰
 ID.INV CIT277777
 R 賢臣
@@ -27554,22 +27544,154 @@ KW_ZH 丹凤
 TERM_PINYIN dan feng
 TERM_EN cinnabar-red phoenix
 TYPE CIT
-ID cit_1_8_3_6_11_2_1
+ID cit_1_8_3_6_3_2_1
 TERM_ZH 丹鳳
-CIT 1.8.3.6.11.2.1
+CIT 1.8.3.6.3.2.1
 $
-N 1.8.3.6.11.2.2
+N 1.8.3.6.3.2.2
 BROADER 鳳凰
 ID.INV THES285602
 KW_ZH 双凤
 TERM_PINYIN shuang feng
 TERM_EN pair of phoenixes
 TYPE CIT
-ID cit_1_8_3_6_11_2_2
+ID cit_1_8_3_6_3_2_2
 TERM_ZH 雙鳳
-CIT 1.8.3.6.11.2.2
+CIT 1.8.3.6.3.2.2
+$
+N 1.8.3.6.4
+BROADER 想像的動物
+ID.INV CIT283765
+KW_ZH 闢邪
+; 辟邪旗
+TERM_PINYIN bi xie
+KW_EN ward-off-evil-spirits beast
+TERM_EN bixie
+TYPE CIT
+ID cit_1_8_3_6_4
+TERM_ZH 辟邪
+CIT 1.8.3.6.4
+$
+N 1.8.3.6.5
+BROADER 想像的動物
+ID.INV CIT278266
+KW_ZH 天鹿
+; 天禄
+; 天鹿旗
+TERM_PINYIN tian lu
+TERM_EN tianlu
+KW_EN heavenly deer
+TYPE CIT
+ID cit_1_8_3_6_5
+TERM_ZH 天祿
+CIT 1.8.3.6.5
+$
+N 1.8.3.6.6
+BROADER 想像的動物
+ID.INV CIT284390
+R 明君
+; 武一品
+KW_ZH 龍馬
+; 龙马
+; 游麟旗
+TERM_PINYIN qi lin
+TERM_EN qilin
+KW_EN Chinese unicorn
+C 1.8.3.6.6.1
+TYPE CIT
+ID cit_1_8_3_6_6
+TERM_ZH 麒麟
+CIT 1.8.3.6.6
+$
+N 1.8.3.6.6.1
+BROADER 麒麟
+ID.INV CIT284389
+KW_ZH 麟趾
+TERM_PINYIN lin zhi
+TERM_EN feet of the qilin
+TYPE CIT
+ID cit_1_8_3_6_6_1
+TERM_ZH 麐趾
+CIT 1.8.3.6.6.1
+$
+N 1.8.3.6.7
+BROADER 想像的動物
+ID.INV THES288532
+TERM_PINYIN xie zhi
+TERM_EN xiezhi
+TYPE CIT
+ID cit_1_8_3_6_7
+TERM_ZH 獬豸
+CIT 1.8.3.6.7
+$
+N 1.8.3.6.8
+BROADER 想像的動物
+ID.INV THES293196
+TERM_PINYIN suan ni
+TERM_EN suanni
+TYPE CIT
+ID cit_1_8_3_6_8
+TERM_ZH 狻猊
+CIT 1.8.3.6.8
+$
+N 1.8.3.6.9
+BROADER 想像的動物
+ID.INV THES288650
+TERM_PINYIN ya yu
+TERM_EN yayu
+TYPE CIT
+ID cit_1_8_3_6_9
+TERM_ZH 押魚
+CIT 1.8.3.6.9
+$
+N 1.8.3.6.10
+BROADER 想像的動物
+ID.INV CIT284283
+KW_ZH 鳌鱼
+TERM_PINYIN ao yu
+TERM_EN legendary dragon-fish
+TYPE CIT
+ID cit_1_8_3_6_10
+TERM_ZH 鰲魚
+CIT 1.8.3.6.10
+$
+N 1.8.3.6.11
+BROADER 想像的動物
+ID.INV CIT289761
+R 明君
+KW_ZH 角端旗
+TERM_PINYIN jiao duan
+TERM_EN jiaoduan
+TYPE CIT
+ID cit_1_8_3_6_11
+TERM_ZH 角端
+CIT 1.8.3.6.11
 $
 N 1.8.3.6.12
+BROADER 想像的動物
+ID.INV CIT289760
+KW_ZH 白泽
+; 白澤旗
+TERM_PINYIN bai ze
+KW_EN beast of white marsh
+TERM_EN baize
+TYPE CIT
+ID cit_1_8_3_6_12
+TERM_ZH 白澤
+CIT 1.8.3.6.12
+$
+N 1.8.3.6.13
+BROADER 想像的動物
+ID.INV CIT289762
+KW_ZH 赤熊旗
+TERM_PINYIN chi xiong
+TERM_EN red bear
+TYPE CIT
+ID cit_1_8_3_6_13
+TERM_ZH 赤熊
+CIT 1.8.3.6.13
+$
+N 1.8.3.6.14
 BROADER 想像的動物
 ID.INV CIT286478
 R 北
@@ -27579,29 +27701,8 @@ TERM_PINYIN xuan wu
 TERM_EN Black Tortoise
 KW_EN Dusky Warrior
 TYPE CIT
-ID cit_1_8_3_6_12
-TERM_ZH 玄武
-CIT 1.8.3.6.12
-$
-N 1.8.3.6.13
-BROADER 想像的動物
-ID.INV CIT284283
-KW_ZH 鳌鱼
-TERM_PINYIN ao yu
-TERM_EN legendary dragon-fish
-TYPE CIT
-ID cit_1_8_3_6_13
-TERM_ZH 鰲魚
-CIT 1.8.3.6.13
-$
-N 1.8.3.6.14
-BROADER 想像的動物
-ID.INV THES288650
-TERM_PINYIN ya yu
-TERM_EN yayu
-TYPE CIT
 ID cit_1_8_3_6_14
-TERM_ZH 押魚
+TERM_ZH 玄武
 CIT 1.8.3.6.14
 $
 N 1.8.3.6.15
@@ -28274,6 +28375,7 @@ C 2.1.2.1.1
 ; 2.1.2.1.6
 ; 2.1.2.1.7
 ; 2.1.2.1.8
+; 2.1.2.1.9
 TYPE CIT
 ID cit_2_1_2_1
 TERM_ZH 全身 (人體姿勢)
@@ -28537,6 +28639,17 @@ $
 N 2.1.2.1.6
 BROADER 全身 (人體姿勢)
 DISCRIM 人體姿勢
+ID.INV THES293252
+TERM_PINYIN gui (ren ti zi shi)
+TERM_EN kneeling (movement, posture, and gesture of the human body)
+TYPE CIT
+ID cit_2_1_2_1_6
+TERM_ZH 跪 (人體姿勢)
+CIT 2.1.2.1.6
+$
+N 2.1.2.1.7
+BROADER 全身 (人體姿勢)
+DISCRIM 人體姿勢
 ID.INV CIT283124
 KW_ZH 跪伏 (人体姿势)
 ; 頂祝
@@ -28544,24 +28657,24 @@ KW_ZH 跪伏 (人体姿势)
 TERM_PINYIN gui fu (ren ti zi shi)
 TERM_EN prostrating oneself (movement, posture, and gesture of the human body)
 TYPE CIT
-ID cit_2_1_2_1_6
+ID cit_2_1_2_1_7
 TERM_ZH 跪伏 (人體姿勢)
-CIT 2.1.2.1.6
+CIT 2.1.2.1.7
 $
-N 2.1.2.1.7
+N 2.1.2.1.8
 BROADER 全身 (人體姿勢)
 DISCRIM 人體姿勢
 ID.INV CIT282576
 KW_ZH 卧 (人体姿势)
 TERM_PINYIN wo (ren ti zi shi)
 TERM_EN lying down (movement, posture, and gesture of the human body)
-C 2.1.2.1.7.1
+C 2.1.2.1.8.1
 TYPE CIT
-ID cit_2_1_2_1_7
+ID cit_2_1_2_1_8
 TERM_ZH 臥 (人體姿勢)
-CIT 2.1.2.1.7
+CIT 2.1.2.1.8
 $
-N 2.1.2.1.7.1
+N 2.1.2.1.8.1
 BROADER 臥 (人體姿勢)
 ID.INV CIT282991
 R 安貧
@@ -28570,31 +28683,31 @@ KW_ZH 卧雪
 TERM_PINYIN wo xue
 TERM_EN lying in the snow
 TYPE CIT
-ID cit_2_1_2_1_7_1
+ID cit_2_1_2_1_8_1
 TERM_ZH 臥雪
-CIT 2.1.2.1.7.1
+CIT 2.1.2.1.8.1
 $
-N 2.1.2.1.8
+N 2.1.2.1.9
 BROADER 全身 (人體姿勢)
 DISCRIM 人體姿勢
 ID.INV THES291789
 TERM_PINYIN pan yuan (ren ti zi shi)
 TERM_EN climbing (movement, posture, and gesture of human body)
-C 2.1.2.1.8.1
+C 2.1.2.1.9.1
 TYPE CIT
-ID cit_2_1_2_1_8
+ID cit_2_1_2_1_9
 TERM_ZH 攀緣 (人體姿勢)
-CIT 2.1.2.1.8
+CIT 2.1.2.1.9
 $
-N 2.1.2.1.8.1
+N 2.1.2.1.9.1
 BROADER 攀緣 (人體姿勢)
 ID.INV THES291790
 TERM_PINYIN pan shu
 TERM_EN climbing a tree
 TYPE CIT
-ID cit_2_1_2_1_8_1
+ID cit_2_1_2_1_9_1
 TERM_ZH 攀樹
-CIT 2.1.2.1.8.1
+CIT 2.1.2.1.9.1
 $
 N 2.1.2.2
 BROADER 姿勢 (人體)
@@ -28724,8 +28837,6 @@ N 2.1.2.3.5
 BROADER 手與臂 (人體姿勢)
 ID.INV CIT282802
 KW_ZH 执持
-; 秉烛
-; 秉燭
 TERM_PINYIN zhi chi
 TERM_EN holding something
 C 2.1.2.3.5.1
@@ -28737,6 +28848,7 @@ C 2.1.2.3.5.1
 ; 2.1.2.3.5.7
 ; 2.1.2.3.5.8
 ; 2.1.2.3.5.9
+; 2.1.2.3.5.10
 TYPE CIT
 ID cit_2_1_2_3_5
 TERM_ZH 執持
@@ -28780,7 +28892,6 @@ BROADER 執持
 ID.INV CIT288761
 KW_ZH 秉烛
 TERM_EN holding a candle
-KW_EN take a nighttrip, stroll/etc. by bright candelight
 TERM_PINYIN bing zhu
 TYPE CIT
 ID cit_2_1_2_3_5_3
@@ -28854,6 +28965,16 @@ TYPE CIT
 ID cit_2_1_2_3_5_9
 TERM_ZH 執扇
 CIT 2.1.2.3.5.9
+$
+N 2.1.2.3.5.10
+BROADER 執持
+ID.INV THES293239
+TERM_PINYIN zhi hua
+TERM_EN holding a flower in one hand
+TYPE CIT
+ID cit_2_1_2_3_5_10
+TERM_ZH 執花
+CIT 2.1.2.3.5.10
 $
 N 2.1.2.3.6
 BROADER 手與臂 (人體姿勢)
@@ -29072,38 +29193,82 @@ CIT 2.1.4.1
 $
 N 2.1.4.2
 BROADER 衛生 (人體)
+ID.INV THES293253
+TERM_PINYIN guan xi
+TERM_EN washing one's hands, face and feet
+C 2.1.4.2.1
+; 2.1.4.2.2
+; 2.1.4.2.3
+TYPE CIT
+ID cit_2_1_4_2
+TERM_ZH 盥洗
+CIT 2.1.4.2
+$
+N 2.1.4.2.1
+BROADER 盥洗
+ID.INV THES293254
+TERM_PINYIN jing shou
+TERM_EN washing one's hands
+TYPE CIT
+ID cit_2_1_4_2_1
+TERM_ZH 淨手
+CIT 2.1.4.2.1
+$
+N 2.1.4.2.2
+BROADER 盥洗
+ID.INV CIT282596
+R 高潔
+TERM_PINYIN zhuo zu
+TERM_EN washing one's feet
+TYPE CIT
+ID cit_2_1_4_2_2
+TERM_ZH 濯足
+CIT 2.1.4.2.2
+$
+N 2.1.4.2.3
+BROADER 盥洗
+ID.INV THES293255
+TERM_PINYIN guan ju
+TERM_EN washing article for the face, hands and feet
+C 2.1.4.2.3.1
+TYPE CIT
+ID cit_2_1_4_2_3
+TERM_ZH 盥具
+CIT 2.1.4.2.3
+$
+N 2.1.4.2.3.1
+BROADER 盥具
+ID.INV THES292275
+TERM_PINYIN shou jin
+TERM_EN hand towel
+TYPE CIT
+ID cit_2_1_4_2_3_1
+TERM_ZH 手巾
+CIT 2.1.4.2.3.1
+$
+N 2.1.4.3
+BROADER 衛生 (人體)
 ID.INV CIT284477
 KW_ZH 浴露
 TERM_PINYIN mu yu
 TERM_EN bathing
 KW_EN ablutions
-C 2.1.4.2.1
+C 2.1.4.3.1
 TYPE CIT
-ID cit_2_1_4_2
+ID cit_2_1_4_3
 TERM_ZH 沐浴
-CIT 2.1.4.2
+CIT 2.1.4.3
 $
-N 2.1.4.2.1
+N 2.1.4.3.1
 BROADER 沐浴
 ID.INV CIT281781
 KW_ZH 婴浴
 TERM_PINYIN ying yu
 TERM_EN bathing a baby
 TYPE CIT
-ID cit_2_1_4_2_1
+ID cit_2_1_4_3_1
 TERM_ZH 嬰浴
-CIT 2.1.4.2.1
-$
-N 2.1.4.3
-BROADER 衛生 (人體)
-ID.INV CIT282596
-R 高潔
-TERM_PINYIN zhuo zu
-TERM_EN washing one's feet
-TYPE CIT
-ID cit_2_1_4_3
-TERM_ZH 濯足
-CIT 2.1.4.3
+CIT 2.1.4.3.1
 $
 N 2.1.5
 BROADER 人體
@@ -31310,6 +31475,9 @@ C 3.1.1.1.1
 ; 3.1.1.1.8
 ; 3.1.1.1.9
 ; 3.1.1.1.10
+; 3.1.1.1.11
+; 3.1.1.1.12
+; 3.1.1.1.13
 TYPE CIT
 ID cit_3_1_1_1
 TERM_ZH 服飾 (一般)
@@ -31317,80 +31485,101 @@ CIT 3.1.1.1
 $
 N 3.1.1.1.1
 BROADER 服飾 (一般)
+ID.INV THES293222
+TERM_PINYIN chuan dai
+TERM_EN being dressed
+TYPE CIT
+ID cit_3_1_1_1_1
+TERM_ZH 穿戴
+CIT 3.1.1.1.1
+$
+N 3.1.1.1.2
+BROADER 服飾 (一般)
+ID.INV THES293223
+TERM_PINYIN tuo jie
+TERM_EN undressing
+KW_EN taking off
+TYPE CIT
+ID cit_3_1_1_1_2
+TERM_ZH 脫解
+CIT 3.1.1.1.2
+$
+N 3.1.1.1.3
+BROADER 服飾 (一般)
 ID.INV THES284832
 TERM_PINYIN dong yi
 TERM_EN winter clothes
 TYPE CIT
-ID cit_3_1_1_1_1
+ID cit_3_1_1_1_3
 TERM_ZH 冬衣
-CIT 3.1.1.1.1
+CIT 3.1.1.1.3
 $
-N 3.1.1.1.2
+N 3.1.1.1.4
 BROADER 服飾 (一般)
 ID.INV THES284833
 TERM_PINYIN xia yi
 TERM_EN summer clothes
 TYPE CIT
-ID cit_3_1_1_1_2
+ID cit_3_1_1_1_4
 TERM_ZH 夏衣
-CIT 3.1.1.1.2
+CIT 3.1.1.1.4
 $
-N 3.1.1.1.3
+N 3.1.1.1.5
 BROADER 服飾 (一般)
 ID.INV THES291717
 TERM_PINYIN chuan yi
 TERM_EN putting on clothes
 TYPE CIT
-ID cit_3_1_1_1_3
+ID cit_3_1_1_1_5
 TERM_ZH 穿衣
-CIT 3.1.1.1.3
+CIT 3.1.1.1.5
 $
-N 3.1.1.1.4
+N 3.1.1.1.6
 BROADER 服飾 (一般)
 ID.INV CIT289584
 TERM_PINYIN yu yi
 TERM_EN raincoat
 TYPE CIT
-ID cit_3_1_1_1_4
+ID cit_3_1_1_1_6
 TERM_ZH 雨衣
-CIT 3.1.1.1.4
+CIT 3.1.1.1.6
 $
-N 3.1.1.1.5
+N 3.1.1.1.7
 BROADER 服飾 (一般)
 ID.INV CIT282635
 KW_ZH 蓑衣
 TERM_PINYIN suo yi
 TERM_EN cloak woven of rush or straw
-C 3.1.1.1.5.1
-; 3.1.1.1.5.2
+C 3.1.1.1.7.1
+; 3.1.1.1.7.2
 TYPE CIT
-ID cit_3_1_1_1_5
+ID cit_3_1_1_1_7
 TERM_ZH 簑衣
-CIT 3.1.1.1.5
+CIT 3.1.1.1.7
 $
-N 3.1.1.1.5.1
+N 3.1.1.1.7.1
 BROADER 簑衣
 ID.INV CIT282582
 KW_ZH 渔蓑
 TERM_PINYIN yu suo
 TERM_EN fisherman's straw cloak
 TYPE CIT
-ID cit_3_1_1_1_5_1
+ID cit_3_1_1_1_7_1
 TERM_ZH 漁簑
-CIT 3.1.1.1.5.1
+CIT 3.1.1.1.7.1
 $
-N 3.1.1.1.5.2
+N 3.1.1.1.7.2
 BROADER 簑衣
 ID.INV CIT283504
 KW_ZH 雪蓑
 TERM_PINYIN xue suo
 TERM_EN snow cloak made from straw or rush
 TYPE CIT
-ID cit_3_1_1_1_5_2
+ID cit_3_1_1_1_7_2
 TERM_ZH 雪簑
-CIT 3.1.1.1.5.2
+CIT 3.1.1.1.7.2
 $
-N 3.1.1.1.6
+N 3.1.1.1.8
 BROADER 服飾 (一般)
 ID.INV CIT281666
 R 隱居
@@ -31398,36 +31587,36 @@ R 隱居
 TERM_PINYIN yang qiu
 TERM_EN goat-fur clothing
 TYPE CIT
-ID cit_3_1_1_1_6
+ID cit_3_1_1_1_8
 TERM_ZH 羊裘
-CIT 3.1.1.1.6
+CIT 3.1.1.1.8
 $
-N 3.1.1.1.7
+N 3.1.1.1.9
 BROADER 服飾 (一般)
 ID.INV THES291833
 TERM_PINYIN ye yi
 TERM_EN leaf clothing
 TYPE CIT
-ID cit_3_1_1_1_7
+ID cit_3_1_1_1_9
 TERM_ZH 葉衣
-CIT 3.1.1.1.7
+CIT 3.1.1.1.9
 $
-N 3.1.1.1.8
+N 3.1.1.1.10
 BROADER 服飾 (一般)
 ID.INV CIT290248
 KW_ZH 礼服
 TERM_PINYIN li fu
 TERM_EN formal dress
-C 3.1.1.1.8.1
-; 3.1.1.1.8.2
-; 3.1.1.1.8.3
-; 3.1.1.1.8.4
+C 3.1.1.1.10.1
+; 3.1.1.1.10.2
+; 3.1.1.1.10.3
+; 3.1.1.1.10.4
 TYPE CIT
-ID cit_3_1_1_1_8
+ID cit_3_1_1_1_10
 TERM_ZH 禮服
-CIT 3.1.1.1.8
+CIT 3.1.1.1.10
 $
-N 3.1.1.1.8.1
+N 3.1.1.1.10.1
 BROADER 禮服
 ID.INV CIT289570
 KW_ZH 朝袍
@@ -31436,11 +31625,11 @@ KW_ZH 朝袍
 TERM_PINYIN chao fu
 TERM_EN court dress
 TYPE CIT
-ID cit_3_1_1_1_8_1
+ID cit_3_1_1_1_10_1
 TERM_ZH 朝服
-CIT 3.1.1.1.8.1
+CIT 3.1.1.1.10.1
 $
-N 3.1.1.1.8.2
+N 3.1.1.1.10.2
 BROADER 禮服
 ID.INV CIT289576
 KW_ZH 衮服
@@ -31448,46 +31637,46 @@ KW_ZH 衮服
 TERM_PINYIN gun fu
 TERM_EN imperial ceremonial dress
 TYPE CIT
-ID cit_3_1_1_1_8_2
+ID cit_3_1_1_1_10_2
 TERM_ZH 袞服
-CIT 3.1.1.1.8.2
+CIT 3.1.1.1.10.2
 $
-N 3.1.1.1.8.3
+N 3.1.1.1.10.3
 BROADER 禮服
 ID.INV CIT290254
 TERM_PINYIN ji fu
 TERM_EN festive dress
 TYPE CIT
-ID cit_3_1_1_1_8_3
+ID cit_3_1_1_1_10_3
 TERM_ZH 吉服
-CIT 3.1.1.1.8.3
+CIT 3.1.1.1.10.3
 $
-N 3.1.1.1.8.4
+N 3.1.1.1.10.4
 BROADER 禮服
 ID.INV CIT289574
 TERM_PINYIN gong fu
 TERM_EN formal dress worn by an official
-C 3.1.1.1.8.4.1
-; 3.1.1.1.8.4.2
+C 3.1.1.1.10.4.1
+; 3.1.1.1.10.4.2
 TYPE CIT
-ID cit_3_1_1_1_8_4
+ID cit_3_1_1_1_10_4
 TERM_ZH 公服
-CIT 3.1.1.1.8.4
+CIT 3.1.1.1.10.4
 $
-N 3.1.1.1.8.4.1
+N 3.1.1.1.10.4.1
 BROADER 公服
 ID.INV CIT289573
 KW_ZH 补服
 TERM_PINYIN bu fu
 TERM_EN official dress with a mandarin square
 KW_EN official dress with a rank badge
-C 3.1.1.1.8.4.1.1
+C 3.1.1.1.10.4.1.1
 TYPE CIT
-ID cit_3_1_1_1_8_4_1
+ID cit_3_1_1_1_10_4_1
 TERM_ZH 補服
-CIT 3.1.1.1.8.4.1
+CIT 3.1.1.1.10.4.1
 $
-N 3.1.1.1.8.4.1.1
+N 3.1.1.1.10.4.1.1
 BROADER 補服
 ID.INV CIT290193
 KW_ZH 补子
@@ -31495,53 +31684,63 @@ TERM_PINYIN bu zi
 KW_EN rank badge
 TERM_EN mandarin square
 TYPE CIT
-ID cit_3_1_1_1_8_4_1_1
+ID cit_3_1_1_1_10_4_1_1
 TERM_ZH 補子
-CIT 3.1.1.1.8.4.1.1
+CIT 3.1.1.1.10.4.1.1
 $
-N 3.1.1.1.8.4.2
+N 3.1.1.1.10.4.2
 BROADER 公服
 ID.INV CIT282229
 TERM_PINYIN zhu yi
 TERM_EN red official dress
 TYPE CIT
-ID cit_3_1_1_1_8_4_2
+ID cit_3_1_1_1_10_4_2
 TERM_ZH 朱衣
-CIT 3.1.1.1.8.4.2
+CIT 3.1.1.1.10.4.2
 $
-N 3.1.1.1.9
+N 3.1.1.1.11
 BROADER 服飾 (一般)
 ID.INV CIT289572
 TERM_PINYIN chang fu
 TERM_EN informal dress
 TYPE CIT
-ID cit_3_1_1_1_9
+ID cit_3_1_1_1_11
 TERM_ZH 常服
-CIT 3.1.1.1.9
+CIT 3.1.1.1.11
 $
-N 3.1.1.1.10
+N 3.1.1.1.12
+BROADER 服飾 (一般)
+ID.INV THES293157
+TERM_PINYIN pu yi
+TERM_EN patched clothing
+TYPE CIT
+ID cit_3_1_1_1_12
+TERM_ZH 補衣
+CIT 3.1.1.1.12
+$
+N 3.1.1.1.13
 BROADER 服飾 (一般)
 ID.INV CIT290703
 KW_ZH 裸体
 TERM_PINYIN luo ti
 TERM_EN state of being unclothed
 KW_EN nakedness
-C 3.1.1.1.10.1
+C 3.1.1.1.13.1
 TYPE CIT
-ID cit_3_1_1_1_10
+ID cit_3_1_1_1_13
 TERM_ZH 裸體
-CIT 3.1.1.1.10
+CIT 3.1.1.1.13
 $
-N 3.1.1.1.10.1
+N 3.1.1.1.13.1
 BROADER 裸體
 ID.INV CIT290704
 KW_ZH 敞怀
 TERM_PINYIN chang huai
 TERM_EN leaving one's coat or shirt unbuttoned
 TYPE CIT
-ID cit_3_1_1_1_10_1
+ID cit_3_1_1_1_13_1
 TERM_ZH 敞懷
-CIT 3.1.1.1.10.1
+CIT 3.1.1.1.13.1
 $
 N 3.1.1.2
 BROADER 服飾
@@ -31615,12 +31814,25 @@ C 3.1.1.3.2.1
 ; 3.1.1.3.2.2
 ; 3.1.1.3.2.3
 ; 3.1.1.3.2.4
+; 3.1.1.3.2.5
 TYPE CIT
 ID cit_3_1_1_3_2
 TERM_ZH 髮式
 CIT 3.1.1.3.2
 $
 N 3.1.1.3.2.1
+BROADER 髮式
+ID.INV THES293156
+KW_ZH 髠頭
+; 髠首
+TERM_PINYIN kun fa
+TERM_EN shaved head
+TYPE CIT
+ID cit_3_1_1_3_2_1
+TERM_ZH 髠髮
+CIT 3.1.1.3.2.1
+$
+N 3.1.1.3.2.2
 BROADER 髮式
 ID.INV THES292342
 KW_ZH 辮子
@@ -31629,50 +31841,50 @@ TERM_EN plait
 KW_EN braid
 ; pigtail
 TYPE CIT
-ID cit_3_1_1_3_2_1
+ID cit_3_1_1_3_2_2
 TERM_ZH 髮辮
-CIT 3.1.1.3.2.1
+CIT 3.1.1.3.2.2
 $
-N 3.1.1.3.2.2
+N 3.1.1.3.2.3
 BROADER 髮式
 ID.INV THES292146
 TERM_PINYIN fa ji
 TERM_EN hair worn in a burn or coil
-C 3.1.1.3.2.2.1
+C 3.1.1.3.2.3.1
 TYPE CIT
-ID cit_3_1_1_3_2_2
+ID cit_3_1_1_3_2_3
 TERM_ZH 髮髻
-CIT 3.1.1.3.2.2
+CIT 3.1.1.3.2.3
 $
-N 3.1.1.3.2.2.1
+N 3.1.1.3.2.3.1
 BROADER 髮髻
 ID.INV THES292149
 TERM_PINYIN shuang zhua ji
 TERM_EN two braided burn or coil on the top of the head
 TYPE CIT
-ID cit_3_1_1_3_2_2_1
+ID cit_3_1_1_3_2_3_1
 TERM_ZH 雙抓髻
-CIT 3.1.1.3.2.2.1
+CIT 3.1.1.3.2.3.1
 $
-N 3.1.1.3.2.3
+N 3.1.1.3.2.4
 BROADER 髮式
 ID.INV THES292148
 TERM_PINYIN hai er fa
 TERM_EN children's hairstyle
 TYPE CIT
-ID cit_3_1_1_3_2_3
+ID cit_3_1_1_3_2_4
 TERM_ZH 孩兒髮
-CIT 3.1.1.3.2.3
+CIT 3.1.1.3.2.4
 $
-N 3.1.1.3.2.4
+N 3.1.1.3.2.5
 BROADER 髮式
 ID.INV THES291794
 TERM_PINYIN peng fa
 TERM_EN unadorned naturally hanging hair
 TYPE CIT
-ID cit_3_1_1_3_2_4
+ID cit_3_1_1_3_2_5
 TERM_ZH 披髮
-CIT 3.1.1.3.2.4
+CIT 3.1.1.3.2.5
 $
 N 3.1.1.3.3
 BROADER 化妝
@@ -32221,8 +32433,6 @@ C 3.1.1.10.1
 ; 3.1.1.10.21
 ; 3.1.1.10.22
 ; 3.1.1.10.23
-; 3.1.1.10.24
-; 3.1.1.10.25
 TYPE CIT
 ID cit_3_1_1_10
 TERM_ZH 配飾
@@ -33075,36 +33285,14 @@ CIT 3.1.1.10.22.4
 $
 N 3.1.1.10.23
 BROADER 配飾
-ID.INV THES284078
-KW_ZH 搭裢
-; 搭肩
-TERM_PINYIN da lian
-TERM_EN long rectangular bag hung from the shoulder
-TYPE CIT
-ID cit_3_1_1_10_23
-TERM_ZH 搭褳
-CIT 3.1.1.10.23
-$
-N 3.1.1.10.24
-BROADER 配飾
-ID.INV THES292275
-TERM_PINYIN shou jin
-TERM_EN hand towel
-TYPE CIT
-ID cit_3_1_1_10_24
-TERM_ZH 手巾
-CIT 3.1.1.10.24
-$
-N 3.1.1.10.25
-BROADER 配飾
 ID.INV THES283949
 KW_ZH 伞
 TERM_PINYIN san
 TERM_EN umbrella
 TYPE CIT
-ID cit_3_1_1_10_25
+ID cit_3_1_1_10_23
 TERM_ZH 傘
-CIT 3.1.1.10.25
+CIT 3.1.1.10.23
 $
 N 3.1.2
 BROADER 衣食住行
@@ -33124,6 +33312,7 @@ C 3.1.2.1
 ; 3.1.2.8
 ; 3.1.2.9
 ; 3.1.2.10
+; 3.1.2.11
 TYPE CIT
 ID cit_3_1_2
 TERM_ZH 飲食
@@ -33287,6 +33476,147 @@ CIT 3.1.2.3.5
 $
 N 3.1.2.4
 BROADER 飲食
+ID.INV CIT283055
+TERM_PINYIN cha shi
+TERM_EN tea drinking
+C 3.1.2.4.1
+; 3.1.2.4.2
+; 3.1.2.4.3
+; 3.1.2.4.4
+; 3.1.2.4.5
+; 3.1.2.4.6
+; 3.1.2.4.7
+; 3.1.2.4.8
+; 3.1.2.4.9
+; 3.1.2.4.10
+TYPE CIT
+ID cit_3_1_2_4
+TERM_ZH 茶事
+CIT 3.1.2.4
+$
+N 3.1.2.4.1
+BROADER 茶事
+ID.INV CIT282474
+KW_ZH 試泉
+; 汲水
+TERM_PINYIN ji quan
+TERM_EN drawing spring water
+TYPE CIT
+ID cit_3_1_2_4_1
+TERM_ZH 汲泉
+CIT 3.1.2.4.1
+$
+N 3.1.2.4.2
+BROADER 茶事
+ID.INV CIT281648
+TERM_PINYIN pin quan
+TERM_EN tasting and judging the spring water
+TYPE CIT
+ID cit_3_1_2_4_2
+TERM_ZH 品泉
+CIT 3.1.2.4.2
+$
+N 3.1.2.4.3
+BROADER 茶事
+ID.INV CIT288965
+KW_ZH 撵茶
+TERM_EN grinding tea leaves
+KW_EN driving out tea
+; make tea
+TERM_PINYIN nian cha
+TYPE CIT
+ID cit_3_1_2_4_3
+TERM_ZH 攆茶
+CIT 3.1.2.4.3
+$
+N 3.1.2.4.4
+BROADER 茶事
+ID.INV CIT282605
+KW_ZH 煎茶
+; 煮茶
+; 瀹茗
+; 煮茗
+TERM_PINYIN peng cha
+TERM_EN boiling tea
+KW_EN make tea
+TYPE CIT
+ID cit_3_1_2_4_4
+TERM_ZH 烹茶
+CIT 3.1.2.4.4
+$
+N 3.1.2.4.5
+BROADER 茶事
+ID.INV CIT288967
+KW_ZH 点茶
+TERM_PINYIN dian cha
+TERM_EN whipping tea
+TYPE CIT
+ID cit_3_1_2_4_5
+TERM_ZH 點茶
+CIT 3.1.2.4.5
+$
+N 3.1.2.4.6
+BROADER 茶事
+ID.INV CIT288966
+TERM_EN brewing tea
+TERM_PINYIN pao cha
+TYPE CIT
+ID cit_3_1_2_4_6
+TERM_ZH 泡茶
+CIT 3.1.2.4.6
+$
+N 3.1.2.4.7
+BROADER 茶事
+ID.INV THES293251
+KW_ZH 倒茶
+TERM_PINYIN zhu cha
+TERM_EN pouring tea
+TYPE CIT
+ID cit_3_1_2_4_7
+TERM_ZH 注茶
+CIT 3.1.2.4.7
+$
+N 3.1.2.4.8
+BROADER 茶事
+ID.INV CIT282107
+KW_ZH 斗茶
+; 鬭茶
+; 茗園賭市
+TERM_PINYIN dou cha
+TERM_EN tea competition
+TYPE CIT
+ID cit_3_1_2_4_8
+TERM_ZH 鬥茶
+CIT 3.1.2.4.8
+$
+N 3.1.2.4.9
+BROADER 茶事
+ID.INV CIT281649
+KW_ZH 品茶
+; 啜茗
+; 賞茶
+; 試茗
+; 茗話
+TERM_PINYIN pin ming
+TERM_EN tasting and judging tea
+TYPE CIT
+ID cit_3_1_2_4_9
+TERM_ZH 品茗
+CIT 3.1.2.4.9
+$
+N 3.1.2.4.10
+BROADER 茶事
+ID.INV CIT281483
+R 陳事茗
+TERM_PINYIN shi ming
+TERM_EN occupying oneself with tea
+TYPE CIT
+ID cit_3_1_2_4_10
+TERM_ZH 事茗
+CIT 3.1.2.4.10
+$
+N 3.1.2.5
+BROADER 飲食
 ID.INV CIT287760
 KW_ZH 烹饪
 ; 調羹
@@ -33294,61 +33624,55 @@ KW_ZH 烹饪
 TERM_EN cooking
 KW_EN culinary art
 TERM_PINYIN peng ren
-C 3.1.2.4.1
-; 3.1.2.4.2
+C 3.1.2.5.1
+; 3.1.2.5.2
 TYPE CIT
-ID cit_3_1_2_4
+ID cit_3_1_2_5
 TERM_ZH 烹飪
-CIT 3.1.2.4
+CIT 3.1.2.5
 $
-N 3.1.2.4.1
+N 3.1.2.5.1
 BROADER 烹飪
 ID.INV THES292605
 TERM_PINYIN chui huo
 TERM_EN blowing on a fire
 TYPE CIT
-ID cit_3_1_2_4_1
+ID cit_3_1_2_5_1
 TERM_ZH 吹火
-CIT 3.1.2.4.1
+CIT 3.1.2.5.1
 $
-N 3.1.2.4.2
+N 3.1.2.5.2
 BROADER 烹飪
 ID.INV THES283958
 KW_ZH 摊饼
 TERM_PINYIN tan bing
 TERM_EN making a pancake
 TYPE CIT
-ID cit_3_1_2_4_2
+ID cit_3_1_2_5_2
 TERM_ZH 攤餅
-CIT 3.1.2.4.2
+CIT 3.1.2.5.2
 $
-N 3.1.2.5
+N 3.1.2.6
 BROADER 飲食
 ID.INV CIT287759
 KW_ZH 厨具
+; 炊具
 TERM_PINYIN chu ju
-TERM_EN kitchen utensil
-C 3.1.2.5.1
-; 3.1.2.5.2
-; 3.1.2.5.3
-; 3.1.2.5.4
-; 3.1.2.5.5
-; 3.1.2.5.6
-; 3.1.2.5.7
-; 3.1.2.5.8
-; 3.1.2.5.9
-; 3.1.2.5.10
-; 3.1.2.5.11
-; 3.1.2.5.12
-; 3.1.2.5.13
-; 3.1.2.5.14
-; 3.1.2.5.15
+TERM_EN cooking utensil
+C 3.1.2.6.1
+; 3.1.2.6.2
+; 3.1.2.6.3
+; 3.1.2.6.4
+; 3.1.2.6.5
+; 3.1.2.6.6
+; 3.1.2.6.7
+; 3.1.2.6.8
 TYPE CIT
-ID cit_3_1_2_5
+ID cit_3_1_2_6
 TERM_ZH 廚具
-CIT 3.1.2.5
+CIT 3.1.2.6
 $
-N 3.1.2.5.1
+N 3.1.2.6.1
 BROADER 廚具
 DISCRIM 廚具
 ID.INV CIT285962
@@ -33356,15 +33680,15 @@ KW_ZH 火炉 (厨具)
 ; 爐
 ; 炉
 TERM_PINYIN huo lu (chu ju)
-TERM_EN furnace (kitchen utensils)
-KW_EN stove (kitchen utensils)
-C 3.1.2.5.1.1
+TERM_EN furnace (kitchen utensil)
+KW_EN stove (kitchen utensil)
+C 3.1.2.6.1.1
 TYPE CIT
-ID cit_3_1_2_5_1
+ID cit_3_1_2_6_1
 TERM_ZH 火爐 (廚具)
-CIT 3.1.2.5.1
+CIT 3.1.2.6.1
 $
-N 3.1.2.5.1.1
+N 3.1.2.6.1.1
 BROADER 火爐 (廚具)
 ID.INV CIT284918
 KW_ZH 風罏
@@ -33374,110 +33698,128 @@ KW_ZH 風罏
 TERM_PINYIN feng lu
 TERM_EN blast furnace for making tea
 TYPE CIT
-ID cit_3_1_2_5_1_1
+ID cit_3_1_2_6_1_1
 TERM_ZH 風爐
-CIT 3.1.2.5.1.1
+CIT 3.1.2.6.1.1
 $
-N 3.1.2.5.2
+N 3.1.2.6.2
 BROADER 廚具
-ID.INV THES284972
-TERM_PINYIN cha ying
-TERM_EN tea-utensil basket
+ID.INV THES292606
+TERM_PINYIN chui huo tong
+TERM_EN fire-blowing pipe
 TYPE CIT
-ID cit_3_1_2_5_2
-TERM_ZH 茶籯
-CIT 3.1.2.5.2
+ID cit_3_1_2_6_2
+TERM_ZH 吹火筒
+CIT 3.1.2.6.2
 $
-N 3.1.2.5.3
+N 3.1.2.6.3
 BROADER 廚具
+ID.INV THES293173
+TERM_PINYIN guo
+TERM_EN cooking pot, wok, wok, pan, boiler
+C 3.1.2.6.3.1
+; 3.1.2.6.3.2
+; 3.1.2.6.3.3
+; 3.1.2.6.3.4
+; 3.1.2.6.3.5
+; 3.1.2.6.3.6
+; 3.1.2.6.3.7
+; 3.1.2.6.3.8
+TYPE CIT
+ID cit_3_1_2_6_3
+TERM_ZH 鍋
+CIT 3.1.2.6.3
+$
+N 3.1.2.6.3.1
+BROADER 鍋
 DISCRIM 廚具
 ID.INV CIT283616
 KW_ZH 鼎 (厨具)
 TERM_PINYIN ding (chu ju)
-KW_EN cauldron
-; tripod
-TERM_EN ding tripod vessel
-C 3.1.2.5.3.1
+KW_EN cauldron (kitchen utensil)
+; tripod ((kitchen utensil)
+TERM_EN ding tripod vessel ((kitchen utensil)
+C 3.1.2.6.3.1.1
 TYPE CIT
-ID cit_3_1_2_5_3
+ID cit_3_1_2_6_3_1
 TERM_ZH 鼎 (廚具)
-CIT 3.1.2.5.3
+CIT 3.1.2.6.3.1
 $
-N 3.1.2.5.3.1
+N 3.1.2.6.3.1.1
 BROADER 鼎 (廚具)
 ID.INV THES284976
 TERM_PINYIN cha ding
 TERM_EN tripod vessel for tea
 TYPE CIT
-ID cit_3_1_2_5_3_1
+ID cit_3_1_2_6_3_1_1
 TERM_ZH 茶鼎
-CIT 3.1.2.5.3.1
+CIT 3.1.2.6.3.1.1
 $
-N 3.1.2.5.4
-BROADER 廚具
+N 3.1.2.6.3.2
+BROADER 鍋
 ID.INV CIT285933
 TERM_PINYIN li
 TERM_EN li cooking vessel
 TYPE CIT
-ID cit_3_1_2_5_4
+ID cit_3_1_2_6_3_2
 TERM_ZH 鬲
-CIT 3.1.2.5.4
+CIT 3.1.2.6.3.2
 $
-N 3.1.2.5.5
-BROADER 廚具
+N 3.1.2.6.3.3
+BROADER 鍋
 ID.INV CIT285942
 KW_ZH 鐎壶
 TERM_PINYIN jiao hu
 TERM_EN jiaohu warming pot
 TYPE CIT
-ID cit_3_1_2_5_5
+ID cit_3_1_2_6_3_3
 TERM_ZH 鐎壺
-CIT 3.1.2.5.5
+CIT 3.1.2.6.3.3
 $
-N 3.1.2.5.6
-BROADER 廚具
+N 3.1.2.6.3.4
+BROADER 鍋
 ID.INV CIT285941
 TERM_PINYIN jiao dou
 TERM_EN jiaodou warming pot
 TYPE CIT
-ID cit_3_1_2_5_6
+ID cit_3_1_2_6_3_4
 TERM_ZH 鐎斗
-CIT 3.1.2.5.6
+CIT 3.1.2.6.3.4
 $
-N 3.1.2.5.7
-BROADER 廚具
+N 3.1.2.6.3.5
+BROADER 鍋
 ID.INV CIT285908
 TERM_PINYIN fu
 TERM_EN fu cooking vessel
 TYPE CIT
-ID cit_3_1_2_5_7
+ID cit_3_1_2_6_3_5
 TERM_ZH 鍑
-CIT 3.1.2.5.7
+CIT 3.1.2.6.3.5
 $
-N 3.1.2.5.8
-BROADER 廚具
+N 3.1.2.6.3.6
+BROADER 鍋
 ID.INV CIT285934
 TERM_PINYIN yan
 TERM_EN yan double steamer
 KW_EN yan double-boiler
 TYPE CIT
-ID cit_3_1_2_5_8
+ID cit_3_1_2_6_3_6
 TERM_ZH 甗
-CIT 3.1.2.5.8
+CIT 3.1.2.6.3.6
 $
-N 3.1.2.5.9
-BROADER 廚具
+N 3.1.2.6.3.7
+BROADER 鍋
 ID.INV CIT285944
 TERM_PINYIN zeng
 TERM_EN zeng rice steamer
 KW_EN zeng rice steamer
 TYPE CIT
-ID cit_3_1_2_5_9
+ID cit_3_1_2_6_3_7
 TERM_ZH 甑
-CIT 3.1.2.5.9
+CIT 3.1.2.6.3.7
 $
-N 3.1.2.5.10
-BROADER 廚具
+N 3.1.2.6.3.8
+BROADER 鍋
 ID.INV CIT284602
 KW_ZH 砂锅
 ; 土銼
@@ -33485,11 +33827,11 @@ KW_ZH 砂锅
 TERM_PINYIN sha guo
 TERM_EN clay cooking pot
 TYPE CIT
-ID cit_3_1_2_5_10
+ID cit_3_1_2_6_3_8
 TERM_ZH 砂鍋
-CIT 3.1.2.5.10
+CIT 3.1.2.6.3.8
 $
-N 3.1.2.5.11
+N 3.1.2.6.4
 BROADER 廚具
 ID.INV CIT285869
 KW_ZH 笊篱
@@ -33498,11 +33840,11 @@ TERM_EN bamboo strainer
 KW_EN wicker straner
 ; wire strainer
 TYPE CIT
-ID cit_3_1_2_5_11
+ID cit_3_1_2_6_4
 TERM_ZH 笊籬
-CIT 3.1.2.5.11
+CIT 3.1.2.6.4
 $
-N 3.1.2.5.12
+N 3.1.2.6.5
 BROADER 廚具
 ID.INV CIT285924
 KW_ZH 水杓
@@ -33511,95 +33853,96 @@ TERM_PINYIN shao
 TERM_EN ladle
 KW_EN dipper
 TYPE CIT
-ID cit_3_1_2_5_12
+ID cit_3_1_2_6_5
 TERM_ZH 勺
-CIT 3.1.2.5.12
+CIT 3.1.2.6.5
 $
-N 3.1.2.5.13
-BROADER 廚具
-ID.INV CIT282444
-TERM_PINYIN shui tong
-TERM_EN pail
-KW_EN bucket
-TYPE CIT
-ID cit_3_1_2_5_13
-TERM_ZH 水桶
-CIT 3.1.2.5.13
-$
-N 3.1.2.5.14
+N 3.1.2.6.6
 BROADER 廚具
 ID.INV THES283988
 TERM_PINYIN cai dao
 TERM_EN kitchen knife
 TYPE CIT
-ID cit_3_1_2_5_14
+ID cit_3_1_2_6_6
 TERM_ZH 菜刀
-CIT 3.1.2.5.14
+CIT 3.1.2.6.6
 $
-N 3.1.2.5.15
+N 3.1.2.6.7
 BROADER 廚具
-ID.INV THES292606
-TERM_PINYIN chui huo tong
-TERM_EN fire-blowing pipe
+ID.INV THES284972
+TERM_PINYIN cha ying
+TERM_EN tea-utensil basket
 TYPE CIT
-ID cit_3_1_2_5_15
-TERM_ZH 吹火筒
-CIT 3.1.2.5.15
+ID cit_3_1_2_6_7
+TERM_ZH 茶籯
+CIT 3.1.2.6.7
 $
-N 3.1.2.6
+N 3.1.2.6.8
+BROADER 廚具
+DISCRIM 廚具
+ID.INV CIT282444
+TERM_PINYIN tong (chu ju)
+TERM_EN pail (kitchen utensil)
+KW_EN bucket
+TYPE CIT
+ID cit_3_1_2_6_8
+TERM_ZH 桶 (廚具)
+CIT 3.1.2.6.8
+$
+N 3.1.2.7
 BROADER 飲食
 ID.INV CIT287758
 TERM_PINYIN can ju
 TERM_EN utensil for eating and drinking
-C 3.1.2.6.1
-; 3.1.2.6.2
+C 3.1.2.7.1
+; 3.1.2.7.2
 TYPE CIT
-ID cit_3_1_2_6
+ID cit_3_1_2_7
 TERM_ZH 餐具
-CIT 3.1.2.6
+CIT 3.1.2.7
 $
-N 3.1.2.6.1
+N 3.1.2.7.1
 BROADER 餐具
 ID.INV CIT288187
 KW_ZH 饮具
 TERM_PINYIN yin ju
 TERM_EN drinking utensil
-C 3.1.2.6.1.1
-; 3.1.2.6.1.2
-; 3.1.2.6.1.3
-; 3.1.2.6.1.4
-; 3.1.2.6.1.5
+C 3.1.2.7.1.1
+; 3.1.2.7.1.2
+; 3.1.2.7.1.3
+; 3.1.2.7.1.4
+; 3.1.2.7.1.5
 TYPE CIT
-ID cit_3_1_2_6_1
+ID cit_3_1_2_7_1
 TERM_ZH 飲具
-CIT 3.1.2.6.1
+CIT 3.1.2.7.1
 $
-N 3.1.2.6.1.1
+N 3.1.2.7.1.1
 BROADER 飲具
 ID.INV CIT285946
 TERM_PINYIN chi
 TERM_EN spoon
 TYPE CIT
-ID cit_3_1_2_6_1_1
+ID cit_3_1_2_7_1_1
 TERM_ZH 匙
-CIT 3.1.2.6.1.1
+CIT 3.1.2.7.1.1
 $
-N 3.1.2.6.1.2
+N 3.1.2.7.1.2
 BROADER 飲具
 ID.INV CIT285965
 TERM_PINYIN bei
 KW_EN cup
 TERM_EN drinking cup
-C 3.1.2.6.1.2.1
-; 3.1.2.6.1.2.2
-; 3.1.2.6.1.2.3
-; 3.1.2.6.1.2.4
+C 3.1.2.7.1.2.1
+; 3.1.2.7.1.2.2
+; 3.1.2.7.1.2.3
+; 3.1.2.7.1.2.4
 TYPE CIT
-ID cit_3_1_2_6_1_2
+ID cit_3_1_2_7_1_2
 TERM_ZH 杯
-CIT 3.1.2.6.1.2
+CIT 3.1.2.7.1.2
 $
-N 3.1.2.6.1.2.1
+N 3.1.2.7.1.2.1
 BROADER 杯
 ID.INV CIT285966
 KW_ZH 盏
@@ -33609,33 +33952,33 @@ TERM_EN small cup
 KW_EN shallow wine-cup
 ; small wine-cup
 TYPE CIT
-ID cit_3_1_2_6_1_2_1
+ID cit_3_1_2_7_1_2_1
 TERM_ZH 盞
-CIT 3.1.2.6.1.2.1
+CIT 3.1.2.7.1.2.1
 $
-N 3.1.2.6.1.2.2
+N 3.1.2.7.1.2.2
 BROADER 杯
 ID.INV CIT285911
 TERM_PINYIN zhong
 KW_EN handleless cup
 TERM_EN zhong cup
 TYPE CIT
-ID cit_3_1_2_6_1_2_2
+ID cit_3_1_2_7_1_2_2
 TERM_ZH 盅
-CIT 3.1.2.6.1.2.2
+CIT 3.1.2.7.1.2.2
 $
-N 3.1.2.6.1.2.3
+N 3.1.2.7.1.2.3
 BROADER 杯
 ID.INV CIT283480
 KW_ZH 双耳杯
 TERM_PINYIN shuang er bei
 TERM_EN two-handled cup
 TYPE CIT
-ID cit_3_1_2_6_1_2_3
+ID cit_3_1_2_7_1_2_3
 TERM_ZH 雙耳杯
-CIT 3.1.2.6.1.2.3
+CIT 3.1.2.7.1.2.3
 $
-N 3.1.2.6.1.2.4
+N 3.1.2.7.1.2.4
 BROADER 杯
 ID.INV CIT284708
 R 秋葵
@@ -33643,11 +33986,11 @@ TERM_PINYIN jin bei
 TERM_EN gold cup
 KW_EN precious cup
 TYPE CIT
-ID cit_3_1_2_6_1_2_4
+ID cit_3_1_2_7_1_2_4
 TERM_ZH 金杯
-CIT 3.1.2.6.1.2.4
+CIT 3.1.2.7.1.2.4
 $
-N 3.1.2.6.1.3
+N 3.1.2.7.1.3
 BROADER 飲具
 ID.INV CIT281726
 KW_ZH 壶
@@ -33663,98 +34006,98 @@ KW_EN ewer
 ; bottle
 ; jar
 TYPE CIT
-ID cit_3_1_2_6_1_3
+ID cit_3_1_2_7_1_3
 TERM_ZH 壺
-CIT 3.1.2.6.1.3
+CIT 3.1.2.7.1.3
 $
-N 3.1.2.6.1.4
+N 3.1.2.7.1.4
 BROADER 飲具
 ID.INV CIT288189
 KW_ZH 酒器
 TERM_PINYIN jiu ju
 TERM_EN wine-drinking utensil
-C 3.1.2.6.1.4.1
-; 3.1.2.6.1.4.2
-; 3.1.2.6.1.4.3
-; 3.1.2.6.1.4.4
-; 3.1.2.6.1.4.5
-; 3.1.2.6.1.4.6
-; 3.1.2.6.1.4.7
-; 3.1.2.6.1.4.8
-; 3.1.2.6.1.4.9
-; 3.1.2.6.1.4.10
-; 3.1.2.6.1.4.11
-; 3.1.2.6.1.4.12
-; 3.1.2.6.1.4.13
-; 3.1.2.6.1.4.14
-; 3.1.2.6.1.4.15
-; 3.1.2.6.1.4.16
-; 3.1.2.6.1.4.17
-; 3.1.2.6.1.4.18
-; 3.1.2.6.1.4.19
-; 3.1.2.6.1.4.20
-; 3.1.2.6.1.4.21
+C 3.1.2.7.1.4.1
+; 3.1.2.7.1.4.2
+; 3.1.2.7.1.4.3
+; 3.1.2.7.1.4.4
+; 3.1.2.7.1.4.5
+; 3.1.2.7.1.4.6
+; 3.1.2.7.1.4.7
+; 3.1.2.7.1.4.8
+; 3.1.2.7.1.4.9
+; 3.1.2.7.1.4.10
+; 3.1.2.7.1.4.11
+; 3.1.2.7.1.4.12
+; 3.1.2.7.1.4.13
+; 3.1.2.7.1.4.14
+; 3.1.2.7.1.4.15
+; 3.1.2.7.1.4.16
+; 3.1.2.7.1.4.17
+; 3.1.2.7.1.4.18
+; 3.1.2.7.1.4.19
+; 3.1.2.7.1.4.20
+; 3.1.2.7.1.4.21
 TYPE CIT
-ID cit_3_1_2_6_1_4
+ID cit_3_1_2_7_1_4
 TERM_ZH 酒具
-CIT 3.1.2.6.1.4
+CIT 3.1.2.7.1.4
 $
-N 3.1.2.6.1.4.1
+N 3.1.2.7.1.4.1
 BROADER 酒具
 ID.INV CIT283379
 KW_ZH 酒盏
 TERM_PINYIN jiu zhan
 TERM_EN wine cup
 TYPE CIT
-ID cit_3_1_2_6_1_4_1
+ID cit_3_1_2_7_1_4_1
 TERM_ZH 酒盞
-CIT 3.1.2.6.1.4.1
+CIT 3.1.2.7.1.4.1
 $
-N 3.1.2.6.1.4.2
+N 3.1.2.7.1.4.2
 BROADER 酒具
 ID.INV CIT284727
 TERM_PINYIN he bei
 TERM_EN lotus-leaf cup
 TYPE CIT
-ID cit_3_1_2_6_1_4_2
+ID cit_3_1_2_7_1_4_2
 TERM_ZH 荷杯
-CIT 3.1.2.6.1.4.2
+CIT 3.1.2.7.1.4.2
 $
-N 3.1.2.6.1.4.3
+N 3.1.2.7.1.4.3
 BROADER 酒具
 ID.INV CIT285914
 TERM_PINYIN zun
 KW_EN zun goblet
 ; zun wine-cup
 TERM_EN zun wine vessel
-C 3.1.2.6.1.4.3.1
+C 3.1.2.7.1.4.3.1
 TYPE CIT
-ID cit_3_1_2_6_1_4_3
+ID cit_3_1_2_7_1_4_3
 TERM_ZH 尊
-CIT 3.1.2.6.1.4.3
+CIT 3.1.2.7.1.4.3
 $
-N 3.1.2.6.1.4.3.1
+N 3.1.2.7.1.4.3.1
 BROADER 尊
 ID.INV CIT283077
 TERM_PINYIN yang zun
 TERM_EN goat-shaped zun wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_3_1
+ID cit_3_1_2_7_1_4_3_1
 TERM_ZH 羊尊
-CIT 3.1.2.6.1.4.3.1
+CIT 3.1.2.7.1.4.3.1
 $
-N 3.1.2.6.1.4.4
+N 3.1.2.7.1.4.4
 BROADER 酒具
 ID.INV CIT285918
 TERM_PINYIN you
 KW_EN you (for holding wine, with a handle passing over the cover)
 TERM_EN you wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_4
+ID cit_3_1_2_7_1_4_4
 TERM_ZH 卣
-CIT 3.1.2.6.1.4.4
+CIT 3.1.2.7.1.4.4
 $
-N 3.1.2.6.1.4.5
+N 3.1.2.7.1.4.5
 BROADER 酒具
 ID.INV CIT285917
 TERM_PINYIN fang yi
@@ -33762,22 +34105,22 @@ KW_EN fang yi (for holding food or wine)
 ; rectangular casket-shaped vessel
 TERM_EN rectangular yi wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_5
+ID cit_3_1_2_7_1_4_5
 TERM_ZH 方彝
-CIT 3.1.2.6.1.4.5
+CIT 3.1.2.7.1.4.5
 $
-N 3.1.2.6.1.4.6
+N 3.1.2.7.1.4.6
 BROADER 酒具
 ID.INV CIT285913
 TERM_PINYIN jia
 KW_EN jia (for heating wine)
 TERM_EN jia wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_6
+ID cit_3_1_2_7_1_4_6
 TERM_ZH 斝
-CIT 3.1.2.6.1.4.6
+CIT 3.1.2.7.1.4.6
 $
-N 3.1.2.6.1.4.7
+N 3.1.2.7.1.4.7
 BROADER 酒具
 ID.INV CIT285923
 KW_ZH 羽觞
@@ -33786,33 +34129,33 @@ TERM_EN winged kylix
 KW_EN wine cup
 ; wine goblet
 TYPE CIT
-ID cit_3_1_2_6_1_4_7
+ID cit_3_1_2_7_1_4_7
 TERM_ZH 羽觴
-CIT 3.1.2.6.1.4.7
+CIT 3.1.2.7.1.4.7
 $
-N 3.1.2.6.1.4.8
+N 3.1.2.7.1.4.8
 BROADER 酒具
 ID.INV CIT284924
 TERM_PINYIN lei
 KW_EN lei (for holding wine or water)
 TERM_EN lei wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_8
+ID cit_3_1_2_7_1_4_8
 TERM_ZH 罍
-CIT 3.1.2.6.1.4.8
+CIT 3.1.2.7.1.4.8
 $
-N 3.1.2.6.1.4.9
+N 3.1.2.7.1.4.9
 BROADER 酒具
 ID.INV CIT285927
 TERM_PINYIN fou
 KW_EN fou (for holding wine or water)
 TERM_EN fou wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_9
+ID cit_3_1_2_7_1_4_9
 TERM_ZH 缶
-CIT 3.1.2.6.1.4.9
+CIT 3.1.2.7.1.4.9
 $
-N 3.1.2.6.1.4.10
+N 3.1.2.7.1.4.10
 BROADER 酒具
 ID.INV CIT284856
 TERM_PINYIN jue
@@ -33821,22 +34164,22 @@ KW_EN jue goblet
 ; tripod cup
 TERM_EN jue wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_10
+ID cit_3_1_2_7_1_4_10
 TERM_ZH 爵
-CIT 3.1.2.6.1.4.10
+CIT 3.1.2.7.1.4.10
 $
-N 3.1.2.6.1.4.11
+N 3.1.2.7.1.4.11
 BROADER 酒具
 ID.INV CIT285922
 TERM_PINYIN bu
 KW_EN bu (for holding wine or water)
 TERM_EN bu wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_11
+ID cit_3_1_2_7_1_4_11
 TERM_ZH 瓿
-CIT 3.1.2.6.1.4.11
+CIT 3.1.2.7.1.4.11
 $
-N 3.1.2.6.1.4.12
+N 3.1.2.7.1.4.12
 BROADER 酒具
 ID.INV CIT285926
 KW_ZH 钫
@@ -33844,22 +34187,22 @@ TERM_PINYIN fang
 KW_EN fang (square vessel for holding wine)
 TERM_EN fang wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_12
+ID cit_3_1_2_7_1_4_12
 TERM_ZH 鈁
-CIT 3.1.2.6.1.4.12
+CIT 3.1.2.7.1.4.12
 $
-N 3.1.2.6.1.4.13
+N 3.1.2.7.1.4.13
 BROADER 酒具
 ID.INV CIT285904
 TERM_PINYIN he
 KW_EN he (for holding wine or blending wine and water)
 TERM_EN he wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_13
+ID cit_3_1_2_7_1_4_13
 TERM_ZH 盉
-CIT 3.1.2.6.1.4.13
+CIT 3.1.2.7.1.4.13
 $
-N 3.1.2.6.1.4.14
+N 3.1.2.7.1.4.14
 BROADER 酒具
 DISCRIM 酒具
 ID.INV CIT285925
@@ -33868,43 +34211,43 @@ TERM_PINYIN zhong (jiu ju)
 KW_EN zhong (drinking vessel)
 TERM_EN zhong wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_14
+ID cit_3_1_2_7_1_4_14
 TERM_ZH 鐘 (酒具)
-CIT 3.1.2.6.1.4.14
+CIT 3.1.2.7.1.4.14
 $
-N 3.1.2.6.1.4.15
+N 3.1.2.7.1.4.15
 BROADER 酒具
 ID.INV CIT285912
 TERM_PINYIN jue
 TERM_EN jue wine vessel with two spouts
 TYPE CIT
-ID cit_3_1_2_6_1_4_15
+ID cit_3_1_2_7_1_4_15
 TERM_ZH 角
-CIT 3.1.2.6.1.4.15
+CIT 3.1.2.7.1.4.15
 $
-N 3.1.2.6.1.4.16
+N 3.1.2.7.1.4.16
 BROADER 酒具
 ID.INV CIT285915
 TERM_PINYIN gu
 KW_EN tall beaker
 TERM_EN gu wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_16
+ID cit_3_1_2_7_1_4_16
 TERM_ZH 觚
-CIT 3.1.2.6.1.4.16
+CIT 3.1.2.7.1.4.16
 $
-N 3.1.2.6.1.4.17
+N 3.1.2.7.1.4.17
 BROADER 酒具
 ID.INV CIT285919
 TERM_PINYIN gong
 KW_EN gong (for holding or drinking wine, with spout, handle and circle foot or four legs)
 TERM_EN gong wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_17
+ID cit_3_1_2_7_1_4_17
 TERM_ZH 觥
-CIT 3.1.2.6.1.4.17
+CIT 3.1.2.7.1.4.17
 $
-N 3.1.2.6.1.4.18
+N 3.1.2.7.1.4.18
 BROADER 酒具
 ID.INV CIT285916
 KW_ZH 觯
@@ -33912,11 +34255,11 @@ TERM_PINYIN zhi
 KW_EN zhi (similar to bottle, with flaring lip and circle foot)
 TERM_EN zhi wine vessel
 TYPE CIT
-ID cit_3_1_2_6_1_4_18
+ID cit_3_1_2_7_1_4_18
 TERM_ZH 觶
-CIT 3.1.2.6.1.4.18
+CIT 3.1.2.7.1.4.18
 $
-N 3.1.2.6.1.4.19
+N 3.1.2.7.1.4.19
 BROADER 酒具
 ID.INV CIT277909
 KW_ZH 兕觥
@@ -33924,44 +34267,44 @@ TERM_PINYIN si gong
 TERM_EN rhinoceros-shaped gong wine vessel
 KW_EN rhinoceros-shaped rhyton
 TYPE CIT
-ID cit_3_1_2_6_1_4_19
+ID cit_3_1_2_7_1_4_19
 TERM_ZH 兕觥
-CIT 3.1.2.6.1.4.19
+CIT 3.1.2.7.1.4.19
 $
-N 3.1.2.6.1.4.20
+N 3.1.2.7.1.4.20
 BROADER 酒具
 ID.INV CIT285921
 TERM_PINYIN jin
 TERM_EN jin table for holding wine vessels
 TYPE CIT
-ID cit_3_1_2_6_1_4_20
+ID cit_3_1_2_7_1_4_20
 TERM_ZH 禁
-CIT 3.1.2.6.1.4.20
+CIT 3.1.2.7.1.4.20
 $
-N 3.1.2.6.1.4.21
+N 3.1.2.7.1.4.21
 BROADER 酒具
 ID.INV CIT290163
 KW_ZH 挈搕
 TERM_PINYIN ke
 TERM_EN wooden wine container
 TYPE CIT
-ID cit_3_1_2_6_1_4_21
+ID cit_3_1_2_7_1_4_21
 TERM_ZH 榼
-CIT 3.1.2.6.1.4.21
+CIT 3.1.2.7.1.4.21
 $
-N 3.1.2.6.1.5
+N 3.1.2.7.1.5
 BROADER 飲具
 ID.INV CIT288188
 TERM_EN tea utensil
 KW_EN tea service
 TERM_PINYIN cha ju
-C 3.1.2.6.1.5.1
+C 3.1.2.7.1.5.1
 TYPE CIT
-ID cit_3_1_2_6_1_5
+ID cit_3_1_2_7_1_5
 TERM_ZH 茶具
-CIT 3.1.2.6.1.5
+CIT 3.1.2.7.1.5
 $
-N 3.1.2.6.1.5.1
+N 3.1.2.7.1.5.1
 BROADER 茶具
 ID.INV THES284975
 KW_ZH 茶瓯
@@ -33969,55 +34312,56 @@ TERM_PINYIN cha ou
 TERM_EN tea cup
 KW_EN tea bowl
 TYPE CIT
-ID cit_3_1_2_6_1_5_1
+ID cit_3_1_2_7_1_5_1
 TERM_ZH 茶甌
-CIT 3.1.2.6.1.5.1
+CIT 3.1.2.7.1.5.1
 $
-N 3.1.2.6.2
+N 3.1.2.7.2
 BROADER 餐具
 ID.INV CIT288190
 KW_ZH 食器
 TERM_PINYIN shi ju
 TERM_EN eating utensil
-C 3.1.2.6.2.1
-; 3.1.2.6.2.2
-; 3.1.2.6.2.3
-; 3.1.2.6.2.4
-; 3.1.2.6.2.5
-; 3.1.2.6.2.6
-; 3.1.2.6.2.7
-; 3.1.2.6.2.8
-; 3.1.2.6.2.9
-; 3.1.2.6.2.10
-; 3.1.2.6.2.11
+C 3.1.2.7.2.1
+; 3.1.2.7.2.2
+; 3.1.2.7.2.3
+; 3.1.2.7.2.4
+; 3.1.2.7.2.5
+; 3.1.2.7.2.6
+; 3.1.2.7.2.7
+; 3.1.2.7.2.8
+; 3.1.2.7.2.9
+; 3.1.2.7.2.10
+; 3.1.2.7.2.11
+; 3.1.2.7.2.12
 TYPE CIT
-ID cit_3_1_2_6_2
+ID cit_3_1_2_7_2
 TERM_ZH 食具
-CIT 3.1.2.6.2
+CIT 3.1.2.7.2
 $
-N 3.1.2.6.2.1
+N 3.1.2.7.2.1
 BROADER 食具
 ID.INV CIT285935
 TERM_PINYIN gui
 KW_EN gui (for holding glutinous millet, rice, and sorghum)
 TERM_EN gui food vessel
 TYPE CIT
-ID cit_3_1_2_6_2_1
+ID cit_3_1_2_7_2_1
 TERM_ZH 簋
-CIT 3.1.2.6.2.1
+CIT 3.1.2.7.2.1
 $
-N 3.1.2.6.2.2
+N 3.1.2.7.2.2
 BROADER 食具
 ID.INV CIT285936
 TERM_PINYIN fu
 KW_EN fu (for holding glutinous millet, rice, and sorghum)
 TERM_EN fu food vessel
 TYPE CIT
-ID cit_3_1_2_6_2_2
+ID cit_3_1_2_7_2_2
 TERM_ZH 簠
-CIT 3.1.2.6.2.2
+CIT 3.1.2.7.2.2
 $
-N 3.1.2.6.2.3
+N 3.1.2.7.2.3
 BROADER 食具
 ID.INV CIT285907
 TERM_PINYIN yu
@@ -34026,11 +34370,11 @@ KW_EN wide-mouthed jar
 ; wide-mouthed pot
 ; yu (for holding water or food)
 TYPE CIT
-ID cit_3_1_2_6_2_3
+ID cit_3_1_2_7_2_3
 TERM_ZH 盂
-CIT 3.1.2.6.2.3
+CIT 3.1.2.7.2.3
 $
-N 3.1.2.6.2.4
+N 3.1.2.7.2.4
 BROADER 食具
 ID.INV CIT285939
 KW_ZH 卢
@@ -34038,32 +34382,32 @@ TERM_PINYIN lu
 KW_EN rice scoop
 TERM_EN lu food scoop
 TYPE CIT
-ID cit_3_1_2_6_2_4
+ID cit_3_1_2_7_2_4
 TERM_ZH 盧
-CIT 3.1.2.6.2.4
+CIT 3.1.2.7.2.4
 $
-N 3.1.2.6.2.5
+N 3.1.2.7.2.5
 BROADER 食具
 ID.INV CIT285937
 TERM_PINYIN dui
 KW_EN dun (for holding glutinous millet, rice, and sorghum)
 TERM_EN dun food vessel
 TYPE CIT
-ID cit_3_1_2_6_2_5
+ID cit_3_1_2_7_2_5
 TERM_ZH 敦
-CIT 3.1.2.6.2.5
+CIT 3.1.2.7.2.5
 $
-N 3.1.2.6.2.6
+N 3.1.2.7.2.6
 BROADER 食具
 ID.INV CIT284951
 TERM_PINYIN wan
 TERM_EN bowl
 TYPE CIT
-ID cit_3_1_2_6_2_6
+ID cit_3_1_2_7_2_6
 TERM_ZH 碗
-CIT 3.1.2.6.2.6
+CIT 3.1.2.7.2.6
 $
-N 3.1.2.6.2.7
+N 3.1.2.7.2.7
 BROADER 食具
 ID.INV CIT285940
 TERM_PINYIN zu
@@ -34073,11 +34417,11 @@ KW_EN receptacle for meat
 ; butcher block
 ; chopping block
 TYPE CIT
-ID cit_3_1_2_6_2_7
+ID cit_3_1_2_7_2_7
 TERM_ZH 俎
-CIT 3.1.2.6.2.7
+CIT 3.1.2.7.2.7
 $
-N 3.1.2.6.2.8
+N 3.1.2.7.2.8
 BROADER 食具
 DISCRIM 食具
 ID.INV CIT284877
@@ -34086,21 +34430,21 @@ KW_EN tazza
 ; dou (for holding meat, bean-sauce and others)
 TERM_EN dou stemmed cup
 TYPE CIT
-ID cit_3_1_2_6_2_8
+ID cit_3_1_2_7_2_8
 TERM_ZH 豆 (食具)
-CIT 3.1.2.6.2.8
+CIT 3.1.2.7.2.8
 $
-N 3.1.2.6.2.9
+N 3.1.2.7.2.9
 BROADER 食具
 ID.INV CIT286020
 TERM_PINYIN zha dou
 TERM_EN refuse vessel
 TYPE CIT
-ID cit_3_1_2_6_2_9
+ID cit_3_1_2_7_2_9
 TERM_ZH 渣斗
-CIT 3.1.2.6.2.9
+CIT 3.1.2.7.2.9
 $
-N 3.1.2.6.2.10
+N 3.1.2.7.2.10
 BROADER 食具
 ID.INV CIT285956
 KW_ZH 碟子
@@ -34108,59 +34452,70 @@ TERM_PINYIN die
 TERM_EN small plate
 KW_EN small dish
 TYPE CIT
-ID cit_3_1_2_6_2_10
+ID cit_3_1_2_7_2_10
 TERM_ZH 碟
-CIT 3.1.2.6.2.10
+CIT 3.1.2.7.2.10
 $
-N 3.1.2.6.2.11
+N 3.1.2.7.2.11
+BROADER 食具
+ID.INV THES293174
+TERM_PINYIN kuai
+TERM_EN chopsticks
+TYPE CIT
+ID cit_3_1_2_7_2_11
+TERM_ZH 筷
+CIT 3.1.2.7.2.11
+$
+N 3.1.2.7.2.12
 BROADER 食具
 ID.INV CIT285967
 TERM_PINYIN kuai tong
 TERM_EN chopsticks holder
 TYPE CIT
-ID cit_3_1_2_6_2_11
+ID cit_3_1_2_7_2_12
 TERM_ZH 筷筒
-CIT 3.1.2.6.2.11
+CIT 3.1.2.7.2.12
 $
-N 3.1.2.7
+N 3.1.2.8
 BROADER 飲食
 ID.INV CIT284564
 KW_ZH 食物
 TERM_PINYIN shi pin
 TERM_EN foodstuff
 KW_EN food
-C 3.1.2.7.1
-; 3.1.2.7.2
-; 3.1.2.7.3
-; 3.1.2.7.4
-; 3.1.2.7.5
-; 3.1.2.7.6
-; 3.1.2.7.7
-; 3.1.2.7.8
-; 3.1.2.7.9
-; 3.1.2.7.10
-; 3.1.2.7.11
-; 3.1.2.7.12
+C 3.1.2.8.1
+; 3.1.2.8.2
+; 3.1.2.8.3
+; 3.1.2.8.4
+; 3.1.2.8.5
+; 3.1.2.8.6
+; 3.1.2.8.7
+; 3.1.2.8.8
+; 3.1.2.8.9
+; 3.1.2.8.10
+; 3.1.2.8.11
+; 3.1.2.8.12
+; 3.1.2.8.13
 TYPE CIT
-ID cit_3_1_2_7
+ID cit_3_1_2_8
 TERM_ZH 食品
-CIT 3.1.2.7
+CIT 3.1.2.8
 $
-N 3.1.2.7.1
+N 3.1.2.8.1
 BROADER 食品
 DISCRIM 一般
 ID.INV CIT290159
 TERM_PINYIN shi pin (yi ban)
 TERM_EN food (general)
-C 3.1.2.7.1.1
-; 3.1.2.7.1.2
-; 3.1.2.7.1.3
+C 3.1.2.8.1.1
+; 3.1.2.8.1.2
+; 3.1.2.8.1.3
 TYPE CIT
-ID cit_3_1_2_7_1
+ID cit_3_1_2_8_1
 TERM_ZH 食品 (一般)
-CIT 3.1.2.7.1
+CIT 3.1.2.8.1
 $
-N 3.1.2.7.1.1
+N 3.1.2.8.1.1
 BROADER 食品 (一般)
 ID.INV CIT284639
 KW_ZH 旨蓄
@@ -34168,21 +34523,21 @@ TERM_PINYIN mei shi
 TERM_EN delicious food
 KW_EN table delicacies
 TYPE CIT
-ID cit_3_1_2_7_1_1
+ID cit_3_1_2_8_1_1
 TERM_ZH 美食
-CIT 3.1.2.7.1.1
+CIT 3.1.2.8.1.1
 $
-N 3.1.2.7.1.2
+N 3.1.2.8.1.2
 BROADER 食品 (一般)
 ID.INV CIT284640
 TERM_PINYIN shan zhen
 TERM_EN rare delicacies
 TYPE CIT
-ID cit_3_1_2_7_1_2
+ID cit_3_1_2_8_1_2
 TERM_ZH 山珍
-CIT 3.1.2.7.1.2
+CIT 3.1.2.8.1.2
 $
-N 3.1.2.7.1.3
+N 3.1.2.8.1.3
 BROADER 食品 (一般)
 ID.INV CIT279552
 KW_ZH 海错
@@ -34191,169 +34546,169 @@ KW_ZH 海错
 TERM_PINYIN hai xian
 TERM_EN sea delicacies
 TYPE CIT
-ID cit_3_1_2_7_1_3
+ID cit_3_1_2_8_1_3
 TERM_ZH 海鮮
-CIT 3.1.2.7.1.3
+CIT 3.1.2.8.1.3
 $
-N 3.1.2.7.2
+N 3.1.2.8.2
 BROADER 食品
 ID.INV THES283984
 TERM_PINYIN rou shi
 TERM_EN meat
-C 3.1.2.7.2.1
-; 3.1.2.7.2.2
+C 3.1.2.8.2.1
+; 3.1.2.8.2.2
 TYPE CIT
-ID cit_3_1_2_7_2
+ID cit_3_1_2_8_2
 TERM_ZH 肉食
-CIT 3.1.2.7.2
+CIT 3.1.2.8.2
 $
-N 3.1.2.7.2.1
+N 3.1.2.8.2.1
 BROADER 肉食
 ID.INV THES283985
 TERM_PINYIN zhu rou
 TERM_EN pork
 TYPE CIT
-ID cit_3_1_2_7_2_1
+ID cit_3_1_2_8_2_1
 TERM_ZH 豬肉
-CIT 3.1.2.7.2.1
+CIT 3.1.2.8.2.1
 $
-N 3.1.2.7.2.2
+N 3.1.2.8.2.2
 BROADER 肉食
 ID.INV THES283986
 TERM_PINYIN yang rou
 TERM_EN lamb and mutton
 TYPE CIT
-ID cit_3_1_2_7_2_2
+ID cit_3_1_2_8_2_2
 TERM_ZH 羊肉
-CIT 3.1.2.7.2.2
+CIT 3.1.2.8.2.2
 $
-N 3.1.2.7.3
+N 3.1.2.8.3
 BROADER 食品
 ID.INV CIT288438
 TERM_PINYIN zheng shi
 TERM_EN steamed food
-C 3.1.2.7.3.1
-; 3.1.2.7.3.2
+C 3.1.2.8.3.1
+; 3.1.2.8.3.2
 TYPE CIT
-ID cit_3_1_2_7_3
+ID cit_3_1_2_8_3
 TERM_ZH 篜食
-CIT 3.1.2.7.3
+CIT 3.1.2.8.3
 $
-N 3.1.2.7.3.1
+N 3.1.2.8.3.1
 BROADER 篜食
 ID.INV CIT281603
 R 同胞一氣
 TERM_PINYIN bao zi
 TERM_EN steamed stuffed bun
 TYPE CIT
-ID cit_3_1_2_7_3_1
+ID cit_3_1_2_8_3_1
 TERM_ZH 包子
-CIT 3.1.2.7.3.1
+CIT 3.1.2.8.3.1
 $
-N 3.1.2.7.3.2
+N 3.1.2.8.3.2
 BROADER 篜食
 ID.INV CIT282348
 KW_ZH 蒸裹
 TERM_PINYIN zong zi
 TERM_EN pyramid-shaped dumpling of glutinous rice wrapped in reed leaves
 TYPE CIT
-ID cit_3_1_2_7_3_2
+ID cit_3_1_2_8_3_2
 TERM_ZH 粽子
-CIT 3.1.2.7.3.2
+CIT 3.1.2.8.3.2
 $
-N 3.1.2.7.4
+N 3.1.2.8.4
 BROADER 食品
 ID.INV THES283875
 KW_ZH 腌制食品
 TERM_PINYIN yan zhi shi pin
 TERM_EN pickled or salted food
-C 3.1.2.7.4.1
-; 3.1.2.7.4.2
+C 3.1.2.8.4.1
+; 3.1.2.8.4.2
 TYPE CIT
-ID cit_3_1_2_7_4
+ID cit_3_1_2_8_4
 TERM_ZH 醃製食品
-CIT 3.1.2.7.4
+CIT 3.1.2.8.4
 $
-N 3.1.2.7.4.1
+N 3.1.2.8.4.1
 BROADER 醃製食品
 ID.INV THES283876
 KW_ZH 咸鱼
 TERM_PINYIN xian yu
 TERM_EN salted fish
 TYPE CIT
-ID cit_3_1_2_7_4_1
+ID cit_3_1_2_8_4_1
 TERM_ZH 鹹魚
-CIT 3.1.2.7.4.1
+CIT 3.1.2.8.4.1
 $
-N 3.1.2.7.4.2
+N 3.1.2.8.4.2
 BROADER 醃製食品
 ID.INV THES284086
 KW_ZH 咸菜
 TERM_PINYIN xian cai
 TERM_EN salted vegetable
 TYPE CIT
-ID cit_3_1_2_7_4_2
+ID cit_3_1_2_8_4_2
 TERM_ZH 鹹菜
-CIT 3.1.2.7.4.2
+CIT 3.1.2.8.4.2
 $
-N 3.1.2.7.5
+N 3.1.2.8.5
 BROADER 食品
 ID.INV THES283929
 KW_ZH 豆制品
 TERM_PINYIN dou zhi pin
 TERM_EN bean products
-C 3.1.2.7.5.1
-; 3.1.2.7.5.2
-; 3.1.2.7.5.3
-; 3.1.2.7.5.4
+C 3.1.2.8.5.1
+; 3.1.2.8.5.2
+; 3.1.2.8.5.3
+; 3.1.2.8.5.4
 TYPE CIT
-ID cit_3_1_2_7_5
+ID cit_3_1_2_8_5
 TERM_ZH 豆製品
-CIT 3.1.2.7.5
+CIT 3.1.2.8.5
 $
-N 3.1.2.7.5.1
+N 3.1.2.8.5.1
 BROADER 豆製品
 ID.INV THES284150
 KW_ZH 豆浆
 TERM_PINYIN dou jiang
 TERM_EN soybean milk
 TYPE CIT
-ID cit_3_1_2_7_5_1
+ID cit_3_1_2_8_5_1
 TERM_ZH 豆漿
-CIT 3.1.2.7.5.1
+CIT 3.1.2.8.5.1
 $
-N 3.1.2.7.5.2
+N 3.1.2.8.5.2
 BROADER 豆製品
 ID.INV THES283959
 TERM_PINYIN dou fu
 TERM_EN bean curd
 TYPE CIT
-ID cit_3_1_2_7_5_2
+ID cit_3_1_2_8_5_2
 TERM_ZH 豆腐
-CIT 3.1.2.7.5.2
+CIT 3.1.2.8.5.2
 $
-N 3.1.2.7.5.3
+N 3.1.2.8.5.3
 BROADER 豆製品
 ID.INV THES283931
 TERM_PINYIN dou fu hua
 TERM_EN jellied bean curd
 TYPE CIT
-ID cit_3_1_2_7_5_3
+ID cit_3_1_2_8_5_3
 TERM_ZH 豆腐花
-CIT 3.1.2.7.5.3
+CIT 3.1.2.8.5.3
 $
-N 3.1.2.7.5.4
+N 3.1.2.8.5.4
 BROADER 豆製品
 ID.INV THES284100
 KW_ZH 豆腐干
 TERM_PINYIN dou fu gan
 TERM_EN dried bean curd
 TYPE CIT
-ID cit_3_1_2_7_5_4
+ID cit_3_1_2_8_5_4
 TERM_ZH 豆腐乾
-CIT 3.1.2.7.5.4
+CIT 3.1.2.8.5.4
 $
-N 3.1.2.7.6
+N 3.1.2.8.6
 BROADER 食品
 ID.INV CIT288439
 KW_ZH 稀饭
@@ -34362,25 +34717,25 @@ TERM_PINYIN xi fan
 TERM_EN watery rice gruel
 KW_EN porridge
 ; congee
-C 3.1.2.7.6.1
-; 3.1.2.7.6.2
+C 3.1.2.8.6.1
+; 3.1.2.8.6.2
 TYPE CIT
-ID cit_3_1_2_7_6
+ID cit_3_1_2_8_6
 TERM_ZH 稀飯
-CIT 3.1.2.7.6
+CIT 3.1.2.8.6
 $
-N 3.1.2.7.6.1
+N 3.1.2.8.6.1
 BROADER 稀飯
 ID.INV CIT281482
 KW_ZH 乳麋
 TERM_PINYIN ru mi
 TERM_EN milk gruel
 TYPE CIT
-ID cit_3_1_2_7_6_1
+ID cit_3_1_2_8_6_1
 TERM_ZH 乳糜
-CIT 3.1.2.7.6.1
+CIT 3.1.2.8.6.1
 $
-N 3.1.2.7.6.2
+N 3.1.2.8.6.2
 BROADER 稀飯
 ID.INV CIT288833
 KW_ZH 口数粥
@@ -34388,11 +34743,11 @@ TERM_EN headcount porridge
 TERM_PINYIN kou shu zhou
 KW_EN red bean porridge
 TYPE CIT
-ID cit_3_1_2_7_6_2
+ID cit_3_1_2_8_6_2
 TERM_ZH 口數粥
-CIT 3.1.2.7.6.2
+CIT 3.1.2.8.6.2
 $
-N 3.1.2.7.7
+N 3.1.2.8.7
 BROADER 食品
 ID.INV CIT284522
 KW_ZH 羹汤
@@ -34402,22 +34757,22 @@ TERM_PINYIN geng tang
 TERM_EN thick soup
 KW_EN broth
 TYPE CIT
-ID cit_3_1_2_7_7
+ID cit_3_1_2_8_7
 TERM_ZH 羹湯
-CIT 3.1.2.7.7
+CIT 3.1.2.8.7
 $
-N 3.1.2.7.8
+N 3.1.2.8.8
 BROADER 食品
 ID.INV THES284107
 KW_ZH 馄饨
 TERM_PINYIN hun dun
 TERM_EN wonton
 TYPE CIT
-ID cit_3_1_2_7_8
+ID cit_3_1_2_8_8
 TERM_ZH 餛飩
-CIT 3.1.2.7.8
+CIT 3.1.2.8.8
 $
-N 3.1.2.7.9
+N 3.1.2.8.9
 BROADER 食品
 ID.INV CIT283551
 KW_ZH 饼
@@ -34427,82 +34782,92 @@ TERM_PINYIN bing
 TERM_EN round flat cake
 KW_EN tortilla-like cake
 ; pancake
-C 3.1.2.7.9.1
+C 3.1.2.8.9.1
 TYPE CIT
-ID cit_3_1_2_7_9
+ID cit_3_1_2_8_9
 TERM_ZH 餅
-CIT 3.1.2.7.9
+CIT 3.1.2.8.9
 $
-N 3.1.2.7.9.1
+N 3.1.2.8.9.1
 BROADER 餅
 ID.INV THES283957
 KW_ZH 煎饼
 TERM_PINYIN jian bing
 TERM_EN thin pancake
 TYPE CIT
-ID cit_3_1_2_7_9_1
+ID cit_3_1_2_8_9_1
 TERM_ZH 煎餅
-CIT 3.1.2.7.9.1
+CIT 3.1.2.8.9.1
 $
-N 3.1.2.7.10
+N 3.1.2.8.10
 BROADER 食品
 ID.INV THES284098
 KW_ZH 糕点
 TERM_PINYIN gao dian
 TERM_EN pastry
 TYPE CIT
-ID cit_3_1_2_7_10
+ID cit_3_1_2_8_10
 TERM_ZH 糕點
-CIT 3.1.2.7.10
+CIT 3.1.2.8.10
 $
-N 3.1.2.7.11
+N 3.1.2.8.11
 BROADER 食品
 ID.INV THES284384
 KW_ZH 冰盘
 TERM_PINYIN bing pan
 TERM_EN iced fruit dish
 TYPE CIT
-ID cit_3_1_2_7_11
+ID cit_3_1_2_8_11
 TERM_ZH 冰盤
-CIT 3.1.2.7.11
+CIT 3.1.2.8.11
 $
-N 3.1.2.7.12
+N 3.1.2.8.12
+BROADER 食品
+ID.INV THES293407
+TERM_PINYIN suan cu
+TERM_EN vinegar
+TYPE CIT
+ID cit_3_1_2_8_12
+TERM_ZH 酸醋
+CIT 3.1.2.8.12
+$
+N 3.1.2.8.13
 BROADER 食品
 ID.INV CIT287005
 TERM_PINYIN xiang xiang de shi pin
 TERM_EN imaginary foodstuff
-C 3.1.2.7.12.1
+C 3.1.2.8.13.1
 TYPE CIT
-ID cit_3_1_2_7_12
+ID cit_3_1_2_8_13
 TERM_ZH 想像的食品
-CIT 3.1.2.7.12
+CIT 3.1.2.8.13
 $
-N 3.1.2.7.12.1
+N 3.1.2.8.13.1
 BROADER 想像的食品
 ID.INV CIT279965
 TERM_PINYIN bai shi
 TERM_EN white stone
 TYPE CIT
-ID cit_3_1_2_7_12_1
+ID cit_3_1_2_8_13_1
 TERM_ZH 白石
-CIT 3.1.2.7.12.1
+CIT 3.1.2.8.13.1
 $
-N 3.1.2.8
+N 3.1.2.9
 BROADER 飲食
 ID.INV CIT287755
 KW_ZH 饮料
 TERM_PINYIN yin liao
 TERM_EN beverage
 KW_EN drink
-C 3.1.2.8.1
-; 3.1.2.8.2
-; 3.1.2.8.3
+C 3.1.2.9.1
+; 3.1.2.9.2
+; 3.1.2.9.3
 TYPE CIT
-ID cit_3_1_2_8
+ID cit_3_1_2_9
 TERM_ZH 飲料
-CIT 3.1.2.8
+CIT 3.1.2.9
 $
-N 3.1.2.8.1
+N 3.1.2.9.1
 BROADER 飲料
 ID.INV CIT283054
 KW_ZH 茗
@@ -34510,11 +34875,11 @@ KW_ZH 茗
 TERM_PINYIN cha
 TERM_EN tea
 TYPE CIT
-ID cit_3_1_2_8_1
+ID cit_3_1_2_9_1
 TERM_ZH 茶
-CIT 3.1.2.8.1
+CIT 3.1.2.9.1
 $
-N 3.1.2.8.2
+N 3.1.2.9.2
 BROADER 飲料
 ID.INV CIT286661
 KW_ZH 壺中
@@ -34525,26 +34890,49 @@ TERM_PINYIN jiu
 TERM_EN wine
 KW_EN liquor
 ; spirits
-C 3.1.2.8.2.1
-; 3.1.2.8.2.2
-; 3.1.2.8.2.3
+C 3.1.2.9.2.1
+; 3.1.2.9.2.2
+; 3.1.2.9.2.3
+; 3.1.2.9.2.4
+; 3.1.2.9.2.5
 TYPE CIT
-ID cit_3_1_2_8_2
+ID cit_3_1_2_9_2
 TERM_ZH 酒
-CIT 3.1.2.8.2
+CIT 3.1.2.9.2
 $
-N 3.1.2.8.2.1
+N 3.1.2.9.2.1
+BROADER 酒
+ID.INV THES293408
+KW_ZH 白酒
+TERM_PINYIN shao jiu
+TERM_EN strong white spirits
+TYPE CIT
+ID cit_3_1_2_9_2_1
+TERM_ZH 燒酒
+CIT 3.1.2.9.2.1
+$
+N 3.1.2.9.2.2
+BROADER 酒
+ID.INV THES293409
+TERM_PINYIN mi jiu
+TERM_EN rice wine
+TYPE CIT
+ID cit_3_1_2_9_2_2
+TERM_ZH 米酒
+CIT 3.1.2.9.2.2
+$
+N 3.1.2.9.2.3
 BROADER 酒
 ID.INV CIT284587
 KW_ZH 宜春
 TERM_PINYIN chun jiu
 TERM_EN liquor prepared in spring and winter
 TYPE CIT
-ID cit_3_1_2_8_2_1
+ID cit_3_1_2_9_2_3
 TERM_ZH 春酒
-CIT 3.1.2.8.2.1
+CIT 3.1.2.9.2.3
 $
-N 3.1.2.8.2.2
+N 3.1.2.9.2.4
 BROADER 酒
 ID.INV CIT281863
 KW_ZH 屠苏酒
@@ -34553,22 +34941,22 @@ KW_ZH 屠苏酒
 TERM_PINYIN tu su jiu
 TERM_EN tusu wine
 TYPE CIT
-ID cit_3_1_2_8_2_2
+ID cit_3_1_2_9_2_4
 TERM_ZH 屠蘇酒
-CIT 3.1.2.8.2.2
+CIT 3.1.2.9.2.4
 $
-N 3.1.2.8.2.3
+N 3.1.2.9.2.5
 BROADER 酒
 ID.INV THES285451
 R 春水
 TERM_PINYIN liu xiang
 TERM_EN flowing fragrance
 TYPE CIT
-ID cit_3_1_2_8_2_3
+ID cit_3_1_2_9_2_5
 TERM_ZH 流香
-CIT 3.1.2.8.2.3
+CIT 3.1.2.9.2.5
 $
-N 3.1.2.8.3
+N 3.1.2.9.3
 BROADER 飲料
 ID.INV CIT283304
 KW_ZH 酢浆
@@ -34578,11 +34966,11 @@ KW_ZH 酢浆
 TERM_PINYIN cu jiang
 TERM_EN sour-flavoured liquid made from wheat
 TYPE CIT
-ID cit_3_1_2_8_3
+ID cit_3_1_2_9_3
 TERM_ZH 酢漿
-CIT 3.1.2.8.3
+CIT 3.1.2.9.3
 $
-N 3.1.2.9
+N 3.1.2.10
 BROADER 飲食
 ID.INV CIT287765
 KW_ZH 烟草
@@ -34590,96 +34978,96 @@ TERM_PINYIN yan cao
 TERM_EN tobacco
 KW_EN tabacco plant
 ; Nicotiana tabacum
-C 3.1.2.9.1
-; 3.1.2.9.2
-; 3.1.2.9.3
-; 3.1.2.9.4
-; 3.1.2.9.5
-; 3.1.2.9.6
+C 3.1.2.10.1
+; 3.1.2.10.2
+; 3.1.2.10.3
+; 3.1.2.10.4
+; 3.1.2.10.5
+; 3.1.2.10.6
 TYPE CIT
-ID cit_3_1_2_9
+ID cit_3_1_2_10
 TERM_ZH 煙草
-CIT 3.1.2.9
+CIT 3.1.2.10
 $
-N 3.1.2.9.1
+N 3.1.2.10.1
 BROADER 煙草
 ID.INV THES283960
 KW_ZH 吸烟
 TERM_PINYIN xi yan
 TERM_EN smoking
 TYPE CIT
-ID cit_3_1_2_9_1
+ID cit_3_1_2_10_1
 TERM_ZH 吸煙
-CIT 3.1.2.9.1
+CIT 3.1.2.10.1
 $
-N 3.1.2.9.2
+N 3.1.2.10.2
 BROADER 煙草
 ID.INV THES283892
 KW_ZH 旱烟
 TERM_PINYIN han yan
 TERM_EN dry-smoked tobacco
 TYPE CIT
-ID cit_3_1_2_9_2
+ID cit_3_1_2_10_2
 TERM_ZH 旱煙
-CIT 3.1.2.9.2
+CIT 3.1.2.10.2
 $
-N 3.1.2.9.3
+N 3.1.2.10.3
 BROADER 煙草
 ID.INV CIT287764
 KW_ZH 鼻烟
 TERM_PINYIN bi yan
 TERM_EN snuff
 TYPE CIT
-ID cit_3_1_2_9_3
+ID cit_3_1_2_10_3
 TERM_ZH 鼻煙
-CIT 3.1.2.9.3
+CIT 3.1.2.10.3
 $
-N 3.1.2.9.4
+N 3.1.2.10.4
 BROADER 煙草
 ID.INV THES283893
 KW_ZH 旱烟袋
 TERM_PINYIN han yan dai
 TERM_EN long-stemmed Chinese pipe
 TYPE CIT
-ID cit_3_1_2_9_4
+ID cit_3_1_2_10_4
 TERM_ZH 旱煙袋
-CIT 3.1.2.9.4
+CIT 3.1.2.10.4
 $
-N 3.1.2.9.5
+N 3.1.2.10.5
 BROADER 煙草
 ID.INV CIT286017
 KW_ZH 鼻烟壶
 TERM_PINYIN bi yan hu
 TERM_EN snuff bottle
 TYPE CIT
-ID cit_3_1_2_9_5
+ID cit_3_1_2_10_5
 TERM_ZH 鼻煙壺
-CIT 3.1.2.9.5
+CIT 3.1.2.10.5
 $
-N 3.1.2.9.6
+N 3.1.2.10.6
 BROADER 煙草
 ID.INV THES292126
 TERM_PINYIN yan he bao
 TERM_EN tobacco pouch
 TYPE CIT
-ID cit_3_1_2_9_6
+ID cit_3_1_2_10_6
 TERM_ZH 煙荷包
-CIT 3.1.2.9.6
+CIT 3.1.2.10.6
 $
-N 3.1.2.10
+N 3.1.2.11
 BROADER 飲食
 ID.INV CIT286095
 TERM_PINYIN xiang liao
 TERM_EN incense
-C 3.1.2.10.1
-; 3.1.2.10.2
-; 3.1.2.10.3
+C 3.1.2.11.1
+; 3.1.2.11.2
+; 3.1.2.11.3
 TYPE CIT
-ID cit_3_1_2_10
+ID cit_3_1_2_11
 TERM_ZH 香料
-CIT 3.1.2.10
+CIT 3.1.2.11
 $
-N 3.1.2.10.1
+N 3.1.2.11.1
 BROADER 香料
 ID.INV THES283858
 KW_ZH 线香
@@ -34689,113 +35077,113 @@ KW_ZH 线香
 TERM_PINYIN xian xiang
 TERM_EN incense stick
 TYPE CIT
-ID cit_3_1_2_10_1
+ID cit_3_1_2_11_1
 TERM_ZH 線香
-CIT 3.1.2.10.1
+CIT 3.1.2.11.1
 $
-N 3.1.2.10.2
+N 3.1.2.11.2
 BROADER 香料
 ID.INV CIT290173
 KW_ZH 香烟
 TERM_PINYIN xiang yan
 TERM_EN incense smoke
 TYPE CIT
-ID cit_3_1_2_10_2
+ID cit_3_1_2_11_2
 TERM_ZH 香煙
-CIT 3.1.2.10.2
+CIT 3.1.2.11.2
 $
-N 3.1.2.10.3
+N 3.1.2.11.3
 BROADER 香料
 ID.INV CIT286089
 TERM_PINYIN xiang ju
 TERM_EN incense utensil
-C 3.1.2.10.3.1
-; 3.1.2.10.3.2
-; 3.1.2.10.3.3
-; 3.1.2.10.3.4
-; 3.1.2.10.3.5
+C 3.1.2.11.3.1
+; 3.1.2.11.3.2
+; 3.1.2.11.3.3
+; 3.1.2.11.3.4
+; 3.1.2.11.3.5
 TYPE CIT
-ID cit_3_1_2_10_3
+ID cit_3_1_2_11_3
 TERM_ZH 香具
-CIT 3.1.2.10.3
+CIT 3.1.2.11.3
 $
-N 3.1.2.10.3.1
+N 3.1.2.11.3.1
 BROADER 香具
 ID.INV CIT286093
 KW_ZH 香合
 TERM_PINYIN xiang he
 TERM_EN incense box
 TYPE CIT
-ID cit_3_1_2_10_3_1
+ID cit_3_1_2_11_3_1
 TERM_ZH 香盒
-CIT 3.1.2.10.3.1
+CIT 3.1.2.11.3.1
 $
-N 3.1.2.10.3.2
+N 3.1.2.11.3.2
 BROADER 香具
 ID.INV CIT286096
 TERM_PINYIN xiang tong
 TERM_EN incense tube
 TYPE CIT
-ID cit_3_1_2_10_3_2
+ID cit_3_1_2_11_3_2
 TERM_ZH 香筒
-CIT 3.1.2.10.3.2
+CIT 3.1.2.11.3.2
 $
-N 3.1.2.10.3.3
+N 3.1.2.11.3.3
 BROADER 香具
 ID.INV CIT286091
 KW_ZH 花薰
 TERM_PINYIN xiang xun
 TERM_EN incense perfumer
 TYPE CIT
-ID cit_3_1_2_10_3_3
+ID cit_3_1_2_11_3_3
 TERM_ZH 香薰
-CIT 3.1.2.10.3.3
+CIT 3.1.2.11.3.3
 $
-N 3.1.2.10.3.4
+N 3.1.2.11.3.4
 BROADER 香具
 ID.INV CIT283561
 KW_ZH 香炉
 TERM_PINYIN xiang lu
 TERM_EN incense burner
-C 3.1.2.10.3.4.1
-; 3.1.2.10.3.4.2
+C 3.1.2.11.3.4.1
+; 3.1.2.11.3.4.2
 TYPE CIT
-ID cit_3_1_2_10_3_4
+ID cit_3_1_2_11_3_4
 TERM_ZH 香爐
-CIT 3.1.2.10.3.4
+CIT 3.1.2.11.3.4
 $
-N 3.1.2.10.3.4.1
+N 3.1.2.11.3.4.1
 BROADER 香爐
 ID.INV CIT286090
 KW_ZH 博山炉
 TERM_PINYIN bo shan lu
 TERM_EN hill-shaped incense burner
 TYPE CIT
-ID cit_3_1_2_10_3_4_1
+ID cit_3_1_2_11_3_4_1
 TERM_ZH 博山爐
-CIT 3.1.2.10.3.4.1
+CIT 3.1.2.11.3.4.1
 $
-N 3.1.2.10.3.4.2
+N 3.1.2.11.3.4.2
 BROADER 香爐
 ID.INV CIT284862
 KW_ZH 提炉
 TERM_PINYIN ti lu
 TERM_EN incense burner with a handle
 TYPE CIT
-ID cit_3_1_2_10_3_4_2
+ID cit_3_1_2_11_3_4_2
 TERM_ZH 提爐
-CIT 3.1.2.10.3.4.2
+CIT 3.1.2.11.3.4.2
 $
-N 3.1.2.10.3.5
+N 3.1.2.11.3.5
 BROADER 香具
 ID.INV CIT286097
 KW_ZH 香铲
 TERM_PINYIN xiang chan
 TERM_EN incense shovel
 TYPE CIT
-ID cit_3_1_2_10_3_5
+ID cit_3_1_2_11_3_5
 TERM_ZH 香鏟
-CIT 3.1.2.10.3.5
+CIT 3.1.2.11.3.5
 $
 N 3.1.3
 BROADER 衣食住行
@@ -35074,6 +35462,7 @@ C 3.1.3.2.1
 ; 3.1.3.2.2
 ; 3.1.3.2.3
 ; 3.1.3.2.4
+; 3.1.3.2.5
 TYPE CIT
 ID cit_3_1_3_2
 TERM_ZH 環境 (居住)
@@ -35197,6 +35586,16 @@ CIT 3.1.3.2.1.4
 $
 N 3.1.3.2.2
 BROADER 環境 (居住)
+ID.INV THES293335
+TERM_PINYIN ji zhen
+TERM_EN town
+TYPE CIT
+ID cit_3_1_3_2_2
+TERM_ZH 集鎮
+CIT 3.1.3.2.2
+$
+N 3.1.3.2.3
+BROADER 環境 (居住)
 ID.INV CIT280667
 KW_ZH 乡村
 ; 荷乡
@@ -35208,13 +35607,13 @@ KW_ZH 乡村
 TERM_PINYIN xiang cun
 TERM_EN countryside
 KW_EN rural area
-C 3.1.3.2.2.1
+C 3.1.3.2.3.1
 TYPE CIT
-ID cit_3_1_3_2_2
+ID cit_3_1_3_2_3
 TERM_ZH 鄉村
-CIT 3.1.3.2.2
+CIT 3.1.3.2.3
 $
-N 3.1.3.2.2.1
+N 3.1.3.2.3.1
 BROADER 鄉村
 ID.INV CIT283376
 KW_ZH 村庄
@@ -35253,16 +35652,16 @@ KW_ZH 村庄
 TERM_PINYIN cun zhuang
 TERM_EN village
 KW_EN hamlet
-C 3.1.3.2.2.1.1
-; 3.1.3.2.2.1.2
-; 3.1.3.2.2.1.3
-; 3.1.3.2.2.1.4
+C 3.1.3.2.3.1.1
+; 3.1.3.2.3.1.2
+; 3.1.3.2.3.1.3
+; 3.1.3.2.3.1.4
 TYPE CIT
-ID cit_3_1_3_2_2_1
+ID cit_3_1_3_2_3_1
 TERM_ZH 邨莊
-CIT 3.1.3.2.2.1
+CIT 3.1.3.2.3.1
 $
-N 3.1.3.2.2.1.1
+N 3.1.3.2.3.1.1
 BROADER 邨莊
 ID.INV CIT282581
 KW_ZH 渔庄
@@ -35270,22 +35669,22 @@ KW_ZH 渔庄
 TERM_PINYIN yu zhuang
 TERM_EN fishing village
 TYPE CIT
-ID cit_3_1_3_2_2_1_1
+ID cit_3_1_3_2_3_1_1
 TERM_ZH 漁莊
-CIT 3.1.3.2.2.1.1
+CIT 3.1.3.2.3.1.1
 $
-N 3.1.3.2.2.1.2
+N 3.1.3.2.3.1.2
 BROADER 邨莊
 ID.INV CIT283031
 KW_ZH 苗寨
 TERM_PINYIN cun zhai
 TERM_EN stockaded village
 TYPE CIT
-ID cit_3_1_3_2_2_1_2
+ID cit_3_1_3_2_3_1_2
 TERM_ZH 村寨
-CIT 3.1.3.2.2.1.2
+CIT 3.1.3.2.3.1.2
 $
-N 3.1.3.2.2.1.3
+N 3.1.3.2.3.1.3
 BROADER 邨莊
 ID.INV THES292590
 KW_ZH 山村
@@ -35295,21 +35694,21 @@ KW_ZH 山村
 TERM_PINYIN shan cun
 TERM_EN mountain village
 TYPE CIT
-ID cit_3_1_3_2_2_1_3
+ID cit_3_1_3_2_3_1_3
 TERM_ZH 山邨
-CIT 3.1.3.2.2.1.3
+CIT 3.1.3.2.3.1.3
 $
-N 3.1.3.2.2.1.4
+N 3.1.3.2.3.1.4
 BROADER 邨莊
 ID.INV THES285352
 TERM_PINYIN cang cun
 TERM_EN hidden village
 TYPE CIT
-ID cit_3_1_3_2_2_1_4
+ID cit_3_1_3_2_3_1_4
 TERM_ZH 藏村
-CIT 3.1.3.2.2.1.4
+CIT 3.1.3.2.3.1.4
 $
-N 3.1.3.2.3
+N 3.1.3.2.4
 BROADER 環境 (居住)
 ID.INV CIT287708
 KW_ZH 雪郊
@@ -35320,24 +35719,24 @@ KW_ZH 雪郊
 TERM_PINYIN jiao wai
 TERM_EN countryside around a city
 KW_EN outskirts
-C 3.1.3.2.3.1
+C 3.1.3.2.4.1
 TYPE CIT
-ID cit_3_1_3_2_3
+ID cit_3_1_3_2_4
 TERM_ZH 郊外
-CIT 3.1.3.2.3
+CIT 3.1.3.2.4
 $
-N 3.1.3.2.3.1
+N 3.1.3.2.4.1
 BROADER 郊外
 ID.INV THES292541
 KW_ZH 东郊
 TERM_PINYIN dong jiao
 TERM_EN eastern suburbs
 TYPE CIT
-ID cit_3_1_3_2_3_1
+ID cit_3_1_3_2_4_1
 TERM_ZH 東郊
-CIT 3.1.3.2.3.1
+CIT 3.1.3.2.4.1
 $
-N 3.1.3.2.4
+N 3.1.3.2.5
 BROADER 環境 (居住)
 ID.INV CIT284595
 KW_ZH 草野
@@ -35358,13 +35757,13 @@ KW_ZH 草野
 TERM_PINYIN ye wai
 TERM_EN open countryside
 KW_EN field
-C 3.1.3.2.4.1
+C 3.1.3.2.5.1
 TYPE CIT
-ID cit_3_1_3_2_4
+ID cit_3_1_3_2_5
 TERM_ZH 野外
-CIT 3.1.3.2.4
+CIT 3.1.3.2.5
 $
-N 3.1.3.2.4.1
+N 3.1.3.2.5.1
 BROADER 野外
 ID.INV CIT279125
 R 隱居
@@ -35372,9 +35771,9 @@ KW_ZH 林薮
 TERM_PINYIN lin sou
 TERM_EN woods and marshes
 TYPE CIT
-ID cit_3_1_3_2_4_1
+ID cit_3_1_3_2_5_1
 TERM_ZH 林藪
-CIT 3.1.3.2.4.1
+CIT 3.1.3.2.5.1
 $
 N 3.1.3.3
 BROADER 居住
@@ -36665,6 +37064,7 @@ C 3.1.3.3.3.9.1
 ; 3.1.3.3.3.9.7
 ; 3.1.3.3.3.9.8
 ; 3.1.3.3.3.9.9
+; 3.1.3.3.3.9.10
 TYPE CIT
 ID cit_3_1_3_3_3_9
 TERM_ZH 窗
@@ -36747,6 +37147,16 @@ CIT 3.1.3.3.3.9.7
 $
 N 3.1.3.3.3.9.8
 BROADER 窗
+ID.INV THES293237
+TERM_PINYIN sha chuang
+TERM_EN gauze-covered window
+TYPE CIT
+ID cit_3_1_3_3_3_9_8
+TERM_ZH 紗窗
+CIT 3.1.3.3.3.9.8
+$
+N 3.1.3.3.3.9.9
+BROADER 窗
 ID.INV CIT283435
 KW_ZH 开窗
 ; 开窗
@@ -36756,20 +37166,20 @@ KW_ZH 开窗
 TERM_PINYIN kai chuang
 TERM_EN wide-open window
 TYPE CIT
-ID cit_3_1_3_3_3_9_8
+ID cit_3_1_3_3_3_9_9
 TERM_ZH 開窗
-CIT 3.1.3.3.3.9.8
+CIT 3.1.3.3.3.9.9
 $
-N 3.1.3.3.3.9.9
+N 3.1.3.3.3.9.10
 BROADER 窗
 ID.INV THES285496
 KW_ZH 闲窗
 TERM_PINYIN xian chuang
 TERM_EN quiet window
 TYPE CIT
-ID cit_3_1_3_3_3_9_9
+ID cit_3_1_3_3_3_9_10
 TERM_ZH 閒窗
-CIT 3.1.3.3.3.9.9
+CIT 3.1.3.3.3.9.10
 $
 N 3.1.3.3.3.10
 BROADER 構件 (屋舍)
@@ -37015,8 +37425,6 @@ N 3.1.3.3.5.3.1
 BROADER 照明器
 ID.INV CIT284656
 KW_ZH 蜡烛
-; 秉燭
-; 秉烛
 TERM_PINYIN la zhu
 TERM_EN candle
 C 3.1.3.3.5.3.1.1
@@ -37295,6 +37703,7 @@ C 3.1.3.3.6.1.2.1
 ; 3.1.3.3.6.1.2.2
 ; 3.1.3.3.6.1.2.3
 ; 3.1.3.3.6.1.2.4
+; 3.1.3.3.6.1.2.5
 TYPE CIT
 ID cit_3_1_3_3_6_1_2
 TERM_ZH 坐具
@@ -37367,6 +37776,16 @@ TYPE CIT
 ID cit_3_1_3_3_6_1_2_4
 TERM_ZH 坐墊
 CIT 3.1.3.3.6.1.2.4
+$
+N 3.1.3.3.6.1.2.5
+BROADER 坐具
+ID.INV THES293299
+TERM_PINYIN ping ji
+TERM_EN armrest
+TYPE CIT
+ID cit_3_1_3_3_6_1_2_5
+TERM_ZH 憑几
+CIT 3.1.3.3.6.1.2.5
 $
 N 3.1.3.3.6.1.3
 BROADER 傢俱
@@ -38742,6 +39161,7 @@ TERM_EN luggage
 KW_EN baggage
 C 3.1.4.1.3.4.1
 ; 3.1.4.1.3.4.2
+; 3.1.4.1.3.4.3
 TYPE CIT
 ID cit_3_1_4_1_3_4
 TERM_ZH 行李
@@ -38770,6 +39190,18 @@ TYPE CIT
 ID cit_3_1_4_1_3_4_2
 TERM_ZH 包袱
 CIT 3.1.4.1.3.4.2
+$
+N 3.1.4.1.3.4.3
+BROADER 行李
+ID.INV THES284078
+KW_ZH 搭裢
+; 搭肩
+TERM_PINYIN da lian
+TERM_EN long rectangular bag hung from the shoulder
+TYPE CIT
+ID cit_3_1_4_1_3_4_3
+TERM_ZH 搭褳
+CIT 3.1.4.1.3.4.3
 $
 N 3.1.4.1.4
 BROADER 旅行
@@ -38883,6 +39315,7 @@ C 3.1.4.2.1.1
 ; 3.1.4.2.1.12
 ; 3.1.4.2.1.13
 ; 3.1.4.2.1.14
+; 3.1.4.2.1.15
 TYPE CIT
 ID cit_3_1_4_2_1
 TERM_ZH 道路
@@ -38890,20 +39323,30 @@ CIT 3.1.4.2.1
 $
 N 3.1.4.2.1.1
 BROADER 道路
+ID.INV THES293274
+TERM_PINYIN jie dao
+TERM_EN street
+TYPE CIT
+ID cit_3_1_4_2_1_1
+TERM_ZH 街道
+CIT 3.1.4.2.1.1
+$
+N 3.1.4.2.1.2
+BROADER 道路
 DISCRIM 國都
 ID.INV CIT284625
 KW_ZH 街道 (国都)
 ; 槐路
 ; 六街
 ; 槐街
-TERM_PINYIN jie dao
-TERM_EN street
+TERM_PINYIN jie dao (guo du)
+TERM_EN street (the capital of a country)
 TYPE CIT
-ID cit_3_1_4_2_1_1
+ID cit_3_1_4_2_1_2
 TERM_ZH 街道 (國都)
-CIT 3.1.4.2.1.1
+CIT 3.1.4.2.1.2
 $
-N 3.1.4.2.1.2
+N 3.1.4.2.1.3
 BROADER 道路
 DISCRIM 郊野
 ID.INV CIT280363
@@ -38913,21 +39356,21 @@ KW_ZH 紫陌
 TERM_PINYIN dao lu (jiao ye)
 TERM_EN path (countryside)
 TYPE CIT
-ID cit_3_1_4_2_1_2
+ID cit_3_1_4_2_1_3
 TERM_ZH 道路 (郊野)
-CIT 3.1.4.2.1.2
+CIT 3.1.4.2.1.3
 $
-N 3.1.4.2.1.3
+N 3.1.4.2.1.4
 BROADER 道路
 ID.INV THES285608
 TERM_PINYIN gu dao
 TERM_EN ancient road
 TYPE CIT
-ID cit_3_1_4_2_1_3
+ID cit_3_1_4_2_1_4
 TERM_ZH 古道
-CIT 3.1.4.2.1.3
+CIT 3.1.4.2.1.4
 $
-N 3.1.4.2.1.4
+N 3.1.4.2.1.5
 BROADER 道路
 ID.INV THES285394
 KW_ZH 远路
@@ -38935,21 +39378,21 @@ KW_ZH 远路
 TERM_PINYIN yuan lu
 TERM_EN long road
 TYPE CIT
-ID cit_3_1_4_2_1_4
+ID cit_3_1_4_2_1_5
 TERM_ZH 遠路
-CIT 3.1.4.2.1.4
+CIT 3.1.4.2.1.5
 $
-N 3.1.4.2.1.5
+N 3.1.4.2.1.6
 BROADER 道路
 ID.INV CIT276934
 TERM_PINYIN yin lu
 TERM_EN leading the way
 TYPE CIT
-ID cit_3_1_4_2_1_5
+ID cit_3_1_4_2_1_6
 TERM_ZH 引路
-CIT 3.1.4.2.1.5
+CIT 3.1.4.2.1.6
 $
-N 3.1.4.2.1.6
+N 3.1.4.2.1.7
 BROADER 道路
 ID.INV CIT284733
 KW_ZH 步道
@@ -38971,15 +39414,15 @@ KW_ZH 步道
 TERM_PINYIN xiao lu
 TERM_EN footpath
 KW_EN trail
-C 3.1.4.2.1.6.1
-; 3.1.4.2.1.6.2
-; 3.1.4.2.1.6.3
+C 3.1.4.2.1.7.1
+; 3.1.4.2.1.7.2
+; 3.1.4.2.1.7.3
 TYPE CIT
-ID cit_3_1_4_2_1_6
+ID cit_3_1_4_2_1_7
 TERM_ZH 小路
-CIT 3.1.4.2.1.6
+CIT 3.1.4.2.1.7
 $
-N 3.1.4.2.1.6.1
+N 3.1.4.2.1.7.1
 BROADER 小路
 ID.INV CIT282195
 KW_ZH 曲径
@@ -38987,11 +39430,11 @@ KW_ZH 曲径
 TERM_PINYIN qu jing
 TERM_EN winding footpath
 TYPE CIT
-ID cit_3_1_4_2_1_6_1
+ID cit_3_1_4_2_1_7_1
 TERM_ZH 曲徑
-CIT 3.1.4.2.1.6.1
+CIT 3.1.4.2.1.7.1
 $
-N 3.1.4.2.1.6.2
+N 3.1.4.2.1.7.2
 BROADER 小路
 ID.INV CIT282774
 KW_ZH 石径
@@ -38999,11 +39442,11 @@ KW_ZH 石径
 TERM_PINYIN shi jing
 TERM_EN footpath paved with stone
 TYPE CIT
-ID cit_3_1_4_2_1_6_2
+ID cit_3_1_4_2_1_7_2
 TERM_ZH 石徑
-CIT 3.1.4.2.1.6.2
+CIT 3.1.4.2.1.7.2
 $
-N 3.1.4.2.1.6.3
+N 3.1.4.2.1.7.3
 BROADER 小路
 ID.INV CIT277745
 R 隱居
@@ -39013,11 +39456,11 @@ TERM_PINYIN san jing
 TERM_EN three footpaths
 KW_EN three pathways
 TYPE CIT
-ID cit_3_1_4_2_1_6_3
+ID cit_3_1_4_2_1_7_3
 TERM_ZH 三徑
-CIT 3.1.4.2.1.6.3
+CIT 3.1.4.2.1.7.3
 $
-N 3.1.4.2.1.7
+N 3.1.4.2.1.8
 BROADER 道路
 ID.INV CIT278420
 KW_ZH 山径
@@ -39028,24 +39471,24 @@ KW_ZH 山径
 ; 翠微路
 TERM_PINYIN shan jing
 TERM_EN mountain path
-C 3.1.4.2.1.7.1
+C 3.1.4.2.1.8.1
 TYPE CIT
-ID cit_3_1_4_2_1_7
+ID cit_3_1_4_2_1_8
 TERM_ZH 山徑
-CIT 3.1.4.2.1.7
+CIT 3.1.4.2.1.8
 $
-N 3.1.4.2.1.7.1
+N 3.1.4.2.1.8.1
 BROADER 山徑
 ID.INV THES285523
 KW_ZH 险径
 TERM_PINYIN xian jing
 TERM_EN precarious mountain path
 TYPE CIT
-ID cit_3_1_4_2_1_7_1
+ID cit_3_1_4_2_1_8_1
 TERM_ZH 險徑
-CIT 3.1.4.2.1.7.1
+CIT 3.1.4.2.1.8.1
 $
-N 3.1.4.2.1.8
+N 3.1.4.2.1.9
 BROADER 道路
 ID.INV CIT282776
 KW_ZH 磴
@@ -39060,27 +39503,27 @@ KW_EN stone steps
 ; steps on rocks
 ; ledge on a mountain
 TERM_EN stone stairway
-C 3.1.4.2.1.8.1
-; 3.1.4.2.1.8.2
-; 3.1.4.2.1.8.3
-; 3.1.4.2.1.8.4
+C 3.1.4.2.1.9.1
+; 3.1.4.2.1.9.2
+; 3.1.4.2.1.9.3
+; 3.1.4.2.1.9.4
 TYPE CIT
-ID cit_3_1_4_2_1_8
+ID cit_3_1_4_2_1_9
 TERM_ZH 石磴
-CIT 3.1.4.2.1.8
+CIT 3.1.4.2.1.9
 $
-N 3.1.4.2.1.8.1
+N 3.1.4.2.1.9.1
 BROADER 石磴
 ID.INV THES285284
 KW_ZH 曲隥
 TERM_PINYIN qu deng
 TERM_EN winding stone stairway
 TYPE CIT
-ID cit_3_1_4_2_1_8_1
+ID cit_3_1_4_2_1_9_1
 TERM_ZH 曲磴
-CIT 3.1.4.2.1.8.1
+CIT 3.1.4.2.1.9.1
 $
-N 3.1.4.2.1.8.2
+N 3.1.4.2.1.9.2
 BROADER 石磴
 ID.INV THES285467
 KW_ZH 云磴
@@ -39088,31 +39531,31 @@ KW_ZH 云磴
 TERM_PINYIN yun deng
 TERM_EN stone stairway into clouds
 TYPE CIT
-ID cit_3_1_4_2_1_8_2
+ID cit_3_1_4_2_1_9_2
 TERM_ZH 雲磴
-CIT 3.1.4.2.1.8.2
+CIT 3.1.4.2.1.9.2
 $
-N 3.1.4.2.1.8.3
+N 3.1.4.2.1.9.3
 BROADER 石磴
 ID.INV THES288902
 TERM_PINYIN bi deng
 TERM_EN emerald-blue stone stairway
 TYPE CIT
-ID cit_3_1_4_2_1_8_3
+ID cit_3_1_4_2_1_9_3
 TERM_ZH 碧磴
-CIT 3.1.4.2.1.8.3
+CIT 3.1.4.2.1.9.3
 $
-N 3.1.4.2.1.8.4
+N 3.1.4.2.1.9.4
 BROADER 石磴
 ID.INV THES288937
 TERM_PINYIN dan deng
 TERM_EN cinnabar-red stone stairway
 TYPE CIT
-ID cit_3_1_4_2_1_8_4
+ID cit_3_1_4_2_1_9_4
 TERM_ZH 丹磴
-CIT 3.1.4.2.1.8.4
+CIT 3.1.4.2.1.9.4
 $
-N 3.1.4.2.1.9
+N 3.1.4.2.1.10
 BROADER 道路
 ID.INV CIT282352
 KW_ZH 栈道
@@ -39122,48 +39565,48 @@ TERM_PINYIN zhan dao
 KW_EN plank road built along the face of a cliff
 ; edgeway
 TERM_EN cliffway
-C 3.1.4.2.1.9.1
-; 3.1.4.2.1.9.2
-; 3.1.4.2.1.9.3
+C 3.1.4.2.1.10.1
+; 3.1.4.2.1.10.2
+; 3.1.4.2.1.10.3
 TYPE CIT
-ID cit_3_1_4_2_1_9
+ID cit_3_1_4_2_1_10
 TERM_ZH 棧道
-CIT 3.1.4.2.1.9
+CIT 3.1.4.2.1.10
 $
-N 3.1.4.2.1.9.1
+N 3.1.4.2.1.10.1
 BROADER 棧道
 ID.INV CIT282196
 KW_ZH 曲栈
 TERM_PINYIN qu zhan
 TERM_EN winding cliffway
 TYPE CIT
-ID cit_3_1_4_2_1_9_1
+ID cit_3_1_4_2_1_10_1
 TERM_ZH 曲棧
-CIT 3.1.4.2.1.9.1
+CIT 3.1.4.2.1.10.1
 $
-N 3.1.4.2.1.9.2
+N 3.1.4.2.1.10.2
 BROADER 棧道
 ID.INV THES285481
 KW_ZH 云栈
 TERM_PINYIN yun zhan
 TERM_EN cliffway into clouds
 TYPE CIT
-ID cit_3_1_4_2_1_9_2
+ID cit_3_1_4_2_1_10_2
 TERM_ZH 雲棧
-CIT 3.1.4.2.1.9.2
+CIT 3.1.4.2.1.10.2
 $
-N 3.1.4.2.1.9.3
+N 3.1.4.2.1.10.3
 BROADER 棧道
 ID.INV THES285522
 KW_ZH 危栈
 TERM_PINYIN wei zhan
 TERM_EN precarious cliffway
 TYPE CIT
-ID cit_3_1_4_2_1_9_3
+ID cit_3_1_4_2_1_10_3
 TERM_ZH 危棧
-CIT 3.1.4.2.1.9.3
+CIT 3.1.4.2.1.10.3
 $
-N 3.1.4.2.1.10
+N 3.1.4.2.1.11
 BROADER 道路
 ID.INV CIT282391
 KW_ZH 桥
@@ -39180,21 +39623,21 @@ KW_ZH 桥
 ; 雪橋
 TERM_PINYIN qiao
 TERM_EN bridge
-C 3.1.4.2.1.10.1
-; 3.1.4.2.1.10.2
-; 3.1.4.2.1.10.3
-; 3.1.4.2.1.10.4
-; 3.1.4.2.1.10.5
-; 3.1.4.2.1.10.6
-; 3.1.4.2.1.10.7
-; 3.1.4.2.1.10.8
-; 3.1.4.2.1.10.9
+C 3.1.4.2.1.11.1
+; 3.1.4.2.1.11.2
+; 3.1.4.2.1.11.3
+; 3.1.4.2.1.11.4
+; 3.1.4.2.1.11.5
+; 3.1.4.2.1.11.6
+; 3.1.4.2.1.11.7
+; 3.1.4.2.1.11.8
+; 3.1.4.2.1.11.9
 TYPE CIT
-ID cit_3_1_4_2_1_10
+ID cit_3_1_4_2_1_11
 TERM_ZH 橋
-CIT 3.1.4.2.1.10
+CIT 3.1.4.2.1.11
 $
-N 3.1.4.2.1.10.1
+N 3.1.4.2.1.11.1
 BROADER 橋
 ID.INV CIT283362
 KW_ZH 过桥
@@ -39203,11 +39646,11 @@ KW_ZH 过桥
 TERM_PINYIN guo qiao
 TERM_EN passing over a bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_1
+ID cit_3_1_4_2_1_11_1
 TERM_ZH 過橋
-CIT 3.1.4.2.1.10.1
+CIT 3.1.4.2.1.11.1
 $
-N 3.1.4.2.1.10.2
+N 3.1.4.2.1.11.2
 BROADER 橋
 ID.INV CIT281953
 KW_ZH 彴
@@ -39219,46 +39662,46 @@ KW_ZH 彴
 TERM_PINYIN xiao qiao
 TERM_EN small bridge
 KW_EN foot bridge
-C 3.1.4.2.1.10.2.1
-; 3.1.4.2.1.10.2.2
+C 3.1.4.2.1.11.2.1
+; 3.1.4.2.1.11.2.2
 TYPE CIT
-ID cit_3_1_4_2_1_10_2
+ID cit_3_1_4_2_1_11_2
 TERM_ZH 小橋
-CIT 3.1.4.2.1.10.2
+CIT 3.1.4.2.1.11.2
 $
-N 3.1.4.2.1.10.2.1
+N 3.1.4.2.1.11.2.1
 BROADER 小橋
 ID.INV CIT282194
 TERM_PINYIN qu zhuo
 TERM_EN winding small bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_2_1
+ID cit_3_1_4_2_1_11_2_1
 TERM_ZH 曲彴
-CIT 3.1.4.2.1.10.2.1
+CIT 3.1.4.2.1.11.2.1
 $
-N 3.1.4.2.1.10.2.2
+N 3.1.4.2.1.11.2.2
 BROADER 小橋
 ID.INV CIT282773
 KW_ZH 石橋
 TERM_PINYIN shi zhuo
 TERM_EN small stone bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_2_2
+ID cit_3_1_4_2_1_11_2_2
 TERM_ZH 石彴
-CIT 3.1.4.2.1.10.2.2
+CIT 3.1.4.2.1.11.2.2
 $
-N 3.1.4.2.1.10.3
+N 3.1.4.2.1.11.3
 BROADER 橋
 ID.INV CIT281914
 KW_ZH 平桥
 TERM_PINYIN ping qiao
 TERM_EN flat bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_3
+ID cit_3_1_4_2_1_11_3
 TERM_ZH 平橋
-CIT 3.1.4.2.1.10.3
+CIT 3.1.4.2.1.11.3
 $
-N 3.1.4.2.1.10.4
+N 3.1.4.2.1.11.4
 BROADER 橋
 ID.INV CIT280926
 KW_ZH 虹梁
@@ -39266,33 +39709,33 @@ KW_ZH 虹梁
 TERM_PINYIN gong qiao
 TERM_EN arch bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_4
+ID cit_3_1_4_2_1_11_4
 TERM_ZH 拱橋
-CIT 3.1.4.2.1.10.4
+CIT 3.1.4.2.1.11.4
 $
-N 3.1.4.2.1.10.5
+N 3.1.4.2.1.11.5
 BROADER 橋
 ID.INV CIT282114
 KW_ZH 断桥
 TERM_PINYIN duan qiao
 TERM_EN broken bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_5
+ID cit_3_1_4_2_1_11_5
 TERM_ZH 斷橋
-CIT 3.1.4.2.1.10.5
+CIT 3.1.4.2.1.11.5
 $
-N 3.1.4.2.1.10.6
+N 3.1.4.2.1.11.6
 BROADER 橋
 ID.INV CIT282283
 KW_ZH 板桥
 TERM_PINYIN ban qiao
 TERM_EN wooden bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_6
+ID cit_3_1_4_2_1_11_6
 TERM_ZH 板橋
-CIT 3.1.4.2.1.10.6
+CIT 3.1.4.2.1.11.6
 $
-N 3.1.4.2.1.10.7
+N 3.1.4.2.1.11.7
 BROADER 橋
 ID.INV CIT282298
 R 送別
@@ -39300,31 +39743,31 @@ KW_ZH 柳桥
 TERM_PINYIN liu qiao
 TERM_EN bridge under a willow tree
 TYPE CIT
-ID cit_3_1_4_2_1_10_7
+ID cit_3_1_4_2_1_11_7
 TERM_ZH 柳橋
-CIT 3.1.4.2.1.10.7
+CIT 3.1.4.2.1.11.7
 $
-N 3.1.4.2.1.10.8
+N 3.1.4.2.1.11.8
 BROADER 橋
 ID.INV CIT280050
 TERM_PINYIN shi liang
 TERM_EN natural rock bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_8
+ID cit_3_1_4_2_1_11_8
 TERM_ZH 石梁
-CIT 3.1.4.2.1.10.8
+CIT 3.1.4.2.1.11.8
 $
-N 3.1.4.2.1.10.9
+N 3.1.4.2.1.11.9
 BROADER 橋
 ID.INV THES288947
 TERM_PINYIN hong qiao
 TERM_EN red bridge
 TYPE CIT
-ID cit_3_1_4_2_1_10_9
+ID cit_3_1_4_2_1_11_9
 TERM_ZH 紅橋
-CIT 3.1.4.2.1.10.9
+CIT 3.1.4.2.1.11.9
 $
-N 3.1.4.2.1.11
+N 3.1.4.2.1.12
 BROADER 道路
 ID.INV CIT282632
 TERM_PINYIN pai fang
@@ -39333,11 +39776,11 @@ KW_EN honorific gateway
 ; honorific archway
 ; memorial gateway
 TYPE CIT
-ID cit_3_1_4_2_1_11
+ID cit_3_1_4_2_1_12
 TERM_ZH 牌坊
-CIT 3.1.4.2.1.11
+CIT 3.1.4.2.1.12
 $
-N 3.1.4.2.1.12
+N 3.1.4.2.1.13
 BROADER 道路
 ID.INV CIT282633
 KW_ZH 牌楼
@@ -39345,11 +39788,11 @@ TERM_PINYIN pai lou
 TERM_EN decorated archway
 KW_EN temporary ceremonial gateway
 TYPE CIT
-ID cit_3_1_4_2_1_12
+ID cit_3_1_4_2_1_13
 TERM_ZH 牌樓
-CIT 3.1.4.2.1.12
+CIT 3.1.4.2.1.13
 $
-N 3.1.4.2.1.13
+N 3.1.4.2.1.14
 BROADER 道路
 ID.INV CIT283084
 KW_ZH 华表
@@ -39357,19 +39800,19 @@ TERM_PINYIN hua biao
 TERM_EN memorial column
 KW_EN memorial pillar
 TYPE CIT
-ID cit_3_1_4_2_1_13
+ID cit_3_1_4_2_1_14
 TERM_ZH 華表
-CIT 3.1.4.2.1.13
+CIT 3.1.4.2.1.14
 $
-N 3.1.4.2.1.14
+N 3.1.4.2.1.15
 BROADER 道路
 ID.INV THES292092
 TERM_PINYIN qi gan
 TERM_EN flagpole
 TYPE CIT
-ID cit_3_1_4_2_1_14
+ID cit_3_1_4_2_1_15
 TERM_ZH 旗桿
-CIT 3.1.4.2.1.14
+CIT 3.1.4.2.1.15
 $
 N 3.1.4.2.2
 BROADER 陸路 (交通)
@@ -40043,6 +40486,8 @@ C 3.1.4.3.1
 ; 3.1.4.3.4
 ; 3.1.4.3.5
 ; 3.1.4.3.6
+; 3.1.4.3.7
+; 3.1.4.3.8
 TYPE CIT
 ID cit_3_1_4_3
 TERM_ZH 水路 (交通)
@@ -40050,28 +40495,16 @@ CIT 3.1.4.3
 $
 N 3.1.4.3.1
 BROADER 水路 (交通)
-ID.INV CIT281309
-KW_ZH 橫涉
-; 涉川
-TERM_PINYIN she shui
-TERM_EN wading
-TYPE CIT
-ID cit_3_1_4_3_1
-TERM_ZH 涉水
-CIT 3.1.4.3.1
-$
-N 3.1.4.3.2
-BROADER 水路 (交通)
 ID.INV CIT284642
 TERM_PINYIN chuan fu
 TERM_EN crewman
 KW_EN boatman
 TYPE CIT
-ID cit_3_1_4_3_2
+ID cit_3_1_4_3_1
 TERM_ZH 船夫
-CIT 3.1.4.3.2
+CIT 3.1.4.3.1
 $
-N 3.1.4.3.3
+N 3.1.4.3.2
 BROADER 水路 (交通)
 ID.INV CIT282649
 KW_ZH 牵夫
@@ -40080,83 +40513,24 @@ KW_ZH 牵夫
 TERM_PINYIN qian fu
 TERM_EN boat tracker
 TYPE CIT
-ID cit_3_1_4_3_3
+ID cit_3_1_4_3_2
 TERM_ZH 牽夫
+CIT 3.1.4.3.2
+$
+N 3.1.4.3.3
+BROADER 水路 (交通)
+ID.INV CIT281309
+KW_ZH 橫涉
+; 涉川
+TERM_PINYIN she shui
+TERM_EN wading
+TYPE CIT
+ID cit_3_1_4_3_3
+TERM_ZH 涉水
 CIT 3.1.4.3.3
 $
 N 3.1.4.3.4
 BROADER 水路 (交通)
-DISCRIM 舟楫
-ID.INV CIT286921
-KW_ZH 运输 (舟楫)
-; 运载
-; 載月
-; 載梅
-; 載酒
-; 載鶴
-TERM_EN conveying passengers or goods (watercraft)
-TERM_PINYIN yun shu (zhou ji)
-C 3.1.4.3.4.1
-; 3.1.4.3.4.2
-; 3.1.4.3.4.3
-; 3.1.4.3.4.4
-; 3.1.4.3.4.5
-TYPE CIT
-ID cit_3_1_4_3_4
-TERM_ZH 運輸 (舟楫)
-CIT 3.1.4.3.4
-$
-N 3.1.4.3.4.1
-BROADER 運輸 (舟楫)
-ID.INV CIT281543
-KW_ZH 倚岸
-; 漁泊
-; 舟維
-; 維州
-; 繫艇
-; 停舟
-; 停橈
-; 停棹
-; 艤釣
-; 艤舟
-; 艤艇
-; 艤棹
-; 艤渡
-; 閒泊
-TERM_PINYIN bo zhou
-TERM_EN mooring
-KW_EN being at anchor
-C 3.1.4.3.4.1.1
-; 3.1.4.3.4.1.2
-TYPE CIT
-ID cit_3_1_4_3_4_1
-TERM_ZH 泊舟
-CIT 3.1.4.3.4.1
-$
-N 3.1.4.3.4.1.1
-BROADER 泊舟
-ID.INV CIT283786
-TERM_PINYIN ye bo
-TERM_EN mooring in the wilderness
-TYPE CIT
-ID cit_3_1_4_3_4_1_1
-TERM_ZH 野泊
-CIT 3.1.4.3.4.1.1
-$
-N 3.1.4.3.4.1.2
-BROADER 泊舟
-ID.INV THES283518
-KW_ZH 码头
-TERM_PINYIN ma tou
-TERM_EN wharf
-KW_EN dock
-TYPE CIT
-ID cit_3_1_4_3_4_1_2
-TERM_ZH 碼頭
-CIT 3.1.4.3.4.1.2
-$
-N 3.1.4.3.4.2
-BROADER 運輸 (舟楫)
 ID.INV CIT287860
 KW_ZH 舟行
 ; 江行
@@ -40175,28 +40549,39 @@ KW_ZH 舟行
 ; 穿流
 TERM_PINYIN xing zhou
 TERM_EN sailing
-C 3.1.4.3.4.2.1
-; 3.1.4.3.4.2.2
-; 3.1.4.3.4.2.3
-; 3.1.4.3.4.2.4
-; 3.1.4.3.4.2.5
-; 3.1.4.3.4.2.6
+C 3.1.4.3.4.1
+; 3.1.4.3.4.2
+; 3.1.4.3.4.3
+; 3.1.4.3.4.4
+; 3.1.4.3.4.5
+; 3.1.4.3.4.6
+; 3.1.4.3.4.7
 TYPE CIT
-ID cit_3_1_4_3_4_2
+ID cit_3_1_4_3_4
 TERM_ZH 行舟
-CIT 3.1.4.3.4.2
+CIT 3.1.4.3.4
 $
-N 3.1.4.3.4.2.1
+N 3.1.4.3.4.1
+BROADER 行舟
+ID.INV THES293272
+TERM_PINYIN ba duo
+TERM_EN holding the rudder
+TYPE CIT
+ID cit_3_1_4_3_4_1
+TERM_ZH 把舵
+CIT 3.1.4.3.4.1
+$
+N 3.1.4.3.4.2
 BROADER 行舟
 ID.INV CIT277763
 TERM_PINYIN shang shui
 TERM_EN sailing upstream
 TYPE CIT
-ID cit_3_1_4_3_4_2_1
+ID cit_3_1_4_3_4_2
 TERM_ZH 上水
-CIT 3.1.4.3.4.2.1
+CIT 3.1.4.3.4.2
 $
-N 3.1.4.3.4.2.2
+N 3.1.4.3.4.3
 BROADER 行舟
 ID.INV CIT283617
 KW_ZH 鼓櫂
@@ -40207,11 +40592,11 @@ KW_ZH 鼓櫂
 TERM_PINYIN hua jiang
 TERM_EN paddling
 TYPE CIT
-ID cit_3_1_4_3_4_2_2
+ID cit_3_1_4_3_4_3
 TERM_ZH 划槳
-CIT 3.1.4.3.4.2.2
+CIT 3.1.4.3.4.3
 $
-N 3.1.4.3.4.2.3
+N 3.1.4.3.4.4
 BROADER 行舟
 ID.INV CIT283474
 KW_ZH 撑舟
@@ -40219,22 +40604,22 @@ TERM_PINYIN cheng zhou
 TERM_EN poling a boat
 KW_EN punting a boat
 TYPE CIT
-ID cit_3_1_4_3_4_2_3
+ID cit_3_1_4_3_4_4
 TERM_ZH 撐舟
-CIT 3.1.4.3.4.2.3
+CIT 3.1.4.3.4.4
 $
-N 3.1.4.3.4.2.4
+N 3.1.4.3.4.5
 BROADER 行舟
 ID.INV THES291757
 KW_ZH 搖橹
 TERM_PINYIN yao lu
 TERM_EN rowing a scull
 TYPE CIT
-ID cit_3_1_4_3_4_2_4
+ID cit_3_1_4_3_4_5
 TERM_ZH 搖櫓
-CIT 3.1.4.3.4.2.4
+CIT 3.1.4.3.4.5
 $
-N 3.1.4.3.4.2.5
+N 3.1.4.3.4.6
 BROADER 行舟
 ID.INV CIT282036
 KW_ZH 挂帆
@@ -40242,21 +40627,127 @@ KW_ZH 挂帆
 TERM_PINYIN gua fan
 TERM_EN hoisting sails
 TYPE CIT
-ID cit_3_1_4_3_4_2_5
+ID cit_3_1_4_3_4_6
 TERM_ZH 掛帆
-CIT 3.1.4.3.4.2.5
+CIT 3.1.4.3.4.6
 $
-N 3.1.4.3.4.2.6
+N 3.1.4.3.4.7
 BROADER 行舟
 ID.INV THES291793
 TERM_PINYIN la qian
 TERM_EN towing a boat
 TYPE CIT
-ID cit_3_1_4_3_4_2_6
+ID cit_3_1_4_3_4_7
 TERM_ZH 拉縴
-CIT 3.1.4.3.4.2.6
+CIT 3.1.4.3.4.7
 $
-N 3.1.4.3.4.3
+N 3.1.4.3.5
+BROADER 水路 (交通)
+ID.INV CIT281543
+KW_ZH 倚岸
+; 漁泊
+; 舟維
+; 維州
+; 繫艇
+; 停舟
+; 停橈
+; 停棹
+; 艤釣
+; 艤舟
+; 艤艇
+; 艤棹
+; 艤渡
+; 閒泊
+TERM_PINYIN bo zhou
+TERM_EN mooring
+KW_EN being at anchor
+C 3.1.4.3.5.1
+; 3.1.4.3.5.2
+TYPE CIT
+ID cit_3_1_4_3_5
+TERM_ZH 泊舟
+CIT 3.1.4.3.5
+$
+N 3.1.4.3.5.1
+BROADER 泊舟
+ID.INV CIT283786
+TERM_PINYIN ye bo
+TERM_EN mooring in the wilderness
+TYPE CIT
+ID cit_3_1_4_3_5_1
+TERM_ZH 野泊
+CIT 3.1.4.3.5.1
+$
+N 3.1.4.3.5.2
+BROADER 泊舟
+ID.INV THES283518
+KW_ZH 码头
+TERM_PINYIN ma tou
+TERM_EN wharf
+KW_EN dock
+TYPE CIT
+ID cit_3_1_4_3_5_2
+TERM_ZH 碼頭
+CIT 3.1.4.3.5.2
+$
+N 3.1.4.3.6
+BROADER 水路 (交通)
+DISCRIM 舟楫
+ID.INV CIT286921
+KW_ZH 运输 (舟楫)
+; 运载
+; 載月
+; 載梅
+; 載酒
+; 載鶴
+TERM_EN conveying passengers or goods (watercraft)
+TERM_PINYIN yun shu (zhou ji)
+C 3.1.4.3.6.1
+; 3.1.4.3.6.2
+; 3.1.4.3.6.3
+TYPE CIT
+ID cit_3_1_4_3_6
+TERM_ZH 運輸 (舟楫)
+CIT 3.1.4.3.6
+$
+N 3.1.4.3.6.1
+BROADER 運輸 (舟楫)
+DISCRIM 舟楫
+ID.INV THES284882
+KW_ZH 货运 (舟楫)
+TERM_PINYIN huo yun (zhou ji)
+TERM_EN cargo transport
+C 3.1.4.3.6.1.1
+; 3.1.4.3.6.1.2
+TYPE CIT
+ID cit_3_1_4_3_6_1
+TERM_ZH 貨運 (舟楫)
+CIT 3.1.4.3.6.1
+$
+N 3.1.4.3.6.1.1
+BROADER 貨運 (舟楫)
+ID.INV CIT288483
+KW_ZH 漕运
+; 通漕
+TERM_PINYIN cao yun
+TERM_EN grain transport by water to the capital
+TYPE CIT
+ID cit_3_1_4_3_6_1_1
+TERM_ZH 漕運
+CIT 3.1.4.3.6.1.1
+$
+N 3.1.4.3.6.1.2
+BROADER 貨運 (舟楫)
+ID.INV THES283022
+KW_ZH 盐运
+TERM_PINYIN yan yun
+TERM_EN salt transport by water to the capital
+TYPE CIT
+ID cit_3_1_4_3_6_1_2
+TERM_ZH 鹽運
+CIT 3.1.4.3.6.1.2
+$
+N 3.1.4.3.6.2
 BROADER 運輸 (舟楫)
 ID.INV CIT287859
 KW_ZH 摆渡
@@ -40266,17 +40757,17 @@ KW_ZH 摆渡
 ; 驶渡
 TERM_PINYIN bai du
 TERM_EN ferry
-C 3.1.4.3.4.3.1
-; 3.1.4.3.4.3.2
-; 3.1.4.3.4.3.3
-; 3.1.4.3.4.3.4
-; 3.1.4.3.4.3.5
+C 3.1.4.3.6.2.1
+; 3.1.4.3.6.2.2
+; 3.1.4.3.6.2.3
+; 3.1.4.3.6.2.4
+; 3.1.4.3.6.2.5
 TYPE CIT
-ID cit_3_1_4_3_4_3
+ID cit_3_1_4_3_6_2
 TERM_ZH 擺渡
-CIT 3.1.4.3.4.3
+CIT 3.1.4.3.6.2
 $
-N 3.1.4.3.4.3.1
+N 3.1.4.3.6.2.1
 BROADER 擺渡
 ID.INV CIT282530
 KW_ZH 津
@@ -40286,33 +40777,33 @@ KW_ZH 津
 ; 桃津
 TERM_PINYIN du kou
 TERM_EN pier
-C 3.1.4.3.4.3.1.1
+C 3.1.4.3.6.2.1.1
 TYPE CIT
-ID cit_3_1_4_3_4_3_1
+ID cit_3_1_4_3_6_2_1
 TERM_ZH 渡口
-CIT 3.1.4.3.4.3.1
+CIT 3.1.4.3.6.2.1
 $
-N 3.1.4.3.4.3.1.1
+N 3.1.4.3.6.2.1.1
 BROADER 渡口
 ID.INV THES285607
 TERM_PINYIN gu du
 TERM_EN ancient pier
 TYPE CIT
-ID cit_3_1_4_3_4_3_1_1
+ID cit_3_1_4_3_6_2_1_1
 TERM_ZH 古渡
-CIT 3.1.4.3.4.3.1.1
+CIT 3.1.4.3.6.2.1.1
 $
-N 3.1.4.3.4.3.2
+N 3.1.4.3.6.2.2
 BROADER 擺渡
 ID.INV CIT281957
 TERM_PINYIN dai du
 TERM_EN waiting for the ferry
 TYPE CIT
-ID cit_3_1_4_3_4_3_2
+ID cit_3_1_4_3_6_2_2
 TERM_ZH 待渡
-CIT 3.1.4.3.4.3.2
+CIT 3.1.4.3.6.2.2
 $
-N 3.1.4.3.4.3.3
+N 3.1.4.3.6.2.3
 BROADER 擺渡
 ID.INV CIT281654
 KW_ZH 问渡
@@ -40320,11 +40811,11 @@ KW_ZH 问渡
 TERM_PINYIN wen du
 TERM_EN asking about the ferry
 TYPE CIT
-ID cit_3_1_4_3_4_3_3
+ID cit_3_1_4_3_6_2_3
 TERM_ZH 問渡
-CIT 3.1.4.3.4.3.3
+CIT 3.1.4.3.6.2.3
 $
-N 3.1.4.3.4.3.4
+N 3.1.4.3.6.2.4
 BROADER 擺渡
 ID.INV CIT281658
 KW_ZH 唤渡
@@ -40332,101 +40823,64 @@ KW_ZH 唤渡
 TERM_PINYIN huan du
 TERM_EN calling over the ferry
 TYPE CIT
-ID cit_3_1_4_3_4_3_4
+ID cit_3_1_4_3_6_2_4
 TERM_ZH 喚渡
-CIT 3.1.4.3.4.3.4
+CIT 3.1.4.3.6.2.4
 $
-N 3.1.4.3.4.3.5
+N 3.1.4.3.6.2.5
 BROADER 擺渡
 ID.INV THES288987
 TERM_PINYIN xuan du
 TERM_EN hubbub ferry
 TYPE CIT
-ID cit_3_1_4_3_4_3_5
+ID cit_3_1_4_3_6_2_5
 TERM_ZH 喧渡
-CIT 3.1.4.3.4.3.5
+CIT 3.1.4.3.6.2.5
 $
-N 3.1.4.3.4.4
-BROADER 運輸 (舟楫)
-DISCRIM 舟楫
-ID.INV THES284882
-KW_ZH 货运 (舟楫)
-TERM_PINYIN huo yun (zhou ji)
-TERM_EN cargo transport
-C 3.1.4.3.4.4.1
-; 3.1.4.3.4.4.2
-TYPE CIT
-ID cit_3_1_4_3_4_4
-TERM_ZH 貨運 (舟楫)
-CIT 3.1.4.3.4.4
-$
-N 3.1.4.3.4.4.1
-BROADER 貨運 (舟楫)
-ID.INV CIT288483
-KW_ZH 漕运
-; 通漕
-TERM_PINYIN cao yun
-TERM_EN grain transport by water to the capital
-TYPE CIT
-ID cit_3_1_4_3_4_4_1
-TERM_ZH 漕運
-CIT 3.1.4.3.4.4.1
-$
-N 3.1.4.3.4.4.2
-BROADER 貨運 (舟楫)
-ID.INV THES283022
-KW_ZH 盐运
-TERM_PINYIN yan yun
-TERM_EN salt transport by water to the capital
-TYPE CIT
-ID cit_3_1_4_3_4_4_2
-TERM_ZH 鹽運
-CIT 3.1.4.3.4.4.2
-$
-N 3.1.4.3.4.5
+N 3.1.4.3.6.3
 BROADER 運輸 (舟楫)
 DISCRIM 水路
 ID.INV CIT288491
 TERM_PINYIN cheng ke (shui lu)
 TERM_EN passenger (waterway)
 TYPE CIT
-ID cit_3_1_4_3_4_5
+ID cit_3_1_4_3_6_3
 TERM_ZH 乘客 (水路)
-CIT 3.1.4.3.4.5
+CIT 3.1.4.3.6.3
 $
-N 3.1.4.3.5
+N 3.1.4.3.7
 BROADER 水路 (交通)
 ID.INV CIT282879
 TERM_PINYIN fa
 TERM_EN raft
-C 3.1.4.3.5.1
-; 3.1.4.3.5.2
+C 3.1.4.3.7.1
+; 3.1.4.3.7.2
 TYPE CIT
-ID cit_3_1_4_3_5
+ID cit_3_1_4_3_7
 TERM_ZH 筏
-CIT 3.1.4.3.5
+CIT 3.1.4.3.7
 $
-N 3.1.4.3.5.1
+N 3.1.4.3.7.1
 BROADER 筏
 ID.INV CIT288481
 TERM_PINYIN mu fa
 TERM_EN log raft
 TYPE CIT
-ID cit_3_1_4_3_5_1
+ID cit_3_1_4_3_7_1
 TERM_ZH 木筏
-CIT 3.1.4.3.5.1
+CIT 3.1.4.3.7.1
 $
-N 3.1.4.3.5.2
+N 3.1.4.3.7.2
 BROADER 筏
 ID.INV CIT288482
 TERM_PINYIN zhu fa
 TERM_EN bamboo raft
 TYPE CIT
-ID cit_3_1_4_3_5_2
+ID cit_3_1_4_3_7_2
 TERM_ZH 竹筏
-CIT 3.1.4.3.5.2
+CIT 3.1.4.3.7.2
 $
-N 3.1.4.3.6
+N 3.1.4.3.8
 BROADER 水路 (交通)
 ID.INV CIT288511
 KW_ZH 歸棹
@@ -40453,28 +40907,28 @@ KW_ZH 歸棹
 ; 仙棹
 TERM_PINYIN zhou ji
 TERM_EN watercraft
-C 3.1.4.3.6.1
-; 3.1.4.3.6.2
-; 3.1.4.3.6.3
-; 3.1.4.3.6.4
-; 3.1.4.3.6.5
+C 3.1.4.3.8.1
+; 3.1.4.3.8.2
+; 3.1.4.3.8.3
+; 3.1.4.3.8.4
+; 3.1.4.3.8.5
 TYPE CIT
-ID cit_3_1_4_3_6
+ID cit_3_1_4_3_8
 TERM_ZH 舟楫
-CIT 3.1.4.3.6
+CIT 3.1.4.3.8
 $
-N 3.1.4.3.6.1
+N 3.1.4.3.8.1
 BROADER 舟楫
 ID.INV THES285550
 KW_ZH 獨舟
 TERM_PINYIN gu zhou
 TERM_EN lone boat
 TYPE CIT
-ID cit_3_1_4_3_6_1
+ID cit_3_1_4_3_8_1
 TERM_ZH 孤舟
-CIT 3.1.4.3.6.1
+CIT 3.1.4.3.8.1
 $
-N 3.1.4.3.6.2
+N 3.1.4.3.8.2
 BROADER 舟楫
 ID.INV THES285597
 KW_ZH 双舟
@@ -40482,44 +40936,44 @@ KW_ZH 双舟
 TERM_PINYIN shuang zhou
 TERM_EN two boats
 TYPE CIT
-ID cit_3_1_4_3_6_2
+ID cit_3_1_4_3_8_2
 TERM_ZH 雙舟
-CIT 3.1.4.3.6.2
+CIT 3.1.4.3.8.2
 $
-N 3.1.4.3.6.3
+N 3.1.4.3.8.3
 BROADER 舟楫
 ID.INV THES285323
 TERM_PINYIN ju zhou
 TERM_EN gathering of boats
 TYPE CIT
-ID cit_3_1_4_3_6_3
+ID cit_3_1_4_3_8_3
 TERM_ZH 聚舟
-CIT 3.1.4.3.6.3
+CIT 3.1.4.3.8.3
 $
-N 3.1.4.3.6.4
+N 3.1.4.3.8.4
 BROADER 舟楫
 DISCRIM 舟楫
 ID.INV THES284878
 KW_ZH 种类 (舟楫)
 TERM_PINYIN zhong lei (zhou ji)
 TERM_EN types (watercraft)
-C 3.1.4.3.6.4.1
-; 3.1.4.3.6.4.2
-; 3.1.4.3.6.4.3
-; 3.1.4.3.6.4.4
-; 3.1.4.3.6.4.5
-; 3.1.4.3.6.4.6
-; 3.1.4.3.6.4.7
-; 3.1.4.3.6.4.8
-; 3.1.4.3.6.4.9
-; 3.1.4.3.6.4.10
-; 3.1.4.3.6.4.11
+C 3.1.4.3.8.4.1
+; 3.1.4.3.8.4.2
+; 3.1.4.3.8.4.3
+; 3.1.4.3.8.4.4
+; 3.1.4.3.8.4.5
+; 3.1.4.3.8.4.6
+; 3.1.4.3.8.4.7
+; 3.1.4.3.8.4.8
+; 3.1.4.3.8.4.9
+; 3.1.4.3.8.4.10
+; 3.1.4.3.8.4.11
 TYPE CIT
-ID cit_3_1_4_3_6_4
+ID cit_3_1_4_3_8_4
 TERM_ZH 種類 (舟楫)
-CIT 3.1.4.3.6.4
+CIT 3.1.4.3.8.4
 $
-N 3.1.4.3.6.4.1
+N 3.1.4.3.8.4.1
 BROADER 種類 (舟楫)
 ID.INV CIT281998
 KW_ZH 扁舟
@@ -40540,34 +40994,34 @@ KW_ZH 扁舟
 TERM_PINYIN xiao zhou
 TERM_EN cockleshell
 KW_EN small boat
-C 3.1.4.3.6.4.1.1
-; 3.1.4.3.6.4.1.2
+C 3.1.4.3.8.4.1.1
+; 3.1.4.3.8.4.1.2
 TYPE CIT
-ID cit_3_1_4_3_6_4_1
+ID cit_3_1_4_3_8_4_1
 TERM_ZH 小舟
-CIT 3.1.4.3.6.4.1
+CIT 3.1.4.3.8.4.1
 $
-N 3.1.4.3.6.4.1.1
+N 3.1.4.3.8.4.1.1
 BROADER 小舟
 ID.INV THES285552
 TERM_PINYIN gu ting
 TERM_EN lone small boat
 TYPE CIT
-ID cit_3_1_4_3_6_4_1_1
+ID cit_3_1_4_3_8_4_1_1
 TERM_ZH 孤艇
-CIT 3.1.4.3.6.4.1.1
+CIT 3.1.4.3.8.4.1.1
 $
-N 3.1.4.3.6.4.1.2
+N 3.1.4.3.8.4.1.2
 BROADER 小舟
 ID.INV CIT283403
 TERM_PINYIN ye hang
 TERM_EN countryside small boat
 TYPE CIT
-ID cit_3_1_4_3_6_4_1_2
+ID cit_3_1_4_3_8_4_1_2
 TERM_ZH 野航
-CIT 3.1.4.3.6.4.1.2
+CIT 3.1.4.3.8.4.1.2
 $
-N 3.1.4.3.6.4.2
+N 3.1.4.3.8.4.2
 BROADER 種類 (舟楫)
 ID.INV CIT282892
 KW_ZH 篷船
@@ -40575,11 +41029,11 @@ KW_ZH 篷船
 TERM_PINYIN peng zhou
 TERM_EN houseboat
 TYPE CIT
-ID cit_3_1_4_3_6_4_2
+ID cit_3_1_4_3_8_4_2
 TERM_ZH 篷舟
-CIT 3.1.4.3.6.4.2
+CIT 3.1.4.3.8.4.2
 $
-N 3.1.4.3.6.4.3
+N 3.1.4.3.8.4.3
 BROADER 種類 (舟楫)
 ID.INV CIT281911
 KW_ZH 飛颿
@@ -40593,25 +41047,25 @@ TERM_EN sailing boat
 KW_EN boat
 ; sailing ship
 ; junk
-C 3.1.4.3.6.4.3.1
-; 3.1.4.3.6.4.3.2
-; 3.1.4.3.6.4.3.3
+C 3.1.4.3.8.4.3.1
+; 3.1.4.3.8.4.3.2
+; 3.1.4.3.8.4.3.3
 TYPE CIT
-ID cit_3_1_4_3_6_4_3
+ID cit_3_1_4_3_8_4_3
 TERM_ZH 帆船
-CIT 3.1.4.3.6.4.3
+CIT 3.1.4.3.8.4.3
 $
-N 3.1.4.3.6.4.3.1
+N 3.1.4.3.8.4.3.1
 BROADER 帆船
 ID.INV THES285549
 TERM_PINYIN gu fan
 TERM_EN lone sail
 TYPE CIT
-ID cit_3_1_4_3_6_4_3_1
+ID cit_3_1_4_3_8_4_3_1
 TERM_ZH 孤帆
-CIT 3.1.4.3.6.4.3.1
+CIT 3.1.4.3.8.4.3.1
 $
-N 3.1.4.3.6.4.3.2
+N 3.1.4.3.8.4.3.2
 BROADER 帆船
 ID.INV THES285391
 KW_ZH 远帆
@@ -40619,33 +41073,33 @@ KW_ZH 远帆
 TERM_PINYIN yuan fan
 TERM_EN distant sail
 TYPE CIT
-ID cit_3_1_4_3_6_4_3_2
+ID cit_3_1_4_3_8_4_3_2
 TERM_ZH 遠帆
-CIT 3.1.4.3.6.4.3.2
+CIT 3.1.4.3.8.4.3.2
 $
-N 3.1.4.3.6.4.3.3
+N 3.1.4.3.8.4.3.3
 BROADER 帆船
 ID.INV THES285598
 KW_ZH 双帆
 TERM_PINYIN shuang fan
 TERM_EN two sailboats
 TYPE CIT
-ID cit_3_1_4_3_6_4_3_3
+ID cit_3_1_4_3_8_4_3_3
 TERM_ZH 雙帆
-CIT 3.1.4.3.6.4.3.3
+CIT 3.1.4.3.8.4.3.3
 $
-N 3.1.4.3.6.4.4
+N 3.1.4.3.8.4.4
 BROADER 種類 (舟楫)
 ID.INV CIT284629
 KW_ZH 楼船
 TERM_PINYIN lou chuan
 TERM_EN large turreted boat
 TYPE CIT
-ID cit_3_1_4_3_6_4_4
+ID cit_3_1_4_3_8_4_4
 TERM_ZH 樓船
-CIT 3.1.4.3.6.4.4
+CIT 3.1.4.3.8.4.4
 $
-N 3.1.4.3.6.4.5
+N 3.1.4.3.8.4.5
 BROADER 種類 (舟楫)
 ID.INV CIT283005
 KW_ZH 舣渡
@@ -40653,11 +41107,11 @@ KW_ZH 舣渡
 TERM_PINYIN du chuan
 TERM_EN ferryboat
 TYPE CIT
-ID cit_3_1_4_3_6_4_5
+ID cit_3_1_4_3_8_4_5
 TERM_ZH 渡船
-CIT 3.1.4.3.6.4.5
+CIT 3.1.4.3.8.4.5
 $
-N 3.1.4.3.6.4.6
+N 3.1.4.3.8.4.6
 BROADER 種類 (舟楫)
 ID.INV CIT277143
 KW_ZH 番舶
@@ -40665,11 +41119,11 @@ KW_ZH 番舶
 TERM_PINYIN hai chuan
 TERM_EN seagoing ship
 TYPE CIT
-ID cit_3_1_4_3_6_4_6
+ID cit_3_1_4_3_8_4_6
 TERM_ZH 海船
-CIT 3.1.4.3.6.4.6
+CIT 3.1.4.3.8.4.6
 $
-N 3.1.4.3.6.4.7
+N 3.1.4.3.8.4.7
 BROADER 種類 (舟楫)
 ID.INV CIT282724
 KW_ZH 畫舸
@@ -40679,44 +41133,44 @@ KW_ZH 畫舸
 ; 画舫
 TERM_PINYIN hua fang
 TERM_EN gaily painted pleasure boat
-C 3.1.4.3.6.4.7.1
+C 3.1.4.3.8.4.7.1
 TYPE CIT
-ID cit_3_1_4_3_6_4_7
+ID cit_3_1_4_3_8_4_7
 TERM_ZH 畫舫
-CIT 3.1.4.3.6.4.7
+CIT 3.1.4.3.8.4.7
 $
-N 3.1.4.3.6.4.7.1
+N 3.1.4.3.8.4.7.1
 BROADER 畫舫
 ID.INV THES283023
 KW_ZH 沙姑
 TERM_PINYIN ji chuan
 TERM_EN floating brothel
 TYPE CIT
-ID cit_3_1_4_3_6_4_7_1
+ID cit_3_1_4_3_8_4_7_1
 TERM_ZH 妓船
-CIT 3.1.4.3.6.4.7.1
+CIT 3.1.4.3.8.4.7.1
 $
-N 3.1.4.3.6.4.8
+N 3.1.4.3.8.4.8
 BROADER 種類 (舟楫)
 ID.INV THES283026
 TERM_PINYIN yu zhou
 TERM_EN imperial boat
 TYPE CIT
-ID cit_3_1_4_3_6_4_8
+ID cit_3_1_4_3_8_4_8
 TERM_ZH 御舟
-CIT 3.1.4.3.6.4.8
+CIT 3.1.4.3.8.4.8
 $
-N 3.1.4.3.6.4.9
+N 3.1.4.3.8.4.9
 BROADER 種類 (舟楫)
 ID.INV THES283021
 TERM_PINYIN zuo chuan
 TERM_EN mandarin's boat
 TYPE CIT
-ID cit_3_1_4_3_6_4_9
+ID cit_3_1_4_3_8_4_9
 TERM_ZH 座船
-CIT 3.1.4.3.6.4.9
+CIT 3.1.4.3.8.4.9
 $
-N 3.1.4.3.6.4.10
+N 3.1.4.3.8.4.10
 BROADER 種類 (舟楫)
 ID.INV CIT284705
 KW_ZH 货舟
@@ -40727,11 +41181,11 @@ TERM_EN cargo ship
 KW_EN cargo vessell
 ; freighter
 TYPE CIT
-ID cit_3_1_4_3_6_4_10
+ID cit_3_1_4_3_8_4_10
 TERM_ZH 貨舟
-CIT 3.1.4.3.6.4.10
+CIT 3.1.4.3.8.4.10
 $
-N 3.1.4.3.6.4.11
+N 3.1.4.3.8.4.11
 BROADER 種類 (舟楫)
 ID.INV CIT282579
 KW_ZH 渔船
@@ -40744,14 +41198,14 @@ KW_ZH 渔船
 ; 釣舟
 TERM_PINYIN yu chuan
 TERM_EN fishing boat
-C 3.1.4.3.6.4.11.1
-; 3.1.4.3.6.4.11.2
+C 3.1.4.3.8.4.11.1
+; 3.1.4.3.8.4.11.2
 TYPE CIT
-ID cit_3_1_4_3_6_4_11
+ID cit_3_1_4_3_8_4_11
 TERM_ZH 漁船
-CIT 3.1.4.3.6.4.11
+CIT 3.1.4.3.8.4.11
 $
-N 3.1.4.3.6.4.11.1
+N 3.1.4.3.8.4.11.1
 BROADER 漁船
 ID.INV CIT282580
 KW_ZH 渔艇
@@ -40759,39 +41213,40 @@ KW_ZH 渔艇
 TERM_PINYIN yu ting
 TERM_EN small fishing boat
 TYPE CIT
-ID cit_3_1_4_3_6_4_11_1
+ID cit_3_1_4_3_8_4_11_1
 TERM_ZH 漁艇
-CIT 3.1.4.3.6.4.11.1
+CIT 3.1.4.3.8.4.11.1
 $
-N 3.1.4.3.6.4.11.2
+N 3.1.4.3.8.4.11.2
 BROADER 漁船
 ID.INV THES285324
 KW_ZH 渔集
 TERM_PINYIN yu ji
 TERM_EN group of fishing boats
 TYPE CIT
-ID cit_3_1_4_3_6_4_11_2
+ID cit_3_1_4_3_8_4_11_2
 TERM_ZH 漁集
-CIT 3.1.4.3.6.4.11.2
+CIT 3.1.4.3.8.4.11.2
 $
-N 3.1.4.3.6.5
+N 3.1.4.3.8.5
 BROADER 舟楫
 DISCRIM 舟楫
 ID.INV CIT288488
 TERM_PINYIN bu jian (zhou ji)
 TERM_EN component (watercraft)
-C 3.1.4.3.6.5.1
-; 3.1.4.3.6.5.2
-; 3.1.4.3.6.5.3
-; 3.1.4.3.6.5.4
-; 3.1.4.3.6.5.5
-; 3.1.4.3.6.5.6
+C 3.1.4.3.8.5.1
+; 3.1.4.3.8.5.2
+; 3.1.4.3.8.5.3
+; 3.1.4.3.8.5.4
+; 3.1.4.3.8.5.5
+; 3.1.4.3.8.5.6
+; 3.1.4.3.8.5.7
 TYPE CIT
-ID cit_3_1_4_3_6_5
+ID cit_3_1_4_3_8_5
 TERM_ZH 部件 (舟楫)
-CIT 3.1.4.3.6.5
+CIT 3.1.4.3.8.5
 $
-N 3.1.4.3.6.5.1
+N 3.1.4.3.8.5.1
 BROADER 部件 (舟楫)
 ID.INV CIT282404
 KW_ZH 桅杆
@@ -40800,11 +41255,21 @@ KW_ZH 桅杆
 TERM_PINYIN wei gan
 TERM_EN mast of a boat
 TYPE CIT
-ID cit_3_1_4_3_6_5_1
+ID cit_3_1_4_3_8_5_1
 TERM_ZH 桅桿
-CIT 3.1.4.3.6.5.1
+CIT 3.1.4.3.8.5.1
 $
-N 3.1.4.3.6.5.2
+N 3.1.4.3.8.5.2
+BROADER 部件 (舟楫)
+ID.INV THES293271
+TERM_PINYIN duo
+TERM_EN rudder
+TYPE CIT
+ID cit_3_1_4_3_8_5_2
+TERM_ZH 舵
+CIT 3.1.4.3.8.5.2
+$
+N 3.1.4.3.8.5.3
 BROADER 部件 (舟楫)
 ID.INV CIT288489
 KW_ZH 橹
@@ -40813,11 +41278,11 @@ KW_EN stern-oar
 ; sweep
 TERM_EN scull
 TYPE CIT
-ID cit_3_1_4_3_6_5_2
+ID cit_3_1_4_3_8_5_3
 TERM_ZH 櫓
-CIT 3.1.4.3.6.5.2
+CIT 3.1.4.3.8.5.3
 $
-N 3.1.4.3.6.5.3
+N 3.1.4.3.8.5.4
 BROADER 部件 (舟楫)
 ID.INV CIT281907
 KW_ZH 篷帆
@@ -40825,13 +41290,13 @@ KW_ZH 篷帆
 ; 江帆
 TERM_PINYIN fan
 TERM_EN sail
-C 3.1.4.3.6.5.3.1
+C 3.1.4.3.8.5.4.1
 TYPE CIT
-ID cit_3_1_4_3_6_5_3
+ID cit_3_1_4_3_8_5_4
 TERM_ZH 帆
-CIT 3.1.4.3.6.5.3
+CIT 3.1.4.3.8.5.4
 $
-N 3.1.4.3.6.5.3.1
+N 3.1.4.3.8.5.4.1
 BROADER 帆
 ID.INV CIT283512
 KW_ZH 云帆
@@ -40839,24 +41304,24 @@ TERM_PINYIN yun fan
 TERM_EN white sail
 KW_EN cloud-sail
 TYPE CIT
-ID cit_3_1_4_3_6_5_3_1
+ID cit_3_1_4_3_8_5_4_1
 TERM_ZH 雲帆
-CIT 3.1.4.3.6.5.3.1
+CIT 3.1.4.3.8.5.4.1
 $
-N 3.1.4.3.6.5.4
+N 3.1.4.3.8.5.5
 BROADER 部件 (舟楫)
 ID.INV CIT282369
 KW_ZH 桨
 ; 亭櫂
 TERM_PINYIN jiang
 TERM_EN oar
-C 3.1.4.3.6.5.4.1
+C 3.1.4.3.8.5.5.1
 TYPE CIT
-ID cit_3_1_4_3_6_5_4
+ID cit_3_1_4_3_8_5_5
 TERM_ZH 槳
-CIT 3.1.4.3.6.5.4
+CIT 3.1.4.3.8.5.5
 $
-N 3.1.4.3.6.5.4.1
+N 3.1.4.3.8.5.5.1
 BROADER 槳
 ID.INV THES285588
 KW_ZH 两桨
@@ -40864,21 +41329,21 @@ KW_ZH 两桨
 TERM_PINYIN liang jiang
 TERM_EN pair of oars
 TYPE CIT
-ID cit_3_1_4_3_6_5_4_1
+ID cit_3_1_4_3_8_5_5_1
 TERM_ZH 兩槳
-CIT 3.1.4.3.6.5.4.1
+CIT 3.1.4.3.8.5.5.1
 $
-N 3.1.4.3.6.5.5
+N 3.1.4.3.8.5.6
 BROADER 部件 (舟楫)
 ID.INV CIT288490
 TERM_PINYIN gao
 TERM_EN boat pole
 TYPE CIT
-ID cit_3_1_4_3_6_5_5
+ID cit_3_1_4_3_8_5_6
 TERM_ZH 篙
-CIT 3.1.4.3.6.5.5
+CIT 3.1.4.3.8.5.6
 $
-N 3.1.4.3.6.5.6
+N 3.1.4.3.8.5.7
 BROADER 部件 (舟楫)
 ID.INV CIT282891
 KW_ZH 船窗
@@ -40886,9 +41351,9 @@ KW_ZH 船窗
 TERM_PINYIN peng chuang
 TERM_EN porthole
 TYPE CIT
-ID cit_3_1_4_3_6_5_6
+ID cit_3_1_4_3_8_5_7
 TERM_ZH 篷窗
-CIT 3.1.4.3.6.5.6
+CIT 3.1.4.3.8.5.7
 $
 N 3.1.4.4
 BROADER 交通
@@ -41838,6 +42303,7 @@ C 3.3.1.3.1
 ; 3.3.1.3.6
 ; 3.3.1.3.7
 ; 3.3.1.3.8
+; 3.3.1.3.9
 TYPE CIT
 ID cit_3_3_1_3
 TERM_ZH 農人
@@ -41848,7 +42314,7 @@ BROADER 農人
 ID.INV CIT283336
 KW_ZH 农夫
 TERM_PINYIN nong fu
-TERM_EN farmer
+TERM_EN male farmer
 TYPE CIT
 ID cit_3_3_1_3_1
 TERM_ZH 農夫
@@ -41859,7 +42325,7 @@ BROADER 農人
 ID.INV CIT283338
 KW_ZH 农妇
 TERM_PINYIN nong fu
-TERM_EN peasant woman
+TERM_EN female farmer
 TYPE CIT
 ID cit_3_3_1_3_2
 TERM_ZH 農婦
@@ -41902,20 +42368,19 @@ CIT 3.3.1.3.5
 $
 N 3.3.1.3.6
 BROADER 農人
-ID.INV THES283998
-KW_ZH 烟农
-TERM_PINYIN yan nong
-TERM_EN tobacco farmer
+ID.INV THES293176
+TERM_PINYIN cha nü
+TERM_EN female tea farmer
 TYPE CIT
 ID cit_3_3_1_3_6
-TERM_ZH 煙農
+TERM_ZH 茶女
 CIT 3.3.1.3.6
 $
 N 3.3.1.3.7
 BROADER 農人
 ID.INV THES292102
 TERM_PINYIN can nong
-TERM_EN silkworm raiser
+TERM_EN male silkworm raiser
 TYPE CIT
 ID cit_3_3_1_3_7
 TERM_ZH 蠶農
@@ -41926,11 +42391,22 @@ BROADER 農人
 ID.INV THES292103
 KW_ZH 蠶女
 TERM_PINYIN can fu
-TERM_EN silkworm-raising woman
+TERM_EN female silkworm raiser
 TYPE CIT
 ID cit_3_3_1_3_8
 TERM_ZH 蠶婦
 CIT 3.3.1.3.8
+$
+N 3.3.1.3.9
+BROADER 農人
+ID.INV THES283998
+KW_ZH 烟农
+TERM_PINYIN yan nong
+TERM_EN tobacco farmer
+TYPE CIT
+ID cit_3_3_1_3_9
+TERM_ZH 煙農
+CIT 3.3.1.3.9
 $
 N 3.3.1.4
 BROADER 社會階層
@@ -44199,6 +44675,7 @@ C 3.4.4.3.1
 ; 3.4.4.3.5
 ; 3.4.4.3.6
 ; 3.4.4.3.7
+; 3.4.4.3.8
 TYPE CIT
 ID cit_3_4_4_3
 TERM_ZH 官員
@@ -44366,6 +44843,17 @@ CIT 3.4.4.3.4
 $
 N 3.4.4.3.5
 BROADER 官員
+ID.INV THES293259
+KW_ZH 晝錦
+TERM_PINYIN rong gui
+TERM_EN returning in glory (said of a high official)
+TYPE CIT
+ID cit_3_4_4_3_5
+TERM_ZH 榮歸
+CIT 3.4.4.3.5
+$
+N 3.4.4.3.6
+BROADER 官員
 ID.INV CIT284261
 R 林居
 KW_ZH 高致
@@ -44373,11 +44861,11 @@ KW_ZH 高致
 TERM_PINYIN zhi shi
 TERM_EN resigning from office
 TYPE CIT
-ID cit_3_4_4_3_5
+ID cit_3_4_4_3_6
 TERM_ZH 致仕
-CIT 3.4.4.3.5
+CIT 3.4.4.3.6
 $
-N 3.4.4.3.6
+N 3.4.4.3.7
 BROADER 官員
 DISCRIM 官員
 ID.INV CIT288603
@@ -44385,49 +44873,49 @@ KW_ZH 政务 (官员)
 TERM_EN government affairs
 KW_EN government administration
 TERM_PINYIN zheng wu (guan yuan)
-C 3.4.4.3.6.1
-; 3.4.4.3.6.2
-; 3.4.4.3.6.3
-; 3.4.4.3.6.4
+C 3.4.4.3.7.1
+; 3.4.4.3.7.2
+; 3.4.4.3.7.3
+; 3.4.4.3.7.4
 TYPE CIT
-ID cit_3_4_4_3_6
+ID cit_3_4_4_3_7
 TERM_ZH 政務 (官員)
-CIT 3.4.4.3.6
+CIT 3.4.4.3.7
 $
-N 3.4.4.3.6.1
+N 3.4.4.3.7.1
 BROADER 政務 (官員)
 ID.INV CIT281497
 TERM_PINYIN ban chun
 TERM_EN issuing spring decree
 TYPE CIT
-ID cit_3_4_4_3_6_1
+ID cit_3_4_4_3_7_1
 TERM_ZH 班春
-CIT 3.4.4.3.6.1
+CIT 3.4.4.3.7.1
 $
-N 3.4.4.3.6.2
+N 3.4.4.3.7.2
 BROADER 政務 (官員)
 ID.INV CIT282440
 TERM_PINYIN shui li
 TERM_EN water conservancy project
 KW_EN irrigation works
-C 3.4.4.3.6.2.1
-; 3.4.4.3.6.2.2
+C 3.4.4.3.7.2.1
+; 3.4.4.3.7.2.2
 TYPE CIT
-ID cit_3_4_4_3_6_2
+ID cit_3_4_4_3_7_2
 TERM_ZH 水利
-CIT 3.4.4.3.6.2
+CIT 3.4.4.3.7.2
 $
-N 3.4.4.3.6.2.1
+N 3.4.4.3.7.2.1
 BROADER 水利
 ID.INV THES292395
 TERM_PINYIN di ba
 TERM_EN dikes and dams
 TYPE CIT
-ID cit_3_4_4_3_6_2_1
+ID cit_3_4_4_3_7_2_1
 TERM_ZH 堤壩
-CIT 3.4.4.3.6.2.1
+CIT 3.4.4.3.7.2.1
 $
-N 3.4.4.3.6.2.2
+N 3.4.4.3.7.2.2
 BROADER 水利
 ID.INV CIT288283
 KW_ZH 水闸
@@ -44435,23 +44923,23 @@ TERM_EN sluice
 KW_EN water gate
 TERM_PINYIN shui zha
 TYPE CIT
-ID cit_3_4_4_3_6_2_2
+ID cit_3_4_4_3_7_2_2
 TERM_ZH 水閘
-CIT 3.4.4.3.6.2.2
+CIT 3.4.4.3.7.2.2
 $
-N 3.4.4.3.6.3
+N 3.4.4.3.7.3
 BROADER 政務 (官員)
 ID.INV CIT288604
 KW_ZH 税务
 TERM_EN taxation
 TERM_PINYIN shui wu
-C 3.4.4.3.6.3.1
+C 3.4.4.3.7.3.1
 TYPE CIT
-ID cit_3_4_4_3_6_3
+ID cit_3_4_4_3_7_3
 TERM_ZH 稅務
-CIT 3.4.4.3.6.3
+CIT 3.4.4.3.7.3
 $
-N 3.4.4.3.6.3.1
+N 3.4.4.3.7.3.1
 BROADER 稅務
 ID.INV CIT282345
 KW_ZH 税关
@@ -44459,11 +44947,11 @@ TERM_PINYIN shui guan
 TERM_EN customhouse
 KW_EN Customs
 TYPE CIT
-ID cit_3_4_4_3_6_3_1
+ID cit_3_4_4_3_7_3_1
 TERM_ZH 稅關
-CIT 3.4.4.3.6.3.1
+CIT 3.4.4.3.7.3.1
 $
-N 3.4.4.3.6.4
+N 3.4.4.3.7.4
 BROADER 政務 (官員)
 ID.INV CIT281596
 KW_ZH 救济
@@ -44473,19 +44961,19 @@ TERM_PINYIN jiu ji
 TERM_EN relief
 KW_EN succor
 TYPE CIT
-ID cit_3_4_4_3_6_4
+ID cit_3_4_4_3_7_4
 TERM_ZH 救濟
-CIT 3.4.4.3.6.4
+CIT 3.4.4.3.7.4
 $
-N 3.4.4.3.7
+N 3.4.4.3.8
 BROADER 官員
 ID.INV THES291816
 TERM_PINYIN jin jian
 TERM_EN remonstrating with the emperor
 TYPE CIT
-ID cit_3_4_4_3_7
+ID cit_3_4_4_3_8
 TERM_ZH 進諫
-CIT 3.4.4.3.7
+CIT 3.4.4.3.8
 $
 N 3.4.5
 BROADER 政治、軍事、法律
@@ -45383,6 +45871,7 @@ TERM_PINYIN fa lü
 C 3.4.6.1
 ; 3.4.6.2
 ; 3.4.6.3
+; 3.4.6.4
 TYPE CIT
 ID cit_3_4_6
 TERM_ZH 法律
@@ -45390,47 +45879,57 @@ CIT 3.4.6
 $
 N 3.4.6.1
 BROADER 法律
+ID.INV THES293231
+TERM_PINYIN ju bu
+TERM_EN making an arrest
+TYPE CIT
+ID cit_3_4_6_1
+TERM_ZH 拘捕
+CIT 3.4.6.1
+$
+N 3.4.6.2
+BROADER 法律
 ID.INV THES291824
 TERM_PINYIN shen an
 TERM_EN holding a court trial
 TYPE CIT
-ID cit_3_4_6_1
+ID cit_3_4_6_2
 TERM_ZH 審案
-CIT 3.4.6.1
+CIT 3.4.6.2
 $
-N 3.4.6.2
+N 3.4.6.3
 BROADER 法律
 ID.INV THES284127
 TERM_PINYIN ku xing
 TERM_EN torture
 TYPE CIT
-ID cit_3_4_6_2
+ID cit_3_4_6_3
 TERM_ZH 酷刑
-CIT 3.4.6.2
+CIT 3.4.6.3
 $
-N 3.4.6.3
+N 3.4.6.4
 BROADER 法律
 ID.INV THES284128
 TERM_PINYIN xing ju
 TERM_EN instruments of torture
-C 3.4.6.3.1
-; 3.4.6.3.2
+C 3.4.6.4.1
+; 3.4.6.4.2
 TYPE CIT
-ID cit_3_4_6_3
+ID cit_3_4_6_4
 TERM_ZH 刑具
-CIT 3.4.6.3
+CIT 3.4.6.4
 $
-N 3.4.6.3.1
+N 3.4.6.4.1
 BROADER 刑具
 ID.INV THES291825
 TERM_PINYIN jia
 TERM_EN cangue
 TYPE CIT
-ID cit_3_4_6_3_1
+ID cit_3_4_6_4_1
 TERM_ZH 枷
-CIT 3.4.6.3.1
+CIT 3.4.6.4.1
 $
-N 3.4.6.3.2
+N 3.4.6.4.2
 BROADER 刑具
 ID.INV THES284126
 KW_ZH 锁链
@@ -45438,9 +45937,9 @@ TERM_PINYIN suo lian
 TERM_EN shackles
 KW_EN chain
 TYPE CIT
-ID cit_3_4_6_3_2
+ID cit_3_4_6_4_2
 TERM_ZH 鎖鍊
-CIT 3.4.6.3.2
+CIT 3.4.6.4.2
 $
 N 3.4.7
 BROADER 政治、軍事、法律
@@ -46214,6 +46713,8 @@ TERM_PINYIN zhang dou
 C 3.4.7.4.3.1
 ; 3.4.7.4.3.2
 ; 3.4.7.4.3.3
+; 3.4.7.4.3.4
+; 3.4.7.4.3.5
 TYPE CIT
 ID cit_3_4_7_4_3
 TERM_ZH 戰鬥
@@ -46247,14 +46748,34 @@ CIT 3.4.7.4.3.2
 $
 N 3.4.7.4.3.3
 BROADER 戰鬥
+ID.INV THES293286
+TERM_PINYIN she sha
+TERM_EN killing by shooting
+TYPE CIT
+ID cit_3_4_7_4_3_3
+TERM_ZH 射殺
+CIT 3.4.7.4.3.3
+$
+N 3.4.7.4.3.4
+BROADER 戰鬥
+ID.INV THES293287
+TERM_PINYIN zhong jian
+TERM_EN being hit by an arrow
+TYPE CIT
+ID cit_3_4_7_4_3_4
+TERM_ZH 中箭
+CIT 3.4.7.4.3.4
+$
+N 3.4.7.4.3.5
+BROADER 戰鬥
 ID.INV CIT289227
 KW_ZH 解围
 TERM_PINYIN jie wei
 TERM_EN raising a siege
 TYPE CIT
-ID cit_3_4_7_4_3_3
+ID cit_3_4_7_4_3_5
 TERM_ZH 解圍
-CIT 3.4.7.4.3.3
+CIT 3.4.7.4.3.5
 $
 N 3.4.7.4.4
 BROADER 戰爭
@@ -46610,27 +47131,6 @@ TYPE CIT
 ID cit_3_4_7_6_5_1
 TERM_ZH 弓
 CIT 3.4.7.6.5.1
-$
-N 3.4.7.6.5.1.1
-BROADER 弓
-ID.INV CIT289693
-TERM_PINYIN gao
-TERM_EN bow container
-TYPE CIT
-ID cit_3_4_7_6_5_1_1
-TERM_ZH 櫜
-CIT 3.4.7.6.5.1.1
-$
-N 3.4.7.6.5.1.2
-BROADER 弓
-ID.INV CIT283137
-R 息兵
-TERM_PINYIN tuo gong
-TERM_EN bows being packed up
-TYPE CIT
-ID cit_3_4_7_6_5_1_2
-TERM_ZH 橐弓
-CIT 3.4.7.6.5.1.2
 $
 N 3.4.7.6.5.2
 BROADER 兵器
@@ -49104,6 +49604,7 @@ C 3.5.2.2.4.1
 ; 3.5.2.2.4.5
 ; 3.5.2.2.4.6
 ; 3.5.2.2.4.7
+; 3.5.2.2.4.8
 TYPE CIT
 ID cit_3_5_2_2_4
 TERM_ZH 兒童遊戲
@@ -49162,60 +49663,71 @@ CIT 3.5.2.2.4.4
 $
 N 3.5.2.2.4.5
 BROADER 兒童遊戲
+DISCRIM 兒童
+ID.INV THES293236
+TERM_PINYIN zhuo liu hua (er tong)
+TERM_EN catching willow catkins
+TYPE CIT
+ID cit_3_5_2_2_4_5
+TERM_ZH 捉柳花 (兒童)
+CIT 3.5.2.2.4.5
+$
+N 3.5.2.2.4.6
+BROADER 兒童遊戲
 ID.INV CIT282085
 KW_ZH 放筝
 TERM_PINYIN fang zheng
 TERM_EN kite flying
 TYPE CIT
-ID cit_3_5_2_2_4_5
+ID cit_3_5_2_2_4_6
 TERM_ZH 放箏
-CIT 3.5.2.2.4.5
+CIT 3.5.2.2.4.6
 $
-N 3.5.2.2.4.6
+N 3.5.2.2.4.7
 BROADER 兒童遊戲
 ID.INV THES283354
 KW_ZH 斗蟋蟀
 TERM_PINYIN dou xishuai
 TERM_EN cricket fight
 TYPE CIT
-ID cit_3_5_2_2_4_6
+ID cit_3_5_2_2_4_7
 TERM_ZH 鬥蟋蟀
-CIT 3.5.2.2.4.6
+CIT 3.5.2.2.4.7
 $
-N 3.5.2.2.4.7
+N 3.5.2.2.4.8
 BROADER 兒童遊戲
 ID.INV THES291745
 TERM_PINYIN wan ju
 TERM_EN toy
-C 3.5.2.2.4.7.1
+C 3.5.2.2.4.8.1
 TYPE CIT
-ID cit_3_5_2_2_4_7
+ID cit_3_5_2_2_4_8
 TERM_ZH 玩具
-CIT 3.5.2.2.4.7
+CIT 3.5.2.2.4.8
 $
-N 3.5.2.2.4.7.1
+N 3.5.2.2.4.8.1
 BROADER 玩具
 ID.INV CIT288240
 KW_ZH 风筝
 ; 紙鳶
 TERM_PINYIN feng zheng
 TERM_EN kite
-C 3.5.2.2.4.7.1.1
+C 3.5.2.2.4.8.1.1
 TYPE CIT
-ID cit_3_5_2_2_4_7_1
+ID cit_3_5_2_2_4_8_1
 TERM_ZH 風箏
-CIT 3.5.2.2.4.7.1
+CIT 3.5.2.2.4.8.1
 $
-N 3.5.2.2.4.7.1.1
+N 3.5.2.2.4.8.1.1
 BROADER 風箏
 ID.INV CIT283194
 KW_ZH 蝙蝠风筝
 TERM_PINYIN bian fu feng zheng
 TERM_EN bat kite
 TYPE CIT
-ID cit_3_5_2_2_4_7_1_1
+ID cit_3_5_2_2_4_8_1_1
 TERM_ZH 蝙蝠風箏
-CIT 3.5.2.2.4.7.1.1
+CIT 3.5.2.2.4.8.1.1
 $
 N 3.5.2.3
 BROADER 娛樂
@@ -49246,7 +49758,6 @@ C 3.5.2.3.1
 ; 3.5.2.3.6
 ; 3.5.2.3.7
 ; 3.5.2.3.8
-; 3.5.2.3.9
 TYPE CIT
 ID cit_3_5_2_3
 TERM_ZH 閒適
@@ -49254,149 +49765,20 @@ CIT 3.5.2.3
 $
 N 3.5.2.3.1
 BROADER 閒適
-ID.INV CIT283055
-TERM_PINYIN cha shi
-TERM_EN tea gathering
-C 3.5.2.3.1.1
-; 3.5.2.3.1.2
-; 3.5.2.3.1.3
-; 3.5.2.3.1.4
-; 3.5.2.3.1.5
-; 3.5.2.3.1.6
-; 3.5.2.3.1.7
-; 3.5.2.3.1.8
-; 3.5.2.3.1.9
-TYPE CIT
-ID cit_3_5_2_3_1
-TERM_ZH 茶事
-CIT 3.5.2.3.1
-$
-N 3.5.2.3.1.1
-BROADER 茶事
-ID.INV CIT282474
-KW_ZH 試泉
-; 汲水
-TERM_PINYIN ji quan
-TERM_EN drawing spring water
-TYPE CIT
-ID cit_3_5_2_3_1_1
-TERM_ZH 汲泉
-CIT 3.5.2.3.1.1
-$
-N 3.5.2.3.1.2
-BROADER 茶事
-ID.INV CIT281648
-TERM_PINYIN pin quan
-TERM_EN tasting and judging the spring water
-TYPE CIT
-ID cit_3_5_2_3_1_2
-TERM_ZH 品泉
-CIT 3.5.2.3.1.2
-$
-N 3.5.2.3.1.3
-BROADER 茶事
-ID.INV CIT288965
-KW_ZH 撵茶
-TERM_EN grinding tea leaves
-KW_EN driving out tea
-; make tea
-TERM_PINYIN nian cha
-TYPE CIT
-ID cit_3_5_2_3_1_3
-TERM_ZH 攆茶
-CIT 3.5.2.3.1.3
-$
-N 3.5.2.3.1.4
-BROADER 茶事
-ID.INV CIT282605
-KW_ZH 煎茶
-; 煮茶
-; 瀹茗
-; 煮茗
-TERM_PINYIN peng cha
-TERM_EN boiling tea
-KW_EN make tea
-TYPE CIT
-ID cit_3_5_2_3_1_4
-TERM_ZH 烹茶
-CIT 3.5.2.3.1.4
-$
-N 3.5.2.3.1.5
-BROADER 茶事
-ID.INV CIT288967
-KW_ZH 点茶
-TERM_PINYIN dian cha
-TERM_EN whipping tea
-TYPE CIT
-ID cit_3_5_2_3_1_5
-TERM_ZH 點茶
-CIT 3.5.2.3.1.5
-$
-N 3.5.2.3.1.6
-BROADER 茶事
-ID.INV CIT288966
-TERM_EN brewing tea
-TERM_PINYIN pao cha
-TYPE CIT
-ID cit_3_5_2_3_1_6
-TERM_ZH 泡茶
-CIT 3.5.2.3.1.6
-$
-N 3.5.2.3.1.7
-BROADER 茶事
-ID.INV CIT281649
-KW_ZH 品茶
-; 啜茗
-; 賞茶
-; 試茗
-; 茗話
-TERM_PINYIN pin ming
-TERM_EN tasting and judging tea
-TYPE CIT
-ID cit_3_5_2_3_1_7
-TERM_ZH 品茗
-CIT 3.5.2.3.1.7
-$
-N 3.5.2.3.1.8
-BROADER 茶事
-ID.INV CIT282107
-KW_ZH 斗茶
-; 鬭茶
-; 茗園賭市
-TERM_PINYIN dou cha
-TERM_EN tea competition
-TYPE CIT
-ID cit_3_5_2_3_1_8
-TERM_ZH 鬥茶
-CIT 3.5.2.3.1.8
-$
-N 3.5.2.3.1.9
-BROADER 茶事
-ID.INV CIT281483
-R 陳事茗
-TERM_PINYIN shi ming
-TERM_EN occupying oneself with tea
-TYPE CIT
-ID cit_3_5_2_3_1_9
-TERM_ZH 事茗
-CIT 3.5.2.3.1.9
-$
-N 3.5.2.3.2
-BROADER 閒適
 ID.INV CIT282960
 KW_ZH 习静
 ; 习靖
 TERM_PINYIN xi jing
 TERM_EN cultivating a peaceful mind
-C 3.5.2.3.2.1
-; 3.5.2.3.2.2
-; 3.5.2.3.2.3
+C 3.5.2.3.1.1
+; 3.5.2.3.1.2
+; 3.5.2.3.1.3
 TYPE CIT
-ID cit_3_5_2_3_2
+ID cit_3_5_2_3_1
 TERM_ZH 習靜
-CIT 3.5.2.3.2
+CIT 3.5.2.3.1
 $
-N 3.5.2.3.2.1
+N 3.5.2.3.1.1
 BROADER 習靜
 ID.INV CIT277021
 KW_ZH 静坐
@@ -49405,24 +49787,24 @@ KW_ZH 静坐
 ; 閒坐
 TERM_PINYIN jing zuo
 TERM_EN sitting quietly
-C 3.5.2.3.2.1.1
-; 3.5.2.3.2.1.2
+C 3.5.2.3.1.1.1
+; 3.5.2.3.1.1.2
 TYPE CIT
-ID cit_3_5_2_3_2_1
+ID cit_3_5_2_3_1_1
 TERM_ZH 靜坐
-CIT 3.5.2.3.2.1
+CIT 3.5.2.3.1.1
 $
-N 3.5.2.3.2.1.1
+N 3.5.2.3.1.1.1
 BROADER 靜坐
 ID.INV CIT281741
 TERM_PINYIN ye zuo
 TERM_EN sitting at night
 TYPE CIT
-ID cit_3_5_2_3_2_1_1
+ID cit_3_5_2_3_1_1_1
 TERM_ZH 夜坐
-CIT 3.5.2.3.2.1.1
+CIT 3.5.2.3.1.1.1
 $
-N 3.5.2.3.2.1.2
+N 3.5.2.3.1.1.2
 BROADER 靜坐
 ID.INV CIT282654
 KW_ZH 独坐
@@ -49430,34 +49812,34 @@ KW_ZH 独坐
 TERM_EN sitting alone
 TERM_PINYIN du zuo
 TYPE CIT
-ID cit_3_5_2_3_2_1_2
+ID cit_3_5_2_3_1_1_2
 TERM_ZH 獨坐
-CIT 3.5.2.3.2.1.2
+CIT 3.5.2.3.1.1.2
 $
-N 3.5.2.3.2.2
+N 3.5.2.3.1.2
 BROADER 習靜
 ID.INV CIT277023
 KW_ZH 静听
 TERM_PINYIN jing ting
 TERM_EN listening quietly
 TYPE CIT
-ID cit_3_5_2_3_2_2
+ID cit_3_5_2_3_1_2
 TERM_ZH 靜聽
-CIT 3.5.2.3.2.2
+CIT 3.5.2.3.1.2
 $
-N 3.5.2.3.2.3
+N 3.5.2.3.1.3
 BROADER 習靜
 ID.INV CIT282989
 KW_ZH 卧居
 TERM_PINYIN wo ju
 TERM_EN repose
-C 3.5.2.3.2.3.1
+C 3.5.2.3.1.3.1
 TYPE CIT
-ID cit_3_5_2_3_2_3
+ID cit_3_5_2_3_1_3
 TERM_ZH 臥居
-CIT 3.5.2.3.2.3
+CIT 3.5.2.3.1.3
 $
-N 3.5.2.3.2.3.1
+N 3.5.2.3.1.3.1
 BROADER 臥居
 ID.INV CIT277031
 KW_ZH 高卧
@@ -49465,11 +49847,11 @@ TERM_PINYIN gao wo
 TERM_EN lying down comfortably
 KW_EN sleep with the head on a high pillow
 TYPE CIT
-ID cit_3_5_2_3_2_3_1
+ID cit_3_5_2_3_1_3_1
 TERM_ZH 高臥
-CIT 3.5.2.3.2.3.1
+CIT 3.5.2.3.1.3.1
 $
-N 3.5.2.3.3
+N 3.5.2.3.2
 BROADER 閒適
 ID.INV CIT288221
 KW_ZH 赏玩
@@ -49479,27 +49861,27 @@ KW_ZH 赏玩
 TERM_PINYIN shang wan
 TERM_EN entertaining oneself by playing with something
 KW_EN delight in
-C 3.5.2.3.3.1
-; 3.5.2.3.3.2
+C 3.5.2.3.2.1
+; 3.5.2.3.2.2
 TYPE CIT
-ID cit_3_5_2_3_3
+ID cit_3_5_2_3_2
 TERM_ZH 賞玩
-CIT 3.5.2.3.3
+CIT 3.5.2.3.2
 $
-N 3.5.2.3.3.1
+N 3.5.2.3.2.1
 BROADER 賞玩
 DISCRIM 賞玩
 ID.INV CIT288440
 KW_ZH 植物 (赏玩)
 TERM_EN plant (entertainment)
 TERM_PINYIN zhi wu (shang wan)
-C 3.5.2.3.3.1.1
+C 3.5.2.3.2.1.1
 TYPE CIT
-ID cit_3_5_2_3_3_1
+ID cit_3_5_2_3_2_1
 TERM_ZH 植物 (賞玩)
-CIT 3.5.2.3.3.1
+CIT 3.5.2.3.2.1
 $
-N 3.5.2.3.3.1.1
+N 3.5.2.3.2.1.1
 BROADER 植物 (賞玩)
 ID.INV THES285046
 KW_ZH 搴芳
@@ -49507,78 +49889,78 @@ KW_ZH 搴芳
 ; 擷秀
 TERM_PINYIN cai hua
 TERM_EN picking flowers
-C 3.5.2.3.3.1.1.1
-; 3.5.2.3.3.1.1.2
+C 3.5.2.3.2.1.1.1
+; 3.5.2.3.2.1.1.2
 TYPE CIT
-ID cit_3_5_2_3_3_1_1
+ID cit_3_5_2_3_2_1_1
 TERM_ZH 採花
-CIT 3.5.2.3.3.1.1
+CIT 3.5.2.3.2.1.1
 $
-N 3.5.2.3.3.1.1.1
+N 3.5.2.3.2.1.1.1
 BROADER 採花
 ID.INV CIT282009
 R 進士
 TERM_EN breaking off an osmanthus twig
 TERM_PINYIN zhe gui
 TYPE CIT
-ID cit_3_5_2_3_3_1_1_1
+ID cit_3_5_2_3_2_1_1_1
 TERM_ZH 折桂
-CIT 3.5.2.3.3.1.1.1
+CIT 3.5.2.3.2.1.1.1
 $
-N 3.5.2.3.3.1.1.2
+N 3.5.2.3.2.1.1.2
 BROADER 採花
 ID.INV CIT282010
 TERM_EN breaking off a plum twig
 TERM_PINYIN zhe mei
 TYPE CIT
-ID cit_3_5_2_3_3_1_1_2
+ID cit_3_5_2_3_2_1_1_2
 TERM_ZH 折梅
-CIT 3.5.2.3.3.1.1.2
+CIT 3.5.2.3.2.1.1.2
 $
-N 3.5.2.3.3.2
+N 3.5.2.3.2.2
 BROADER 賞玩
 DISCRIM 賞玩
 ID.INV CIT288222
 KW_ZH 动物 (赏玩)
 TERM_EN animal (entertainment)
 TERM_PINYIN dong wu (shang wan)
-C 3.5.2.3.3.2.1
-; 3.5.2.3.3.2.2
-; 3.5.2.3.3.2.3
-; 3.5.2.3.3.2.4
+C 3.5.2.3.2.2.1
+; 3.5.2.3.2.2.2
+; 3.5.2.3.2.2.3
+; 3.5.2.3.2.2.4
 TYPE CIT
-ID cit_3_5_2_3_3_2
+ID cit_3_5_2_3_2_2
 TERM_ZH 動物 (賞玩)
-CIT 3.5.2.3.3.2
+CIT 3.5.2.3.2.2
 $
-N 3.5.2.3.3.2.1
+N 3.5.2.3.2.2.1
 BROADER 動物 (賞玩)
 ID.INV CIT282676
 KW_ZH 玩鹤
 TERM_EN entertaining oneself with cranes
 TERM_PINYIN wan he
-C 3.5.2.3.3.2.1.1
-; 3.5.2.3.3.2.1.2
-; 3.5.2.3.3.2.1.3
-; 3.5.2.3.3.2.1.4
-; 3.5.2.3.3.2.1.5
+C 3.5.2.3.2.2.1.1
+; 3.5.2.3.2.2.1.2
+; 3.5.2.3.2.2.1.3
+; 3.5.2.3.2.2.1.4
+; 3.5.2.3.2.2.1.5
 TYPE CIT
-ID cit_3_5_2_3_3_2_1
+ID cit_3_5_2_3_2_2_1
 TERM_ZH 玩鶴
-CIT 3.5.2.3.3.2.1
+CIT 3.5.2.3.2.2.1
 $
-N 3.5.2.3.3.2.1.1
+N 3.5.2.3.2.2.1.1
 BROADER 玩鶴
 ID.INV CIT281627
 KW_ZH 召鹤
 TERM_PINYIN zhao he
 TERM_EN summoning cranes
 TYPE CIT
-ID cit_3_5_2_3_3_2_1_1
+ID cit_3_5_2_3_2_2_1_1
 TERM_ZH 召鶴
-CIT 3.5.2.3.3.2.1.1
+CIT 3.5.2.3.2.2.1.1
 $
-N 3.5.2.3.3.2.1.2
+N 3.5.2.3.2.2.1.2
 BROADER 玩鶴
 ID.INV CIT276906
 KW_ZH 侣鹤
@@ -49587,33 +49969,33 @@ KW_ZH 侣鹤
 TERM_EN treating cranes as a companions
 TERM_PINYIN lü he
 TYPE CIT
-ID cit_3_5_2_3_3_2_1_2
+ID cit_3_5_2_3_2_2_1_2
 TERM_ZH 侶鶴
-CIT 3.5.2.3.3.2.1.2
+CIT 3.5.2.3.2.2.1.2
 $
-N 3.5.2.3.3.2.1.3
+N 3.5.2.3.2.2.1.3
 BROADER 玩鶴
 ID.INV CIT276944
 KW_ZH 放鹤
 TERM_EN freeing cranes
 TERM_PINYIN fang he
 TYPE CIT
-ID cit_3_5_2_3_3_2_1_3
+ID cit_3_5_2_3_2_2_1_3
 TERM_ZH 放鶴
-CIT 3.5.2.3.3.2.1.3
+CIT 3.5.2.3.2.2.1.3
 $
-N 3.5.2.3.3.2.1.4
+N 3.5.2.3.2.2.1.4
 BROADER 玩鶴
 ID.INV CIT282279
 KW_ZH 调鹤
 TERM_PINYIN diao he
 TERM_EN taming the crane
 TYPE CIT
-ID cit_3_5_2_3_3_2_1_4
+ID cit_3_5_2_3_2_2_1_4
 TERM_ZH 調鶴
-CIT 3.5.2.3.3.2.1.4
+CIT 3.5.2.3.2.2.1.4
 $
-N 3.5.2.3.3.2.1.5
+N 3.5.2.3.2.2.1.5
 BROADER 玩鶴
 ID.INV CIT289246
 R 王觀
@@ -49621,43 +50003,43 @@ KW_ZH 款鹤
 TERM_PINYIN kuan he
 TERM_EN treating cranes kindly
 TYPE CIT
-ID cit_3_5_2_3_3_2_1_5
+ID cit_3_5_2_3_2_2_1_5
 TERM_ZH 款鶴
-CIT 3.5.2.3.3.2.1.5
+CIT 3.5.2.3.2.2.1.5
 $
-N 3.5.2.3.3.2.2
+N 3.5.2.3.2.2.2
 BROADER 動物 (賞玩)
 ID.INV CIT283493
 TERM_PINYIN fu lu
 TERM_EN holding deer
 TYPE CIT
-ID cit_3_5_2_3_3_2_2
+ID cit_3_5_2_3_2_2_2
 TERM_ZH 扶鹿
-CIT 3.5.2.3.3.2.2
+CIT 3.5.2.3.2.2.2
 $
-N 3.5.2.3.3.2.3
+N 3.5.2.3.2.2.3
 BROADER 動物 (賞玩)
 ID.INV CIT277008
 KW_ZH 调鹦鹉
 TERM_PINYIN tiao ying wu
 TERM_EN training parrots
 TYPE CIT
-ID cit_3_5_2_3_3_2_3
+ID cit_3_5_2_3_2_2_3
 TERM_ZH 調鸚鵡
-CIT 3.5.2.3.3.2.3
+CIT 3.5.2.3.2.2.3
 $
-N 3.5.2.3.3.2.4
+N 3.5.2.3.2.2.4
 BROADER 動物 (賞玩)
 ID.INV CIT282090
 KW_ZH 放鸽
 TERM_PINYIN fang ge
 TERM_EN freeing a pigeon
 TYPE CIT
-ID cit_3_5_2_3_3_2_4
+ID cit_3_5_2_3_2_2_4
 TERM_ZH 放鴿
-CIT 3.5.2.3.3.2.4
+CIT 3.5.2.3.2.2.4
 $
-N 3.5.2.3.4
+N 3.5.2.3.3
 BROADER 閒適
 ID.INV CIT287740
 KW_ZH 观赏
@@ -49672,45 +50054,45 @@ KW_ZH 观赏
 TERM_PINYIN guan shang
 TERM_EN enjoying the sight of something
 KW_EN seeing and enjoying
-C 3.5.2.3.4.1
-; 3.5.2.3.4.2
-; 3.5.2.3.4.3
+C 3.5.2.3.3.1
+; 3.5.2.3.3.2
+; 3.5.2.3.3.3
 TYPE CIT
-ID cit_3_5_2_3_4
+ID cit_3_5_2_3_3
 TERM_ZH 觀賞
-CIT 3.5.2.3.4
+CIT 3.5.2.3.3
 $
-N 3.5.2.3.4.1
+N 3.5.2.3.3.1
 BROADER 觀賞
 ID.INV CIT288215
 KW_ZH 观赏自然界
 TERM_PINYIN guan shang zi ran jie
 TERM_EN enjoying the sight of nature
-C 3.5.2.3.4.1.1
-; 3.5.2.3.4.1.2
-; 3.5.2.3.4.1.3
-; 3.5.2.3.4.1.4
+C 3.5.2.3.3.1.1
+; 3.5.2.3.3.1.2
+; 3.5.2.3.3.1.3
+; 3.5.2.3.3.1.4
 TYPE CIT
-ID cit_3_5_2_3_4_1
+ID cit_3_5_2_3_3_1
 TERM_ZH 觀賞自然界
-CIT 3.5.2.3.4.1
+CIT 3.5.2.3.3.1
 $
-N 3.5.2.3.4.1.1
+N 3.5.2.3.3.1.1
 BROADER 觀賞自然界
 ID.INV CIT288220
 KW_ZH 观赏天象
 TERM_PINYIN guan shang tian xiang
 TERM_EN enjoying the sight of the heavens
-C 3.5.2.3.4.1.1.1
-; 3.5.2.3.4.1.1.2
-; 3.5.2.3.4.1.1.3
-; 3.5.2.3.4.1.1.4
+C 3.5.2.3.3.1.1.1
+; 3.5.2.3.3.1.1.2
+; 3.5.2.3.3.1.1.3
+; 3.5.2.3.3.1.1.4
 TYPE CIT
-ID cit_3_5_2_3_4_1_1
+ID cit_3_5_2_3_3_1_1
 TERM_ZH 觀賞天象
-CIT 3.5.2.3.4.1.1
+CIT 3.5.2.3.3.1.1
 $
-N 3.5.2.3.4.1.1.1
+N 3.5.2.3.3.1.1.1
 BROADER 觀賞天象
 ID.INV CIT283298
 KW_ZH 赏月
@@ -49719,58 +50101,58 @@ KW_ZH 赏月
 ; 望月
 TERM_PINYIN shang yue
 TERM_EN enjoying the moonlight
-C 3.5.2.3.4.1.1.1.1
-; 3.5.2.3.4.1.1.1.2
-; 3.5.2.3.4.1.1.1.3
-; 3.5.2.3.4.1.1.1.4
+C 3.5.2.3.3.1.1.1.1
+; 3.5.2.3.3.1.1.1.2
+; 3.5.2.3.3.1.1.1.3
+; 3.5.2.3.3.1.1.1.4
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_1
+ID cit_3_5_2_3_3_1_1_1
 TERM_ZH 賞月
-CIT 3.5.2.3.4.1.1.1
+CIT 3.5.2.3.3.1.1.1
 $
-N 3.5.2.3.4.1.1.1.1
+N 3.5.2.3.3.1.1.1.1
 BROADER 賞月
 ID.INV CIT281956
 TERM_EN waiting for the moon
 TERM_PINYIN dai yue
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_1_1
+ID cit_3_5_2_3_3_1_1_1_1
 TERM_ZH 待月
-CIT 3.5.2.3.4.1.1.1.1
+CIT 3.5.2.3.3.1.1.1.1
 $
-N 3.5.2.3.4.1.1.1.2
+N 3.5.2.3.3.1.1.1.2
 BROADER 賞月
 ID.INV CIT281838
 KW_ZH 对月
 TERM_EN facing the moon
 TERM_PINYIN dui yue
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_1_2
+ID cit_3_5_2_3_3_1_1_1_2
 TERM_ZH 對月
-CIT 3.5.2.3.4.1.1.1.2
+CIT 3.5.2.3.3.1.1.1.2
 $
-N 3.5.2.3.4.1.1.1.3
+N 3.5.2.3.3.1.1.1.3
 BROADER 賞月
 ID.INV CIT282339
 KW_ZH 踏月
 TERM_PINYIN bu yue
 TERM_EN strolling under the moon
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_1_3
+ID cit_3_5_2_3_3_1_1_1_3
 TERM_ZH 步月
-CIT 3.5.2.3.4.1.1.1.3
+CIT 3.5.2.3.3.1.1.1.3
 $
-N 3.5.2.3.4.1.1.1.4
+N 3.5.2.3.3.1.1.1.4
 BROADER 賞月
 ID.INV CIT276920
 TERM_EN sitting under the moon
 TERM_PINYIN zuo yue
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_1_4
+ID cit_3_5_2_3_3_1_1_1_4
 TERM_ZH 坐月
-CIT 3.5.2.3.4.1.1.1.4
+CIT 3.5.2.3.3.1.1.1.4
 $
-N 3.5.2.3.4.1.1.2
+N 3.5.2.3.3.1.1.2
 BROADER 觀賞天象
 ID.INV CIT283233
 KW_ZH 观云
@@ -49779,48 +50161,48 @@ KW_ZH 观云
 TERM_PINYIN guan yun
 TERM_EN viewing clouds
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_2
+ID cit_3_5_2_3_3_1_1_2
 TERM_ZH 觀雲
-CIT 3.5.2.3.4.1.1.2
+CIT 3.5.2.3.3.1.1.2
 $
-N 3.5.2.3.4.1.1.3
+N 3.5.2.3.3.1.1.3
 BROADER 觀賞天象
 ID.INV CIT283303
 KW_ZH 赏雪
 ; 看雪
 TERM_PINYIN shang xue
 TERM_EN enjoying a snow scene
-C 3.5.2.3.4.1.1.3.1
+C 3.5.2.3.3.1.1.3.1
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_3
+ID cit_3_5_2_3_3_1_1_3
 TERM_ZH 賞雪
-CIT 3.5.2.3.4.1.1.3
+CIT 3.5.2.3.3.1.1.3
 $
-N 3.5.2.3.4.1.1.3.1
+N 3.5.2.3.3.1.1.3.1
 BROADER 賞雪
 ID.INV CIT283316
 KW_ZH 蹋雪
 TERM_PINYIN ta xue
 TERM_EN walking in the snow
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_3_1
+ID cit_3_5_2_3_3_1_1_3_1
 TERM_ZH 踏雪
-CIT 3.5.2.3.4.1.1.3.1
+CIT 3.5.2.3.3.1.1.3.1
 $
-N 3.5.2.3.4.1.1.4
+N 3.5.2.3.3.1.1.4
 BROADER 觀賞天象
 ID.INV CIT283045
 KW_ZH 赏雨
 TERM_PINYIN shang yu
 TERM_EN enjoying a rainy scene
-C 3.5.2.3.4.1.1.4.1
-; 3.5.2.3.4.1.1.4.2
+C 3.5.2.3.3.1.1.4.1
+; 3.5.2.3.3.1.1.4.2
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_4
+ID cit_3_5_2_3_3_1_1_4
 TERM_ZH 賞雨
-CIT 3.5.2.3.4.1.1.4
+CIT 3.5.2.3.3.1.1.4
 $
-N 3.5.2.3.4.1.1.4.1
+N 3.5.2.3.3.1.1.4.1
 BROADER 賞雨
 ID.INV CIT283489
 KW_ZH 观雨
@@ -49829,22 +50211,22 @@ KW_ZH 观雨
 TERM_PINYIN guan yu
 TERM_EN watching the rain
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_4_1
+ID cit_3_5_2_3_3_1_1_4_1
 TERM_ZH 觀雨
-CIT 3.5.2.3.4.1.1.4.1
+CIT 3.5.2.3.3.1.1.4.1
 $
-N 3.5.2.3.4.1.1.4.2
+N 3.5.2.3.3.1.1.4.2
 BROADER 賞雨
 ID.INV CIT281843
 KW_ZH 对雨
 TERM_EN facing the rain
 TERM_PINYIN dui yu
 TYPE CIT
-ID cit_3_5_2_3_4_1_1_4_2
+ID cit_3_5_2_3_3_1_1_4_2
 TERM_ZH 對雨
-CIT 3.5.2.3.4.1.1.4.2
+CIT 3.5.2.3.3.1.1.4.2
 $
-N 3.5.2.3.4.1.2
+N 3.5.2.3.3.1.2
 BROADER 觀賞自然界
 ID.INV CIT288217
 KW_ZH 观赏山水
@@ -49852,26 +50234,26 @@ KW_ZH 观赏山水
 ; 溪山真赏
 TERM_PINYIN guan shang shan shui
 TERM_EN enjoying the landscape
-C 3.5.2.3.4.1.2.1
-; 3.5.2.3.4.1.2.2
-; 3.5.2.3.4.1.2.3
+C 3.5.2.3.3.1.2.1
+; 3.5.2.3.3.1.2.2
+; 3.5.2.3.3.1.2.3
 TYPE CIT
-ID cit_3_5_2_3_4_1_2
+ID cit_3_5_2_3_3_1_2
 TERM_ZH 觀賞山水
-CIT 3.5.2.3.4.1.2
+CIT 3.5.2.3.3.1.2
 $
-N 3.5.2.3.4.1.2.1
+N 3.5.2.3.3.1.2.1
 BROADER 觀賞山水
 ID.INV CIT276997
 KW_ZH 观景
 TERM_PINYIN guan jing
 TERM_EN viewing a scenery
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_1
+ID cit_3_5_2_3_3_1_2_1
 TERM_ZH 觀景
-CIT 3.5.2.3.4.1.2.1
+CIT 3.5.2.3.3.1.2.1
 $
-N 3.5.2.3.4.1.2.2
+N 3.5.2.3.3.1.2.2
 BROADER 觀賞山水
 ID.INV CIT276996
 KW_ZH 观山
@@ -49879,74 +50261,74 @@ KW_ZH 观山
 ; 望山
 TERM_PINYIN guan shan
 TERM_EN viewing a mountain
-C 3.5.2.3.4.1.2.2.1
-; 3.5.2.3.4.1.2.2.2
+C 3.5.2.3.3.1.2.2.1
+; 3.5.2.3.3.1.2.2.2
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_2
+ID cit_3_5_2_3_3_1_2_2
 TERM_ZH 觀山
-CIT 3.5.2.3.4.1.2.2
+CIT 3.5.2.3.3.1.2.2
 $
-N 3.5.2.3.4.1.2.2.1
+N 3.5.2.3.3.1.2.2.1
 BROADER 觀山
 ID.INV CIT281836
 KW_ZH 对山
 TERM_EN facing a mountain
 TERM_PINYIN dui shan
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_2_1
+ID cit_3_5_2_3_3_1_2_2_1
 TERM_ZH 對山
-CIT 3.5.2.3.4.1.2.2.1
+CIT 3.5.2.3.3.1.2.2.1
 $
-N 3.5.2.3.4.1.2.2.2
+N 3.5.2.3.3.1.2.2.2
 BROADER 觀山
 ID.INV CIT282769
 TERM_EN gazing at a mountain
 TERM_PINYIN tiao shan
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_2_2
+ID cit_3_5_2_3_3_1_2_2_2
 TERM_ZH 眺山
-CIT 3.5.2.3.4.1.2.2.2
+CIT 3.5.2.3.3.1.2.2.2
 $
-N 3.5.2.3.4.1.2.3
+N 3.5.2.3.3.1.2.3
 BROADER 觀賞山水
 ID.INV CIT288226
 KW_ZH 观水
 TERM_PINYIN guan shui
 TERM_EN viewing a body of water
-C 3.5.2.3.4.1.2.3.1
-; 3.5.2.3.4.1.2.3.2
-; 3.5.2.3.4.1.2.3.3
-; 3.5.2.3.4.1.2.3.4
-; 3.5.2.3.4.1.2.3.5
-; 3.5.2.3.4.1.2.3.6
-; 3.5.2.3.4.1.2.3.7
+C 3.5.2.3.3.1.2.3.1
+; 3.5.2.3.3.1.2.3.2
+; 3.5.2.3.3.1.2.3.3
+; 3.5.2.3.3.1.2.3.4
+; 3.5.2.3.3.1.2.3.5
+; 3.5.2.3.3.1.2.3.6
+; 3.5.2.3.3.1.2.3.7
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3
+ID cit_3_5_2_3_3_1_2_3
 TERM_ZH 觀水
-CIT 3.5.2.3.4.1.2.3
+CIT 3.5.2.3.3.1.2.3
 $
-N 3.5.2.3.4.1.2.3.1
+N 3.5.2.3.3.1.2.3.1
 BROADER 觀水
 ID.INV CIT283228
 KW_ZH 观海
 TERM_PINYIN guan hai
 TERM_EN viewing the sea
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_1
+ID cit_3_5_2_3_3_1_2_3_1
 TERM_ZH 觀海
-CIT 3.5.2.3.4.1.2.3.1
+CIT 3.5.2.3.3.1.2.3.1
 $
-N 3.5.2.3.4.1.2.3.2
+N 3.5.2.3.3.1.2.3.2
 BROADER 觀水
 ID.INV CIT276949
 TERM_PINYIN wang jiang
 TERM_EN gazing at the river
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_2
+ID cit_3_5_2_3_3_1_2_3_2
 TERM_ZH 望江
-CIT 3.5.2.3.4.1.2.3.2
+CIT 3.5.2.3.3.1.2.3.2
 $
-N 3.5.2.3.4.1.2.3.3
+N 3.5.2.3.3.1.2.3.3
 BROADER 觀水
 ID.INV CIT276999
 KW_ZH 观泉
@@ -49954,11 +50336,11 @@ KW_ZH 观泉
 TERM_PINYIN guan quan
 TERM_EN viewing a spring
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_3
+ID cit_3_5_2_3_3_1_2_3_3
 TERM_ZH 觀泉
-CIT 3.5.2.3.4.1.2.3.3
+CIT 3.5.2.3.3.1.2.3.3
 $
-N 3.5.2.3.4.1.2.3.4
+N 3.5.2.3.3.1.2.3.4
 BROADER 觀水
 ID.INV CIT283230
 KW_ZH 观瀑
@@ -49968,36 +50350,36 @@ KW_ZH 观瀑
 TERM_PINYIN guan pu
 TERM_EN viewing a waterfall
 KW_EN gazing at a waterfall
-C 3.5.2.3.4.1.2.3.4.1
+C 3.5.2.3.3.1.2.3.4.1
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_4
+ID cit_3_5_2_3_3_1_2_3_4
 TERM_ZH 觀瀑
-CIT 3.5.2.3.4.1.2.3.4
+CIT 3.5.2.3.3.1.2.3.4
 $
-N 3.5.2.3.4.1.2.3.4.1
+N 3.5.2.3.3.1.2.3.4.1
 BROADER 觀瀑
 ID.INV CIT281839
 KW_ZH 对瀑
 TERM_PINYIN dui pu
 TERM_EN facing a waterfall
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_4_1
+ID cit_3_5_2_3_3_1_2_3_4_1
 TERM_ZH 對瀑
-CIT 3.5.2.3.4.1.2.3.4.1
+CIT 3.5.2.3.3.1.2.3.4.1
 $
-N 3.5.2.3.4.1.2.3.5
+N 3.5.2.3.3.1.2.3.5
 BROADER 觀水
 ID.INV CIT283227
 KW_ZH 观流
 TERM_PINYIN guan liu
 TERM_EN viewing a stream
-C 3.5.2.3.4.1.2.3.5.1
+C 3.5.2.3.3.1.2.3.5.1
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_5
+ID cit_3_5_2_3_3_1_2_3_5
 TERM_ZH 觀流
-CIT 3.5.2.3.4.1.2.3.5
+CIT 3.5.2.3.3.1.2.3.5
 $
-N 3.5.2.3.4.1.2.3.5.1
+N 3.5.2.3.3.1.2.3.5.1
 BROADER 觀流
 ID.INV CIT276989
 KW_ZH 临流
@@ -50006,11 +50388,11 @@ KW_ZH 临流
 TERM_PINYIN lin liu
 TERM_EN facing a stream
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_5_1
+ID cit_3_5_2_3_3_1_2_3_5_1
 TERM_ZH 臨流
-CIT 3.5.2.3.4.1.2.3.5.1
+CIT 3.5.2.3.3.1.2.3.5.1
 $
-N 3.5.2.3.4.1.2.3.6
+N 3.5.2.3.3.1.2.3.6
 BROADER 觀水
 ID.INV CIT283229
 KW_ZH 观涛
@@ -50018,11 +50400,11 @@ KW_ZH 观涛
 TERM_PINYIN guan tao
 TERM_EN viewing waves
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_6
+ID cit_3_5_2_3_3_1_2_3_6
 TERM_ZH 觀濤
-CIT 3.5.2.3.4.1.2.3.6
+CIT 3.5.2.3.3.1.2.3.6
 $
-N 3.5.2.3.4.1.2.3.7
+N 3.5.2.3.3.1.2.3.7
 BROADER 觀水
 ID.INV CIT277000
 KW_ZH 观潮
@@ -50032,25 +50414,25 @@ KW_ZH 观潮
 TERM_PINYIN guan chao
 TERM_EN watching a tidal bore
 TYPE CIT
-ID cit_3_5_2_3_4_1_2_3_7
+ID cit_3_5_2_3_3_1_2_3_7
 TERM_ZH 觀潮
-CIT 3.5.2.3.4.1.2.3.7
+CIT 3.5.2.3.3.1.2.3.7
 $
-N 3.5.2.3.4.1.3
+N 3.5.2.3.3.1.3
 BROADER 觀賞自然界
 ID.INV CIT288219
 KW_ZH 观赏植物
 TERM_PINYIN guan shang zhi wu
 TERM_EN enjoying the sight of plants
-C 3.5.2.3.4.1.3.1
-; 3.5.2.3.4.1.3.2
-; 3.5.2.3.4.1.3.3
+C 3.5.2.3.3.1.3.1
+; 3.5.2.3.3.1.3.2
+; 3.5.2.3.3.1.3.3
 TYPE CIT
-ID cit_3_5_2_3_4_1_3
+ID cit_3_5_2_3_3_1_3
 TERM_ZH 觀賞植物
-CIT 3.5.2.3.4.1.3
+CIT 3.5.2.3.3.1.3
 $
-N 3.5.2.3.4.1.3.1
+N 3.5.2.3.3.1.3.1
 BROADER 觀賞植物
 ID.INV CIT281796
 KW_ZH 观赏花卉
@@ -50058,16 +50440,16 @@ KW_ZH 观赏花卉
 ; 对花坐
 TERM_PINYIN guan shang hua hui
 TERM_EN enjoying the sight of flowers
-C 3.5.2.3.4.1.3.1.1
-; 3.5.2.3.4.1.3.1.2
-; 3.5.2.3.4.1.3.1.3
-; 3.5.2.3.4.1.3.1.4
+C 3.5.2.3.3.1.3.1.1
+; 3.5.2.3.3.1.3.1.2
+; 3.5.2.3.3.1.3.1.3
+; 3.5.2.3.3.1.3.1.4
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_1
+ID cit_3_5_2_3_3_1_3_1
 TERM_ZH 觀賞花卉
-CIT 3.5.2.3.4.1.3.1
+CIT 3.5.2.3.3.1.3.1
 $
-N 3.5.2.3.4.1.3.1.1
+N 3.5.2.3.3.1.3.1.1
 BROADER 觀賞花卉
 ID.INV CIT283300
 KW_ZH 赏梅
@@ -50077,21 +50459,21 @@ KW_ZH 赏梅
 TERM_PINYIN shang mei
 TERM_EN enjoying plum blossoms
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_1_1
+ID cit_3_5_2_3_3_1_3_1_1
 TERM_ZH 賞梅
-CIT 3.5.2.3.4.1.3.1.1
+CIT 3.5.2.3.3.1.3.1.1
 $
-N 3.5.2.3.4.1.3.1.2
+N 3.5.2.3.3.1.3.1.2
 BROADER 觀賞花卉
 ID.INV CIT282675
 TERM_EN entertaining onself with a chrysanthemum
 TERM_PINYIN wan ju
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_1_2
+ID cit_3_5_2_3_3_1_3_1_2
 TERM_ZH 玩菊
-CIT 3.5.2.3.4.1.3.1.2
+CIT 3.5.2.3.3.1.3.1.2
 $
-N 3.5.2.3.4.1.3.1.3
+N 3.5.2.3.3.1.3.1.3
 BROADER 觀賞花卉
 ID.INV CIT283232
 KW_ZH 观莲
@@ -50102,93 +50484,93 @@ KW_ZH 观莲
 TERM_PINYIN guan lian
 TERM_EN viewing lotus flowers
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_1_3
+ID cit_3_5_2_3_3_1_3_1_3
 TERM_ZH 觀蓮
-CIT 3.5.2.3.4.1.3.1.3
+CIT 3.5.2.3.3.1.3.1.3
 $
-N 3.5.2.3.4.1.3.1.4
+N 3.5.2.3.3.1.3.1.4
 BROADER 觀賞花卉
 ID.INV CIT283299
 KW_ZH 赏桂
 TERM_PINYIN shang gui
 TERM_EN enjoying the osmanthus tree
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_1_4
+ID cit_3_5_2_3_3_1_3_1_4
 TERM_ZH 賞桂
-CIT 3.5.2.3.4.1.3.1.4
+CIT 3.5.2.3.3.1.3.1.4
 $
-N 3.5.2.3.4.1.3.2
+N 3.5.2.3.3.1.3.2
 BROADER 觀賞植物
 ID.INV CIT281840
 KW_ZH 对竹
 TERM_EN facing bamboo
 TERM_PINYIN dui zhu
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_2
+ID cit_3_5_2_3_3_1_3_2
 TERM_ZH 對竹
-CIT 3.5.2.3.4.1.3.2
+CIT 3.5.2.3.3.1.3.2
 $
-N 3.5.2.3.4.1.3.3
+N 3.5.2.3.3.1.3.3
 BROADER 觀賞植物
 ID.INV CIT283225
 KW_ZH 观柳
 TERM_PINYIN guan liu
 TERM_EN viewing willows
 TYPE CIT
-ID cit_3_5_2_3_4_1_3_3
+ID cit_3_5_2_3_3_1_3_3
 TERM_ZH 觀柳
-CIT 3.5.2.3.4.1.3.3
+CIT 3.5.2.3.3.1.3.3
 $
-N 3.5.2.3.4.1.4
+N 3.5.2.3.3.1.4
 BROADER 觀賞自然界
 ID.INV CIT288218
 KW_ZH 观赏动物
 TERM_PINYIN guan shang dong wu
 TERM_EN enjoying the sight of animals
-C 3.5.2.3.4.1.4.1
-; 3.5.2.3.4.1.4.2
-; 3.5.2.3.4.1.4.3
-; 3.5.2.3.4.1.4.4
-; 3.5.2.3.4.1.4.5
+C 3.5.2.3.3.1.4.1
+; 3.5.2.3.3.1.4.2
+; 3.5.2.3.3.1.4.3
+; 3.5.2.3.3.1.4.4
+; 3.5.2.3.3.1.4.5
 TYPE CIT
-ID cit_3_5_2_3_4_1_4
+ID cit_3_5_2_3_3_1_4
 TERM_ZH 觀賞動物
-CIT 3.5.2.3.4.1.4
+CIT 3.5.2.3.3.1.4
 $
-N 3.5.2.3.4.1.4.1
+N 3.5.2.3.3.1.4.1
 BROADER 觀賞動物
 ID.INV CIT283235
 KW_ZH 观鹤
 TERM_PINYIN guan he
 TERM_EN watching cranes
 TYPE CIT
-ID cit_3_5_2_3_4_1_4_1
+ID cit_3_5_2_3_3_1_4_1
 TERM_ZH 觀鶴
-CIT 3.5.2.3.4.1.4.1
+CIT 3.5.2.3.3.1.4.1
 $
-N 3.5.2.3.4.1.4.2
+N 3.5.2.3.3.1.4.2
 BROADER 觀賞動物
 ID.INV CIT282766
 KW_ZH 看凫
 TERM_EN watching wild ducks
 TERM_PINYIN kan fu
 TYPE CIT
-ID cit_3_5_2_3_4_1_4_2
+ID cit_3_5_2_3_3_1_4_2
 TERM_ZH 看鳧
-CIT 3.5.2.3.4.1.4.2
+CIT 3.5.2.3.3.1.4.2
 $
-N 3.5.2.3.4.1.4.3
+N 3.5.2.3.3.1.4.3
 BROADER 觀賞動物
 ID.INV CIT277001
 KW_ZH 观雁
 TERM_PINYIN guan yan
 TERM_EN watching wild geese
 TYPE CIT
-ID cit_3_5_2_3_4_1_4_3
+ID cit_3_5_2_3_3_1_4_3
 TERM_ZH 觀雁
-CIT 3.5.2.3.4.1.4.3
+CIT 3.5.2.3.3.1.4.3
 $
-N 3.5.2.3.4.1.4.4
+N 3.5.2.3.3.1.4.4
 BROADER 觀賞動物
 ID.INV CIT276972
 KW_ZH 看鸿
@@ -50197,35 +50579,35 @@ KW_ZH 看鸿
 TERM_EN watching swan geese
 TERM_PINYIN kan hong
 TYPE CIT
-ID cit_3_5_2_3_4_1_4_4
+ID cit_3_5_2_3_3_1_4_4
 TERM_ZH 看鴻
-CIT 3.5.2.3.4.1.4.4
+CIT 3.5.2.3.3.1.4.4
 $
-N 3.5.2.3.4.1.4.5
+N 3.5.2.3.3.1.4.5
 BROADER 觀賞動物
 ID.INV CIT277002
 KW_ZH 观鱼
 TERM_PINYIN guan yu
 TERM_EN watching fish
 TYPE CIT
-ID cit_3_5_2_3_4_1_4_5
+ID cit_3_5_2_3_3_1_4_5
 TERM_ZH 觀魚
-CIT 3.5.2.3.4.1.4.5
+CIT 3.5.2.3.3.1.4.5
 $
-N 3.5.2.3.4.2
+N 3.5.2.3.3.2
 BROADER 觀賞
 ID.INV CIT288224
 KW_ZH 观赏行舟
 TERM_PINYIN guan shang xing zhou
 TERM_EN enjoying the sight of sailboats
-C 3.5.2.3.4.2.1
-; 3.5.2.3.4.2.2
+C 3.5.2.3.3.2.1
+; 3.5.2.3.3.2.2
 TYPE CIT
-ID cit_3_5_2_3_4_2
+ID cit_3_5_2_3_3_2
 TERM_ZH 觀賞行舟
-CIT 3.5.2.3.4.2
+CIT 3.5.2.3.3.2
 $
-N 3.5.2.3.4.2.1
+N 3.5.2.3.3.2.1
 BROADER 觀賞行舟
 ID.INV CIT282219
 KW_ZH 看飛帆
@@ -50233,35 +50615,35 @@ KW_ZH 看飛帆
 TERM_PINYIN wang fan
 TERM_EN gazing at sails
 TYPE CIT
-ID cit_3_5_2_3_4_2_1
+ID cit_3_5_2_3_3_2_1
 TERM_ZH 望帆
-CIT 3.5.2.3.4.2.1
+CIT 3.5.2.3.3.2.1
 $
-N 3.5.2.3.4.2.2
+N 3.5.2.3.3.2.2
 BROADER 觀賞行舟
 ID.INV CIT282302
 KW_ZH 观渡
 TERM_PINYIN guan du
 TERM_EN watching ferries
 TYPE CIT
-ID cit_3_5_2_3_4_2_2
+ID cit_3_5_2_3_3_2_2
 TERM_ZH 觀渡
-CIT 3.5.2.3.4.2.2
+CIT 3.5.2.3.3.2.2
 $
-N 3.5.2.3.4.3
+N 3.5.2.3.3.3
 BROADER 觀賞
 ID.INV CIT288225
 KW_ZH 鉴藏
 TERM_PINYIN jian cang
 TERM_EN connoisseurship
-C 3.5.2.3.4.3.1
-; 3.5.2.3.4.3.2
+C 3.5.2.3.3.3.1
+; 3.5.2.3.3.3.2
 TYPE CIT
-ID cit_3_5_2_3_4_3
+ID cit_3_5_2_3_3_3
 TERM_ZH 鑒藏
-CIT 3.5.2.3.4.3
+CIT 3.5.2.3.3.3
 $
-N 3.5.2.3.4.3.1
+N 3.5.2.3.3.3.1
 BROADER 鑒藏
 ID.INV CIT283428
 KW_ZH 鑑古
@@ -50270,11 +50652,11 @@ KW_ZH 鑑古
 TERM_PINYIN jian gu
 TERM_EN examination of antiquities
 TYPE CIT
-ID cit_3_5_2_3_4_3_1
+ID cit_3_5_2_3_3_3_1
 TERM_ZH 鑒古
-CIT 3.5.2.3.4.3.1
+CIT 3.5.2.3.3.3.1
 $
-N 3.5.2.3.4.3.2
+N 3.5.2.3.3.3.2
 BROADER 鑒藏
 ID.INV CIT283301
 KW_ZH 赏画
@@ -50284,87 +50666,87 @@ KW_ZH 赏画
 ; 畫禪
 TERM_PINYIN shang hua
 TERM_EN enjoying paintings
-C 3.5.2.3.4.3.2.1
+C 3.5.2.3.3.3.2.1
 TYPE CIT
-ID cit_3_5_2_3_4_3_2
+ID cit_3_5_2_3_3_3_2
 TERM_ZH 賞畫
-CIT 3.5.2.3.4.3.2
+CIT 3.5.2.3.3.3.2
 $
-N 3.5.2.3.4.3.2.1
+N 3.5.2.3.3.3.2.1
 BROADER 賞畫
 ID.INV CIT282990
 KW_ZH 卧游
 TERM_PINYIN wo you
 TERM_EN vicarious travel through pictures
 TYPE CIT
-ID cit_3_5_2_3_4_3_2_1
+ID cit_3_5_2_3_3_3_2_1
 TERM_ZH 臥遊
-CIT 3.5.2.3.4.3.2.1
+CIT 3.5.2.3.3.3.2.1
 $
-N 3.5.2.3.5
+N 3.5.2.3.4
 BROADER 閒適
 ID.INV THES285013
 KW_ZH 听赏
 TERM_PINYIN ting shang
 TERM_EN enjoying the sound of something
-C 3.5.2.3.5.1
-; 3.5.2.3.5.2
-; 3.5.2.3.5.3
-; 3.5.2.3.5.4
-; 3.5.2.3.5.5
-; 3.5.2.3.5.6
-; 3.5.2.3.5.7
-; 3.5.2.3.5.8
+C 3.5.2.3.4.1
+; 3.5.2.3.4.2
+; 3.5.2.3.4.3
+; 3.5.2.3.4.4
+; 3.5.2.3.4.5
+; 3.5.2.3.4.6
+; 3.5.2.3.4.7
+; 3.5.2.3.4.8
 TYPE CIT
-ID cit_3_5_2_3_5
+ID cit_3_5_2_3_4
 TERM_ZH 聽賞
-CIT 3.5.2.3.5
+CIT 3.5.2.3.4
 $
-N 3.5.2.3.5.1
+N 3.5.2.3.4.1
 BROADER 聽賞
 ID.INV CIT276988
 KW_ZH 听雨
 TERM_PINYIN ting yu
 TERM_EN listening to the rain
 TYPE CIT
-ID cit_3_5_2_3_5_1
+ID cit_3_5_2_3_4_1
 TERM_ZH 聽雨
-CIT 3.5.2.3.5.1
+CIT 3.5.2.3.4.1
 $
-N 3.5.2.3.5.2
+N 3.5.2.3.4.2
 BROADER 聽賞
 ID.INV CIT276987
 KW_ZH 听泉
 TERM_PINYIN ting quan
 TERM_EN listening to a spring
 TYPE CIT
-ID cit_3_5_2_3_5_2
+ID cit_3_5_2_3_4_2
 TERM_ZH 聽泉
-CIT 3.5.2.3.5.2
+CIT 3.5.2.3.4.2
 $
-N 3.5.2.3.5.3
+N 3.5.2.3.4.3
 BROADER 聽賞
 ID.INV CIT282981
 KW_ZH 听瀑
 TERM_PINYIN ting pu
 TERM_EN listening to a waterfall
 TYPE CIT
-ID cit_3_5_2_3_5_3
+ID cit_3_5_2_3_4_3
 TERM_ZH 聽瀑
-CIT 3.5.2.3.5.3
+CIT 3.5.2.3.4.3
 $
-N 3.5.2.3.5.4
+N 3.5.2.3.4.4
 BROADER 聽賞
 ID.INV CIT282980
 KW_ZH 听涛
 TERM_PINYIN ting tao
 TERM_EN listening to waves
 TYPE CIT
-ID cit_3_5_2_3_5_4
+ID cit_3_5_2_3_4_4
 TERM_ZH 聽濤
-CIT 3.5.2.3.5.4
+CIT 3.5.2.3.4.4
 $
-N 3.5.2.3.5.5
+N 3.5.2.3.4.5
 BROADER 聽賞
 ID.INV CIT276985
 KW_ZH 听松
@@ -50373,54 +50755,54 @@ KW_ZH 听松
 TERM_PINYIN ting song
 TERM_EN listening to the sound of wind moving through pine trees
 TYPE CIT
-ID cit_3_5_2_3_5_5
+ID cit_3_5_2_3_4_5
 TERM_ZH 聽松
-CIT 3.5.2.3.5.5
+CIT 3.5.2.3.4.5
 $
-N 3.5.2.3.5.6
+N 3.5.2.3.4.6
 BROADER 聽賞
 ID.INV CIT282159
 KW_ZH 听莺
 TERM_PINYIN ting ying
 TERM_EN listening to orioles
 TYPE CIT
-ID cit_3_5_2_3_5_6
+ID cit_3_5_2_3_4_6
 TERM_ZH 聽鶯
-CIT 3.5.2.3.5.6
+CIT 3.5.2.3.4.6
 $
-N 3.5.2.3.5.7
+N 3.5.2.3.4.7
 BROADER 聽賞
 ID.INV CIT277172
 KW_ZH 闻喜
 TERM_PINYIN wen xi
 TERM_EN hearing magpies
 TYPE CIT
-ID cit_3_5_2_3_5_7
+ID cit_3_5_2_3_4_7
 TERM_ZH 聞喜
-CIT 3.5.2.3.5.7
+CIT 3.5.2.3.4.7
 $
-N 3.5.2.3.5.8
+N 3.5.2.3.4.8
 BROADER 聽賞
 ID.INV THES292357
 TERM_PINYIN ting xue
 TERM_EN listening to the snow fall
 TYPE CIT
-ID cit_3_5_2_3_5_8
+ID cit_3_5_2_3_4_8
 TERM_ZH 聽雪
-CIT 3.5.2.3.5.8
+CIT 3.5.2.3.4.8
 $
-N 3.5.2.3.6
+N 3.5.2.3.5
 BROADER 閒適
 ID.INV THES288998
 KW_ZH 静赏
 TERM_PINYIN jing shang
 TERM_EN silent enjoyment
 TYPE CIT
-ID cit_3_5_2_3_6
+ID cit_3_5_2_3_5
 TERM_ZH 靜賞
-CIT 3.5.2.3.6
+CIT 3.5.2.3.5
 $
-N 3.5.2.3.7
+N 3.5.2.3.6
 BROADER 閒適
 DISCRIM 閒適
 ID.INV THES285071
@@ -50433,11 +50815,11 @@ KW_ZH 渔钓 (闲适)
 TERM_PINYIN yu diao (xian shi)
 TERM_EN angling (leisure)
 TYPE CIT
-ID cit_3_5_2_3_7
+ID cit_3_5_2_3_6
 TERM_ZH 漁釣 (閒適)
-CIT 3.5.2.3.7
+CIT 3.5.2.3.6
 $
-N 3.5.2.3.8
+N 3.5.2.3.7
 BROADER 閒適
 ID.INV CIT282397
 KW_ZH 清谭
@@ -50451,11 +50833,11 @@ TERM_PINYIN qing tan
 TERM_EN idle talk
 KW_EN pure talk
 TYPE CIT
-ID cit_3_5_2_3_8
+ID cit_3_5_2_3_7
 TERM_ZH 清談
-CIT 3.5.2.3.8
+CIT 3.5.2.3.7
 $
-N 3.5.2.3.9
+N 3.5.2.3.8
 BROADER 閒適
 ID.INV THES285339
 KW_ZH 闲步
@@ -50464,9 +50846,9 @@ TERM_PINYIN xian bu
 TERM_EN strolling
 KW_EN taking a walk
 TYPE CIT
-ID cit_3_5_2_3_9
+ID cit_3_5_2_3_8
 TERM_ZH 閒步
-CIT 3.5.2.3.9
+CIT 3.5.2.3.8
 $
 N 3.5.3
 BROADER 節慶與娛樂
@@ -51770,6 +52152,9 @@ C 3.6.1.4.1
 ; 3.6.1.4.16
 ; 3.6.1.4.17
 ; 3.6.1.4.18
+; 3.6.1.4.19
+; 3.6.1.4.20
+; 3.6.1.4.21
 TYPE CIT
 ID cit_3_6_1_4
 TERM_ZH 農器
@@ -51854,6 +52239,27 @@ CIT 3.6.1.4.7
 $
 N 3.6.1.4.8
 BROADER 農器
+ID.INV CIT282192
+KW_ZH 连耞
+TERM_PINYIN lian jia
+TERM_EN flail
+TYPE CIT
+ID cit_3_6_1_4_8
+TERM_ZH 連耞
+CIT 3.6.1.4.8
+$
+N 3.6.1.4.9
+BROADER 農器
+ID.INV THES293139
+TERM_PINYIN bian
+TERM_EN round shalow basket
+TYPE CIT
+ID cit_3_6_1_4_9
+TERM_ZH 匾
+CIT 3.6.1.4.9
+$
+N 3.6.1.4.10
+BROADER 農器
 ID.INV CIT283041
 KW_ZH 筛
 ; 穀簁
@@ -51862,22 +52268,11 @@ KW_ZH 筛
 TERM_PINYIN shai
 TERM_EN sieve
 TYPE CIT
-ID cit_3_6_1_4_8
+ID cit_3_6_1_4_10
 TERM_ZH 篩
-CIT 3.6.1.4.8
+CIT 3.6.1.4.10
 $
-N 3.6.1.4.9
-BROADER 農器
-ID.INV CIT282192
-KW_ZH 连耞
-TERM_PINYIN lian jia
-TERM_EN flail
-TYPE CIT
-ID cit_3_6_1_4_9
-TERM_ZH 連耞
-CIT 3.6.1.4.9
-$
-N 3.6.1.4.10
+N 3.6.1.4.11
 BROADER 農器
 ID.INV CIT284459
 KW_ZH 簸箕
@@ -51886,21 +52281,32 @@ KW_EN dustpan
 ; wicker scoop
 TERM_EN bamboo scoop
 TYPE CIT
-ID cit_3_6_1_4_10
+ID cit_3_6_1_4_11
 TERM_ZH 畚箕
-CIT 3.6.1.4.10
+CIT 3.6.1.4.11
 $
-N 3.6.1.4.11
+N 3.6.1.4.12
 BROADER 農器
 ID.INV CIT283532
 TERM_PINYIN bian
 TERM_EN whip
 TYPE CIT
-ID cit_3_6_1_4_11
+ID cit_3_6_1_4_12
 TERM_ZH 鞭
-CIT 3.6.1.4.11
+CIT 3.6.1.4.12
 $
-N 3.6.1.4.12
+N 3.6.1.4.13
+BROADER 農器
+ID.INV THES293158
+KW_ZH 粪箕
+TERM_PINYIN fen ji
+TERM_EN dustpan
+TYPE CIT
+ID cit_3_6_1_4_13
+TERM_ZH 糞箕
+CIT 3.6.1.4.13
+$
+N 3.6.1.4.14
 BROADER 農器
 ID.INV CIT282785
 TERM_PINYIN mo
@@ -51908,21 +52314,21 @@ KW_EN milstone
 ; quern
 TERM_EN grindstone
 TYPE CIT
-ID cit_3_6_1_4_12
+ID cit_3_6_1_4_14
 TERM_ZH 磨
-CIT 3.6.1.4.12
+CIT 3.6.1.4.14
 $
-N 3.6.1.4.13
+N 3.6.1.4.15
 BROADER 農器
 ID.INV CIT282214
 TERM_PINYIN chu jiu
 TERM_EN pestle and mortar
 TYPE CIT
-ID cit_3_6_1_4_13
+ID cit_3_6_1_4_15
 TERM_ZH 杵臼
-CIT 3.6.1.4.13
+CIT 3.6.1.4.15
 $
-N 3.6.1.4.14
+N 3.6.1.4.16
 BROADER 農器
 ID.INV THES292447
 KW_ZH 谿碓
@@ -51934,87 +52340,98 @@ KW_ZH 谿碓
 TERM_PINYIN shui dui
 TERM_EN water-powered trip-hammer
 TYPE CIT
-ID cit_3_6_1_4_14
+ID cit_3_6_1_4_16
 TERM_ZH 水碓
-CIT 3.6.1.4.14
+CIT 3.6.1.4.16
 $
-N 3.6.1.4.15
+N 3.6.1.4.17
 BROADER 農器
 ID.INV CIT282453
 KW_ZH 水车
 TERM_PINYIN shui che
 TERM_EN water-powered machine
-C 3.6.1.4.15.1
-; 3.6.1.4.15.2
-; 3.6.1.4.15.3
+C 3.6.1.4.17.1
+; 3.6.1.4.17.2
+; 3.6.1.4.17.3
 TYPE CIT
-ID cit_3_6_1_4_15
+ID cit_3_6_1_4_17
 TERM_ZH 水車
-CIT 3.6.1.4.15
+CIT 3.6.1.4.17
 $
-N 3.6.1.4.15.1
+N 3.6.1.4.17.1
 BROADER 水車
 ID.INV THES292449
 KW_ZH 翻車
 TERM_PINYIN long gu shui che
 TERM_EN square-pallet chain-pump
 TYPE CIT
-ID cit_3_6_1_4_15_1
+ID cit_3_6_1_4_17_1
 TERM_ZH 龍骨水車
-CIT 3.6.1.4.15.1
+CIT 3.6.1.4.17.1
 $
-N 3.6.1.4.15.2
+N 3.6.1.4.17.2
 BROADER 水車
 ID.INV THES292450
 TERM_PINYIN tong che
 TERM_EN waterwheel with tube-buckets
 TYPE CIT
-ID cit_3_6_1_4_15_2
+ID cit_3_6_1_4_17_2
 TERM_ZH 筒車
-CIT 3.6.1.4.15.2
+CIT 3.6.1.4.17.2
 $
-N 3.6.1.4.15.3
+N 3.6.1.4.17.3
 BROADER 水車
 ID.INV THES292452
 TERM_PINYIN gua che
 TERM_EN scoop wheel
 TYPE CIT
-ID cit_3_6_1_4_15_3
+ID cit_3_6_1_4_17_3
 TERM_ZH 刮車
-CIT 3.6.1.4.15.3
+CIT 3.6.1.4.17.3
 $
-N 3.6.1.4.16
+N 3.6.1.4.18
 BROADER 農器
 ID.INV CIT288337
 KW_ZH 鞻车
 TERM_PINYIN lou che
 TERM_EN seed drill
 TYPE CIT
-ID cit_3_6_1_4_16
+ID cit_3_6_1_4_18
 TERM_ZH 鞻車
-CIT 3.6.1.4.16
+CIT 3.6.1.4.18
 $
-N 3.6.1.4.17
+N 3.6.1.4.19
 BROADER 農器
 ID.INV CIT282791
 KW_ZH 砻
 TERM_PINYIN long
 TERM_EN rice huller
 TYPE CIT
-ID cit_3_6_1_4_17
+ID cit_3_6_1_4_19
 TERM_ZH 礱
-CIT 3.6.1.4.17
+CIT 3.6.1.4.19
 $
-N 3.6.1.4.18
+N 3.6.1.4.20
 BROADER 農器
 ID.INV CIT282893
 TERM_PINYIN lu
 TERM_EN bamboo chest
 KW_EN hamper
 TYPE CIT
-ID cit_3_6_1_4_18
+ID cit_3_6_1_4_20
 TERM_ZH 簏
-CIT 3.6.1.4.18
+CIT 3.6.1.4.20
+$
+N 3.6.1.4.21
+BROADER 農器
+DISCRIM 農器
+ID.INV THES293117
+TERM_PINYIN tong (nong qi)
+TERM_EN pail (agricultural implements)
+TYPE CIT
+ID cit_3_6_1_4_21
+TERM_ZH 桶 (農器)
+CIT 3.6.1.4.21
 $
 N 3.6.1.5
 BROADER 農業
@@ -53021,6 +53438,7 @@ TERM_PINYIN lin ye
 C 3.6.4.1
 ; 3.6.4.2
 ; 3.6.4.3
+; 3.6.4.4
 TYPE CIT
 ID cit_3_6_4
 TERM_ZH 林業
@@ -53069,11 +53487,11 @@ N 3.6.4.2
 BROADER 林業
 ID.INV CIT282386
 KW_ZH 砍柴
-TERM_PINYIN qiao
+TERM_PINYIN cai qiao
 TERM_EN woodcutting
 TYPE CIT
 ID cit_3_6_4_2
-TERM_ZH 樵
+TERM_ZH 採樵
 CIT 3.6.4.2
 $
 N 3.6.4.3
@@ -53085,6 +53503,16 @@ TYPE CIT
 ID cit_3_6_4_3
 TERM_ZH 樵柯
 CIT 3.6.4.3
+$
+N 3.6.4.4
+BROADER 林業
+ID.INV THES293175
+TERM_PINYIN chai xin
+TERM_EN firewood
+TYPE CIT
+ID cit_3_6_4_4
+TERM_ZH 柴薪
+CIT 3.6.4.4
 $
 N 3.6.5
 BROADER 農林牧副漁
@@ -53657,12 +54085,13 @@ $
 N 3.6.6.3
 BROADER 狩獵業
 ID.INV CIT275045
-KW_ZH 打猎
+KW_ZH 打獵
+; 打猎
 ; 雪獵
 ; 雪猎
 ; 小獵
 ; 行圍
-TERM_PINYIN da lie
+TERM_PINYIN xing lie
 TERM_EN hunting
 C 3.6.6.3.1
 ; 3.6.6.3.2
@@ -53670,11 +54099,11 @@ C 3.6.6.3.1
 ; 3.6.6.3.4
 TYPE CIT
 ID cit_3_6_6_3
-TERM_ZH 打獵
+TERM_ZH 行獵
 CIT 3.6.6.3
 $
 N 3.6.6.3.1
-BROADER 打獵
+BROADER 行獵
 ID.INV CIT281584
 KW_ZH 出猎
 TERM_PINYIN chu lie
@@ -53685,18 +54114,20 @@ TERM_ZH 出獵
 CIT 3.6.6.3.1
 $
 N 3.6.6.3.2
-BROADER 打獵
-ID.INV CIT282027
-KW_ZH 挟弹
-TERM_PINYIN xie dan
-TERM_EN carrying a pellet bow
+BROADER 行獵
+ID.INV CIT281678
+KW_ZH 回猎
+; 歸獵
+; 归猎
+TERM_PINYIN hui lie
+TERM_EN returning from a hunt
 TYPE CIT
 ID cit_3_6_6_3_2
-TERM_ZH 挾彈
+TERM_ZH 回獵
 CIT 3.6.6.3.2
 $
 N 3.6.6.3.3
-BROADER 打獵
+BROADER 行獵
 ID.INV CIT281824
 KW_ZH 射虎
 TERM_PINYIN she lie
@@ -53707,16 +54138,14 @@ TERM_ZH 射獵
 CIT 3.6.6.3.3
 $
 N 3.6.6.3.4
-BROADER 打獵
-ID.INV CIT281678
-KW_ZH 回猎
-; 歸獵
-; 归猎
-TERM_PINYIN hui lie
-TERM_EN returning from a hunt
+BROADER 行獵
+ID.INV CIT282027
+KW_ZH 挟弹
+TERM_PINYIN xie dan
+TERM_EN carrying a pellet bow
 TYPE CIT
 ID cit_3_6_6_3_4
-TERM_ZH 回獵
+TERM_ZH 挾彈
 CIT 3.6.6.3.4
 $
 N 3.6.6.4
@@ -53740,6 +54169,7 @@ C 3.6.6.5.1
 ; 3.6.6.5.2
 ; 3.6.6.5.3
 ; 3.6.6.5.4
+; 3.6.6.5.5
 TYPE CIT
 ID cit_3_6_6_5
 TERM_ZH 獵具
@@ -53759,188 +54189,220 @@ CIT 3.6.6.5.1
 $
 N 3.6.6.5.2
 BROADER 獵具
+DISCRIM 獵具
+ID.INV THES293233
+TERM_PINYIN gong (lie ju)
+TERM_EN bow (hunting equipment)
+TYPE CIT
+ID cit_3_6_6_5_2
+TERM_ZH 弓 (獵具)
+CIT 3.6.6.5.2
+$
+N 3.4.7.6.5.1.1
+BROADER 弓
+ID.INV CIT289693
+TERM_PINYIN gao
+TERM_EN bow container
+TYPE CIT
+ID cit_3_4_7_6_5_1_1
+TERM_ZH 櫜
+CIT 3.4.7.6.5.1.1
+$
+N 3.4.7.6.5.1.2
+BROADER 弓
+ID.INV CIT283137
+R 息兵
+TERM_PINYIN tuo gong
+TERM_EN bows being packed up
+TYPE CIT
+ID cit_3_4_7_6_5_1_2
+TERM_ZH 橐弓
+CIT 3.4.7.6.5.1.2
+$
+N 3.6.6.5.3
+BROADER 獵具
 ID.INV CIT285551
 TERM_PINYIN nu
 TERM_EN crossbow
 KW_EN arbalest
-C 3.6.6.5.2.1
-; 3.6.6.5.2.2
-; 3.6.6.5.2.3
+C 3.6.6.5.3.1
+; 3.6.6.5.3.2
+; 3.6.6.5.3.3
 TYPE CIT
-ID cit_3_6_6_5_2
+ID cit_3_6_6_5_3
 TERM_ZH 弩
-CIT 3.6.6.5.2
+CIT 3.6.6.5.3
 $
-N 3.6.6.5.2.1
+N 3.6.6.5.3.1
 BROADER 弩
 ID.INV CIT289936
 TERM_PINYIN she hu nu
 TERM_EN tiger-shooting crossbow
 TYPE CIT
-ID cit_3_6_6_5_2_1
+ID cit_3_6_6_5_3_1
 TERM_ZH 射虎弩
-CIT 3.6.6.5.2.1
+CIT 3.6.6.5.3.1
 $
-N 3.6.6.5.2.2
+N 3.6.6.5.3.2
 BROADER 弩
 ID.INV CIT289931
 TERM_PINYIN ru yi nu
 TERM_EN ruyi crossbow
 TYPE CIT
-ID cit_3_6_6_5_2_2
+ID cit_3_6_6_5_3_2
 TERM_ZH 如意弩
-CIT 3.6.6.5.2.2
+CIT 3.6.6.5.3.2
 $
-N 3.6.6.5.2.3
+N 3.6.6.5.3.3
 BROADER 弩
 ID.INV CIT289932
 KW_ZH 双机弩
 TERM_PINYIN shuang ji nu
 TERM_EN double-trigger crossbow
 TYPE CIT
-ID cit_3_6_6_5_2_3
+ID cit_3_6_6_5_3_3
 TERM_ZH 雙機弩
-CIT 3.6.6.5.2.3
+CIT 3.6.6.5.3.3
 $
-N 3.6.6.5.3
+N 3.6.6.5.4
 BROADER 獵具
 DISCRIM 獵具
 ID.INV THES284987
 KW_ZH 箭 (猎具)
 TERM_PINYIN jian (lie ju)
 TERM_EN arrow (hunting equipment)
-C 3.6.6.5.3.1
-; 3.6.6.5.3.2
-; 3.6.6.5.3.3
-; 3.6.6.5.3.4
-; 3.6.6.5.3.5
-; 3.6.6.5.3.6
-; 3.6.6.5.3.7
-; 3.6.6.5.3.8
-; 3.6.6.5.3.9
-; 3.6.6.5.3.10
-; 3.6.6.5.3.11
-; 3.6.6.5.3.12
-; 3.6.6.5.3.13
+C 3.6.6.5.4.1
+; 3.6.6.5.4.2
+; 3.6.6.5.4.3
+; 3.6.6.5.4.4
+; 3.6.6.5.4.5
+; 3.6.6.5.4.6
+; 3.6.6.5.4.7
+; 3.6.6.5.4.8
+; 3.6.6.5.4.9
+; 3.6.6.5.4.10
+; 3.6.6.5.4.11
+; 3.6.6.5.4.12
+; 3.6.6.5.4.13
 TYPE CIT
-ID cit_3_6_6_5_3
+ID cit_3_6_6_5_4
 TERM_ZH 箭 (獵具)
-CIT 3.6.6.5.3
+CIT 3.6.6.5.4
 $
-N 3.6.6.5.3.1
+N 3.6.6.5.4.1
 BROADER 箭 (獵具)
 ID.INV CIT289878
 TERM_PINYIN she hou jian
 TERM_EN marquis-shooting arrow
 TYPE CIT
-ID cit_3_6_6_5_3_1
+ID cit_3_6_6_5_4_1
 TERM_ZH 射侯箭
-CIT 3.6.6.5.3.1
+CIT 3.6.6.5.4.1
 $
-N 3.6.6.5.3.2
+N 3.6.6.5.4.2
 BROADER 箭 (獵具)
 ID.INV CIT289940
 TERM_PINYIN she hu nu jian
 TERM_EN tiger-shooting crossbow arrow
 TYPE CIT
-ID cit_3_6_6_5_3_2
+ID cit_3_6_6_5_4_2
 TERM_ZH 射虎弩箭
-CIT 3.6.6.5.3.2
+CIT 3.6.6.5.4.2
 $
-N 3.6.6.5.3.3
+N 3.6.6.5.4.3
 BROADER 箭 (獵具)
 ID.INV CIT289915
 KW_ZH 尖头箭
 TERM_PINYIN jian tou jian
 TERM_EN sharp-tipped arrow
 TYPE CIT
-ID cit_3_6_6_5_3_3
+ID cit_3_6_6_5_4_3
 TERM_ZH 尖頭箭
-CIT 3.6.6.5.3.3
+CIT 3.6.6.5.4.3
 $
-N 3.6.6.5.3.4
+N 3.6.6.5.4.4
 BROADER 箭 (獵具)
 ID.INV CIT289923
 TERM_PINYIN shui jian
 TERM_EN water arrow
 TYPE CIT
-ID cit_3_6_6_5_3_4
+ID cit_3_6_6_5_4_4
 TERM_ZH 水箭
-CIT 3.6.6.5.3.4
+CIT 3.6.6.5.4.4
 $
-N 3.6.6.5.3.5
+N 3.6.6.5.4.5
 BROADER 箭 (獵具)
 ID.INV CIT289877
 TERM_PINYIN tu cha jian
 TERM_EN hare-fork arrow
-C 3.6.6.5.3.5.1
-; 3.6.6.5.3.5.2
+C 3.6.6.5.4.5.1
+; 3.6.6.5.4.5.2
 TYPE CIT
-ID cit_3_6_6_5_3_5
+ID cit_3_6_6_5_4_5
 TERM_ZH 兔叉箭
-CIT 3.6.6.5.3.5
+CIT 3.6.6.5.4.5
 $
-N 3.6.6.5.3.5.1
+N 3.6.6.5.4.5.1
 BROADER 兔叉箭
 ID.INV CIT289921
 TERM_PINYIN mu tu cha jian
 TERM_EN wooden hare-fork arrow
 TYPE CIT
-ID cit_3_6_6_5_3_5_1
+ID cit_3_6_6_5_4_5_1
 TERM_ZH 木兔叉箭
-CIT 3.6.6.5.3.5.1
+CIT 3.6.6.5.4.5.1
 $
-N 3.6.6.5.3.5.2
+N 3.6.6.5.4.5.2
 BROADER 兔叉箭
 ID.INV CIT289920
 KW_ZH 铁兔叉箭
 TERM_PINYIN tie tu cha jian
 TERM_EN iron hare-fork arrow
 TYPE CIT
-ID cit_3_6_6_5_3_5_2
+ID cit_3_6_6_5_4_5_2
 TERM_ZH 鐵兔叉箭
-CIT 3.6.6.5.3.5.2
+CIT 3.6.6.5.4.5.2
 $
-N 3.6.6.5.3.6
+N 3.6.6.5.4.6
 BROADER 箭 (獵具)
 ID.INV CIT289876
 TERM_PINYIN shao jian
 KW_EN shrieking arrow
 TERM_EN whistling arrow
-C 3.6.6.5.3.6.1
-; 3.6.6.5.3.6.2
-; 3.6.6.5.3.6.3
-; 3.6.6.5.3.6.4
-; 3.6.6.5.3.6.5
-; 3.6.6.5.3.6.6
-; 3.6.6.5.3.6.7
-; 3.6.6.5.3.6.8
+C 3.6.6.5.4.6.1
+; 3.6.6.5.4.6.2
+; 3.6.6.5.4.6.3
+; 3.6.6.5.4.6.4
+; 3.6.6.5.4.6.5
+; 3.6.6.5.4.6.6
+; 3.6.6.5.4.6.7
+; 3.6.6.5.4.6.8
 TYPE CIT
-ID cit_3_6_6_5_3_6
+ID cit_3_6_6_5_4_6
 TERM_ZH 哨箭
-CIT 3.6.6.5.3.6
+CIT 3.6.6.5.4.6
 $
-N 3.6.6.5.3.6.1
+N 3.6.6.5.4.6.1
 BROADER 哨箭
 ID.INV CIT289902
 TERM_PINYIN he bao shao jian
 TERM_EN cone-shaped whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_1
+ID cit_3_6_6_5_4_6_1
 TERM_ZH 合包哨箭
-CIT 3.6.6.5.3.6.1
+CIT 3.6.6.5.4.6.1
 $
-N 3.6.6.5.3.6.2
+N 3.6.6.5.4.6.2
 BROADER 哨箭
 ID.INV CIT289900
 TERM_PINYIN fang shao jian
 TERM_EN square whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_2
+ID cit_3_6_6_5_4_6_2
 TERM_ZH 方哨箭
-CIT 3.6.6.5.3.6.2
+CIT 3.6.6.5.4.6.2
 $
-N 3.6.6.5.3.6.3
+N 3.6.6.5.4.6.3
 BROADER 哨箭
 ID.INV CIT289905
 KW_ZH 圆哨箭
@@ -53948,395 +54410,395 @@ TERM_PINYIN yuan shao jian
 TERM_EN round whistling arrow
 KW_EN round shrieking arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_3
+ID cit_3_6_6_5_4_6_3
 TERM_ZH 圓哨箭
-CIT 3.6.6.5.3.6.3
+CIT 3.6.6.5.4.6.3
 $
-N 3.6.6.5.3.6.4
+N 3.6.6.5.4.6.4
 BROADER 哨箭
 ID.INV CIT289907
 TERM_PINYIN zhen zi shao jian
 TERM_EN hazelnut-shaped whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_4
+ID cit_3_6_6_5_4_6_4
 TERM_ZH 榛子哨箭
-CIT 3.6.6.5.3.6.4
+CIT 3.6.6.5.4.6.4
 $
-N 3.6.6.5.3.6.5
+N 3.6.6.5.4.6.5
 BROADER 哨箭
 ID.INV CIT289903
 KW_ZH 齐哨箭
 TERM_PINYIN qi shao jian
 TERM_EN flat-tipped whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_5
+ID cit_3_6_6_5_4_6_5
 TERM_ZH 齊哨箭
-CIT 3.6.6.5.3.6.5
+CIT 3.6.6.5.4.6.5
 $
-N 3.6.6.5.3.6.6
+N 3.6.6.5.4.6.6
 BROADER 哨箭
 ID.INV CIT289906
 TERM_PINYIN chang shao jian
 TERM_EN long whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_6
+ID cit_3_6_6_5_4_6_6
 TERM_ZH 長哨箭
-CIT 3.6.6.5.3.6.6
+CIT 3.6.6.5.4.6.6
 $
-N 3.6.6.5.3.6.7
+N 3.6.6.5.4.6.7
 BROADER 哨箭
 ID.INV CIT289899
 TERM_PINYIN jiao shao jian
 TERM_EN horn whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_7
+ID cit_3_6_6_5_4_6_7
 TERM_ZH 角哨箭
-CIT 3.6.6.5.3.6.7
+CIT 3.6.6.5.4.6.7
 $
-N 3.6.6.5.3.6.8
+N 3.6.6.5.4.6.8
 BROADER 哨箭
 ID.INV CIT289901
 KW_ZH 鸭嘴哨箭
 TERM_PINYIN ya zui shao jian
 TERM_EN duck-beak whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_6_8
+ID cit_3_6_6_5_4_6_8
 TERM_ZH 鴨嘴哨箭
-CIT 3.6.6.5.3.6.8
+CIT 3.6.6.5.4.6.8
 $
-N 3.6.6.5.3.7
+N 3.6.6.5.4.7
 BROADER 箭 (獵具)
 ID.INV CIT289919
 TERM_PINYIN dun jian
 TERM_EN headless arrow
 TYPE CIT
-ID cit_3_6_6_5_3_7
+ID cit_3_6_6_5_4_7
 TERM_ZH 墩箭
-CIT 3.6.6.5.3.7
+CIT 3.6.6.5.4.7
 $
-N 3.6.6.5.3.8
+N 3.6.6.5.4.8
 BROADER 箭 (獵具)
 ID.INV CIT289937
 TERM_PINYIN ru yi nu jian
 TERM_EN ruyi crossbow arrow
 TYPE CIT
-ID cit_3_6_6_5_3_8
+ID cit_3_6_6_5_4_8
 TERM_ZH 如意弩箭
-CIT 3.6.6.5.3.8
+CIT 3.6.6.5.4.8
 $
-N 3.6.6.5.3.9
+N 3.6.6.5.4.9
 BROADER 箭 (獵具)
 ID.INV CIT289917
 TERM_PINYIN kuai jian
 TERM_EN fast arrow
 TYPE CIT
-ID cit_3_6_6_5_3_9
+ID cit_3_6_6_5_4_9
 TERM_ZH 快箭
-CIT 3.6.6.5.3.9
+CIT 3.6.6.5.4.9
 $
-N 3.6.6.5.3.10
+N 3.6.6.5.4.10
 BROADER 箭 (獵具)
 DISCRIM 獵具
 ID.INV CIT289873
 KW_ZH 鈚箭 (猎具)
 TERM_PINYIN pi jian (lie ju)
 TERM_EN broad-headed arrow (hunting equipment)
-C 3.6.6.5.3.10.1
-; 3.6.6.5.3.10.2
-; 3.6.6.5.3.10.3
-; 3.6.6.5.3.10.4
-; 3.6.6.5.3.10.5
-; 3.6.6.5.3.10.6
-; 3.6.6.5.3.10.7
-; 3.6.6.5.3.10.8
-; 3.6.6.5.3.10.9
-; 3.6.6.5.3.10.10
-; 3.6.6.5.3.10.11
-; 3.6.6.5.3.10.12
-; 3.6.6.5.3.10.13
+C 3.6.6.5.4.10.1
+; 3.6.6.5.4.10.2
+; 3.6.6.5.4.10.3
+; 3.6.6.5.4.10.4
+; 3.6.6.5.4.10.5
+; 3.6.6.5.4.10.6
+; 3.6.6.5.4.10.7
+; 3.6.6.5.4.10.8
+; 3.6.6.5.4.10.9
+; 3.6.6.5.4.10.10
+; 3.6.6.5.4.10.11
+; 3.6.6.5.4.10.12
+; 3.6.6.5.4.10.13
 TYPE CIT
-ID cit_3_6_6_5_3_10
+ID cit_3_6_6_5_4_10
 TERM_ZH 鈚箭 (獵具)
-CIT 3.6.6.5.3.10
+CIT 3.6.6.5.4.10
 $
-N 3.6.6.5.3.10.1
+N 3.6.6.5.4.10.1
 BROADER 鈚箭 (獵具)
 ID.INV CIT289938
 TERM_PINYIN nu bi jian
 TERM_EN crossbow broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_1
+ID cit_3_6_6_5_4_10_1
 TERM_ZH 弩鈚箭
-CIT 3.6.6.5.3.10.1
+CIT 3.6.6.5.4.10.1
 $
-N 3.6.6.5.3.10.2
+N 3.6.6.5.4.10.2
 BROADER 鈚箭 (獵具)
 ID.INV CIT289891
 TERM_PINYIN she hu pi jian
 TERM_EN tiger-shooting broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_2
+ID cit_3_6_6_5_4_10_2
 TERM_ZH 射虎鈚箭
-CIT 3.6.6.5.3.10.2
+CIT 3.6.6.5.4.10.2
 $
-N 3.6.6.5.3.10.3
+N 3.6.6.5.4.10.3
 BROADER 鈚箭 (獵具)
 ID.INV CIT289888
 TERM_PINYIN xiao pi jian
 TERM_EN lesser broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_3
+ID cit_3_6_6_5_4_10_3
 TERM_ZH 小鈚箭
-CIT 3.6.6.5.3.10.3
+CIT 3.6.6.5.4.10.3
 $
-N 3.6.6.5.3.10.4
+N 3.6.6.5.4.10.4
 BROADER 鈚箭 (獵具)
 ID.INV CIT289897
 TERM_PINYIN jian pi jian
 TERM_EN sharp-edged broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_4
+ID cit_3_6_6_5_4_10_4
 TERM_ZH 尖鈚箭
-CIT 3.6.6.5.3.10.4
+CIT 3.6.6.5.4.10.4
 $
-N 3.6.6.5.3.10.5
+N 3.6.6.5.4.10.5
 BROADER 鈚箭 (獵具)
 ID.INV CIT289896
 TERM_PINYIN mo jiao pi jian
 TERM_EN round-edged broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_5
+ID cit_3_6_6_5_4_10_5
 TERM_ZH 抹角鈚箭
-CIT 3.6.6.5.3.10.5
+CIT 3.6.6.5.4.10.5
 $
-N 3.6.6.5.3.10.6
+N 3.6.6.5.4.10.6
 BROADER 鈚箭 (獵具)
 ID.INV THES284988
 TERM_PINYIN cha pi jian
 TERM_EN fork-shaped broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_6
+ID cit_3_6_6_5_4_10_6
 TERM_ZH 叉鈚箭
-CIT 3.6.6.5.3.10.6
+CIT 3.6.6.5.4.10.6
 $
-N 3.6.6.5.3.10.7
+N 3.6.6.5.4.10.7
 BROADER 鈚箭 (獵具)
 ID.INV CIT289893
 TERM_PINYIN yue ya pi jian
 TERM_EN crescent borad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_7
+ID cit_3_6_6_5_4_10_7
 TERM_ZH 月牙鈚箭
-CIT 3.6.6.5.3.10.7
+CIT 3.6.6.5.4.10.7
 $
-N 3.6.6.5.3.10.8
+N 3.6.6.5.4.10.8
 BROADER 鈚箭 (獵具)
 ID.INV CIT289895
 TERM_PINYIN shu ji pi jian
 TERM_EN comb-shaft broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_8
+ID cit_3_6_6_5_4_10_8
 TERM_ZH 梳脊鈚箭
-CIT 3.6.6.5.3.10.8
+CIT 3.6.6.5.4.10.8
 $
-N 3.6.6.5.3.10.9
+N 3.6.6.5.4.10.9
 BROADER 鈚箭 (獵具)
 ID.INV CIT289887
 TERM_PINYIN da pi jian
 TERM_EN greater broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_9
+ID cit_3_6_6_5_4_10_9
 TERM_ZH 大鈚箭
-CIT 3.6.6.5.3.10.9
+CIT 3.6.6.5.4.10.9
 $
-N 3.6.6.5.3.10.10
+N 3.6.6.5.4.10.10
 BROADER 鈚箭 (獵具)
 ID.INV CIT289908
 TERM_PINYIN zhen zi shao pi jian
 TERM_EN hazelnut-shaped broad-headed whistling arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_10
+ID cit_3_6_6_5_4_10_10
 TERM_ZH 榛子哨鈚箭
-CIT 3.6.6.5.3.10.10
+CIT 3.6.6.5.4.10.10
 $
-N 3.6.6.5.3.10.11
+N 3.6.6.5.4.10.11
 BROADER 鈚箭 (獵具)
 ID.INV CIT289894
 TERM_PINYIN yan wei pi jian
 TERM_EN swallowtail broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_11
+ID cit_3_6_6_5_4_10_11
 TERM_ZH 燕尾鈚箭
-CIT 3.6.6.5.3.10.11
+CIT 3.6.6.5.4.10.11
 $
-N 3.6.6.5.3.10.12
+N 3.6.6.5.4.10.12
 BROADER 鈚箭 (獵具)
 ID.INV CIT289892
 KW_ZH 齐鈚箭
 TERM_PINYIN qi pi jian
 TERM_EN flat-tipped broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_12
+ID cit_3_6_6_5_4_10_12
 TERM_ZH 齊鈚箭
-CIT 3.6.6.5.3.10.12
+CIT 3.6.6.5.4.10.12
 $
-N 3.6.6.5.3.10.13
+N 3.6.6.5.4.10.13
 BROADER 鈚箭 (獵具)
 ID.INV CIT289890
 KW_ZH 锈铁鈚箭
 TERM_PINYIN xiu tie pi jian
 TERM_EN rusty broad-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_10_13
+ID cit_3_6_6_5_4_10_13
 TERM_ZH 鏽鐵鈚箭
-CIT 3.6.6.5.3.10.13
+CIT 3.6.6.5.4.10.13
 $
-N 3.6.6.5.3.11
+N 3.6.6.5.4.11
 BROADER 箭 (獵具)
 ID.INV CIT289875
 TERM_PINYIN bao jian
 TERM_EN bone-headed whistle arrow
-C 3.6.6.5.3.11.1
-; 3.6.6.5.3.11.2
-; 3.6.6.5.3.11.3
-; 3.6.6.5.3.11.4
-; 3.6.6.5.3.11.5
-; 3.6.6.5.3.11.6
-; 3.6.6.5.3.11.7
-; 3.6.6.5.3.11.8
-; 3.6.6.5.3.11.9
+C 3.6.6.5.4.11.1
+; 3.6.6.5.4.11.2
+; 3.6.6.5.4.11.3
+; 3.6.6.5.4.11.4
+; 3.6.6.5.4.11.5
+; 3.6.6.5.4.11.6
+; 3.6.6.5.4.11.7
+; 3.6.6.5.4.11.8
+; 3.6.6.5.4.11.9
 TYPE CIT
-ID cit_3_6_6_5_3_11
+ID cit_3_6_6_5_4_11
 TERM_ZH 骲箭
-CIT 3.6.6.5.3.11
+CIT 3.6.6.5.4.11
 $
-N 3.6.6.5.3.11.1
+N 3.6.6.5.4.11.1
 BROADER 骲箭
 ID.INV CIT289879
 KW_ZH 射鹄骲箭
 TERM_PINYIN she hu bao jian
 TERM_EN bone-headed whistle arrow for target shooting
 TYPE CIT
-ID cit_3_6_6_5_3_11_1
+ID cit_3_6_6_5_4_11_1
 TERM_ZH 射鵠骲箭
-CIT 3.6.6.5.3.11.1
+CIT 3.6.6.5.4.11.1
 $
-N 3.6.6.5.3.11.2
+N 3.6.6.5.4.11.2
 BROADER 骲箭
 ID.INV CIT289912
 TERM_PINYIN she hu bao jian
 TERM_EN bone-headed whistle arrow for tiger shooting
 TYPE CIT
-ID cit_3_6_6_5_3_11_2
+ID cit_3_6_6_5_4_11_2
 TERM_ZH 射虎骲箭
-CIT 3.6.6.5.3.11.2
+CIT 3.6.6.5.4.11.2
 $
-N 3.6.6.5.3.11.3
+N 3.6.6.5.4.11.3
 BROADER 骲箭
 ID.INV CIT289910
 TERM_PINYIN jian bao jian
 TERM_EN sharp bone-headed whistle arrow
 TYPE CIT
-ID cit_3_6_6_5_3_11_3
+ID cit_3_6_6_5_4_11_3
 TERM_ZH 尖骲箭
-CIT 3.6.6.5.3.11.3
+CIT 3.6.6.5.4.11.3
 $
-N 3.6.6.5.3.11.4
+N 3.6.6.5.4.11.4
 BROADER 骲箭
 ID.INV CIT289939
 TERM_PINYIN nu bao jian
 TERM_EN bone-headed whistle arrow shot from a crossbow
 TYPE CIT
-ID cit_3_6_6_5_3_11_4
+ID cit_3_6_6_5_4_11_4
 TERM_ZH 弩骲箭
-CIT 3.6.6.5.3.11.4
+CIT 3.6.6.5.4.11.4
 $
-N 3.6.6.5.3.11.5
+N 3.6.6.5.4.11.5
 BROADER 骲箭
 ID.INV CIT289911
 TERM_PINYIN fang bao jian
 TERM_EN square bone-headed whistle arrow
 TYPE CIT
-ID cit_3_6_6_5_3_11_5
+ID cit_3_6_6_5_4_11_5
 TERM_ZH 方骲箭
-CIT 3.6.6.5.3.11.5
+CIT 3.6.6.5.4.11.5
 $
-N 3.6.6.5.3.11.6
+N 3.6.6.5.4.11.6
 BROADER 骲箭
 ID.INV CIT289914
 KW_ZH 实心骲箭
 TERM_PINYIN shi xin bao jian
 TERM_EN solid bone-headed whistle arrow
 TYPE CIT
-ID cit_3_6_6_5_3_11_6
+ID cit_3_6_6_5_4_11_6
 TERM_ZH 實心骲箭
-CIT 3.6.6.5.3.11.6
+CIT 3.6.6.5.4.11.6
 $
-N 3.6.6.5.3.11.7
+N 3.6.6.5.4.11.7
 BROADER 骲箭
 ID.INV CIT289880
 KW_ZH 马射骲箭
 TERM_PINYIN ma she bao jian
 TERM_EN bone-headed whistle arrow shot from horseback
 TYPE CIT
-ID cit_3_6_6_5_3_11_7
+ID cit_3_6_6_5_4_11_7
 TERM_ZH 馬射骲箭
-CIT 3.6.6.5.3.11.7
+CIT 3.6.6.5.4.11.7
 $
-N 3.6.6.5.3.11.8
+N 3.6.6.5.4.11.8
 BROADER 骲箭
 ID.INV CIT289913
 KW_ZH 齐骲箭
 TERM_PINYIN qi bao jian
 TERM_EN flat bone-headed whistle arrow
 TYPE CIT
-ID cit_3_6_6_5_3_11_8
+ID cit_3_6_6_5_4_11_8
 TERM_ZH 齊骲箭
-CIT 3.6.6.5.3.11.8
+CIT 3.6.6.5.4.11.8
 $
-N 3.6.6.5.3.11.9
+N 3.6.6.5.4.11.9
 BROADER 骲箭
 ID.INV CIT289909
 KW_ZH 拧翎箭
 TERM_PINYIN ning ling jian
 TERM_EN spare shaft for the bone-headed arrow
 TYPE CIT
-ID cit_3_6_6_5_3_11_9
+ID cit_3_6_6_5_4_11_9
 TERM_ZH 擰翎箭
-CIT 3.6.6.5.3.11.9
+CIT 3.6.6.5.4.11.9
 $
-N 3.6.6.5.3.12
+N 3.6.6.5.4.12
 BROADER 箭 (獵具)
 ID.INV CIT289924
 KW_ZH 鱼叉箭
 TERM_PINYIN yu cha jian
 TERM_EN fish-fork arrow
 TYPE CIT
-ID cit_3_6_6_5_3_12
+ID cit_3_6_6_5_4_12
 TERM_ZH 魚叉箭
-CIT 3.6.6.5.3.12
+CIT 3.6.6.5.4.12
 $
-N 3.6.6.5.3.13
+N 3.6.6.5.4.13
 BROADER 箭 (獵具)
 ID.INV CIT289922
 KW_ZH 鸭嘴箭
 TERM_PINYIN ya zui jian
 TERM_EN duck-beak arrow
 TYPE CIT
-ID cit_3_6_6_5_3_13
+ID cit_3_6_6_5_4_13
 TERM_ZH 鴨嘴箭
-CIT 3.6.6.5.3.13
+CIT 3.6.6.5.4.13
 $
-N 3.6.6.5.4
+N 3.6.6.5.5
 BROADER 獵具
 ID.INV CIT289944
 KW_ZH 虎枪
 TERM_PINYIN hu qiang
 TERM_EN tiger spear
 TYPE CIT
-ID cit_3_6_6_5_4
+ID cit_3_6_6_5_5
 TERM_ZH 虎槍
-CIT 3.6.6.5.4
+CIT 3.6.6.5.5
 $
 N 3.7
 BROADER 社會與文化
@@ -55989,6 +56451,7 @@ TERM_EN equipment (textile industry)
 C 3.7.10.4.1
 ; 3.7.10.4.2
 ; 3.7.10.4.3
+; 3.7.10.4.4
 TYPE CIT
 ID cit_3_7_10_4
 TERM_ZH 工具 (紡織業)
@@ -56018,14 +56481,24 @@ CIT 3.7.10.4.2
 $
 N 3.7.10.4.3
 BROADER 工具 (紡織業)
+ID.INV THES293114
+TERM_PINYIN jing jia
+TERM_EN frame used in warp preparation
+TYPE CIT
+ID cit_3_7_10_4_3
+TERM_ZH 經架
+CIT 3.7.10.4.3
+$
+N 3.7.10.4.4
+BROADER 工具 (紡織業)
 ID.INV THES284121
 KW_ZH 织机
 TERM_PINYIN zhi ji
 TERM_EN loom
 TYPE CIT
-ID cit_3_7_10_4_3
+ID cit_3_7_10_4_4
 TERM_ZH 織機
-CIT 3.7.10.4.3
+CIT 3.7.10.4.4
 $
 N 3.7.10.5
 BROADER 紡織業
@@ -56475,6 +56948,7 @@ C 3.7.15.1
 ; 3.7.15.9
 ; 3.7.15.10
 ; 3.7.15.11
+; 3.7.15.12
 TYPE CIT
 ID cit_3_7_15
 TERM_ZH 工具 (手工業與工業)
@@ -56606,6 +57080,18 @@ TYPE CIT
 ID cit_3_7_15_11
 TERM_ZH 火爐 (手工業與工業)
 CIT 3.7.15.11
+$
+N 3.7.15.12
+BROADER 工具 (手工業與工業)
+DISCRIM 手工業與工業
+ID.INV THES293116
+TERM_PINYIN tong (shou gong ye yu gong ye)
+TERM_EN pail (crafts and industries)
+KW_EN bucket
+TYPE CIT
+ID cit_3_7_15_12
+TERM_ZH 桶 (手工業與工業)
+CIT 3.7.15.12
 $
 N 3.7.16
 BROADER 手工業與工業
@@ -58114,6 +58600,7 @@ TERM_PINYIN suan shu
 TERM_EN arithmetic
 C 3.9.6.1.1.1
 ; 3.9.6.1.1.2
+; 3.9.6.1.1.3
 TYPE CIT
 ID cit_3_9_6_1_1
 TERM_ZH 算術
@@ -58443,6 +58930,16 @@ TYPE CIT
 ID cit_3_9_6_1_1_2
 TERM_ZH 紀筭
 CIT 3.9.6.1.1.2
+$
+N 3.9.6.1.1.3
+BROADER 算術
+ID.INV THES293115
+TERM_PINYIN suan pan
+TERM_EN abacus
+TYPE CIT
+ID cit_3_9_6_1_1_3
+TERM_ZH 算盤
+CIT 3.9.6.1.1.3
 $
 N 3.9.6.1.2
 BROADER 數學
@@ -62833,6 +63330,7 @@ C 3.9.10.5.2.1
 ; 3.9.10.5.2.11
 ; 3.9.10.5.2.12
 ; 3.9.10.5.2.13
+; 3.9.10.5.2.14
 TYPE CIT
 ID cit_3_9_10_5_2
 TERM_ZH 文具
@@ -63061,12 +63559,22 @@ ID.INV CIT285582
 KW_ZH 臂阁
 ; 臂搁
 TERM_PINYIN bi ge
-TERM_EN arm support in writing
-KW_EN arm rest in writing
+KW_EN arm support in writing
+; armrest in writing
 TYPE CIT
 ID cit_3_9_10_5_2_13
 TERM_ZH 臂擱
 CIT 3.9.10.5.2.13
+$
+N 3.9.10.5.2.14
+BROADER 文具
+ID.INV THES293256
+TERM_PINYIN hua cha
+TERM_EN picture-hanging pole
+TYPE CIT
+ID cit_3_9_10_5_2_14
+TERM_ZH 畫叉
+CIT 3.9.10.5.2.14
 $
 N 3.9.10.5.3
 BROADER 書畫
@@ -64802,7 +65310,7 @@ BROADER 祭器
 ID.INV CIT289437
 KW_ZH 笾
 TERM_PINYIN bian
-TERM_EN bian bamboo bowl for offerings of food
+TERM_EN bamboo bowl for offerings of food
 TYPE CIT
 ID cit_4_2_1_3_10
 TERM_ZH 籩
@@ -79271,7 +79779,9 @@ N 4.3.16.3.4
 BROADER 修持
 ID.INV THES284129
 TERM_PINYIN ku xing
-TERM_EN ascetic practices
+KW_EN ascetic practices
+; tapas
+TERM_EN severe austerities
 C 4.3.16.3.4.1
 ; 4.3.16.3.4.2
 TYPE CIT
@@ -80080,6 +80590,8 @@ TERM_EN seated posture
 C 4.3.16.3.6.1
 ; 4.3.16.3.6.2
 ; 4.3.16.3.6.3
+; 4.3.16.3.6.4
+; 4.3.16.3.6.5
 TYPE CIT
 ID cit_4_3_16_3_6
 TERM_ZH 坐法
@@ -80097,7 +80609,6 @@ KW_EN sitting in meditation
 TERM_EN seated meditation
 C 4.3.16.3.6.1.1
 ; 4.3.16.3.6.1.2
-; 4.3.16.3.6.1.3
 TYPE CIT
 ID cit_4_3_16_3_6_1
 TERM_ZH 禪坐
@@ -80105,38 +80616,51 @@ CIT 4.3.16.3.6.1
 $
 N 4.3.16.3.6.1.1
 BROADER 禪坐
-ID.INV THES283708
-TERM_PINYIN ban jia fu zuo
-KW_EN ardhaparyaṅka
-TERM_EN half cross-legged posture
+ID.INV THES293182
+TERM_PINYIN jie jia fu zuo
+TERM_EN cross-legged posture
+KW_EN paryaṅka
+C 4.3.16.3.6.1.1.1
+; 4.3.16.3.6.1.1.2
 TYPE CIT
 ID cit_4_3_16_3_6_1_1
-TERM_ZH 半跏趺坐
+TERM_ZH 結跏趺坐
 CIT 4.3.16.3.6.1.1
 $
-N 4.3.16.3.6.1.2
-BROADER 禪坐
+N 4.3.16.3.6.1.1.1
+BROADER 結跏趺坐
 ID.INV THES283709
 KW_ZH 蓮花坐
 TERM_PINYIN ji xiang zuo
 KW_EN padmāsana
 TERM_EN lotus posture
 TYPE CIT
-ID cit_4_3_16_3_6_1_2
+ID cit_4_3_16_3_6_1_1_1
 TERM_ZH 吉祥坐
-CIT 4.3.16.3.6.1.2
+CIT 4.3.16.3.6.1.1.1
 $
-N 4.3.16.3.6.1.3
-BROADER 禪坐
+N 4.3.16.3.6.1.1.2
+BROADER 結跏趺坐
 ID.INV THES288602
 KW_ZH 金剛坐
 TERM_PINYIN xiang mo zuo
 KW_EN vajraparyaṅka
 TERM_EN vajra posture
 TYPE CIT
-ID cit_4_3_16_3_6_1_3
+ID cit_4_3_16_3_6_1_1_2
 TERM_ZH 降魔坐
-CIT 4.3.16.3.6.1.3
+CIT 4.3.16.3.6.1.1.2
+$
+N 4.3.16.3.6.1.2
+BROADER 禪坐
+ID.INV THES283708
+TERM_PINYIN ban jia fu zuo
+KW_EN ardhaparyaṅka
+TERM_EN half cross-legged posture
+TYPE CIT
+ID cit_4_3_16_3_6_1_2
+TERM_ZH 半跏趺坐
+CIT 4.3.16.3.6.1.2
 $
 N 4.3.16.3.6.2
 BROADER 坐法
@@ -80160,6 +80684,29 @@ TYPE CIT
 ID cit_4_3_16_3_6_3
 TERM_ZH 遊戲坐
 CIT 4.3.16.3.6.3
+$
+N 4.3.16.3.6.4
+BROADER 坐法
+ID.INV THES293180
+TERM_PINYIN zuo fa
+KW_EN acalāsana
+TERM_EN immovable posture
+TYPE CIT
+ID cit_4_3_16_3_6_4
+TERM_ZH 不動坐
+CIT 4.3.16.3.6.4
+$
+N 4.3.16.3.6.5
+BROADER 坐法
+ID.INV THES293181
+TERM_PINYIN ban jia si wei
+TERM_EN pensive pose
+KW_EN contemplative pose
+; Maitreyāsana
+TYPE CIT
+ID cit_4_3_16_3_6_5
+TERM_ZH 半跏思惟
+CIT 4.3.16.3.6.5
 $
 N 4.3.17
 BROADER 佛教
@@ -80486,6 +81033,7 @@ KW_EN tattva
 TERM_EN theory of ultimate reality
 C 4.3.17.2.1
 ; 4.3.17.2.2
+; 4.3.17.2.3
 TYPE CIT
 ID cit_4_3_17_2
 TERM_ZH 實相論
@@ -80493,57 +81041,14 @@ CIT 4.3.17.2
 $
 N 4.3.17.2.1
 BROADER 實相論
-ID.INV THES290164
-TERM_PINYIN san shen
-KW_EN trikāya
-TERM_EN three bodies of a buddha
-C 4.3.17.2.1.1
-; 4.3.17.2.1.2
-; 4.3.17.2.1.3
+ID.INV THES293283
+TERM_PINYIN xiang
+KW_EN nimitta
+TERM_EN generic appearnce of an object
 TYPE CIT
 ID cit_4_3_17_2_1
-TERM_ZH 三身
+TERM_ZH 相
 CIT 4.3.17.2.1
-$
-N 4.3.17.2.1.1
-BROADER 三身
-ID.INV THES290165
-TERM_PINYIN fa shen
-KW_EN dharmakāya
-; dharma body
-TERM_EN truth body of a buddha
-TYPE CIT
-ID cit_4_3_17_2_1_1
-TERM_ZH 法身
-CIT 4.3.17.2.1.1
-$
-N 4.3.17.2.1.2
-BROADER 三身
-ID.INV THES290166
-TERM_PINYIN bao shen
-KW_EN saṃbhogakāya
-; reward body
-TERM_EN enjoyment body of a buddha
-TYPE CIT
-ID cit_4_3_17_2_1_2
-TERM_ZH 報身
-CIT 4.3.17.2.1.2
-$
-N 4.3.17.2.1.3
-BROADER 三身
-ID.INV CIT281146
-KW_ZH 應化
-; 应化
-; 應身
-; 应身
-TERM_PINYIN hua shen
-KW_EN nirmāṇakāya
-; tranformation body
-TERM_EN emanation body of a buddha
-TYPE CIT
-ID cit_4_3_17_2_1_3
-TERM_ZH 化身
-CIT 4.3.17.2.1.3
 $
 N 4.3.17.2.2
 BROADER 實相論
@@ -80562,6 +81067,60 @@ TYPE CIT
 ID cit_4_3_17_2_2
 TERM_ZH 空
 CIT 4.3.17.2.2
+$
+N 4.3.17.2.3
+BROADER 實相論
+ID.INV THES290164
+TERM_PINYIN san shen
+KW_EN trikāya
+TERM_EN three bodies of a buddha
+C 4.3.17.2.3.1
+; 4.3.17.2.3.2
+; 4.3.17.2.3.3
+TYPE CIT
+ID cit_4_3_17_2_3
+TERM_ZH 三身
+CIT 4.3.17.2.3
+$
+N 4.3.17.2.3.1
+BROADER 三身
+ID.INV THES290165
+TERM_PINYIN fa shen
+KW_EN dharmakāya
+; dharma body
+TERM_EN truth body of a buddha
+TYPE CIT
+ID cit_4_3_17_2_3_1
+TERM_ZH 法身
+CIT 4.3.17.2.3.1
+$
+N 4.3.17.2.3.2
+BROADER 三身
+ID.INV THES290166
+TERM_PINYIN bao shen
+KW_EN saṃbhogakāya
+; reward body
+TERM_EN enjoyment body of a buddha
+TYPE CIT
+ID cit_4_3_17_2_3_2
+TERM_ZH 報身
+CIT 4.3.17.2.3.2
+$
+N 4.3.17.2.3.3
+BROADER 三身
+ID.INV CIT281146
+KW_ZH 應化
+; 应化
+; 應身
+; 应身
+TERM_PINYIN hua shen
+KW_EN nirmāṇakāya
+; tranformation body
+TERM_EN emanation body of a buddha
+TYPE CIT
+ID cit_4_3_17_2_3_3
+TERM_ZH 化身
+CIT 4.3.17.2.3.3
 $
 N 4.3.17.3
 BROADER 教理 (佛教)
@@ -91699,14 +92258,13 @@ $
 N 6.1.1.3.69
 BROADER 人物 (秦漢)
 ID.INV CIT276320
-KW_ZH 班婕妤
-; 班倢伃
-TERM_PINYIN ben ji
-TERM_EN Consort Ban
-KW_EN Ban Jieyu
+KW_ZH 班倢伃
+TERM_PINYIN ban jie yü
+KW_EN Consort Ban
+TERM_EN Ban Jieyü
 TYPE CIT
 ID cit_6_1_1_3_69
-TERM_ZH 班姬
+TERM_ZH 班婕妤
 CIT 6.1.1.3.69
 $
 N 6.1.1.3.70
@@ -97770,7 +98328,7 @@ BROADER 人物 (清)
 ID.INV CIT276749
 KW_ZH 阿玉锡
 TERM_PINYIN a yu xi
-TERM_EN Ayusi
+TERM_EN Ayuｘｉ
 TYPE CIT
 ID cit_6_1_1_9_13
 TERM_ZH 阿玉錫
@@ -101079,6 +101637,7 @@ C 6.1.4.5.1
 ; 6.1.4.5.33
 ; 6.1.4.5.34
 ; 6.1.4.5.35
+; 6.1.4.5.36
 TYPE CIT
 ID cit_6_1_4_5
 TERM_ZH 事件 (隋唐五代)
@@ -101511,6 +102070,16 @@ TYPE CIT
 ID cit_6_1_4_5_35
 TERM_ZH 唐夫人登堂拜乳
 CIT 6.1.4.5.35
+$
+N 6.1.4.5.36
+BROADER 事件 (隋唐五代)
+ID.INV THES293240
+TERM_PINYIN li duan duan qi shi
+TERM_EN Li Duanduan seeking a poem from Cui Ya
+TYPE CIT
+ID cit_6_1_4_5_36
+TERM_ZH 李端端乞詩
+CIT 6.1.4.5.36
 $
 N 6.1.4.6
 BROADER 事件 (歷史)
@@ -106983,6 +107552,7 @@ TERM_PINYIN qi xia shan
 TERM_EN Qixia Shan
 KW_EN Mount Qixia
 C 6.2.11.1.1.1
+; 6.2.11.1.1.2
 TYPE CIT
 ID cit_6_2_11_1_1
 TERM_ZH 棲霞山
@@ -106998,6 +107568,16 @@ TYPE CIT
 ID cit_6_2_11_1_1_1
 TERM_ZH 白鹿泉菴
 CIT 6.2.11.1.1.1
+$
+N 6.2.11.1.1.2
+BROADER 棲霞山
+ID.INV THES293268
+TERM_PINYIN qian fo yan
+TERM_EN Thousand-Buddha Cliff
+TYPE CIT
+ID cit_6_2_11_1_1_2
+TERM_ZH 千佛巖
+CIT 6.2.11.1.1.2
 $
 N 6.2.11.1.2
 BROADER 南京
@@ -111209,8 +111789,8 @@ ID.INV CIT276345
 KW_ZH 白岳
 ; 白嶽山
 ; 白岳山
-; 齊雲巖
-; 齐云岩
+; 齊雲山
+; 齐云山
 TERM_PINYIN bai yue
 TERM_EN Bai Yue
 C 6.2.13.3.3.1
@@ -111220,6 +111800,8 @@ C 6.2.13.3.3.1
 ; 6.2.13.3.3.5
 ; 6.2.13.3.3.6
 ; 6.2.13.3.3.7
+; 6.2.13.3.3.8
+; 6.2.13.3.3.9
 TYPE CIT
 ID cit_6_2_13_3_3
 TERM_ZH 白嶽
@@ -111291,13 +111873,34 @@ CIT 6.2.13.3.3.6
 $
 N 6.2.13.3.3.7
 BROADER 白嶽
+ID.INV CIT276885
+KW_ZH 齐云岩
+TERM_PINYIN qi yun yan
+TERM_EN Qiyun Yan
+TYPE CIT
+ID cit_6_2_13_3_3_7
+TERM_ZH 齊雲巖
+CIT 6.2.13.3.3.7
+$
+N 6.2.13.3.3.8
+BROADER 白嶽
 ID.INV CIT276525
 TERM_PINYIN luo shi
 TERM_EN Luoshi
 TYPE CIT
-ID cit_6_2_13_3_3_7
+ID cit_6_2_13_3_3_8
 TERM_ZH 落石
-CIT 6.2.13.3.3.7
+CIT 6.2.13.3.3.8
+$
+N 6.2.13.3.3.9
+BROADER 白嶽
+ID.INV THES293338
+TERM_PINYIN tian quan shu yuan
+TERM_EN Tianquan Shuyuan
+TYPE CIT
+ID cit_6_2_13_3_3_9
+TERM_ZH 天泉書院
+CIT 6.2.13.3.3.9
 $
 N 6.2.13.3.4
 BROADER 黃山 (市)
@@ -113210,34 +113813,33 @@ $
 N 6.2.17.3.1.18
 BROADER 嵩山
 ID.INV CIT276364
-KW_ZH 卢鸿草堂
-TERM_PINYIN lu hong cao tang
-TERM_EN Lu Hong Caotang
+TERM_PINYIN cao tang
+TERM_EN Caotang
 TYPE CIT
 ID cit_6_2_17_3_1_18
-TERM_ZH 盧鴻草堂
+TERM_ZH 草堂
 CIT 6.2.17.3.1.18
 $
 N 6.2.17.3.1.19
-BROADER 嵩山
-ID.INV CIT275417
-KW_ZH 倒景台
-TERM_PINYIN dao jing tai
-TERM_EN Daojing Tai
-TYPE CIT
-ID cit_6_2_17_3_1_19
-TERM_ZH 倒景臺
-CIT 6.2.17.3.1.19
-$
-N 6.2.17.3.1.20
 BROADER 嵩山
 ID.INV CIT276104
 KW_ZH 樾馆
 TERM_PINYIN yue guan
 TERM_EN Yue Guan
 TYPE CIT
-ID cit_6_2_17_3_1_20
+ID cit_6_2_17_3_1_19
 TERM_ZH 樾館
+CIT 6.2.17.3.1.19
+$
+N 6.2.17.3.1.20
+BROADER 嵩山
+ID.INV CIT275417
+KW_ZH 倒景台
+TERM_PINYIN dao jing tai
+TERM_EN Daojing Tai
+TYPE CIT
+ID cit_6_2_17_3_1_20
+TERM_ZH 倒景臺
 CIT 6.2.17.3.1.20
 $
 N 6.2.17.3.1.21
@@ -113390,6 +113992,7 @@ C 6.2.17.5.1
 ; 6.2.17.5.5
 ; 6.2.17.5.6
 ; 6.2.17.5.7
+; 6.2.17.5.8
 TYPE CIT
 ID cit_6_2_17_5
 TERM_ZH 洛陽
@@ -113397,79 +114000,89 @@ CIT 6.2.17.5
 $
 N 6.2.17.5.1
 BROADER 洛陽
+ID.INV THES293238
+TERM_PINYIN nü ji shan
+TERM_EN Nüji Shan
+TYPE CIT
+ID cit_6_2_17_5_1
+TERM_ZH 女几山
+CIT 6.2.17.5.1
+$
+N 6.2.17.5.2
+BROADER 洛陽
 ID.INV CIT275407
 KW_ZH 伊阙
 TERM_PINYIN yi que
 TERM_EN Yique
 TYPE CIT
-ID cit_6_2_17_5_1
+ID cit_6_2_17_5_2
 TERM_ZH 伊闕
-CIT 6.2.17.5.1
+CIT 6.2.17.5.2
 $
-N 6.2.17.5.2
+N 6.2.17.5.3
 BROADER 洛陽
 ID.INV CIT278304
 TERM_PINYIN meng jin
 TERM_EN Mengjin
 TYPE CIT
-ID cit_6_2_17_5_2
+ID cit_6_2_17_5_3
 TERM_ZH 孟津
-CIT 6.2.17.5.2
+CIT 6.2.17.5.3
 $
-N 6.2.17.5.3
+N 6.2.17.5.4
 BROADER 洛陽
 ID.INV CIT276159
 KW_ZH 洛阳楼
 TERM_PINYIN luo yang lou
 TERM_EN Luoyang Lou
 TYPE CIT
-ID cit_6_2_17_5_3
+ID cit_6_2_17_5_4
 TERM_ZH 洛陽樓
-CIT 6.2.17.5.3
+CIT 6.2.17.5.4
 $
-N 6.2.17.5.4
+N 6.2.17.5.5
 BROADER 洛陽
 ID.INV CIT276297
 KW_ZH 独乐园
 TERM_PINYIN du le yuan
 TERM_EN Dule Yuan
 TYPE CIT
-ID cit_6_2_17_5_4
+ID cit_6_2_17_5_5
 TERM_ZH 獨樂園
-CIT 6.2.17.5.4
+CIT 6.2.17.5.5
 $
-N 6.2.17.5.5
+N 6.2.17.5.6
 BROADER 洛陽
 ID.INV CIT276661
 KW_ZH 连昌宫
 TERM_PINYIN lian chang gong
 TERM_EN Lianchang Gong
 TYPE CIT
-ID cit_6_2_17_5_5
+ID cit_6_2_17_5_6
 TERM_ZH 連昌宮
-CIT 6.2.17.5.5
+CIT 6.2.17.5.6
 $
-N 6.2.17.5.6
+N 6.2.17.5.7
 BROADER 洛陽
 ID.INV CIT276715
 KW_ZH 金谷园
 TERM_PINYIN jin gu yuan
 TERM_EN Jingu Yuan
 TYPE CIT
-ID cit_6_2_17_5_6
+ID cit_6_2_17_5_7
 TERM_ZH 金谷園
-CIT 6.2.17.5.6
+CIT 6.2.17.5.7
 $
-N 6.2.17.5.7
+N 6.2.17.5.8
 BROADER 洛陽
 ID.INV CIT283705
 KW_ZH 西园
 TERM_PINYIN xi yuan
 TERM_EN Xi Yuan
 TYPE CIT
-ID cit_6_2_17_5_7
+ID cit_6_2_17_5_8
 TERM_ZH 西園
-CIT 6.2.17.5.7
+CIT 6.2.17.5.8
 $
 N 6.2.17.6
 BROADER 河南
@@ -120728,6 +121341,7 @@ C 7.2.1
 ; 7.2.3
 ; 7.2.4
 ; 7.2.5
+; 7.2.6
 TYPE CIT
 ID cit_7_2
 TERM_ZH 文學作品 (秦漢)
@@ -121042,30 +121656,17 @@ CIT 7.2.1.24
 $
 N 7.2.2
 BROADER 文學作品 (秦漢)
-DISCRIM 蔡琰
-ID.INV CIT286696
-KW_ZH 十八拍
-TERM_PINYIN hu jia shi ba pai (cai yan)
-TERM_EN Eighteen Songs of a Nomad Flute (Cai Yan)
-KW_EN Eighteen Stanzas for the Barbarian Reed Pipe
-TYPE CIT
-ID cit_7_2_2
-TERM_ZH 胡笳十八拍 (蔡琰)
-CIT 7.2.2
-$
-N 7.2.3
-BROADER 文學作品 (秦漢)
 DISCRIM 仲長統
 ID.INV CIT286718
 KW_ZH 乐志论 (仲长统)
 TERM_PINYIN le zhi lun (zhong chang tong)
 TERM_EN Essay on Delighting the Mind (Zhong Changtong)
 TYPE CIT
-ID cit_7_2_3
+ID cit_7_2_2
 TERM_ZH 樂志論 (仲長統)
-CIT 7.2.3
+CIT 7.2.2
 $
-N 7.2.4
+N 7.2.3
 BROADER 文學作品 (秦漢)
 DISCRIM 王褒
 ID.INV CIT275608
@@ -121073,11 +121674,11 @@ KW_ZH 四子讲德论 (王褒)
 TERM_PINYIN si zi jiang de lun (wang bao)
 TERM_EN Disquisition of Four Masters Discussing Virtue (Wang Bao)
 TYPE CIT
-ID cit_7_2_4
+ID cit_7_2_3
 TERM_ZH 四子講德論 (王褒)
-CIT 7.2.4
+CIT 7.2.3
 $
-N 7.2.5
+N 7.2.4
 BROADER 文學作品 (秦漢)
 DISCRIM 司馬相如
 ID.INV CIT275358
@@ -121085,9 +121686,33 @@ KW_ZH 上林赋 (司马相如)
 TERM_PINYIN shang lin fu (si ma xiang ru)
 TERM_EN Rhapsody on the Shanglin Park (Sima Xiangru)
 TYPE CIT
-ID cit_7_2_5
+ID cit_7_2_4
 TERM_ZH 上林賦 (司馬相如)
+CIT 7.2.4
+$
+N 7.2.5
+BROADER 文學作品 (秦漢)
+DISCRIM 蔡琰
+ID.INV CIT286696
+KW_ZH 十八拍
+TERM_PINYIN hu jia shi ba pai (cai yan)
+TERM_EN Eighteen Songs of a Nomad Flute (Cai Yan)
+KW_EN Eighteen Stanzas for the Barbarian Reed Pipe
+TYPE CIT
+ID cit_7_2_5
+TERM_ZH 胡笳十八拍 (蔡琰)
 CIT 7.2.5
+$
+N 7.2.6
+BROADER 文學作品 (秦漢)
+DISCRIM 班婕妤
+ID.INV THES293241
+TERM_PINYIN yuan ge xing (ban jie yü)
+TERM_EN Ballard of Resentment (Ban Jieyü)
+TYPE CIT
+ID cit_7_2_6
+TERM_ZH 怨歌行 (班婕妤)
+CIT 7.2.6
 $
 N 7.3
 BROADER 文學作品
@@ -122564,6 +123189,7 @@ KW_ZH 积雨辋川庄作 (王维)
 TERM_PINYIN ji yu wang chuan zhuang zuo (wang wei)
 TERM_EN Wangchuan Village on Rainy Days (Wang Wei)
 C 7.4.1.4.5.1
+; 7.4.1.4.5.2
 TYPE CIT
 ID cit_7_4_1_4_5
 TERM_ZH 積雨輞川莊作 (王維)
@@ -122579,6 +123205,16 @@ TYPE CIT
 ID cit_7_4_1_4_5_1
 TERM_ZH 積雨空林煙火遲，蒸藜炊黍餉東菑
 CIT 7.4.1.4.5.1
+$
+N 7.4.1.4.5.2
+BROADER 積雨輞川莊作 (王維)
+ID.INV THES293347
+TERM_PINYIN mo mo shui tian fei bai lu, yin yin xia mu zhuan huang li
+TERM_EN Over rice paddocks fly egrets above watery fields; In the shade of summer foliage chirp orioles in the green
+TYPE CIT
+ID cit_7_4_1_4_5_2
+TERM_ZH 漠漠水田飛白鷺, 陰陰夏木囀黃鸝
+CIT 7.4.1.4.5.2
 $
 N 7.4.1.4.6
 BROADER 王維詩意
@@ -124012,6 +124648,7 @@ C 7.5.1.1.1
 ; 7.5.1.1.5
 ; 7.5.1.1.6
 ; 7.5.1.1.7
+; 7.5.1.1.8
 TYPE CIT
 ID cit_7_5_1_1
 TERM_ZH 蘇軾詩意
@@ -124020,42 +124657,64 @@ $
 N 7.5.1.1.1
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
+ID.INV THES293410
+TERM_PINYIN hai tang (su shi)
+TERM_EN Crabapples (Su Shi)
+C 7.5.1.1.1.1
+TYPE CIT
+ID cit_7_5_1_1_1
+TERM_ZH 海棠 (蘇軾)
+CIT 7.5.1.1.1
+$
+N 7.5.1.1.1.1
+BROADER 海棠 (蘇軾)
+ID.INV THES293411
+TERM_PINYIN zhi kong ye shen hua shui qu, geng shao gao zhu zhao hong zhuang
+TERM_EN Fearing the flowers would go to sleep towards deep night; I burnt thick candles aloft to shine the beauties bright
+TYPE CIT
+ID cit_7_5_1_1_1_1
+TERM_ZH 只恐夜深花睡去，更燒高燭照紅妝
+CIT 7.5.1.1.1.1
+$
+N 7.5.1.1.2
+BROADER 蘇軾詩意
+DISCRIM 蘇軾
 ID.INV CIT286708
 KW_ZH 惠崇春江晓景 (苏轼)
 TERM_PINYIN hui chong chun jiang xiao jing (su shi)
 TERM_EN Monk Huichong's Painting Dusk on the Spring River (Su Shi)
 KW_EN A View of the Sunset on the River in Spring as Painted by Huichong (Su Shi)
-C 7.5.1.1.1.1
+C 7.5.1.1.2.1
 TYPE CIT
-ID cit_7_5_1_1_1
+ID cit_7_5_1_1_2
 TERM_ZH 惠崇春江曉景 (蘇軾)
-CIT 7.5.1.1.1
+CIT 7.5.1.1.2
 $
-N 7.5.1.1.1.1
+N 7.5.1.1.2.1
 BROADER 惠崇春江曉景 (蘇軾)
 ID.INV CIT277330
 KW_ZH 竹外桃花三两枝，春江水暖鸭先知
 TERM_PINYIN zhu wai tao hua san liang zhi chun jiang shui nuan ya xian zhi
 TERM_EN Behind the bamboo, two or three sprays of peach trees grow; When spring warms the stream, ducks are the first to know
 TYPE CIT
-ID cit_7_5_1_1_1_1
+ID cit_7_5_1_1_2_1
 TERM_ZH 竹外桃花三兩枝，春江水暖鴨先知
-CIT 7.5.1.1.1.1
+CIT 7.5.1.1.2.1
 $
-N 7.5.1.1.2
+N 7.5.1.1.3
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
 ID.INV CIT288588
 KW_ZH 书李世南所画秋景 (苏轼)
 TERM_PINYIN shu li shi nan suo hua qiu jing (su shi)
 TERM_EN On the Autumn Scenery Painted by Li Shi'nan (Su Shi)
-C 7.5.1.1.2.1
+C 7.5.1.1.3.1
 TYPE CIT
-ID cit_7_5_1_1_2
+ID cit_7_5_1_1_3
 TERM_ZH 書李世南所畫秋景 (蘇軾)
-CIT 7.5.1.1.2
+CIT 7.5.1.1.3
 $
-N 7.5.1.1.2.1
+N 7.5.1.1.3.1
 BROADER 書李世南所畫秋景 (蘇軾)
 ID.INV CIT282249
 KW_ZH 扁舟一棹归何处，家在江南黄叶村
@@ -124063,95 +124722,95 @@ KW_ZH 扁舟一棹归何处，家在江南黄叶村
 TERM_PINYIN pian zhou yi zhao gui he chu jia zai jiang nan huang ye cun
 TERM_EN In a skiff with a single oar, to where I am returning; My home is in the village of yellow leaves on the south bank of the river
 TYPE CIT
-ID cit_7_5_1_1_2_1
+ID cit_7_5_1_1_3_1
 TERM_ZH 扁舟一棹歸何處，家在江南黃葉村
-CIT 7.5.1.1.2.1
+CIT 7.5.1.1.3.1
 $
-N 7.5.1.1.3
+N 7.5.1.1.4
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
 ID.INV CIT286533
 KW_ZH 赤壁赋 (苏轼)
 TERM_PINYIN chi bi fu (su shi)
 TERM_EN Rhapsody on the Red Cliff (Su Shi)
-C 7.5.1.1.3.1
-; 7.5.1.1.3.2
+C 7.5.1.1.4.1
+; 7.5.1.1.4.2
 TYPE CIT
-ID cit_7_5_1_1_3
+ID cit_7_5_1_1_4
 TERM_ZH 赤壁賦 (蘇軾)
-CIT 7.5.1.1.3
+CIT 7.5.1.1.4
 $
-N 7.5.1.1.3.1
+N 7.5.1.1.4.1
 BROADER 赤壁賦 (蘇軾)
 ID.INV CIT277223
 KW_ZH 前赤壁赋
 TERM_PINYIN qian chi bi fu
 TERM_EN Former Rhapsody on the Red Cliff
 TYPE CIT
-ID cit_7_5_1_1_3_1
+ID cit_7_5_1_1_4_1
 TERM_ZH 前赤壁賦
-CIT 7.5.1.1.3.1
+CIT 7.5.1.1.4.1
 $
-N 7.5.1.1.3.2
+N 7.5.1.1.4.2
 BROADER 赤壁賦 (蘇軾)
 ID.INV CIT277293
 KW_ZH 后赤壁赋
 TERM_PINYIN hou chi bi fu
 TERM_EN Latter Rhapsody on the Red Cliff
 TYPE CIT
-ID cit_7_5_1_1_3_2
+ID cit_7_5_1_1_4_2
 TERM_ZH 後赤壁賦
-CIT 7.5.1.1.3.2
+CIT 7.5.1.1.4.2
 $
-N 7.5.1.1.4
+N 7.5.1.1.5
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
 ID.INV CIT289078
 KW_ZH 章質夫寄惠崔徽真 (蘇軾)
 TERM_PINYIN zhang zhi fu ji hui cui hui zhen (su shi)
 TERM_EN Portrait of Cui Huizhen Sent by Zhang Zhifu (Su Shi)
-C 7.5.1.1.4.1
+C 7.5.1.1.5.1
 TYPE CIT
-ID cit_7_5_1_1_4
+ID cit_7_5_1_1_5
 TERM_ZH 章質夫寄惠崔徽真 (蘇軾)
-CIT 7.5.1.1.4
+CIT 7.5.1.1.5
 $
-N 7.5.1.1.4.1
+N 7.5.1.1.5.1
 BROADER 章質夫寄惠崔徽真 (蘇軾)
 ID.INV CIT289079
 KW_ZH 为君援笔赋梅花，未害广平心似铁
 TERM_PINYIN wei jun yuan bi fu mei hua, wei hai guang ping xin shi tie
 TERM_EN For you, I am holding my brush to compose a rhapsody on the plum blossom, although I have a heart of iron like Song Guangping
 TYPE CIT
-ID cit_7_5_1_1_4_1
+ID cit_7_5_1_1_5_1
 TERM_ZH 為君援筆賦梅花，未害廣平心似鐵
-CIT 7.5.1.1.4.1
+CIT 7.5.1.1.5.1
 $
-N 7.5.1.1.5
+N 7.5.1.1.6
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
 ID.INV CIT289084
 KW_ZH 和秦太虚梅花 (苏轼)
 TERM_PINYIN he qin tai xu mei hua (su shi)
 TERM_EN Response to the Plum Blossom Poem by Qin Taixu (Su Shi)
-C 7.5.1.1.5.1
+C 7.5.1.1.6.1
 TYPE CIT
-ID cit_7_5_1_1_5
+ID cit_7_5_1_1_6
 TERM_ZH 和秦太虛梅花 (蘇軾)
-CIT 7.5.1.1.5
+CIT 7.5.1.1.6
 $
-N 7.5.1.1.5.1
+N 7.5.1.1.6.1
 BROADER 和秦太虛梅花 (蘇軾)
 ID.INV CIT289085
 KW_ZH 多情立马待黄昏，残雪消迟月出早
 TERM_PINYIN duo qing li ma dai huang hun, can xue xiao chi yue chu zao
 TERM_EN Affectonately I am standing beside my horse at dusk; The snow slowly melts and the moon shines
 TYPE CIT
-ID cit_7_5_1_1_5_1
+ID cit_7_5_1_1_6_1
 TERM_ZH 多情立馬待黃昏，殘雪消遲月出早
-CIT 7.5.1.1.5.1
+CIT 7.5.1.1.6.1
 $
-N 7.5.1.1.6
+N 7.5.1.1.7
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
 ID.INV CIT289181
@@ -124159,31 +124818,31 @@ KW_ZH 峡山寺 (苏轼)
 TERM_PINYIN xia shan si (su shi)
 TERM_EN Xiashan Si (Su Shi)
 TYPE CIT
-ID cit_7_5_1_1_6
+ID cit_7_5_1_1_7
 TERM_ZH 峽山寺 (蘇軾)
-CIT 7.5.1.1.6
+CIT 7.5.1.1.7
 $
-N 7.5.1.1.7
+N 7.5.1.1.8
 BROADER 蘇軾詩意
 DISCRIM 蘇軾
 ID.INV THES292742
 TERM_PINYIN he zi you er shou (su shi)
 TERM_EN A Companion Piece to Ziyou's Poem (Su Shi)
-C 7.5.1.1.7.1
+C 7.5.1.1.8.1
 TYPE CIT
-ID cit_7_5_1_1_7
+ID cit_7_5_1_1_8
 TERM_ZH 和子由二首 (蘇軾)
-CIT 7.5.1.1.7
+CIT 7.5.1.1.8
 $
-N 7.5.1.1.7.1
+N 7.5.1.1.8.1
 BROADER 和子由二首 (蘇軾)
 ID.INV THES292744
 TERM_PINYIN ye hou you leng xi jia jian, hua shen shao tai he tou dan
 TERM_EN The leaves are thick with the edges as sturdy as rhinoceros-hide armour; The flowers are not showy with the colour as red as cranes' crown
 TYPE CIT
-ID cit_7_5_1_1_7_1
+ID cit_7_5_1_1_8_1
 TERM_ZH 葉厚有稜犀甲健，花深少態鶴頭丹
-CIT 7.5.1.1.7.1
+CIT 7.5.1.1.8.1
 $
 N 7.5.1.2
 BROADER 宋人詩意
@@ -126258,7 +126917,6 @@ C 7.8.2.1
 ; 7.8.2.2
 ; 7.8.2.3
 ; 7.8.2.4
-; 7.8.2.5
 TYPE CIT
 ID cit_7_8_2
 TERM_ZH 清高宗詩意
@@ -126564,316 +127222,64 @@ $
 N 7.8.2.2
 BROADER 清高宗詩意
 DISCRIM 清高宗
-ID.INV THES286308
-KW_ZH 御制题画诗 (清高宗)
-TERM_PINYIN yu zhi ti hua shi (qing gao zong)
-TERM_EN imperial poems on painting (Emperor Gaozong of Qing)
-C 7.8.2.2.1
-; 7.8.2.2.2
-; 7.8.2.2.3
-; 7.8.2.2.4
-; 7.8.2.2.5
-; 7.8.2.2.6
-; 7.8.2.2.7
-; 7.8.2.2.8
-; 7.8.2.2.9
-; 7.8.2.2.10
-; 7.8.2.2.11
-; 7.8.2.2.12
-; 7.8.2.2.13
-; 7.8.2.2.14
-; 7.8.2.2.15
-; 7.8.2.2.16
-; 7.8.2.2.17
-; 7.8.2.2.18
-; 7.8.2.2.19
-; 7.8.2.2.20
-TYPE CIT
-ID cit_7_8_2_2
-TERM_ZH 御製題畫詩 (清高宗)
-CIT 7.8.2.2
-$
-N 7.8.2.2.1
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277351
-KW_ZH 松涧云岚
-TERM_PINYIN song jian yun lan
-TERM_EN Pine Trees, Streams, Clouds and Mists
-TYPE CIT
-ID cit_7_8_2_2_1
-TERM_ZH 松澗雲嵐
-CIT 7.8.2.2.1
-$
-N 7.8.2.2.2
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277535
-KW_ZH 云林烟艇
-TERM_PINYIN yun lin yan ting
-TERM_EN Cloudy Forest, a Boat on a Misty Water
-TYPE CIT
-ID cit_7_8_2_2_2
-TERM_ZH 雲林煙艇
-CIT 7.8.2.2.2
-$
-N 7.8.2.2.3
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277403
-TERM_PINYIN xi ting shu yu
-TERM_EN Kiosk by a Stream, Flowing Like Rinsing Jade
-TYPE CIT
-ID cit_7_8_2_2_3
-TERM_ZH 溪亭漱玉
-CIT 7.8.2.2.3
-$
-N 7.8.2.2.4
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277444
-TERM_PINYIN qiu lin ye zhang
-TERM_EN In the Autumn Forest I Am Carrying a Walking Stick
-TYPE CIT
-ID cit_7_8_2_2_4
-TERM_ZH 秋林曳杖
-CIT 7.8.2.2.4
-$
-N 7.8.2.2.5
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277458
-KW_ZH 绝壁精蓝
-TERM_PINYIN jue bi jing lan
-TERM_EN Monastery on the Precipice
-TYPE CIT
-ID cit_7_8_2_2_5
-TERM_ZH 絕壁精藍
-CIT 7.8.2.2.5
-$
-N 7.8.2.2.6
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277451
-KW_ZH 竹亭观瀑
-TERM_PINYIN zhu ting guan pu
-TERM_EN In the Bamboo Kiosk I Am Viewing the Waterfall
-TYPE CIT
-ID cit_7_8_2_2_6
-TERM_ZH 竹亭觀瀑
-CIT 7.8.2.2.6
-$
-N 7.8.2.2.7
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277534
-KW_ZH 云峰登眺
-TERM_PINYIN yun feng deng tiao
-TERM_EN Ascending the High Peak into the Clouds, Looking Far into Distance
-TYPE CIT
-ID cit_7_8_2_2_7
-TERM_ZH 雲峰登眺
-CIT 7.8.2.2.7
-$
-N 7.8.2.2.8
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277232
-KW_ZH 千岩万壑
-TERM_PINYIN qian yan wan he
-TERM_EN A Thousand Cliffs and Ten Thousands of Valleys
-TYPE CIT
-ID cit_7_8_2_2_8
-TERM_ZH 千巖萬壑
-CIT 7.8.2.2.8
-$
-N 7.8.2.2.9
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277350
-KW_ZH 松壑携琴
-TERM_PINYIN song he xie qin
-TERM_EN Carrying the Zither in the Pine Valley
-TYPE CIT
-ID cit_7_8_2_2_9
-TERM_ZH 松壑攜琴
-CIT 7.8.2.2.9
-$
-N 7.8.2.2.10
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277532
-KW_ZH 雪溪飞瀑
-TERM_PINYIN xue xi fei pu
-TERM_EN Snowy Streams and Flying Waterfalls
-TYPE CIT
-ID cit_7_8_2_2_10
-TERM_ZH 雪溪飛瀑
-CIT 7.8.2.2.10
-$
-N 7.8.2.2.11
-BROADER 御製題畫詩 (清高宗)
-ID.INV THES286303
-KW_ZH 松阴高士
-TERM_PINYIN song yin gao shi
-TERM_EN Gentleman under the Pines
-TYPE CIT
-ID cit_7_8_2_2_11
-TERM_ZH 松陰高士
-CIT 7.8.2.2.11
-$
-N 7.8.2.2.12
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277542
-KW_ZH 飞阁流泉
-TERM_PINYIN fei ge liu quan
-TERM_EN High Pavilion and the Flowing Spring
-TYPE CIT
-ID cit_7_8_2_2_12
-TERM_ZH 飛閣流泉
-CIT 7.8.2.2.12
-$
-N 7.8.2.2.13
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277478
-KW_ZH 苍崖烟磴
-TERM_PINYIN cang ya yan deng
-TERM_EN Misty Stone Stairway into the Blue-green Cliff
-TYPE CIT
-ID cit_7_8_2_2_13
-TERM_ZH 蒼崖煙磴
-CIT 7.8.2.2.13
-$
-N 7.8.2.2.14
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277356
-KW_ZH 松云溪馆
-TERM_PINYIN song yun xi guan
-TERM_EN Studio by the Stream and the Cloudy Pines
-TYPE CIT
-ID cit_7_8_2_2_14
-TERM_ZH 松雲溪館
-CIT 7.8.2.2.14
-$
-N 7.8.2.2.15
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277474
-KW_ZH 万木森秋
-TERM_PINYIN wan mu sen qiu
-TERM_EN The Deep Autumn Forest
-TYPE CIT
-ID cit_7_8_2_2_15
-TERM_ZH 萬木森秋
-CIT 7.8.2.2.15
-$
-N 7.8.2.2.16
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277480
-KW_ZH 苍松红树
-TERM_PINYIN cang song hong shu
-TERM_EN Blue-green Pines and Red Trees
-TYPE CIT
-ID cit_7_8_2_2_16
-TERM_ZH 蒼松紅樹
-CIT 7.8.2.2.16
-$
-N 7.8.2.2.17
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277373
-KW_ZH 梧馆新秋
-TERM_PINYIN wu guan xin qiu
-TERM_EN Parasol Studio in the Early Autumn
-TYPE CIT
-ID cit_7_8_2_2_17
-TERM_ZH 梧館新秋
-CIT 7.8.2.2.17
-$
-N 7.8.2.2.18
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277443
-KW_ZH 秋塘渔艇
-TERM_PINYIN qiu tang yu ting
-TERM_EN Fishing Boats on the Autumn Pond
-TYPE CIT
-ID cit_7_8_2_2_18
-TERM_ZH 秋塘漁艇
-CIT 7.8.2.2.18
-$
-N 7.8.2.2.19
-BROADER 御製題畫詩 (清高宗)
-ID.INV THES286307
-KW_ZH 苍崖古树
-; 蒼厓古樹
-; 苍厓古树
-TERM_PINYIN cang ya gu shu
-TERM_EN Old Trees on the Blue-green Cliff
-TYPE CIT
-ID cit_7_8_2_2_19
-TERM_ZH 蒼崖古樹
-CIT 7.8.2.2.19
-$
-N 7.8.2.2.20
-BROADER 御製題畫詩 (清高宗)
-ID.INV CIT277472
-KW_ZH 万峰层雪
-TERM_PINYIN wan feng ceng xue
-TERM_EN Myriads of Peaks Covered with the Layers of Snow
-TYPE CIT
-ID cit_7_8_2_2_20
-TERM_ZH 萬峰層雪
-CIT 7.8.2.2.20
-$
-N 7.8.2.3
-BROADER 清高宗詩意
-DISCRIM 清高宗
 ID.INV THES286309
 KW_ZH 拟古四首 (清高宗)
 TERM_PINYIN ni gu si shou (qing gao zong)
 TERM_EN Four Compositions in the Style of Ancient Poets (Emperor Gaozong of Qing)
-C 7.8.2.3.1
-; 7.8.2.3.2
-; 7.8.2.3.3
-; 7.8.2.3.4
+C 7.8.2.2.1
+; 7.8.2.2.2
+; 7.8.2.2.3
+; 7.8.2.2.4
 TYPE CIT
-ID cit_7_8_2_3
+ID cit_7_8_2_2
 TERM_ZH 擬古四首 (清高宗)
-CIT 7.8.2.3
+CIT 7.8.2.2
 $
-N 7.8.2.3.1
+N 7.8.2.2.1
 BROADER 擬古四首 (清高宗)
 ID.INV CIT277404
 KW_ZH 拟王右丞维饭僧
 TERM_PINYIN ni wang you cheng wei fan seng
 TERM_EN In the Style of Alms to a Monk by Wang Wei
 TYPE CIT
-ID cit_7_8_2_3_1
+ID cit_7_8_2_2_1
 TERM_ZH 擬王右丞維飯僧
-CIT 7.8.2.3.1
+CIT 7.8.2.2.1
 $
-N 7.8.2.3.2
+N 7.8.2.2.2
 BROADER 擬古四首 (清高宗)
 ID.INV CIT277357
 KW_ZH 拟孟山人浩然待友
 TERM_PINYIN ni meng shan ren hao ran dai you
 TERM_EN In the Style of Awaiting a Friend by Meng Haoran
 TYPE CIT
-ID cit_7_8_2_3_2
+ID cit_7_8_2_2_2
 TERM_ZH 擬孟山人浩然待友
-CIT 7.8.2.3.2
+CIT 7.8.2.2.2
 $
-N 7.8.2.3.3
+N 7.8.2.2.3
 BROADER 擬古四首 (清高宗)
 ID.INV THES286310
 KW_ZH 拟韦左司应物寄旧
 TERM_PINYIN ni wei zuo si ying wu ji jiu
 TERM_EN In the Style of Posting a Poem to an Old Friend by Wei Yingwu
 TYPE CIT
-ID cit_7_8_2_3_3
+ID cit_7_8_2_2_3
 TERM_ZH 擬韋左司應物寄舊
-CIT 7.8.2.3.3
+CIT 7.8.2.2.3
 $
-N 7.8.2.3.4
+N 7.8.2.2.4
 BROADER 擬古四首 (清高宗)
 ID.INV CIT277353
 KW_ZH 拟柳员外宗元溪上
 TERM_PINYIN ni liu yuan wai zong yuan xi shang
 TERM_EN In the Style of By the Stream by Liu Zongyuan
 TYPE CIT
-ID cit_7_8_2_3_4
+ID cit_7_8_2_2_4
 TERM_ZH 擬柳員外宗元溪上
-CIT 7.8.2.3.4
+CIT 7.8.2.2.4
 $
-N 7.8.2.4
+N 7.8.2.3
 BROADER 清高宗詩意
 DISCRIM 清高宗
 ID.INV CIT277218
@@ -126881,20 +127287,20 @@ KW_ZH 冰嬉赋 (清高宗)
 TERM_PINYIN bing xi fu (qing gao zong)
 TERM_EN Rhapsody on Ice Sports (Emperor Gaozong of Qing)
 TYPE CIT
-ID cit_7_8_2_4
+ID cit_7_8_2_3
 TERM_ZH 冰嬉賦 (清高宗)
-CIT 7.8.2.4
+CIT 7.8.2.3
 $
-N 7.8.2.5
+N 7.8.2.4
 BROADER 清高宗詩意
 DISCRIM 清高宗
 ID.INV CIT277389
 TERM_PINYIN fan yue si shou (qing gao zong)
 TERM_EN Four Poems on Boating in the Moonlight (Emperor Gaozong of Qing)
 TYPE CIT
-ID cit_7_8_2_5
+ID cit_7_8_2_4
 TERM_ZH 泛月四首 (清高宗)
-CIT 7.8.2.5
+CIT 7.8.2.4
 $
 N 7.8.3
 BROADER 文學作品 (清)
