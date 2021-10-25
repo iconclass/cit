@@ -145,7 +145,7 @@ def parse(filename, HIM):
     return objs
 
 
-HIM_CODES = ("VANDA", "MET", "NPM")
+HIM_CODES = ("VANDA", "MET", "NPM", "CMA")
 data_list = []
 for HIM_CODE in HIM_CODES:
     if not os.path.exists(HIM_CODE):
@@ -157,4 +157,4 @@ for HIM_CODE in HIM_CODES:
             data_list.extend(parse(filepath, HIM_CODE))
    
 
-dump("CIT_CATALOG.dmp", data_list)
+dump("CATALOG.dmp", data_list)
