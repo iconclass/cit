@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+		<meta name="theme-color" content="#000000">
+		<meta name="ST.publisher" content="Brill">
+		<meta name="ST.PlatformAPIKey" content="6fcc4f962b0d9f4f">
+		<meta name="ST.customerId" content="HTTP_X_SGK_ACC_ID">
+		<meta name="SGK_ORGANISATION" content="HTTP_X_SGK_ORGANISATION">
+		<link rel="manifest" href="/r/manifest.json">
+		<link rel="shortcut icon" href="/r/favicon.png">
+		<title>Chinese Iconography Thesaurus</title>
+		<link href="/r/static/css/2.ef30d53b.chunk.css" rel="stylesheet">
+		<link href="/r/static/css/main.d1d90a35.chunk.css" rel="stylesheet">
+<style>
+  #panel {
+	  position: relative;
+	  width: 20%;
+	  z-index: 1000;
+	  padding: 1rem;
+	  border: 1px solid #CCCCCC;
+	  border-radius: .25rem;
+	  background-color: #F4F4F4;
+	
+  }
+  #description, #tools, form {
+	  padding: .25rem;
+  }
+  #viz {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  border-bottom-style: solid;
+	  border-bottom-width: 1px;
+	  border-color: #CCCCCC;
+  }
+  .label {
+	  font-size: 3rem;
+	  font-family: sans-serif;
+  }
+</style>
+	</head>
+	<body>
+		<div class="ui stackable grid">
+			<div class="six wide column">
+				<div id="logobox" style="padding-top: 1.5vh;">
+					<a href="/"><img style="height: 12vh;" alt="Chinese Iconography Thesaurus Logo" src="projectlogo.png"></a>
+				</div>
+			</div>
+		</div>
+		<div id="viz"></div>
+		<div id="panel">
+		<h3>The Chord Diagram of the CIT Related Terms</h3>
+		<div id="description">This chord diagram reveals otherwise the hidden pattern of symbolic relationships among related terms in the CIT hierarchy. The word colours represent top-level seven categories (Nature, etc.), and the wavy lines connect related terms. Mousing over a term will highlight the line(s) in blue and show a text box displaying the term and its related terms. Scroll to zoom.</div>
+		<div id="tools">
+			<form id="searchBox">
+			<label for='searchBox' class='searchBox'>Search by name:</label>
+			<input name='searchBox' class='searchBox' type='text' placeholder='Type to search...' />
+			</form>
+			<form id="radioButtons">
+			<span>Select language:</span>
+			<input type="radio" id="chinese" name="radioButtons" value="Chinese" checked>
+			<label for="chinese">Chinese</label>
+			<input type="radio" id="english" name="radioButtons" value="English">
+			<label for="english">English</label>
+			</form>
+		</div>
+		</div>
+		<script src="https://d3js.org/d3.v6.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
