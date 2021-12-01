@@ -48,6 +48,8 @@ d3.json("all_hierarchy_orig.json").then( data => {
   const svg = d3.select("#viz") .append("svg")
 	.attr("preserveAspectRatio", "xMaxYMax meet")
         .attr("viewBox", [-width / 2, -width / 4, width, width/2])
+	.attr("width", "100%")
+	.attr("height", "100%")
 	//.attr("viewBox", [0, 0, 8000, 8000])
 	.classed("svg-content-responsive", true);
 
