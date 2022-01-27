@@ -11,11 +11,14 @@
 <div class="container-fluid">
 
 <div class="row p-4 gx-5">
-    <div class="col-6">
+    <div class="col">
         <h4>{{T('homepage_text1')}}</h4>
         <p>{{T('homepage_text2')}}</p>
     </div>
-    <div class="col-lg-auto">
+</div>
+
+<div class="row p-4 gx-5">    
+    <div class="col">
         <h4><a class="homepageheading" href="/terms/">{{T('homepage_text3')}}</a></h4>
         <p>{{T('homepage_text4')}}</p>
         <ul class="m-3">
@@ -27,8 +30,14 @@
             <li>{{T('6')}}</li>
             <li>{{T('7')}}</li>
         </ul>
-
     </div>
+    <div class="col">
+        <h4><a class="homepageheading" href="/chord">{{T('homepage_chord_diagram_title')}}</a></h4>
+        <p>{{T('homepage_chord_diagram_text')}}</p>
+        <img src="/static/chord_diagram.png" alt="{{T('homepage_chord_diagram_title')}}" style="width: 40vw">
+    </div>
+
+
 </div>
 
 <div class="row p-4">
@@ -36,12 +45,6 @@
 <p>{{T('homepage_text6')}}</p>
 <div id="thedzi1" style="width: 100%; height: 40vh" />
 
-</div>
-
-<div class="row p-4">
-<h4><a class="homepageheading" href="/chord">{{T('homepage_chord_diagram_title')}}</a></h4>
-<p>{{T('homepage_chord_diagram_text')}}</p>
-<img src="/static/chord_diagram.png" alt="{{T('homepage_chord_diagram_title')}}" style="width: 40vw">
 </div>
 
 </div>
