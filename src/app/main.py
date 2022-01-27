@@ -215,7 +215,7 @@ async def focus(request: Request, lang: str, anid: str):
     SAMPLE_SIZE = 9
     lang = request.cookies.get("lang") or "en"
     obj = await get_obj(anid, {"C": "C_INV", "R": "R"})
-    items = await get_objs_for_term(anid)
+    items = []
     items_length = len(items)
 
     return templates.TemplateResponse(
