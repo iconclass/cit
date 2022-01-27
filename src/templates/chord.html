@@ -24,11 +24,8 @@ document.LANG = "{{lang}}"
 	  padding: .25rem;
   }
   #viz {
-	  position: absolute;
-	  width: 100vw;
-	  height: 100vh;
-	  top: 0;
-	  left: 0;
+	  width: 100%;
+	  height: 100%;
 	  border-bottom-style: solid;
 	  border-bottom-width: 1px;
 	  border-color: #CCCCCC;
@@ -42,24 +39,25 @@ document.LANG = "{{lang}}"
 
 {% block content %}
 <div class="container-fluid">
+    <div id="viz">
+    </div>
     <div class="row">
-        <div id="viz"></div>
-        <div id="description">This chord diagram reveals otherwise the hidden pattern of symbolic relationships among related terms in the CIT hierarchy. The word colours represent top-level seven categories (Nature, etc.), and the wavy lines connect related terms. Mousing over a term will highlight the line(s) in blue and show a text box displaying the term and its related terms. Scroll to zoom.</div>
-		<div id="tools">
-			<form id="searchBox">
-			<label for='searchBox' class='searchBox'>Search by name:</label>
-			<input name='searchBox' class='searchBox' type='text' placeholder='Type to search...' />
-			</form>
-			<form id="radioButtons">
-			<span>Select language:</span>
-			<input type="radio" id="chinese" name="radioButtons" value="Chinese" checked>
-			<label for="chinese">Chinese</label>
-			<input type="radio" id="english" name="radioButtons" value="English">
-			<label for="english">English</label>
-			</form>
-		</div>
-
-
+        <div class="col-6">    
+            <div id="description">This chord diagram reveals otherwise the hidden pattern of symbolic relationships among related terms in the CIT hierarchy. The word colours represent top-level seven categories (Nature, etc.), and the wavy lines connect related terms. Mousing over a term will highlight the line(s) in blue and show a text box displaying the term and its related terms. Scroll to zoom.</div>
+                <div id="tools">
+                    <form id="searchBox">
+                    <label for='searchBox' class='searchBox'>Search by name:</label>
+                    <input name='searchBox' class='searchBox' type='text' placeholder='Type to search...' />
+                    </form>
+                    <form id="radioButtons">
+                    <span>Select language:</span>
+                    <input type="radio" id="chinese" name="radioButtons" value="Chinese" checked>
+                    <label for="chinese">Chinese</label>
+                    <input type="radio" id="english" name="radioButtons" value="English">
+                    <label for="english">English</label>
+                    </form>
+                </div>
+            </div>
     </div>
 </div>
 
