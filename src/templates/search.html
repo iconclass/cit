@@ -4,6 +4,7 @@
 
 {% block head_last%}
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script>
     document.LANG = "{{lang}}"
 </script>
@@ -15,16 +16,21 @@
 
 <div class="row">
     <div class="col-sm-4">
-        <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; height: 88vh; overflow: scroll; margin-bottom: 10vh; border-left: 1px solid #eee">        
-        <div class="p-3">
-            <h4 style="margin-top: 3vh">{{T('termsused')}}</h4>
-            {% for cit in terms %}
-            <p anid="{{cit.get('ID')[0]}}" style="margin: 0 0 0 2.5ch; cursor: pointer; text-indent: -2ch"><span style="font-size: 80%; color: #ccc">{{cit.get("CIT")[0]}}</span>
-            {{cit.get("TERM_"+lang[:2].upper())[0]}}
-            </p>
-            {% endfor %}            
-        </div>
-        </div>
+            <div class="p-1">
+                <h4>{{T('browse')}}</h4>
+                <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; overflow: scroll; border-left: 1px solid #eee">
+                </div>
+            </div>
+
+            <div class="p-1" style="margin-top: 5vh">
+                <h4>{{T('termsused')}}</h4>
+                {% for cit in terms %}
+                <p title="{{cit.get('CIT')[0]}}" anid="{{cit.get('ID')[0]}}" style="margin: 0 0 0 2.5ch; cursor: pointer; text-indent: -2ch">
+                <input type="checkbox" name="termsused"/> {{cit.get("TERM_"+lang[:2].upper())[0]}}
+                </p>
+                {% endfor %}            
+            </div>
+    
     </div>
 
     <div class="col-sm-8">
@@ -57,10 +63,10 @@
             </ul>
             </nav>{% endif %}
 
-            <div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer">
+            <div class="row grid" data-masonry='{"percentPosition": true }' style="cursor: pointer">
             {% for obj in paged %}
 
-            <div class="col-sm-6 col-lg-4 mb-4" anid="{{obj.get('ID')[0]}}">
+            <div class="col-sm-6 col-lg-4 mb-4 grid-item" anid="{{obj.get('ID')[0]}}">
                 <div class="card">
                 <img width="100%" src="https://cit.iconclass.org/iiif/3/{{obj.get('URL_IMAGE')[0]}}/full/150,/0/default.jpg">
                 <div class="card-body">
@@ -70,7 +76,6 @@
             </div>
             {% endfor %}
             </div>
-
         </div>
 
     </div>

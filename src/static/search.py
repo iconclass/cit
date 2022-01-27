@@ -31,3 +31,14 @@ async def init():
 
 
 window.addEventListener("load", init)
+
+
+def initmsnry():
+    msnry = __new__(
+        Masonry(grid, {"columnWidth": ".grid-item", "itemSelector": ".grid-item"})
+    )
+    msnry.layout()
+
+
+grid = document.querySelector(".grid")
+imagesLoaded(grid, initmsnry)
