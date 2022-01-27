@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}CIT {{obj.get("TITLE", [""])[0][:80]}} {% endblock %}
+
+{% block head_last%}
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="/static/openseadragon-2.4.2/openseadragon.min.js"></script>
+<script>
+    document.LANG = "{{lang}}"
+    document.anid = "{{anid}}"
+    document.obj = {{obj|tojson}}
+</script>
+<script type="module">import * as frontend from '/static/items/items.js';</script>
+{% endblock %}}
+
+{% block content %}
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-sm-4">
+    <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; height: 88vh; overflow: scroll; margin-bottom: 10vh; border-left: 1px solid #eee">        
+        <div class="p-3">
+            <h4><a style="text-decoration: none; color: #ccc" title="{{T('originalsource')}}" href="{{obj.get('URL_WEBPAGE')[0]}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
+  <path d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9c-.086 0-.17.01-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z"/>
+  <path d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4.02 4.02 0 0 1-.82 1H12a3 3 0 1 0 0-6H9z"/>
+</svg>{{obj.get("LOCATION_INV")[0]}}</a></h4>
+
+            <div>
+                <div class="form-check form-switch" style="">
+                    <input class="form-check-input" type="checkbox" id="inLightbox">
+                    <label class="form-check-label" for="inLightbox">In Mirador LightBox</label>
+
+                <a id="mirador_button" href="/mirador/" title="View the lightbox"><svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="iiif_logo" fill-rule="nonzero">
+                            <g id="g10" transform="translate(16.000000, 14.000000) scale(-1, 1) rotate(-180.000000) translate(-16.000000, -14.000000) ">
+                                <g id="g12" transform="translate(0.075000, 0.000000)">
+                                    <polyline id="path14" fill="#2873AB" points="0.552018333 18.4305136 6.46868333 16.1993958 6.45826667 0.126888218 0.552018333 2.33685801 0.552018333 18.4305136"></polyline>
+                                    <path d="M6.70954167,22.3330876 C7.38821667,20.2951782 6.48893333,18.6431782 4.700875,18.6431782 C2.91289167,18.6431782 0.913283333,20.2951782 0.2346025,22.3330876 C-0.44401,24.3708278 0.455273333,26.0228278 2.24325833,26.0228278 C4.03131667,26.0228278 6.03085833,24.3708278 6.70954167,22.3330876" id="path16" fill="#2873AB"></path>
+                                    <polyline id="path18" fill="#ED1D33" points="13.9965 18.4305136 8.07981667 16.1993958 8.09023333 0.126888218 13.9965 2.33685801 13.9965 18.4305136"></polyline>
+                                    <path d="M7.80068333,22.3330876 C7.12204167,20.2951782 8.021325,18.6431782 9.80933333,18.6431782 C11.5973333,18.6431782 13.5969167,20.2951782 14.2756667,22.3330876 C14.95425,24.3708278 14.055,26.0228278 12.267,26.0228278 C10.4789167,26.0228278 8.47933333,24.3708278 7.80068333,22.3330876" id="path20" fill="#ED1D33"></path>
+                                    <polyline id="path22" fill="#2873AB" points="15.5103333 18.4305136 21.427 16.1993958 21.4165833 0.126888218 15.5103333 2.33685801 15.5103333 18.4305136"></polyline>
+                                    <path d="M21.7061667,22.3330876 C22.3849167,20.2951782 21.4855833,18.6431782 19.6975833,18.6431782 C17.9094167,18.6431782 15.9099167,20.2951782 15.23125,22.3330876 C14.5525833,24.3708278 15.4519167,26.0228278 17.2398333,26.0228278 C19.0279167,26.0228278 21.0274167,24.3708278 21.7061667,22.3330876" id="path24" fill="#2873AB"></path>
+                                    <path d="M30.8436667,28 L30.8436667,22.4803625 C30.8436667,22.4803625 28.927,23.2416918 28.6978333,21.2749245 C28.677,19.1812689 28.6978333,18.4305136 28.6978333,18.4305136 L30.8436667,19.1389728 L30.8436667,14.2960725 L28.6885833,13.5135952 L28.6885833,2.22054381 L22.802,0 L22.802,19.9637462 C22.802,19.9637462 22.677,27.1540785 30.8436667,28" id="path26" fill="#ED1D33"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg></a>
+
+                    </div>
+
+                
+            </div>
+
+
+
+            <h4 style="margin-top: 3vh">{{T('termsused')}}</h4>
+            {% for cit in obj.get("CIT", []) %}
+            <p anid="{{cit.get('ID')[0]}}" style="margin: 0 0 0 2.5ch; cursor: pointer; text-indent: -2ch"><span style="font-size: 80%; color: #ccc">{{cit.get("CIT")[0]}}</span>
+            {{cit.get("TERM_"+lang[:2].upper())[0]}}
+            </p>
+            {% endfor %}            
+        </div>
+
+    </div>
+</div>
+
+    <div class="col-sm-8">
+
+        <div class="input-group mb-3">
+            <input id="searchbox" type="text" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
+                   aria-label="{{T('typeheretostartsearch')}}" aria-describedby="search-addon2" value="{{q}}">
+            <span class="input-group-text" id="search-addon2">{{T('search')}}</span>
+        </div>
+
+        <div id="results" class="shadow p-3">
+        <h3 style="text-align: center; margin-bottom: 2ch">{{obj.get("TITLE")[0]}}</h3> 
+        <h4>{{obj.get("PERSON_ARTIST")[0]}}<span style="float: right">{{obj.get("DATE")[0]}}</span></h4>
+        <p>{{obj.get("ID_INV_ALT")[0]}}</p>
+        <div id="thedzi1" style="height: 60vh"></div>        
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script type="text/javascript">
+async function doInits() {
+    var viewer = OpenSeadragon({
+        id: "thedzi1",
+        prefixUrl: '/static/openseadragon-2.4.2/images/',
+        showNavigator: false,
+        showFullPageControl: true,
+        tileSources: [
+            { x: 0, y: 0, width: 1000, 
+              tileSource: 'https://cit.iconclass.org/iiif/3/{{obj.get("URL_IMAGE")[0]}}/info.json'}],
+    });
+}
+
+doInits()
+</script>
+{% endblock %}

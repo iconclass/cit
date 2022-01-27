@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}CIT {% if obj %}{{obj.get("TERM_"+lang.upper(), [""])[0][:80]}}{% endif %}{% endblock %}
+
+{% block head_last%}
+<script>
+    document.LANG = "{{lang}}"
+    document.ROOT_ID = "{{ROOT_ID}}"
+    document.PATH = {{path|safe}}
+    document.anid = "{{anid}}"
+</script>
+<script type="module">import * as frontend from '/static/terms/terms.js';</script>
+{% endblock %}}
+
+{% block content %}
+<div class="container-fluid">
+
+<div class="row">
+    <div class="col-sm-4">
+        <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; height: 88vh; overflow: scroll; margin-bottom: 10vh; border-left: 1px solid #eee"></div>
+    </div>
+
+    <div class="col-sm-8">
+        <div class="input-group mb-3">
+            <input id="searchbox" type="text" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
+                   aria-label="{{T('typeheretostartsearch')}}" aria-describedby="search-addon2" value="{{q}}">
+            <span class="input-group-text" id="search-addon2">{{T('search')}}</span>
+        </div>
+
+
+        <div id="results">&nbsp;</div>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

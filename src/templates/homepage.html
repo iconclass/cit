@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block head_last%}
+<script src="/static/openseadragon-2.4.2/openseadragon.min.js"></script>
+<style>
+ .homepageheading {text-decoration: none}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+
+<div class="row p-4 gx-5">
+    <div class="col-6">
+        <h4>{{T('homepage_text1')}}</h4>
+        <p>{{T('homepage_text2')}}</p>
+    </div>
+    <div class="col-lg-auto">
+        <h4><a class="homepageheading" href="/terms/">{{T('homepage_text3')}}</a></h4>
+        <p>{{T('homepage_text4')}}</p>
+        <ul class="m-3">
+            <li>{{T('1')}}</li>
+            <li>{{T('2')}}</li>
+            <li>{{T('3')}}</li>
+            <li>{{T('4')}}</li>
+            <li>{{T('5')}}</li>
+            <li>{{T('6')}}</li>
+            <li>{{T('7')}}</li>
+        </ul>
+
+    </div>
+</div>
+
+<div class="row p-4">
+<h4><a class="homepageheading" href="/search">{{T('homepage_text5')}}</a></h4>
+<p>{{T('homepage_text6')}}</p>
+<div id="thedzi1" style="width: 100%; height: 40vh" />
+
+</div>
+
+<div class="row p-4">
+<h4><a class="homepageheading" href="/chord">{{T('homepage_chord_diagram_title')}}</a></h4>
+<p>{{T('homepage_chord_diagram_text')}}</p>
+<img src="/static/chord_diagram.png" alt="{{T('homepage_chord_diagram_title')}}" style="width: 40vw">
+</div>
+
+</div>
+
+<script type="text/javascript">
+async function doInits() {
+    var width = 63768
+    var height = 57672
+    var ratio = width/height
+    var viewer = OpenSeadragon({
+        id: "thedzi1",
+        prefixUrl: '/static/openseadragon-2.4.2/images/',
+        showNavigator: false,
+        showFullPageControl: true,
+        zoomPerClick: 2,
+        tileSources: [
+            { x: 0, y: 0, width: 1000, tileSource: 'https://cit.iconclass.org/z/CIT.dzi' }],
+    });
+    viewer.gestureSettingsMouse.clickToZoom = false;
+    viewer.addHandler("canvas-click", (event) => {
+        let viewer_point = viewer.viewport.pointFromPixel(event.position);
+        let viewer_height = 1000 / ratio;
+        let x = viewer_point.x / 1000;
+        let y = viewer_point.y / viewer_height;
+        fetch(`/metabotnik/xy_wh/cit/${x}_${y}`, {
+          cors: "no-cors",
+          cache: "no-cache",
+          method: "GET",
+        }).then((response) => response.json()).then((result) => {
+            console.log(result)
+        })
+    })
+}
+
+doInits()
+</script>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 import sys
 import xml.etree.ElementTree as ET
-import json
+from rich.progress import track
 
 
 def getpath(obj):
@@ -17,14 +17,15 @@ def gettit(elem, xpath, dest, field):
         dest[field] = d.text
 
 
-# Note, parsing file: CIT export_inOrder_04.03.2019.xml 20190312 gives error in XML on lines 781763 and 781765 encountering character  '\x02' embedded in file.
+# Note, parsing file: CIT export_inOrder_04.03.2019.xml 20190312 gives error in XML on lines 781763 and 781765
+# encountering character  '\x02' embedded in file.
 # Looks like all the source have this so do a search and replace to fix it.
 filecontents = open("CIT.xml", encoding="utf8").read().replace("\x02", "")
 doc = ET.fromstring(filecontents)
 
 data = {}
 seq = 0
-for entry in doc.findall(".//mus_ixthes"):
+for entry in track(doc.findall(".//mus_ixthes")):
     seq += 1
     tmp = {"seq": seq}
     tmp["n"] = entry.find(".//mus_auth_thes_term").text
@@ -34,7 +35,7 @@ for entry in doc.findall(".//mus_ixthes"):
     # Until further notice from Hongxing
     # gettit(entry, "mus_auth_thes_scope_note", tmp, "scopenote")
     # gettit(entry, "mus_auth_thes_source", tmp, "source")
-    gettit(entry, "sys_id", tmp, "ID.INV")
+    gettit(entry, "sys_id", tmp, "id.inv")
 
     # Retrieve the related terms
     related = [r_term.text for r_term in entry.findall(".//mus_auth_thes_r_terms/_")]
@@ -83,10 +84,10 @@ for x in data.values():
     parent = data.get(x.get("broader"))
     if parent:
         parent.setdefault("c", []).append(x["n"])
+        parent.setdefault("c.inv", []).append(x["id.inv"])
 
 TBC = []
 for k, x in data.items():
-    print("%s | %s", k, x)
     pad = list(getpath(x))
     x["p"] = [pobj["n"] for pobj in pad]
     if "TBC" in x["p"]:
@@ -126,18 +127,25 @@ data["<CIT>"]["nnn"] = "<CIT>"
 with open("CIT.dmp", "w", encoding="utf8") as OUT:
     for obj in data.values():
         obj["type"] = "CIT"
-        obj["id"] = f"cit_{obj['nnn'].replace('.', '_')}"
+
         obj["term_zh"] = obj["n"]
+        if "nn" in obj:
+            del obj["n"]
         if "nn" in obj:
             del obj["nn"]
         if "nnn" in obj:
             obj["cit"] = obj["nnn"]
             del obj["nnn"]
-        obj["n"] = obj["cit"]
         if "seq" in obj:
             del obj["seq"]
-        if "p" in obj:
-            del obj["p"]
+        obj["p"] = [data.get(pp, {}).get("id.inv", pp) for pp in obj.get("p", [])]
+        if "broader" in obj:
+            obj["broader"] = data.get(obj["broader"], {}).get("id.inv")
+        if "r" in obj:
+            obj["r"] = [data.get(rr, {}).get("id.inv", "_") for rr in obj["r"]]
+        # if "p" in obj:
+        #     del obj["p"]
+        obj["id"] = obj["id.inv"]
         for k, v in obj.items():
             if v:
                 if type(v) is list:

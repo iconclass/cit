@@ -1,0 +1,15 @@
+<div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer">
+{% for obj in results[:99] %}
+
+<div class="col-sm-6 col-lg-4 mb-4" anid="{{obj.get('ID')[0]}}">
+    <div class="card">
+        <div class="card-body">
+            <p><span style="color: #ccc;">{{obj.get("CIT")[0]}}</span> {{obj.get("TERM_ZH")[0]}}</p>
+            <p style="margin: 0">{{obj.get("TERM_PINYIN")[0]}}</p>
+            <p style="margin: 0">{{obj.get("TERM_EN")[0]}}</p>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+</div>

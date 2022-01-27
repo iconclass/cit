@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block head %}
+    <title>{% block title %}CIT{% endblock %}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+    />
+    {% endblock %}
+    <script async defer data-domain="cit.iconclass.org" src="https://plausible.io/js/plausible.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script defer data-domain="cit.iconclass.org" src="https://plausible.io/js/plausible.js"></script>
+    {% block head_last %}{% endblock %}
+  </head>
+  <body>
+      <header class="p-3">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="/"><img src="/static/cit_logo.png" alt="The CIT Logo in calligraphic brush strokes"  style="width: 100%"></a></div>
+            <div class="col-sm-8 col-lg-auto offset-md-4">
+              <ul class="nav mb-2 shadow-sm">
+                <li>
+                    <a href="/" title="The Homepage" class="nav-link px-2 text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="/help/about" class="nav-link px-2 text-secondary">{{T('about')}}</a>
+                </li>
+                <li>
+                    <a href="/mirador/" class="nav-link px-2 text-secondary">{{T('lightbox')}}</a>
+                </li>
+                <li>
+                    <a href="/help/contact" class="nav-link px-2 text-secondary">{{T('contact')}}</a>
+                </li>
+                <li>
+                    <a href="/help/howtouse" class="nav-link px-2 text-secondary">{{T('howtouse')}}</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link px-2 text-secondary dropdown-toggle">{{T('changelang')}}</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/?lang=zh_hant" class="dropdown-item">中文（繁體)</a></li>
+                        <li><a href="/?lang=zh_hans" class="dropdown-item">中文（简体)</a></li>
+                        <li><a href="/?lang=en" class="dropdown-item">English</a></li>
+                    </ul>
+                </li>
+
+              </ul>
+            </div>
+        </div>
+      </div>
+      </header>
+      
+    {% block content %}{% endblock %}
+<script>
+var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  return new bootstrap.Dropdown(dropdownToggleEl)
+})
+</script>
+
+  </body>  
+</html>

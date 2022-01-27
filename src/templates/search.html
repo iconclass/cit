@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}CIT Search {% if q %}for {{q}}{% endif %}{% endblock %}
+
+{% block head_last%}
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script>
+    document.LANG = "{{lang}}"
+</script>
+<script type="module">import * as frontend from '/static/search/search.js';</script>
+{% endblock %}}
+
+{% block content %}
+<div class="container-fluid">
+
+<div class="row">
+    <div class="col-sm-4">
+        <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; height: 88vh; overflow: scroll; margin-bottom: 10vh; border-left: 1px solid #eee">        
+        <div class="p-3">
+            <h4 style="margin-top: 3vh">{{T('termsused')}}</h4>
+            {% for cit in terms %}
+            <p anid="{{cit.get('ID')[0]}}" style="margin: 0 0 0 2.5ch; cursor: pointer; text-indent: -2ch"><span style="font-size: 80%; color: #ccc">{{cit.get("CIT")[0]}}</span>
+            {{cit.get("TERM_"+lang[:2].upper())[0]}}
+            </p>
+            {% endfor %}            
+        </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8">
+
+        <div class="input-group mb-3">
+            <input id="searchbox" type="text" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
+                   aria-label="{{T('typeheretostartsearch')}}" aria-describedby="search-addon2" value="{{q}}">
+            <span class="input-group-text" id="search-addon2">{{T('search')}}</span>
+        </div>
+
+        <div id="results" class="shadow p-3">
+            {{total}} {% if not (q or cit) %}(randomly chosen) {% endif %}items  
+            {% if pages > 1 %}
+            <nav aria-label="Page navigation">
+            <ul class="pagination pagination-sm justify-content-end">
+                {% if page > 1 %}
+                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page-1}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                {% endif %}
+                {% for apage in range(pages)  %}
+                {% if page == apage+1 %}
+                <li class="page-item"><span class="page-link" style="font-weight: bold;">{{apage + 1}}</span></li>
+                {% else %}
+                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{apage+1}}">{{apage + 1}}</a></li>                
+                {% endif %}
+                
+                {% endfor %}
+                {% if page < pages %}
+                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page+1}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                {% endif %}
+            </ul>
+            </nav>{% endif %}
+
+            <div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer">
+            {% for obj in paged %}
+
+            <div class="col-sm-6 col-lg-4 mb-4" anid="{{obj.get('ID')[0]}}">
+                <div class="card">
+                <img width="100%" src="https://cit.iconclass.org/iiif/3/{{obj.get('URL_IMAGE')[0]}}/full/150,/0/default.jpg">
+                <div class="card-body">
+                    <p style="font-size: 75%" class="card-title">{{obj.get('TITLE')[0]}}</p>
+                </div>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+{% endblock %}
