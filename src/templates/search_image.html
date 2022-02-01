@@ -1,5 +1,7 @@
+Found: {{results | length}}
+
 <div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer">
-{% for obj in results[:99] %}
+{% for obj in results[:20] %}
 
 <div class="col-sm-6 col-lg-4 mb-4" anid="{{obj.get('ID')[0]}}">
     <div class="card">
