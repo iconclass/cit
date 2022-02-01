@@ -1,18 +1,4 @@
-from htmltree import *
 from ui_util import *
-
-
-NODE_MAP = {}
-
-caret_right_fill = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-</svg>"""
-caret_down_fill = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-</svg>"""
-dot = """<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-  <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
-</svg>"""
 
 
 def toggle_visibility(anelement):
@@ -20,16 +6,6 @@ def toggle_visibility(anelement):
         anelement.style.display = "none"
     else:
         anelement.style.display = "block"
-
-
-async def get_obj(anid):
-    if anid in NODE_MAP:
-        return NODE_MAP[anid]
-    result = await fetch("/id/" + anid + ".json")
-    response = await result.json()
-    obj = dict(response)
-    NODE_MAP[anid] = obj
-    return obj
 
 
 async def result_clicker(event):
@@ -52,6 +28,11 @@ async def focus_node(desired):
         return
     history.pushState({}, "", "/terms/" + encodeURIComponent(desired))
     node = NODE_MAP[desired]
+
+    for notationtext in document.querySelectorAll(".notationtext"):
+        notationtext.classList.remove("focussed")
+    node.text_element.classList.add("focussed")
+
     kids_element = document.getElementById("kids" + desired)
     icon_element = document.getElementById("icon" + desired)
     if len(node["C_INV"]) > 0:
@@ -61,7 +42,6 @@ async def focus_node(desired):
     if kids_element.style.display == "none":
         kids_element.style.display = "block"
         icon_element.innerHTML = kind_icon or caret_down_fill
-        caret_down_fill
         if node.fragment is None:
             furi = "/fragments/focus/{}/{}".format(
                 document.LANG, encodeURIComponent(desired)
@@ -75,51 +55,6 @@ async def focus_node(desired):
         kids_element.style.display = "none"
         icon_element.innerHTML = kind_icon or caret_right_fill
     results_element.innerHTML = node.fragment
-
-
-async def build(anid, an_element, path=[]):
-    node = await get_obj(anid)
-
-    for kind in node.get("C_INV", []):
-        kind_node = await get_obj(kind)
-
-        if kind in path:
-            kids_display = "block"
-        else:
-            kids_display = "none"
-
-        if kind_node.kids_element:
-            # We have already added this child
-            kind_node.kids_element.style.display = "block"
-        else:
-
-            if len(kind_node["C_INV"]) > 0:
-                kind_icon = caret_right_fill
-            else:
-                kind_icon = dot
-            txt = kind_node["TERM_" + document.LANG.upper()][0]
-            an_element.insertAdjacentHTML(
-                "beforeend",
-                Div(
-                    Span(
-                        kind_icon,
-                        id="icon" + kind,
-                        anid=kind,
-                        style={"margin-right": "0.6ch"},
-                    ),
-                    Span(txt, anid=kind),
-                    Div(id="kids" + kind, style={"display": kids_display}),
-                    id=kind,
-                    style={"padding-left": "1ch", "cursor": "pointer"},
-                    anid=kind,
-                    title=kind_node["CIT"],
-                ).render(),
-            )
-            kind_node.fragment = None
-            kind_node.element = document.getElementById(kind)
-            kind_node.kids_element = document.getElementById("kids" + kind)
-        if kind in path:
-            await build(kind, kind_node.kids_element, path)
 
 
 async def do_search():
