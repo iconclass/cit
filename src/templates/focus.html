@@ -1,49 +1,31 @@
 <div class="shadow p-3">
-<h1><span style="color: #ccc;">{{obj.get("CIT")[0]}}</span> {{obj.get("TERM_ZH")[0]}}</h1>
-<h3>{{obj.get("TERM_PINYIN")[0]}}</h3>
-<h3>{{obj.get("TERM_EN")[0]}}</h3>
+    <h1><span style="color: #ccc;">{{obj.get("CIT")[0]}}</span> {{obj.get("TERM_ZH")[0]}}</h1>
+    <h3>{{obj.get("TERM_PINYIN")[0]}}</h3>
+    <h3>{{obj.get("TERM_EN")[0]}}</h3>
 
-{% if obj["KW_EN"] and lang == "en" %}
-<div style="margin-top: 2ch">
-<h4>{{T('usefor')}}</h4>
-{% for kw_en in obj["KW_EN"] %}{{kw_en}}{% if not loop.last %}, {% endif %}{% endfor %}
-</div>
-{% endif %}
-
-{% if obj["R"]|length > 0 %}
-<div style="margin-top: 2ch">
-<h4>{{T('relatedterm')}}</h4>
-{% for r in obj["R"] %}
-<p style="margin: 0; cursor: pointer" anid="{{r.get('ID')[0]}}">
-<span style="font-size: 80%; color: #ccc;">{{r.get("CIT")[0]}}</span> {{r.get("TERM_"+lang.upper(), [""])[0]}}
-</p>
-{% endfor %}
-</div>
-{% endif %}
-</div>
-
-{% if items_length > 0 %}
-
-<div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer; margin-top: 5vh">
-
-{% if items_length > SAMPLE_SIZE %}
-<p>Random {{SAMPLE_SIZE}} of {{items_length}} items <a class="btn btn-small btn-light" href="/search?cit={{obj.get('ID')[0]}}">Show more</a></p>
-{% else %}
-<p>{{items_length}} items</p>
-{% endif %}
-
-{% for item in items %}
-
-<div class="col-sm-6 col-lg-4 mb-4" anid="{{item.get('ID')[0]}}" atipe="image">
-    <div class="card">
-    <img width="100%" src="https://cit.iconclass.org/iiif/3/{{item.get('URL_IMAGE')[0]}}/full/150,/0/default.jpg">
-    <div class="card-body">
-        <p style="font-size: 75%" class="card-title">{{item.get('TITLE')[0]}}</p>
+    {% if obj["KW_EN"] and lang == "en" %}
+    <div style="margin-top: 2ch">
+    <h4>{{T('usefor')}}</h4>
+    {% for kw_en in obj["KW_EN"] %}{{kw_en}}{% if not loop.last %}, {% endif %}{% endfor %}
     </div>
+    {% endif %}
+
+    {% if obj["R"]|length > 0 %}
+    <div style="margin-top: 2ch">
+    <h4>{{T('relatedterm')}}</h4>
+    {% for r in obj["R"] %}
+    <p style="margin: 0; cursor: pointer" anid="{{r.get('ID')[0]}}">
+    <span style="font-size: 80%; color: #ccc;">{{r.get("CIT")[0]}}</span> {{r.get("TERM_"+lang.upper(), [""])[0]}}
+    </p>
+    {% endfor %}
     </div>
+    {% endif %}
+
+    
 </div>
 
-{% endfor %}
+{% if obj["OBJS_PATH"][0] > 0 %}
+<div class="p-3 mt-3">
+    <a class="btn btn-small btn-light" href="/search/?cit={{obj.get('ID')[0]}}">Was used for {{obj["OBJS_PATH"][0]}} / {{obj["OBJS_EXACT"][0]}}</a>
 </div>
-
 {% endif %}
