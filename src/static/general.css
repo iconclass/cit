@@ -1,0 +1,11 @@
+.focussed {
+  border-left: 5px solid #f00;
+  border-right: 5px solid #f00;
+  background-color: #efefef;
+  padding: 9px;
+  line-height: 2.5;
+}
+
+a {
+  text-decoration: none;
+}
