@@ -2,9 +2,6 @@
 
 {% block head_last%}
 <script src="/static/openseadragon-2.4.2/openseadragon.min.js"></script>
-<style>
- .homepageheading {text-decoration: none}
-</style>
 {% endblock %}
 
 {% block content %}
@@ -21,14 +18,13 @@
     <div class="col">
         <h4><a class="homepageheading" href="/terms/">{{T('homepage_text3')}}</a></h4>
         <p>{{T('homepage_text4')}}</p>
+
         <ul class="m-3">
-            <li>{{T('1')}}</li>
-            <li>{{T('2')}}</li>
-            <li>{{T('3')}}</li>
-            <li>{{T('4')}}</li>
-            <li>{{T('5')}}</li>
-            <li>{{T('6')}}</li>
-            <li>{{T('7')}}</li>
+         {% for c in obj.get("C", []) %}
+        <li><a href="/terms/{{c['ID'][0]}}">{{c.get("TERM_"+lang.upper(), [""])[0]}}</a></li>
+        {% endfor %}
+
+
         </ul>
     </div>
     <div class="col">
