@@ -1,5 +1,5 @@
 from fastapi import Depends, FastAPI, Request, HTTPException, Query
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from .config import ORIGINS, DATABASE_URL, ROOT_ID, HELP_PATH, SITE_URL
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
@@ -47,8 +47,12 @@ async def homepage(request: Request, lang: str = Query(None)):
         set_language = True
     if lang is None:
         lang = "en"
+
+    obj = await get_obj(ROOT_ID, {"C": "C_INV"})
+
     response = templates.TemplateResponse(
-        "homepage.html", {"request": request, "T": get_T(lang)}
+        "homepage.html",
+        {"request": request, "lang": lang[:2], "obj": obj, "T": get_T(lang)},
     )
     if set_language:
         response.set_cookie(key="lang", value=lang)
@@ -63,19 +67,35 @@ async def id_json(request: Request, anid: str):
 
 
 async def do_search_(q: str, tipe: str, cit=[]):
-    if cit:
-        query = "SELECT objs.obj FROM objs, json_each(objs.obj, '$.CIT_ID') WHERE json_each.value = :cit"
-        results = await database.fetch_all(query, values={"cit": cit[0]})
-    elif q == "":
-        query = "SELECT objs.obj FROM objs, json_each(objs.obj, '$.TYPE[0]') WHERE json_each.value = :tipe ORDER BY RANDOM() LIMIT 99"
-        results = await database.fetch_all(query, values={"tipe": tipe})
+    if tipe == "image":
+        return await search_images(q, cit)
     else:
-        if tipe:
-            query = "SELECT objs.obj FROM txt_idx INNER JOIN objs ON txt_idx.id = objs.id, json_each(objs.obj, '$.TYPE[0]') WHERE txt_idx.text MATCH :q AND json_each.value = :tipe"
-            results = await database.fetch_all(query, values={"q": q, "tipe": tipe})
+        return await search_terms(q)
+
+
+async def search_terms(q: str):
+    query = "SELECT objs.obj FROM txt_idx INNER JOIN objs ON txt_idx.id = objs.id WHERE txt_idx.text MATCH :q"
+    results = await database.fetch_all(query, values={"q": q})
+    return results
+
+
+async def search_images(q: str, cit=[]):
+    if q:
+        query = "SELECT objs.obj FROM objs INNER JOIN txt_idx ON txt_idx.id = objs.id, json_each(objs.obj, '$.TYPE[0]') WHERE json_each.value = 'image'"
+        query += " AND txt_idx.text MATCH :q"
+        if cit:
+            query += " AND objs.id IN (SELECT obj_id FROM objs_cit WHERE cit_id = :cit)"
+            results = await database.fetch_all(query, values={"q": q, "cit": cit[0]})
         else:
-            query = "SELECT objs.obj FROM txt_idx INNER JOIN objs ON txt_idx.id = objs.id WHERE txt_idx.text MATCH :q"
             results = await database.fetch_all(query, values={"q": q})
+    else:
+        query = "SELECT objs.obj FROM objs, json_each(objs.obj, '$.TYPE[0]') WHERE json_each.value = 'image'"
+        if cit:
+            query += " AND objs.id IN (SELECT obj_id FROM objs_cit WHERE cit_id = :cit)"
+            results = await database.fetch_all(query, values={"cit": cit[0]})
+        else:
+            query += " ORDER BY RANDOM() LIMIT 20"
+            results = await database.fetch_all(query)
     return results
 
 
@@ -102,12 +122,27 @@ async def get_objs_for_term(term: str):
     return [json.loads(row[0]) for row in results]
 
 
+async def get_obj_count_for_term(term: str, exact: bool = False):
+    if exact:
+        query = "SELECT COUNT(*) from objs_cit where cit_id = :term AND exact = 1"
+    else:
+        query = "SELECT COUNT(*) from objs_cit where cit_id = :term"
+    try:
+        results = await database.fetch_all(query, values={"term": term})
+    except sqlite3.OperationalError:
+        return 0
+    return results[0][0]
+
+
 async def get_obj(anid: str, filled={}):
     query = "SELECT obj FROM objs WHERE id = :anid"
     results = await database.fetch_one(query, values={"anid": anid})
     if not results:
         raise HTTPException(status_code=404)
     obj = json.loads(results[0])
+    obj["OBJS_PATH"] = [await get_obj_count_for_term(anid)]
+    obj["OBJS_EXACT"] = [await get_obj_count_for_term(anid, True)]
+
     for k, v in filled.items():
         thelist = [await get_obj(kind) for kind in obj.get(v, [])]
         obj[k] = sorted(
@@ -137,16 +172,23 @@ async def terms(request: Request, anid: str):
     )
 
 
-async def get_terms_from_results(results: list):
-    terms_buf = set()
+async def get_terms_from_results(results: list, sort_by: str = "freq"):
+    terms_buf = {}
     for obj in results:
         for term in obj.get("CIT_ID", []):
-            terms_buf.add(term)
-    terms = [await get_obj(x) for x in terms_buf]
-    return sorted(
-        terms,
-        key=lambda x: [int(oo) for oo in x.get("CIT", ["0"])[0].split(".")],
-    )
+            terms_buf.setdefault(term, set()).add(obj["ID"][0])
+    terms = [(len(y), await get_obj(x)) for x, y in terms_buf.items()]
+    for term_buf_len, term in terms:
+        term["OBJ_COUNT"] = [term_buf_len]
+
+    if sort_by == "freq":
+        terms.sort(key=lambda x: x[0])
+        return reversed([t for l, t in terms])
+    else:
+        return sorted(
+            [t for l, t in terms],
+            key=lambda x: [int(oo) for oo in x.get("CIT", ["0"])[0].split(".")],
+        )
 
 
 @app.get(
@@ -167,6 +209,10 @@ async def search(
     paged = results[start:stop]
     pages = round(total / SIZE)
 
+    if total == 1:
+        anid = results[0].get("ID")[0]
+        return RedirectResponse("/items/" + anid)
+
     return templates.TemplateResponse(
         f"search.html",
         {
@@ -181,6 +227,7 @@ async def search(
             "pages": pages,
             "total": total,
             "T": get_T(lang),
+            "ROOT_ID": ROOT_ID,
         },
     )
 
@@ -190,9 +237,15 @@ async def search(
     response_class=HTMLResponse,
     include_in_schema=False,
 )
-async def fragments_search(request: Request, tipe: str, q: str):
+async def fragments_search(
+    request: Request,
+    tipe: str,
+    q: str = "",
+    page: int = 1,
+    cit: List[str] = Query(None),
+):
     lang = request.cookies.get("lang") or "en"
-    results = await do_search(q, tipe)
+    results = await do_search(q, tipe, cit)
 
     return templates.TemplateResponse(
         f"search_{tipe}.html",
@@ -215,8 +268,6 @@ async def focus(request: Request, lang: str, anid: str):
     SAMPLE_SIZE = 9
     lang = request.cookies.get("lang") or "en"
     obj = await get_obj(anid, {"C": "C_INV", "R": "R"})
-    items = []
-    items_length = len(items)
 
     return templates.TemplateResponse(
         "focus.html",
@@ -225,9 +276,6 @@ async def focus(request: Request, lang: str, anid: str):
             "lang": lang[:2],
             "anid": anid,
             "obj": obj,
-            "SAMPLE_SIZE": SAMPLE_SIZE,
-            "items": random.sample(items, min(SAMPLE_SIZE, items_length)),
-            "items_length": items_length,
             "T": get_T(lang),
         },
     )
