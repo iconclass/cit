@@ -1,5 +1,5 @@
 <div class="shadow p-3">
-    <h1><span style="color: #ccc;">{{obj.get("CIT")[0]}}</span> {{obj.get("TERM_ZH")[0]}}</h1>
+    <h1>{{obj.get("TERM_ZH")[0]}}</h1>
     <h3>{{obj.get("TERM_PINYIN")[0]}}</h3>
     <h3>{{obj.get("TERM_EN")[0]}}</h3>
 
@@ -10,18 +10,25 @@
     </div>
     {% endif %}
 
+    {% if obj["KW_ZH"] and lang == "zh" %}
+    <div style="margin-top: 2ch">
+    <h4>{{T('usefor')}}</h4>
+    {% for kw_zh in obj["KW_ZH"] %}{{kw_zh}}{% if not loop.last %}, {% endif %}{% endfor %}
+    </div>
+    {% endif %}
+
     {% if obj["R"]|length > 0 %}
     <div style="margin-top: 2ch">
     <h4>{{T('relatedterm')}}</h4>
     {% for r in obj["R"] %}
-    <p style="margin: 0; cursor: pointer" anid="{{r.get('ID')[0]}}">
-    <span style="font-size: 80%; color: #ccc;">{{r.get("CIT")[0]}}</span> {{r.get("TERM_"+lang.upper(), [""])[0]}}
+    <p style="margin: 0; cursor: pointer" anid="{{r.get('ID')[0]}}" title="{{r.get('CIT')[0]}}">
+    {{r.get("TERM_"+lang.upper(), [""])[0]}}
     </p>
     {% endfor %}
     </div>
     {% endif %}
 
-    
+    <p style="margin-top: 2vh; width: 100%; color: #ccc; font-size: 75%; text-align: right">{{obj.get("CIT")[0]}} &middot; {{obj.get('ID')[0]}}</p>
 </div>
 
 {% if obj["OBJS_PATH"][0] > 0 %}

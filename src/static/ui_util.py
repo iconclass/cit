@@ -1,6 +1,7 @@
 from htmltree import *
 
 searchbox = document.getElementById("searchbox")
+searchbutton = document.getElementById("searchbutton")
 results_element = document.getElementById("results")
 tree_element = document.getElementById("thetree")
 NODE_MAP = {}

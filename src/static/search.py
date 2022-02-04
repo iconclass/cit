@@ -67,7 +67,13 @@ async def searchbox_keyup(event):
         do_search()
 
 
+async def searchbutton_clicker(event):
+    event.preventDefault()
+    do_search()
+
+
 async def init():
+    searchbutton.addEventListener("click", searchbutton_clicker)
     searchbox.addEventListener("keyup", searchbox_keyup)
     results_element.addEventListener("click", results_clicker)
     tree_element.addEventListener("click", tree_clicker)

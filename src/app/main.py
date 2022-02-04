@@ -74,7 +74,9 @@ async def do_search_(q: str, tipe: str, cit=[]):
 
 
 async def search_terms(q: str):
-    query = "SELECT objs.obj FROM txt_idx INNER JOIN objs ON txt_idx.id = objs.id WHERE txt_idx.text MATCH :q"
+    query = "SELECT objs.obj FROM objs INNER JOIN txt_idx ON txt_idx.id = objs.id, json_each(objs.obj, '$.TYPE[0]') WHERE json_each.value = 'CIT'"
+    query += " AND txt_idx.text MATCH :q"
+
     results = await database.fetch_all(query, values={"q": q})
     return results
 

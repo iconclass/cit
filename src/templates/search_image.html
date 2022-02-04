@@ -3,7 +3,7 @@ Found: {{results | length}}
 <div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer">
 {% for obj in results[:20] %}
 
-<div class="col-sm-6 col-lg-4 mb-4" anid="{{obj.get('ID')[0]}}">
+<div class="col-sm-6 col-lg-2 mb-4" anid="{{obj.get('ID')[0]}}">
     <div class="card">
     <img width="100%" src="https://cit.iconclass.org/iiif/3/{{obj.get('URL_IMAGE')[0]}}/full/150,/0/default.jpg">
     <div class="card-body">
