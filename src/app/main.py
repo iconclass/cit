@@ -1,20 +1,33 @@
-from fastapi import Depends, FastAPI, Request, HTTPException, Query
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from .config import ORIGINS, DATABASE_URL, ROOT_ID, HELP_PATH, SITE_URL
+from fastapi import Depends, FastAPI, Request, HTTPException, Query
+from sqlalchemy import select, MetaData, create_engine, Table, and_
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from .translations import texts
 from functools import partial
 from jinja2 import Markup
+from typing import List
+from .util import CIT_A, CIT_O
 import databases
 import markdown
 import sqlite3
 import random
+import httpx
 import json
 import os
-from typing import List
-import httpx
+
+# Retrieve database metadata
+DB_ENGINE = create_engine(DATABASE_URL)
+db_metadata = MetaData()
+db_metadata.reflect(bind=DB_ENGINE)
+images = Table("images", db_metadata, autoload_with=DB_ENGINE)
+objs = db_metadata.tables["objs"]
+objs_cit = db_metadata.tables["objs_cit"]
+txt_idx = db_metadata.tables["txt_idx"]
+DB_ENGINE.dispose()
+
 
 database = databases.Database(DATABASE_URL)
 app = FastAPI(openapi_url="/openapi")
@@ -28,6 +41,25 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Get the collections names once from the DB at start-up
+COLLECTIONS = {}
+
+
+@app.on_event("startup")
+async def startup():
+    C = database._backend.connection()
+    await C.acquire()
+    await C._connection.create_function("CIT_A", 2, CIT_A)
+    await C._connection.create_function("CIT_O", 2, CIT_O)
+    tmp = await database.fetch_all(
+        "select distinct collection, json_extract(obj, '$.LOCATION_INV[0]') from images"
+    )
+    for col, name in tmp:
+        COLLECTIONS[col] = name
+
+
+from .metabotnik import *
 
 
 def T(lang: str, token: str):
@@ -66,9 +98,9 @@ async def id_json(request: Request, anid: str):
     return obj
 
 
-async def do_search_(q: str, tipe: str, cit=[]):
+async def do_search_(q: str, tipe: str, params: dict = {}):
     if tipe == "image":
-        return await search_images(q, cit)
+        return await search_images(q, params)
     else:
         return await search_terms(q)
 
@@ -81,33 +113,41 @@ async def search_terms(q: str):
     return results
 
 
-async def search_images(q: str, cit=[]):
+async def search_images(q: str, params: dict = {}):
+    s = select(images.c.obj).distinct()
+
+    for op, fields in params.items():
+
+        if op.upper() == "A":  # AND query
+            if "CIT" in fields:
+                a = objs_cit
+                wheres = []
+            for val in fields.get("CIT", []):
+                new_alias = objs_cit.alias()
+                a = a.join(new_alias, objs_cit.c.obj_id == new_alias.c.obj_id)
+                wheres.append(and_(new_alias.c.cit_id == val, new_alias.c.exact == 1))
+            for val in fields.get("COL", []):
+                s = s.where(images.c.collection == val)
+            if "CIT" in fields:
+                s = (
+                    s.select_from(a)
+                    .where(objs_cit.c.obj_id == images.c.id)
+                    .where(and_(*wheres))
+                )
+
     if q:
-        query = "SELECT objs.obj FROM objs INNER JOIN txt_idx ON txt_idx.id = objs.id, json_each(objs.obj, '$.TYPE[0]') WHERE json_each.value = 'image'"
-        query += " AND txt_idx.text MATCH :q"
-        if cit:
-            query += " AND objs.id IN (SELECT obj_id FROM objs_cit WHERE cit_id = :cit)"
-            results = await database.fetch_all(query, values={"q": q, "cit": cit[0]})
-        else:
-            results = await database.fetch_all(query, values={"q": q})
-    else:
-        query = "SELECT objs.obj FROM objs, json_each(objs.obj, '$.TYPE[0]') WHERE json_each.value = 'image'"
-        if cit:
-            query += " AND objs.id IN (SELECT obj_id FROM objs_cit WHERE cit_id = :cit)"
-            results = await database.fetch_all(query, values={"cit": cit[0]})
-        else:
-            query += " ORDER BY RANDOM() LIMIT 20"
-            results = await database.fetch_all(query)
-    return results
+        s = s.where(images.c.id == txt_idx.c.id, txt_idx.c.text.match(q))
+
+    return await database.fetch_all(s)
 
 
-async def do_search(q: str, tipe: str = None, cit=[]):
+async def do_search(q: str, tipe: str = None, params: dict = {}):
     try:
-        results = await do_search_(q, tipe, cit)
+        results = await do_search_(q, tipe, params)
     except sqlite3.OperationalError:
         try:
             results = await do_search_(
-                f'"{q}"', tipe
+                f'"{q}"', tipe, params
             )  # Try it with an exact match to circumvent problems with punctuation
         except sqlite3.OperationalError:
             return []
@@ -136,14 +176,29 @@ async def get_obj_count_for_term(term: str, exact: bool = False):
     return results[0][0]
 
 
+async def get_objs(anids: list):
+    query = select(objs.c.obj).where(objs.c.id.in_(anids))
+    results = await database.fetch_all(query)
+    return [json.loads(r[0]) for r in results]
+
+
 async def get_obj(anid: str, filled={}):
-    query = "SELECT obj FROM objs WHERE id = :anid"
-    results = await database.fetch_one(query, values={"anid": anid})
+
+    query = (
+        select(objs.c.obj, objs_cit.c.cit_id, objs_cit.c.exact)
+        .select_from(objs.outerjoin(objs_cit, objs_cit.c.cit_id == objs.c.id))
+        .where(objs.c.id == anid)
+    )  # Note in this query we want to match cit_id from objs_cit to the objs.id - the Object is a Term!
+
+    results = await database.fetch_all(query)
     if not results:
         raise HTTPException(status_code=404)
-    obj = json.loads(results[0])
-    obj["OBJS_PATH"] = [await get_obj_count_for_term(anid)]
-    obj["OBJS_EXACT"] = [await get_obj_count_for_term(anid, True)]
+
+    # The obj is in first column of results, and the
+    obj = json.loads(results[0][0])
+
+    obj["OBJS_EXACT"] = [len([cit_id for _, cit_id, exact in results if exact == 1])]
+    obj["OBJS_PATH"] = [len([cit_id for _, cit_id, exact in results])]
 
     for k, v in filled.items():
         thelist = [await get_obj(kind) for kind in obj.get(v, [])]
@@ -174,42 +229,56 @@ async def terms(request: Request, anid: str):
     )
 
 
-async def get_terms_from_results(results: list, sort_by: str = "freq"):
+async def get_facets_from_results(results: list, sort_by: str = "freq"):
+    coll_buf = {}
+
     terms_buf = {}
     for obj in results:
         for term in obj.get("CIT_ID", []):
             terms_buf.setdefault(term, set()).add(obj["ID"][0])
-    terms = [(len(y), await get_obj(x)) for x, y in terms_buf.items()]
+        col = obj.get("COL")
+        if col:
+            coll_buf.setdefault(col[0], set()).add(obj["ID"][0])
+
+    obj_buf = {}
+    for obj in await get_objs(terms_buf.keys()):
+        obj_buf[obj["ID"][0]] = obj
+
+    terms = [(len(y), obj_buf.get(x)) for x, y in terms_buf.items()]
+
     for term_buf_len, term in terms:
         term["OBJ_COUNT"] = [term_buf_len]
 
+    data = {"collections": coll_buf}
     if sort_by == "freq":
         terms.sort(key=lambda x: x[0])
-        return reversed([t for l, t in terms])
+        data["terms"] = reversed([t for l, t in terms])
     else:
-        return sorted(
+        data["terms"] = sorted(
             [t for l, t in terms],
             key=lambda x: [int(oo) for oo in x.get("CIT", ["0"])[0].split(".")],
         )
+
+    return data
 
 
 @app.get(
     "/search/",
     response_class=HTMLResponse,
-    include_in_schema=False,
 )
 async def search(
-    request: Request, q: str = "", page: int = 1, cit: List[str] = Query(None)
+    request: Request, q: str = "", page: int = 1, f: List[str] = Query(None)
 ):
-    SIZE = 20
+    params = process_f(f)
+
     lang = request.cookies.get("lang") or "en"
-    results = await do_search(q, "image", cit)
-    terms = await get_terms_from_results(results)
-    total = len(results)
-    start = (page - 1) * SIZE
-    stop = start + SIZE
-    paged = results[start:stop]
-    pages = round(total / SIZE)
+    results = await do_search(q, "image", params)
+    total, paged, pages, pages_count = calc_pages(results, page)
+    facets = await get_facets_from_results(results)
+
+    accept_header = request.headers.get("accept", "")
+    if accept_header == "application/json":
+        return JSONResponse(results)
 
     if total == 1:
         anid = results[0].get("ID")[0]
@@ -221,17 +290,40 @@ async def search(
             "request": request,
             "lang": lang[:2],
             "q": q,
-            "cit": cit,
             "page": page,
             "results": results,
-            "terms": terms,
+            "terms": facets.get("terms"),
+            "collections": facets.get("collections"),
             "paged": paged,
             "pages": pages,
+            "pages_count": pages_count,
             "total": total,
+            "paramsuri": params_to_uri(params),
+            "params": params,
             "T": get_T(lang),
             "ROOT_ID": ROOT_ID,
+            "COLLECTIONS": COLLECTIONS,
         },
     )
+
+
+def calc_pages(results: list, page: int):
+    SIZE = 42
+
+    total = len(results)
+    start = (page - 1) * SIZE
+    stop = start + SIZE
+    paged = results[start:stop]
+
+    pages_count = round(total / SIZE)
+
+    pages = [apage for apage in range(page - 1, min(pages_count, page + 6))]
+    if page > 1:
+        pages[0:0] = [0]
+    if len(pages) < pages_count:
+        pages[-1:] = [pages_count]
+
+    return total, paged, pages, pages_count
 
 
 @app.get(
@@ -244,10 +336,13 @@ async def fragments_search(
     tipe: str,
     q: str = "",
     page: int = 1,
-    cit: List[str] = Query(None),
+    f: List[str] = Query(None),
 ):
     lang = request.cookies.get("lang") or "en"
-    results = await do_search(q, tipe, cit)
+    params = process_f(f)
+
+    results = await do_search(q, tipe, params)
+    total, paged, pages, pages_count = calc_pages(results, page)
 
     return templates.TemplateResponse(
         f"search_{tipe}.html",
@@ -257,6 +352,12 @@ async def fragments_search(
             "q": q,
             "results": results,
             "T": get_T(lang),
+            "total": total,
+            "page": page,
+            "paged": paged,
+            "pages": pages,
+            "pages_count": pages_count,
+            "params": params_to_uri(params),
         },
     )
 
@@ -448,3 +549,30 @@ async def iiif_presentation(anid: str):
         ],
     }
     return resp
+
+
+def process_f(fields: List[str]):
+    """
+    Process the search fields - they are passed in as 'operator_field_value' Where:
+    - operator is one of AON - (And | Or | Not)
+    - field    is one of (CIT | COL) ; CIT is terminology and COL is the collection
+    """
+    data = {}
+    if not fields:
+        return data
+    for field in fields:
+        f = field.split("_")
+        if len(f) != 3:
+            continue
+        operator, field, value = f
+        data.setdefault(operator, {}).setdefault(field, []).append(value)
+    return data
+
+
+def params_to_uri(params):
+    buf = []
+    for operator, fields in params.items():
+        for field, values in fields.items():
+            for value in values:
+                buf.append(f"f={operator}_{field}_{value}")
+    return "&".join(buf)
