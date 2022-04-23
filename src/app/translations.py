@@ -1,3 +1,7 @@
+from openpyxl import load_workbook, Workbook
+import sys
+import json
+
 texts = {
     "en": {
         "1": "Nature",
@@ -178,3 +182,42 @@ texts = {
         "homepage_chord_diagram_text": "\u6b64\u548c\u5f26\u56fe\u5c55\u793a\u9690\u85cf\u4e8e\u4e2d\u56fe\u5178\u5c42\u4f4d\u7cfb\u7edf\u4e2d\u5173\u8054\u8bcd\u4e4b\u95f4\u8c61\u5f81\u5173\u7cfb\u7ed3\u6784\u3002\u6587\u5b57\u7684\u8272\u5f69\u8868\u793a\u4e03\u4e2a\u57fa\u672c\u7c7b\u76ee\uff08\u81ea\u7136\u754c\u7b49\uff09\uff0c\u800c\u6ce2\u72b6\u7ebf\u662f\u5173\u8054\u8bcd\u7684\u8fde\u7ebf\u3002\u5f53\u9f20\u6807\u89e6\u78b0\u4e00\u4e2a\u8bcd\u6c47\u65f6\uff0c\u8fde\u7ebf\u5c06\u4f1a\u53d8\u6210\u84dd\u8272\uff0c\u540c\u65f6\u5c06\u4f1a\u51fa\u73b0\u4e00\u4e2a\u6587\u672c\u6846\uff0c\u6846\u5185\u663e\u793a\u8be5\u8bcd\u53ca\u5176\u5bf9\u5e94\u5173\u8054\u8bcd",
     },
 }
+
+if __name__ == "__main__":
+    TRANS_XLS_FILEPATH = "translations.xlsx"
+    TRANS_JSON_FILEPATH = "translations.json"
+    if sys.argv[1] == "write":
+        by_id = json.load(open(TRANS_JSON_FILEPATH))
+
+        workbook = Workbook()
+        ws = workbook.active
+        ws.cell(row=1, column=2, value="en")
+        ws.cell(row=1, column=3, value="zh_hant")
+        ws.cell(row=1, column=4, value="zh_hans")
+        row = 2
+        for id, by_lang in by_id.items():
+            ws.cell(row=row, column=1, value=id)
+            col = 2
+            for lang in ("en", "zh_hant", "zh_hans"):
+                ws.cell(row=row, column=col, value=by_lang.get(lang, ""))
+                col += 1
+            row += 1
+        workbook.save(filename=TRANS_XLS_FILEPATH)
+    if sys.argv[1] == "read":
+        by_id = {}
+        wb = load_workbook(filename=TRANS_XLS_FILEPATH)
+        sheet = wb.worksheets[0]
+        for i, row in enumerate(sheet.rows):
+            if i == 0:
+                continue
+            idx = row[0].value
+            en = row[1].value
+            if en:
+                by_id.setdefault(idx, {})["en"] = en
+            zh_hant = row[2].value
+            if zh_hant:
+                by_id.setdefault(idx, {})["zh_hant"] = zh_hant
+            zh_hans = row[3].value
+            if zh_hans:
+                by_id.setdefault(idx, {})["zh_hans"] = zh_hans
+        open(TRANS_JSON_FILEPATH, "w").write(json.dumps(by_id, indent=2))
