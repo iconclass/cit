@@ -33,6 +33,6 @@
 
 {% if obj["OBJS_PATH"][0] > 0 %}
 <div class="p-3 mt-3">
-    <a class="btn btn-small btn-light" href="/search/?cit={{obj.get('ID')[0]}}">Was used for {{obj["OBJS_PATH"][0]}} / {{obj["OBJS_EXACT"][0]}}</a>
+    <a class="btn btn-small btn-light" href="/search/?f=A_CIT_{{obj.get('ID')[0]}}">Was used for {{obj["OBJS_PATH"][0]}} / {{obj["OBJS_EXACT"][0]}}</a>
 </div>
 {% endif %}

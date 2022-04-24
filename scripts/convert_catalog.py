@@ -48,6 +48,7 @@ def parse(filename, HIM):
         obj = {
             "ID": ["cit_%s" % sys_id.text],
             "HIM": ["CIT", HIM],
+            "COL": [HIM],
             "TYPE": ["image"],
             "LOCATION.INV": ["Victoria and Albert Museum"],
         }
@@ -122,7 +123,7 @@ def parse(filename, HIM):
             obj["URL.WEBPAGE"] = ["http://collections.vam.ac.uk/item/" + sys_id.text]
 
         # The NPM JPG filenames are what is in the 'INSTIT.INV' field with a .jpg appended
-        #if HIM == "NPM":
+        # if HIM == "NPM":
         #    INSTIT_INV = obj.get("INSTIT.INV")
         #    if INSTIT_INV:
         #        obj["URL.IMAGE"] = [f"{x.strip()}.jpg" for x in INSTIT_INV]
@@ -155,6 +156,6 @@ for HIM_CODE in HIM_CODES:
         if filename.lower().endswith(".xml"):
             filepath = os.path.join(HIM_CODE, filename)
             data_list.extend(parse(filepath, HIM_CODE))
-   
+
 
 dump("CATALOG.dmp", data_list)

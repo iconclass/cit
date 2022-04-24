@@ -1,7 +1,29 @@
-Found: {{results | length}}
+Found: {{total}}
+
+{% if pages_count > 1 %}
+<nav aria-label="Page navigation">
+<ul class="pagination pagination-sm justify-content-end">
+    {% if page > 1 %}
+    <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page-1}}&{{params}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    {% endif %}
+    {% for apage in pages  %}
+    {% if page == apage+1 %}
+    <li class="page-item"><span class="page-link" style="font-weight: bold;">{{apage + 1}}</span></li>
+    {% else %}
+    <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{apage+1}}&{{params}}">{{apage + 1}}</a></li>                
+    {% endif %}
+    
+    {% endfor %}
+    {% if page < pages_count %}
+    <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page+1}}&{{params}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    {% endif %}
+</ul>
+</nav>{% endif %}
 
 <div class="row" data-masonry='{"percentPosition": true }' style="cursor: pointer">
-{% for obj in results[:20] %}
+
+
+{% for obj in paged %}
 
 <div class="col-sm-6 col-lg-2 mb-4" anid="{{obj.get('ID')[0]}}">
     <div class="card">

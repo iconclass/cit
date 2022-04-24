@@ -4,7 +4,7 @@ from ui_util import *
 async def tree_clicker(event):
     anid = find_attr_parents(event.target, "anid")
     if anid and len(anid) > 0:
-        document.location = "/terms/" + anid
+        document.location = "/search/?f=A_CIT_" + anid
 
 
 async def results_clicker(event):

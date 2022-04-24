@@ -1,19 +1,17 @@
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from sqlalchemy import select, MetaData, create_engine, Table, func, not_
 from .config import ORIGINS, DATABASE_URL, ROOT_ID, HELP_PATH, SITE_URL
 from fastapi import Depends, FastAPI, Request, HTTPException, Query
-from sqlalchemy import select, MetaData, create_engine, Table, and_
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from .translations import texts
-from functools import partial
+from .util import CIT_A, CIT_O, CIT_N
+from .translations import T, get_T
 from jinja2 import Markup
 from typing import List
-from .util import CIT_A, CIT_O
 import databases
 import markdown
 import sqlite3
-import random
 import httpx
 import json
 import os
@@ -48,10 +46,7 @@ COLLECTIONS = {}
 
 @app.on_event("startup")
 async def startup():
-    C = database._backend.connection()
-    await C.acquire()
-    await C._connection.create_function("CIT_A", 2, CIT_A)
-    await C._connection.create_function("CIT_O", 2, CIT_O)
+    await database.connect()
     tmp = await database.fetch_all(
         "select distinct collection, json_extract(obj, '$.LOCATION_INV[0]') from images"
     )
@@ -59,15 +54,8 @@ async def startup():
         COLLECTIONS[col] = name
 
 
+# import later for init reasons
 from .metabotnik import *
-
-
-def T(lang: str, token: str):
-    return texts.get(lang, {}).get(token, "")
-
-
-def get_T(lang: str):
-    return partial(T, lang)
 
 
 @app.get("/", response_class=HTMLResponse, include_in_schema=False)
@@ -114,31 +102,30 @@ async def search_terms(q: str):
 
 
 async def search_images(q: str, params: dict = {}):
-    s = select(images.c.obj).distinct()
+    s = select(images.c.obj)
 
     for op, fields in params.items():
+        if "CIT" in fields:
+            zefunc = {"A": func.CIT_A, "O": func.CIT_O, "N": func.CIT_N}.get(op)
+            s = s.where(zefunc(images.c.obj, " ".join(fields.get("CIT", []))))
 
-        if op.upper() == "A":  # AND query
-            if "CIT" in fields:
-                a = objs_cit
-                wheres = []
-            for val in fields.get("CIT", []):
-                new_alias = objs_cit.alias()
-                a = a.join(new_alias, objs_cit.c.obj_id == new_alias.c.obj_id)
-                wheres.append(and_(new_alias.c.cit_id == val, new_alias.c.exact == 1))
+    for op, fields in params.items():
+        if op.upper() == "A":
             for val in fields.get("COL", []):
                 s = s.where(images.c.collection == val)
-            if "CIT" in fields:
-                s = (
-                    s.select_from(a)
-                    .where(objs_cit.c.obj_id == images.c.id)
-                    .where(and_(*wheres))
-                )
+        if op.upper() == "N":
+            for val in fields.get("COL", []):
+                s = s.where(images.c.collection != val)
 
     if q:
         s = s.where(images.c.id == txt_idx.c.id, txt_idx.c.text.match(q))
 
-    return await database.fetch_all(s)
+    async with database.connection() as connection:
+        await connection._connection.raw_connection.create_function("CIT_A", 2, CIT_A)
+        await connection._connection.raw_connection.create_function("CIT_O", 2, CIT_O)
+        await connection._connection.raw_connection.create_function("CIT_N", 2, CIT_N)
+        res = await connection.fetch_all(s)
+    return res
 
 
 async def do_search(q: str, tipe: str = None, params: dict = {}):
@@ -280,9 +267,10 @@ async def search(
     if accept_header == "application/json":
         return JSONResponse(results)
 
-    if total == 1:
-        anid = results[0].get("ID")[0]
-        return RedirectResponse("/items/" + anid)
+    # Disable these redirects again, we want to refine with the filters
+    # if total == 1:
+    #     anid = results[0].get("ID")[0]
+    #     return RedirectResponse("/items/" + anid)
 
     return templates.TemplateResponse(
         f"search.html",
@@ -299,6 +287,7 @@ async def search(
             "pages_count": pages_count,
             "total": total,
             "paramsuri": params_to_uri(params),
+            "params_terms": await params_to_terms(params),
             "params": params,
             "T": get_T(lang),
             "ROOT_ID": ROOT_ID,
@@ -576,3 +565,19 @@ def params_to_uri(params):
             for value in values:
                 buf.append(f"f={operator}_{field}_{value}")
     return "&".join(buf)
+
+
+async def params_to_terms(params):
+    buf = []
+    for _, fields in params.items():
+        for field, values in fields.items():
+            if field != "CIT":
+                continue
+            for value in values:
+                buf.append(value)
+
+    obj_buf = {}
+    for obj in await get_objs(buf):
+        obj_buf[obj["ID"][0]] = obj
+
+    return obj_buf

@@ -36,9 +36,13 @@
 </div>
 
 <div class="row p-4">
-<h4><a class="homepageheading" href="/search">{{T('homepage_text5')}}</a></h4>
-<p>{{T('homepage_text6')}}</p>
-<div id="thedzi1" style="width: 100%; height: 40vh" />
+    <h4><a class="homepageheading" href="/search">{{T('homepage_text5')}}</a></h4>
+    <p>{{T('homepage_text6')}}</p>
+
+    <div id="placeholder" style="width: 100%; padding: 2vh; font-size: 120%; color: red; text-align: center">
+    </div>
+
+    <div id="thedzi1" style="width: 100%; height: 40vh" />
 
 </div>
 
@@ -49,6 +53,7 @@ async function doInits() {
     var width = 63768
     var height = 57672
     var ratio = width/height
+    var place = document.querySelector("#placeholder")
     var viewer = OpenSeadragon({
         id: "thedzi1",
         prefixUrl: '/static/openseadragon-2.4.2/images/',
@@ -70,6 +75,9 @@ async function doInits() {
           method: "GET",
         }).then((response) => response.json()).then((result) => {
             console.log(result)
+            var desc = result.obj.DESCRIPTION[0] || ""
+            var title = result.obj.TITLE[0] || ""
+            place.innerHTML = "<a href='/items/" + result.obj.ID[0] + "'>" + title + " " + desc + "</a>"
         })
     })
 }

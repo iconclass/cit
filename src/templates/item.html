@@ -25,7 +25,7 @@
 
 <div class="row">
 <div class="col-sm-4">
-    <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; height: 88vh; overflow: scroll; margin-bottom: 10vh; border-left: 1px solid #eee">        
+    <div id="thetree" style="border-top: 4px solid #5281cc; padding-top: 4px; height: 88vh; overflow: scroll; margin-bottom: 10vh; border-left: 1px solid #eee">        
         <div class="p-3">
             <h4><a style="text-decoration: none; color: #ccc" title="{{T('originalsource')}}" href="{{obj.get('URL_WEBPAGE')[0]}}">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
     <div class="col-sm-8">
 
         <div class="input-group mb-3">
-            <input id="searchbox" type="text" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
+            <input id="searchbox" type="search" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
                    aria-label="{{T('typeheretostartsearch')}}" aria-describedby="search-addon2" value="{{q}}">
             <span class="input-group-text" id="search-addon2">{{T('search')}}</span>
         </div>
@@ -98,6 +98,7 @@ async function doInits() {
         prefixUrl: '/static/openseadragon-2.4.2/images/',
         showNavigator: false,
         showFullPageControl: true,
+        maxZoomPixelRatio: 999,
         tileSources: [
             { x: 0, y: 0, width: 1000, 
               tileSource: 'https://cit.iconclass.org/iiif/3/{{obj.get("URL_IMAGE")[0]}}/info.json'}],

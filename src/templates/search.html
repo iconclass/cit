@@ -2,6 +2,12 @@
 
 {% block title %}CIT Search {% if q %}for {{q}}{% endif %}{% endblock %}
 
+{% macro rmv() %}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-x" viewBox="0 0 16 16">
+  <path d="M6.146 6.146a.5.5 0 0 1 .708 0L8 7.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 8l1.147 1.146a.5.5 0 0 1-.708.708L8 8.707 6.854 9.854a.5.5 0 0 1-.708-.708L7.293 8 6.146 6.854a.5.5 0 0 1 0-.708z"/>
+  <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+</svg>{% endmacro %}
+
+
 {% block head_last%}
 <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -19,51 +25,97 @@
 
 <div class="row">
     <div class="col-sm-4">
-            <div class="p-1">
-                <h4>{{T('browse')}}</h4>
-                <div id="topstatus"></div>
-                <div id="thetree" style="border-top: 2px solid #ccc; padding-top: 4px; overflow: scroll; border-left: 1px solid #eee">
+            <div class="p-1" style="border-top: 4px solid #cca352" id="collections">
+            <h4>Collections</h4>
+
+            {% for col, col_objs in collections.items() %}
+                <div class="row" data-coll="{{col}}" style="cursor: pointer">
+                  <div class="col-2">{{col_objs | length}}</div>
+                  <div class="col">{{COLLECTIONS[col]}}</div>                  
                 </div>
+            {% endfor %}
             </div>
 
-            <div class="p-1" style="height: 70vh; overflow: scroll" id="termsused">
+
+            <div class="p-1" style="margin-top: 3vh; border-top: 4px solid #5281cc" id="termsused">
                 <h4>{{T('termsused')}}</h4>
+                <div style="height: 70vh; overflow: scroll;">
                 {% for cit in terms %}
                 <p title="{{cit.get('CIT')[0]}} used by {{cit.get('OBJ_COUNT', [''])[0]}}" anid="{{cit.get('ID')[0]}}" style="margin: 0 0 0 2.5ch; cursor: pointer; text-indent: -2ch">
                 {{cit.get("TERM_"+lang[:2].upper())[0]}}
+                {% if cit['ID'][0] in params_terms %} &check;{% endif %}
                 </p>
-                {% endfor %}            
+                {% endfor %}
+                </div>
             </div>
     
     </div>
 
     <div class="col-sm-8">
 
-        <div class="input-group mb-3">
-            <input id="searchbox" type="text" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
+        <div class="mb-3">
+            <div class="input-group">
+            <input id="searchbox" type="search" class="form-control" placeholder="{{T('typeheretostartsearch')}}" 
                    aria-label="{{T('typeheretostartsearch')}}" aria-describedby="searchbutton" value="{{q}}">
             <span class="input-group-text" id="searchbutton" style="cursor:pointer">{{T('search')}}</span>
+            </div>
+        {% if params %}        
+        <div id="filters" style="margin: 1vh 0 2vh 0;" class="dropdown">
+        <h4>Filters</h4>
+        {% for operator, fields in params.items() %}
+        {% for field, values in fields.items() %}
+        {% for value in values %}             
+            {% if field == 'COL' %}
+                <a title="Remove this Filter" data-remove="{{operator}}_COL_{{value}}" href="#">{{rmv()}}</a>            
+                <a href="#" style="display: inline" class="nav-link px-2 text-secondary dropdown-toggle">{% if operator == "A" %}from the {% else %}except the {% endif %}</a>
+                <ul class="dropdown-menu" >
+                    <li><a data-remove="{{operator}}_COL_{{value}}" data-add="A_COL_{{value}}" href="#" class="dropdown-item">include</a></li>
+                    <li><a data-remove="{{operator}}_COL_{{value}}" data-add="N_COL_{{value}}" href="#" class="dropdown-item">exclude</a></li>
+                </ul>
+                &nbsp;{{COLLECTIONS[value]}} 
+            {% endif %}
+            {% if field == "CIT" %}
+                <div><a title="Remove this Filter" data-remove="{{operator}}_CIT_{{value}}" href="#">{{rmv()}}</a>
+                <a href="#" style="display: inline" class="nav-link px-2 text-secondary dropdown-toggle">{% if operator == "A" %}must have {% else %}not have {% endif %}</a>
+                <ul class="dropdown-menu" >
+                    <li><a data-remove="{{operator}}_CIT_{{value}}" data-add="A_CIT_{{value}}" href="#" class="dropdown-item">include</a></li>
+                    <li><a data-remove="{{operator}}_CIT_{{value}}" data-add="N_CIT_{{value}}" href="#" class="dropdown-item">exclude</a></li>
+                </ul>
+                 {{params_terms.get(value, {}).get("TERM_"+lang[:2].upper())[0] }}
+                 <a href="/terms/{{value}}"><svg style="margin-left: 2ch" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
+  <path d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0zM2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5v-1zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-1z"/>
+</svg></a>
+                 </div>
+            {% else %}
+            {% endif %}
+        {% endfor %}        
+        {% endfor %}
+        {% endfor %}
+        </div>
+        {% endif %}
+
         </div>
 
-        <div id="results" class="shadow p-3">
+
+        <div id="results" class="shadow p-3" style="border-top: 4px solid #d90c55">
         <div class="p-1">
-            {{total}} {% if not (q or cit) %}randomly chosen {% endif %}items</div>  
-            {% if pages > 1 %}
+            {{total}} items
+            {% if pages_count > 1 %}
             <nav aria-label="Page navigation">
             <ul class="pagination pagination-sm justify-content-end">
                 {% if page > 1 %}
-                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page-1}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page-1}}&{{paramsuri}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                 {% endif %}
-                {% for apage in range(page-1, page+10, 1)  %}
+                {% for apage in pages  %}
                 {% if page == apage+1 %}
                 <li class="page-item"><span class="page-link" style="font-weight: bold;">{{apage + 1}}</span></li>
                 {% else %}
-                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{apage+1}}">{{apage + 1}}</a></li>                
+                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{apage+1}}&{{paramsuri}}">{{apage + 1}}</a></li>                
                 {% endif %}
                 
                 {% endfor %}
-                {% if page < pages %}
-                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page+1}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                {% if page < pages_count %}
+                <li class="page-item"><a class="page-link" href="/search?q={{q}}&page={{page+1}}&{{paramsuri}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                 {% endif %}
             </ul>
             </nav>{% endif %}
