@@ -48,6 +48,8 @@ Jin Gao, Coordinator & Data Standard Editor
 
 Yi-Hsin Lin, Data Standard Editor
 
+Bingjun Liu, Data Standard Editor
+
 ## V&A Steering Group:
 
 Marion Crick, Head of Collections Management
