@@ -1,0 +1,22 @@
+@import "bootstrap";
+@import "fonts";
+
+body {
+    background-color: #EEEEE5;
+}
+
+.focussed {
+    border-left: 5px solid #f00;
+    border-right: 5px solid #f00;
+    background-color: #efefef;
+    padding: 9px;
+    line-height: 2.5;
+}
+  
+a {
+text-decoration: none;
+}
+
+header { background-color: #3F362B; padding-bottom: 1vh; padding-left: 2vw }
+header ul { font-size: 120%; padding-top: 3vh; font-weight: 800 }
+header ul li { margin-left: 2vw}
