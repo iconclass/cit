@@ -23,4 +23,4 @@ RUN pip install -r requirements.txt
 
 COPY src /home
 
-CMD ["uvicorn", "--port", "8000", "--host", "0.0.0.0", "src:app"]
+CMD ["uvicorn", "--port", "8000", "--host", "0.0.0.0", "app:app"]
