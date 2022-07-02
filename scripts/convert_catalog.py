@@ -1,29 +1,10 @@
-import sys, os
+import os, argparse
 import xml.etree.ElementTree as ET
-import json
 import textbase
-from tqdm import tqdm
-
-CIT_data = {}
-for x in textbase.parse("CIT.dmp"):
-    CIT_data[x["ID.INV"][0]] = x
+from rich.progress import track
 
 
-def dump(filename, objs):
-    with open(filename, "w", encoding="utf8") as F:
-        for obj in objs:
-            for k, v in obj.items():
-                tmp = "\n; ".join(set(v))
-                F.write("%s %s\n" % (k, tmp))
-            F.write("$\n")
-
-
-# We only want to add image items for images that we also actually have on disk at time of import.
-# Read in a list of current filenames from disk
-CURRENT_JPGS = set(open("all_jpg.txt").read().split("\n"))
-
-
-def parse(filename, HIM):
+def parse(CIT_data, filename, HIM):
     # Note, parsing file: CIT export_inOrder_04.03.2019.xml 20190312 gives error in XML on lines 781763 and 781765 encountering character  '\x02' embedded in file.
     # Looks like all the source have this so do a search and replace to fix it.
     # Object with <sys_id>O1455666</sys_id> has no vanda_museum_number ?
@@ -39,7 +20,7 @@ def parse(filename, HIM):
     doc = ET.fromstring(filecontents)
     objs = []
 
-    for item in tqdm(doc.findall(".//mus_catalogue")):
+    for item in track(doc.findall(".//mus_catalogue")):
         sys_id = item.find(".//sys_id")
         if sys_id.text is None:
             print(obj)
@@ -64,13 +45,11 @@ def parse(filename, HIM):
             image_filename = mus_obj_images_field_data.text
             if not image_filename.endswith(".jpg"):
                 image_filename = "%s.jpg" % mus_obj_images_field_data.text
-            if image_filename in CURRENT_JPGS:
-                obj.setdefault("URL.IMAGE", []).append(image_filename)
+            obj.setdefault("URL.IMAGE", []).append(image_filename)
 
         # Note only import items with valid CIT IDs as classifiers.
         # https://chineseiconography.org/r/view/cit_O68886/vanda
 
-        cit_list = []
         cit_list_id = []
         # And do all the CIT terms, but retain their IDs.
         for spec_content_other in item.findall(".//spec_content_other/_"):
@@ -91,13 +70,10 @@ def parse(filename, HIM):
                 ):
                     cit_id = spec_content_other_field_th_i.text
                     if cit_id in CIT_data:
-                        # We want to add the NUMERIC notation (like 1.1.2)
-                        cit_list.append(CIT_data[cit_id].get("N")[0])
                         cit_list_id.append(cit_id)
 
-        if cit_list:
-            obj["CIT"] = cit_list
-            obj["CIT.ID"] = cit_list_id
+        if cit_list_id:
+            obj["CIT"] = cit_list_id
 
         mapping = {
             ".//mus_part_obj_num_display": "ID.INV.ALT",
@@ -133,29 +109,53 @@ def parse(filename, HIM):
         if "URL.IMAGE" not in obj:
             vanda_museum_number = obj.get("ID.INV.ALT", [None])[0]
             vanda_museum_number_image = f"{vanda_museum_number}.jpg"
-            if vanda_museum_number_image in CURRENT_JPGS:
-                obj["URL.IMAGE"] = [vanda_museum_number_image.strip()]
-        # At this time we only want to import items that DO have images.
-        # As of 25 July there are 2672 objects total including without images
-        #
-        # if len(obj.get('URL.IMAGE', [])) < 1:
-        #    continue
+            obj["URL.IMAGE"] = [vanda_museum_number_image.strip()]
 
         objs.append(obj)
 
     return objs
 
 
-HIM_CODES = ("VANDA", "MET", "NPM", "CMA")
-data_list = []
-for HIM_CODE in HIM_CODES:
-    if not os.path.exists(HIM_CODE):
-        print(f"Directory named {HIM_CODE} not found")
-        continue
-    for filename in os.listdir(HIM_CODE):
-        if filename.lower().endswith(".xml"):
-            filepath = os.path.join(HIM_CODE, filename)
-            data_list.extend(parse(filepath, HIM_CODE))
+def dump(filename, objs):
+    print(f"Saving {len(objs)} objects")
+    with open(filename, "w", encoding="utf8") as F:
+        for obj in objs:
+            for k, v in obj.items():
+                tmp = "\n; ".join(set(v))
+                F.write("%s %s\n" % (k, tmp))
+            F.write("$\n")
 
 
-dump("CATALOG.dmp", data_list)
+def main(filepaths, collection):
+    CIT_data = {}
+    for x in textbase.parse("CIT.dmp"):
+        CIT_data[x["ID"][0]] = x
+
+    CAT_data = {}
+    if os.path.exists("CATALOG.dmp"):
+        for x in textbase.parse("CATALOG.dmp"):
+            CAT_data[x["ID"][0]] = x
+
+    for filepath in filepaths:
+        for x in parse(CIT_data, filepath, collection):
+            CAT_data[x["ID"][0]] = x
+
+    dump("CATALOG.dmp", CAT_data.values())
+
+
+if __name__ == "__main__":
+    argparser = argparse.ArgumentParser()
+    argparser.add_argument(
+        "inputfiles",
+        nargs="+",
+        help="The XML file(s) to read from",
+    )
+    argparser.add_argument(
+        "-c",
+        "--collection",
+        required=True,
+        help="Which Collection does this file belong to?",
+        choices=["VANDA", "MET", "NPM", "HYL", "CMA"],
+    )
+    args = argparser.parse_args()
+    main(args.inputfiles, args.collection)

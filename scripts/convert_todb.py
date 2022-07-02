@@ -6,7 +6,7 @@ import sys
 
 def add_term_test(obj):
     txtbuf = []
-    for cit_id in obj.get("CIT_ID", []):
+    for cit_id in obj.get("CIT", []):
         cit_obj = objs.get(cit_id, {})
         txtbuf.append("\n")
         txtbuf.append(extract_texts(cit_obj))
@@ -36,7 +36,7 @@ def extract_notations(obj):
     buf = []
     ID = obj.get("ID")[0]
     paths = set()
-    for cit_id in obj.get("CIT_ID", []):
+    for cit_id in obj.get("CIT", []):
         buf.append((ID, cit_id, 1))
         cit_obj = objs.get(cit_id) or {}
         for cit_path in cit_obj.get("P", []):
