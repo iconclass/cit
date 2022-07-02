@@ -2,6 +2,7 @@ rich==12.4.1
 fastapi==0.65.2
 aiofiles==0.4.0
 Jinja2==2.11.3
+markupsafe==2.0.1
 ICONCLASS==0.10
 uvicorn==0.15.0
 Transcrypt==3.9.0
@@ -11,4 +12,5 @@ aiosqlite==0.17.0
 h11==0.12.0
 httpx==0.21.1
 XlsxWriter==3.0.1
+openpyxl==3.0.9
 TextBase==0.15
