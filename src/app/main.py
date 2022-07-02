@@ -68,11 +68,21 @@ async def homepage(request: Request, lang: str = Query(None)):
     if lang is None:
         lang = "en"
 
-    obj = await get_obj(ROOT_ID, {"C": "C_INV"})
+    obj = await get_obj(ROOT_ID, {"C": "C"})
 
+    # fetch the count of terms and artworks
+    term_count = 11003
+    artwork_count = 5773
     response = templates.TemplateResponse(
         "homepage.html",
-        {"request": request, "lang": lang[:2], "obj": obj, "T": get_T(lang)},
+        {
+            "request": request,
+            "lang": lang[:2],
+            "obj": obj,
+            "T": get_T(lang),
+            "term_count": term_count,
+            "artwork_count": artwork_count,
+        },
     )
     if set_language:
         response.set_cookie(key="lang", value=lang)
@@ -143,7 +153,7 @@ async def do_search(q: str, tipe: str = None, params: dict = {}):
 
 
 async def get_objs_for_term(term: str):
-    query = "SELECT DISTINCT objs.obj FROM objs, json_each(objs.obj, '$.CIT_ID') WHERE json_each.value = :term"
+    query = "SELECT DISTINCT objs.obj FROM objs, json_each(objs.obj, '$.CIT') WHERE json_each.value = :term"
     try:
         results = await database.fetch_all(query, values={"term": term})
     except sqlite3.OperationalError:
@@ -221,7 +231,7 @@ async def get_facets_from_results(results: list, sort_by: str = "freq"):
 
     terms_buf = {}
     for obj in results:
-        for term in obj.get("CIT_ID", []):
+        for term in obj.get("CIT", []):
             terms_buf.setdefault(term, set()).add(obj["ID"][0])
         col = obj.get("COL")
         if col:
@@ -359,7 +369,7 @@ async def fragments_search(
 async def focus(request: Request, lang: str, anid: str):
     SAMPLE_SIZE = 9
     lang = request.cookies.get("lang") or "en"
-    obj = await get_obj(anid, {"C": "C_INV", "R": "R"})
+    obj = await get_obj(anid, {"C": "C", "R": "R"})
 
     return templates.TemplateResponse(
         "focus.html",
@@ -387,7 +397,7 @@ async def items(request: Request, anid: str = "", q: str = ""):
             "request": request,
             "lang": lang[:2],
             "anid": anid,
-            "obj": await get_obj(anid, {"CIT": "CIT_ID"}),
+            "obj": await get_obj(anid, {"CIT": "CIT"}),
             "T": get_T(lang),
         },
     )

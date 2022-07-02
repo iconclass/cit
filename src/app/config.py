@@ -12,7 +12,8 @@ ORIGINS = os.environ.get(
     "ORIGINS",
     "http://localhost:8080",
 ).split(" ")
-SITE_URL = os.environ.get("SITE_URL", "https://cit2.iconclass.org")
+SITE_URL = os.environ.get("SITE_URL", "https://cit.iconclass.org")
 HELP_PATH = os.environ.get("HELP_PATH", "./help/")
 DATABASE_URL = "sqlite:///CIT.sqlite"
 ROOT_ID = "CIT284490"
+METABOTNIK_DATABASE = os.environ.get("METABOTNIK_DATABASE", "metabotnik.sqlite")
