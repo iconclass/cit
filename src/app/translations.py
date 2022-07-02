@@ -1,4 +1,5 @@
 from openpyxl import load_workbook, Workbook
+from jinja2 import Markup
 from functools import partial
 import sys
 import json
@@ -10,7 +11,7 @@ texts = json.load(open(TRANS_JSON_FILEPATH))
 
 
 def T(lang: str, token: str):
-    return texts.get(token, {}).get(lang, "")
+    return Markup(texts.get(token, {}).get(lang, ""))
 
 
 def get_T(lang: str):
