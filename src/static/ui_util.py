@@ -31,7 +31,7 @@ async def get_obj(anid):
 async def build(anid, an_element, path=[]):
     node = await get_obj(anid)
 
-    for kind in node.get("C_INV", []):
+    for kind in node.get("C", []):
         kind_node = await get_obj(kind)
 
         if kind in path:
@@ -44,11 +44,14 @@ async def build(anid, an_element, path=[]):
             kind_node.kids_element.style.display = "block"
         else:
 
-            if len(kind_node["C_INV"]) > 0:
+            if len(kind_node["C"]) > 0:
                 kind_icon = caret_right_fill
             else:
                 kind_icon = dot
-            txt = kind_node["TERM_" + document.LANG.upper()][0]
+            try:
+                txt = kind_node["TERM_" + document.LANG.upper()][0]
+            except:
+                txt = "‡"
             an_element.insertAdjacentHTML(
                 "beforeend",
                 Div(
@@ -63,7 +66,7 @@ async def build(anid, an_element, path=[]):
                     id=kind,
                     style={"padding-left": "1ch", "cursor": "pointer"},
                     anid=kind,
-                    title=kind_node["CIT"],
+                    title=kind_node["ID"][0],
                     obj_count=node["OBJS_PATH"],
                 ).render(),
             )

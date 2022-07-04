@@ -49,7 +49,7 @@ async def focus_node(desired):
             result = await fetch(furi)
             response = await result.text()
             node.fragment = response
-            if len(node["C_INV"]) > 0:
+            if len(node["C"]) > 0:
                 await build(desired, kids_element)
     else:
         kids_element.style.display = "none"

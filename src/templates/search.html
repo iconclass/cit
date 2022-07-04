@@ -9,19 +9,16 @@
 
 
 {% block head_last%}
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 <script>
     document.LANG = "{{lang}}"
     document.ROOT_ID = "{{ROOT_ID}}"
 </script>
 
-
 <script type="module">import * as frontend from '/static/search/search.js';</script>
 {% endblock %}}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid" style="padding-top: 3vh">
 
 <div class="row">
     <div class="col-sm-4">
