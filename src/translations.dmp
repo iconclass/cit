@@ -1,0 +1,323 @@
+ID 1
+en Nature
+zh_hant 自然界
+zh_hans 自然界
+$
+ID 2
+en Human Being
+zh_hant  人類
+zh_hans  人類
+$
+ID 3
+en Society and Culture
+zh_hant  社會與文化
+zh_hans  社會與文化
+$
+ID 4
+en Religion
+zh_hant  宗教
+zh_hans  宗教
+$
+ID 5
+en Myths and Legends
+zh_hant  神話與傳說
+zh_hans  神話與傳說
+$
+ID 6
+en History and Geography
+zh_hant  歷史與地理
+zh_hans  歷史與地理
+$
+ID 7
+en Literary Works
+zh_hant  文學作品
+zh_hans  文學作品
+$
+ID search
+en Search
+zh_hant 檢索
+zh_hans 检索
+$
+ID help
+en Help
+zh_hant 幫助
+zh_hans 帮助
+$
+ID yourplists
+en Your Personal Lists
+zh_hant 我的列表
+zh_hans 我的列表
+$
+ID feedback
+en Feedback
+zh_hant 反饋
+zh_hans 反馈
+$
+ID typeheretostartsearch
+en Type here to start searching
+zh_hant 輸入關鍵詞
+zh_hans 输入关键词
+$
+ID changelang
+en 语言切换
+zh_hant Change Language
+zh_hans Change Language
+$
+ID browse
+en Browse
+zh_hant 瀏覽
+zh_hans 浏览
+$
+ID termsused
+en Terms Used:
+zh_hant 標引詞
+zh_hans 标引词
+$
+ID collection
+en Collection
+zh_hant 收藏機構
+zh_hans 收藏机构
+$
+ID resultsfound
+en results found
+zh_hant 檢索結果
+zh_hans ... 检索结果
+$
+ID citableurl
+en Citable URL
+zh_hant 參考鏈接
+zh_hans 参考链接
+$
+ID clearsearch
+en Clear Search
+zh_hant 清空結果
+zh_hans 清空结果
+$
+ID searchresults
+en Search Results
+zh_hant 檢索結果
+zh_hans 检索结果
+$
+ID saveditems
+en Save
+zh_hant 保存
+zh_hans 保存
+$
+ID imageurl
+en Image URL
+zh_hant 圖片鏈接
+zh_hans 图片链接
+$
+ID originalsource
+en Original Source
+zh_hant 原始出處
+zh_hans 原始出处
+$
+ID insearchresults
+en In Search Results
+zh_hant 單件閱覽
+zh_hans 单件阅览
+$
+ID nonotationsassign
+en No notations have been assigned to this item yet. If you want, you can assign your own Iconclass notations.
+zh_hant 此件尚未被標引，請使用ICONCLASS代碼標引
+zh_hans 此件尚未被标引，请使用ICONCLASS代码标引
+$
+ID addcomment
+en Add Comment
+zh_hant 評論
+zh_hans 评论
+$
+ID metadata
+en Metadata
+zh_hant 元數據
+zh_hans 元数据
+$
+ID persistenturl
+en Persistent URL
+zh_hant 永久鏈接
+zh_hans 永久链接
+$
+ID allitems
+en All Items
+zh_hant 全部藏品
+zh_hans 全部藏品
+$
+ID addiconclass
+en Add ICONCLASS
+zh_hant 加入ICONCLASS標引
+zh_hans 加入ICONCLASS标引
+$
+ID null
+en Alas, no example images found for
+zh_hant 抱歉，該詞暫無圖像
+zh_hans 抱歉，该词暂无图像
+$
+ID about
+en About
+zh_hant 關於
+zh_hans 关于
+$
+ID contact
+en Contact
+zh_hant 聯絡
+zh_hans 联络
+$
+ID team
+en Team
+zh_hant 團隊
+zh_hans 团队
+$
+ID howtouse
+en How to Use
+zh_hant 如何使用
+zh_hans 如何使用
+$
+ID sortedobjectid
+en Sorted on Object ID
+zh_hant 以藏品編號排序
+zh_hans 以藏品编号排序
+$
+ID sortedcollection
+en Sorted by Collection
+zh_hant 以收藏機構排序
+zh_hans 以收藏机构排序
+$
+ID sortedrandomly
+en Sorted Randomly
+zh_hant 以隨機方式排序
+zh_hans 以随机方式排序
+$
+ID whatyousearchedfor
+en This is what you searched for:
+zh_hant 檢索內容
+zh_hans 检索内容
+$
+ID filter_onhold
+en - On Hold -
+zh_hant 保留
+zh_hans 保留
+$
+ID filter_musthave
+en Must have
+zh_hant 必含
+zh_hans 必含
+$
+ID filter_include
+en Include
+zh_hant 包括
+zh_hans 包括
+$
+ID filter_exclude
+en Exclude
+zh_hant 除去
+zh_hans 除去
+$
+ID update_results_notice
+en Note: These search results are for a different set of filters. Press the search button again if you want to search with the currently selected filters.
+zh_hant 注意：這些檢索結果是出自於不同的篩選組合。如果要使用當前選定的篩選條件進行檢索的話，請再次點選檢索按鈕。
+zh_hans 注意：这些检索结果是出自于不同的筛选组合。如果要使用当前选定的筛选条件进行检索的话，请再次点选检索按钮。
+$
+ID firstofpleaserefine
+en First 300 of ... items, please try to refine your search
+zh_hant 300個項目中的前...個，請嘗試優化檢索
+zh_hans ...个项目中的前...个，请尝试优化检索
+$
+ID usefor
+en Use for
+zh_hant 義類詞
+zh_hans 义类词
+$
+ID en_displayterm
+en English Display Term
+zh_hant 英文顯示詞
+zh_hans 英文显示词
+$
+ID relatedterm
+en Related Term
+zh_hant 關聯詞
+zh_hans 关联词
+$
+ID term
+en Term
+zh_hant 詞彙
+zh_hans 词汇
+$
+ID homepage_text1
+en A taxonomic vehicle to explore the classical Chinese visual culture
+zh_hant 中國圖像誌索引典（中圖典）旨在匯集漢學、藝術史和信息研究，建構一部中國圖像誌分類詞典。
+zh_hans 中国图像志索引典（中图典）旨在汇集汉学、艺术史和信息研究，建构一部中国图像志分类词典。
+$
+ID homepage_text2
+en The CIT provides free access to motifs, subjects and themes of images in a variety of material forms - paintings, sculpture, prints, book illustrations, ceramics, and other types of applied arts- made in China from 700 to 1900.
+zh_hant 圖像誌是一種植根於歐洲藝術史的研究方法，歷來被用來紀錄和檢索歐美藝術圖像。由於缺乏非西方藝術圖像的紀錄模型，歐洲及北美收藏機構中的中國藝術品通常以西方為中心的分類體系進行編目。 CIT提供了一個獨特的機會，根據中國傳統視覺文化的特性, 創建一種替代分類方案，並使中歐藝術系統比較成為可能。
+zh_hans 图像志是一种植根于欧洲艺术史的研究方法，历来被用来纪录和检索欧美艺术图像。由于缺乏非西方艺术图像的纪录模型，欧洲及北美收藏机构中的中国艺术品通常以西方为中心的分类体系进行编目。 CIT提供了一个独特的机会，根据中国传统视觉文化的特性, 创建一种替代分类方案，并使中欧艺术系统比较成为可能。
+$
+ID homepage_text3
+en The image archive contains a great number of objects selected from the representative collections of museums and libraries. Its size will continue to grow through collaborations with more collections.
+zh_hant 瀏覽並檢索中圖典詞匯
+zh_hans 浏览并检索中图典词汇
+$
+ID homepage_text4
+en All the images are indexed with terms from an alternative classification scheme deeply rooted in the specificity of Chinese visual culture.
+zh_hant 一個具有層級關係的分類系統, 分為以下大類：
+zh_hans 一个具有层级关系的分类系统, 分为以下大类：
+$
+ID homepage_text5
+en A database with multiple functions and features
+zh_hant 搜索中圖典圖像檔案庫
+zh_hans 搜索中图典图像档案库
+$
+ID homepage_text6
+en - Chinese, English bilingual search function<br>
+ - Filter function for more precise search<br>
+ - Lightbox that can be used for comparison with images inside and outside the database<br>
+ - Image links to the  original source<br>
+ 
+ …and much more
+zh_hant 中圖典旨在創建一種索引標準，以促進中國數字圖像跨機構藏品檢索。檔案庫所收錄的圖像用以展示中圖典術語的具體應用。每幅圖像均與藏品機構原始數據庫網站鏈接。檔案庫定期增加更多收藏品機構及藏品。
+zh_hans 中图典旨在创建一种索引标准，以促进中国数字图像跨机构藏品检索。档案库所收录的图像用以展示中图典术语的具体应用。每幅图像均与藏品机构原始数据库网站链接。档案库定期增加更多收藏品机构及藏品。
+$
+ID homepage_text7
+en <h3>Overview of image archive:</h3>
+ 
+ <p>CLICK on the image to the right and read the corresponding description.</p>
+ 
+ <p>ZOOM with the + and - buttons or scrollwheel of your mouse.</p>
+ 
+ <p>SEARCH & BROWSE for more information by clicking on the description</p>
+$
+ID homepage_chord_diagram_title
+en A Chord Diagram of the CIT Related Terms
+zh_hant 中圖典關聯詞和弦圖
+zh_hans 中图典关联词和弦图
+$
+ID homepage_chord_diagram_text
+en This chord diagram reveals otherwise the hidden pattern of symbolic relationships among related terms in the CIT hierarchy. The word colours represent top-level seven categories (Nature, etc.), and the wavy lines connect related terms. Mousing over a term will highlight the line(s) in blue and show a text box displaying the term and its related terms.
+zh_hant 此和弦圖展示隱藏于中圖典層位系統中關聯詞之間象徵關係結構。文字的色彩表示七個基本類目（自然界等），而波狀綫是關聯詞的連綫。當鼠標觸碰一個詞匯時，連綫將會變成藍色，同時將會出現一個文本框，框内顯示該詞及其對應的關聯詞
+zh_hans 此和弦图展示隐藏于中图典层位系统中关联词之间象征关系结构。文字的色彩表示七个基本类目（自然界等），而波状线是关联词的连线。当鼠标触碰一个词汇时，连线将会变成蓝色，同时将会出现一个文本框，框内显示该词及其对应关联词
+$
+ID lightbox
+en Lightbox
+$
+ID browsesearch
+en Browse and Search
+$
+ID terminology
+en Terminology
+$
+ID guide
+en Guide
+$
+ID terms
+en Terms
+$
+ID artworks
+en Artworks
+$
+ID sponsors
+en Sponsors
+$
+ID collections
+en Collections
+$
