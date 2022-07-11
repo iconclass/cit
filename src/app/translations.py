@@ -6,6 +6,7 @@ import json
 
 TRANS_XLS_FILEPATH = "translations.xlsx"
 TRANS_JSON_FILEPATH = "translations.json"
+TRANS_DMP_FILEPATH = "translations.dmp"
 
 texts = json.load(open(TRANS_JSON_FILEPATH))
 
@@ -22,20 +23,13 @@ if __name__ == "__main__":
     if sys.argv[1] == "write":
         by_id = json.load(open(TRANS_JSON_FILEPATH))
 
-        workbook = Workbook()
-        ws = workbook.active
-        ws.cell(row=1, column=2, value="en")
-        ws.cell(row=1, column=3, value="zh_hant")
-        ws.cell(row=1, column=4, value="zh_hans")
-        row = 2
-        for id, by_lang in by_id.items():
-            ws.cell(row=row, column=1, value=id)
-            col = 2
-            for lang in ("en", "zh_hant", "zh_hans"):
-                ws.cell(row=row, column=col, value=by_lang.get(lang, ""))
-                col += 1
-            row += 1
-        workbook.save(filename=TRANS_XLS_FILEPATH)
+        with open(TRANS_DMP_FILEPATH, "w") as TDMP:
+            for anid, item in by_id.items():
+                TDMP.write(f"ID {anid}\n")
+                for k, v in item.items():
+                    vv = "\n ".join(v.split("\n"))
+                    TDMP.write(f"{k} {vv}\n")
+                TDMP.write("$\n")
     if sys.argv[1] == "read":
         by_id = {}
         wb = load_workbook(filename=TRANS_XLS_FILEPATH)
