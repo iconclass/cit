@@ -1,32 +1,44 @@
 {% extends "base.html" %}
 
 {% block head_last%}
+<style>
+.parallax {
+	height: 60vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.wideslab {
+ padding: 3vw; min-height: 27vh; display: flex; text-align: center; width: 100vw
+}
+</style>
 <script src="/static/openseadragon-2.4.2/openseadragon.min.js"></script>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid" style="padding: 0">
 
-<div><image src="/static/homepage1.jpg" style="width: 100%"/></div>
-<div style="font-weight: 800; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text1')}}</div>
-<div><image src="/static/homepage2.jpg" style="width: 100%"/></div>
-<div style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text2')}}</div>
-<div><image src="/static/homepage3.jpg" style="width: 100%"/></div>
+<div class="parallax" style="background-image: url(/static/homepage1.jpg); height: 70vh"></div>
+<div class="wideslab" style="font-weight: 800; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text1')}}</div>
+<div class="paralllax" style="background-image: url(/static/homepage2.jpg)"></div>
+<div class="wideslab" style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text2')}}</div>
+<div class="parallax" style="background-image: url(/static/homepage3.jpg)"></div>
 <div style="background-color: #D5DCD2; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text3')}}</div>
-<div><image src="/static/homepage4.jpg" style="width: 100%"/></div>
+<div class="parallax" style="background-image: url(/static/homepage4.jpg);"></div>
 <div style="background-color: #D5DCD2; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text4')}}</div>
-<div><image src="/static/homepage5.jpg" style="width: 100%"/></div>
+<div class="parallax" style="background-image: url(/static/homepage5.jpg)"></div>
 <div style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw; display: flex; align-items: center;">
     <div style="font-weight: 800; width: 40vw">{{T('homepage_text5')}}</div>
     <div style="text-align: left; margin-left: 8vw">{{T('homepage_text6')}}</div>
 </div>
-<div><image src="/static/homepage6.jpg" style="width: 100%"/></div>
+<div class="parallax" style="background-image: url(/static/homepage6.jpg)"></div>
 
 <div style="text-align: center; padding: 3vw"><p id="placeholder"></p></div>
 
 <div style="display: flex; align-items: center;">
-    <div style="padding-left: 5vw; width: 40vw;">{{T('homepage_text7')}}</div>
-    <div id="thedzi1" style="width:100%; height: 40vh"></div>
+    <div style="padding-left: 5vw; width: 30vw;">{{T('homepage_text7')}}</div>
+    <div id="thedzi1" style="width:100%; height: 80vh"></div>
 </div>
 
 <div style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw">
