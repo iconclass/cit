@@ -35,7 +35,7 @@ async def focus_node(desired):
 
     kids_element = document.getElementById("kids" + desired)
     icon_element = document.getElementById("icon" + desired)
-    if len(node["C_INV"]) > 0:
+    if len(node["C"]) > 0:
         kind_icon = None
     else:
         kind_icon = dot
