@@ -51,7 +51,6 @@ async def results_clicker(event):
 
 
 async def filters_clicker(event):
-    event.preventDefault()
     action_needed = False
 
     data_remove = find_attr_parents(event.target, "data-remove")
@@ -74,8 +73,13 @@ async def filters_clicker(event):
             document.PARAMS.setdefault(op, {})[field] = values
             action_needed = True
     if action_needed == True:
+        event.preventDefault()
         search_url = "/search/?" + make_searchparams()
         document.location = search_url
+    else:
+        href = find_attr_parents(event.target, "href")
+        if href:
+            document.location = href
 
 
 async def termsused_clicker(event):
