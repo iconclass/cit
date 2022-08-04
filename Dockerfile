@@ -30,20 +30,20 @@ RUN transcrypt -bm mirador.py && mv __target__ mirador
 
 FROM python:3.9.7
 
-
-WORKDIR /home
-
-COPY --from=stylebuild /home/static /home/static
+COPY --from=stylebuild /home/static /home/src/static
 
 RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY src /home
+COPY src /home/src
+COPY scripts/*py /home/scripts/
 
-COPY --from=transcrypt /home/terms /home/static/terms
-COPY --from=transcrypt /home/items /home/static/items
-COPY --from=transcrypt /home/search /home/static/search
-COPY --from=transcrypt /home/mirador /home/static/mirador
+COPY --from=transcrypt /home/terms /home/src/static/terms
+COPY --from=transcrypt /home/items /home/src/static/items
+COPY --from=transcrypt /home/search /home/src/static/search
+COPY --from=transcrypt /home/mirador /home/src/static/mirador
+
+WORKDIR /home/src
 
 CMD ["uvicorn", "--port", "8000", "--host", "0.0.0.0", "app:app"]
