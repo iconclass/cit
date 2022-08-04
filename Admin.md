@@ -36,13 +36,13 @@ docker run --rm -it -v $(pwd)/src/templates:/home/src/templates -v $(pwd)/src/tr
 
 Now you can look at this link [http://localhost:8000/](http://localhost:8000/) in your web-browser.
 
-### Data Conversion
+## Data Conversion
 
 The data for the CIT is managed in the collections management system of the V&A, and periodically exported and converted to a format that is used for the website.
 
 An XML dump of the thesaurus and catalog information is made, and then converted using the Python scripts in this repo. One converts the thesaurus, and another converts the catalog data. The output of these conversion scripts then create .dmp files, which are more human-friendly to read and use for further analysis and dissussion.
 
-## Thesaurus terms
+### Thesaurus terms
 
 From the CIT.dmp file, we also create some further derivatives; a SQLITE database used for navigation and searching, and a SKOS version in JSON-LD.
 
