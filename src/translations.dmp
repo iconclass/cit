@@ -59,9 +59,9 @@ zh_hant 輸入關鍵詞
 zh_hans 输入关键词
 $
 ID changelang
-en Change Language
-zh_hant 語言
-zh_hans 语言
+en 語言
+zh_hant Change Language
+zh_hans Change Language
 $
 ID browse
 en Browse
@@ -269,11 +269,15 @@ zh_hant 具備多種功能和特性的數據庫
 zh_hans 具备多种功能和特性的数据库
 $
 ID homepage_text6
-en - Chinese, English bilingual search function<br>
- - Filter function for more precise search<br>
- - Lightbox that can be used for comparison with images inside and outside the database<br>
- - Image links to the  original source<br>
+en <ul>
+ <li>Chinese, English bilingual search function</li>
+ <li>Filter function for more precise search</li>
+ <li>Lightbox that can be used for comparison with images inside and outside the database</li>
+ <li>Image links to the  original source</li>
+ <ul>
+ <br>
  …and much more
+
 zh_hant - 中英雙語的搜索功能<br>
  - 進行更精確搜索的篩選功能<br>
  - 便於數據庫內部與外部圖像比較的檢視器<br>
