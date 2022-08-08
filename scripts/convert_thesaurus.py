@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ET
 from rich.progress import track
-
+import sys
 
 def getpath(data, obj):
     parent = obj.get("broader")
@@ -85,14 +85,14 @@ def main():
                 filter(None, [data.get(rr, {}).get("id") for rr in obj["r"]])
             )
 
-    dump(data)
+    dump(data, filepath="../data/CIT.dmp")
     return data
 
 
 def read_entries():
     data = {}
     seq = 0
-    doc = read_xml()
+    doc = read_xml(sys.argv[1])
     for entry in track(doc.findall(".//mus_ixthes")):
         seq += 1
         tmp = {"seq": seq, "type": "CIT"}
