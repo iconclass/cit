@@ -2,6 +2,7 @@ import textbase
 import sqlite3
 import json
 import sys
+from rich.progress import track
 
 
 def add_term_test(obj):
@@ -62,12 +63,12 @@ def read_dmp(filename):
 
 objs = {}
 for filename in sys.argv[1:]:
-    for k, v in read_dmp(filename).items():
+    for k, v in track(read_dmp(filename).items()):
         objs[k] = v
 
 searchtxt_en = {}
 notations = []
-for the_id, obj in objs.items():
+for the_id, obj in track(objs.items()):
     t1 = extract_texts(obj)
     t2 = add_term_test(obj)
     searchtxt_en[the_id] = t1 + t2
@@ -97,8 +98,11 @@ cursor.execute("CREATE VIRTUAL TABLE IF NOT EXISTS txt_idx USING fts5(id, text)"
 cursor.execute("CREATE TABLE IF NOT EXISTS objs_cit (obj_id, cit_id, exact)")
 cursor.execute("CREATE INDEX IF NOT EXISTS objs_cit_idx ON objs_cit (cit_id)")
 batch = [(k, v) for k, v in searchtxt_en.items()]
+print("Inserting txt_idx")
 cursor.executemany("INSERT INTO txt_idx VALUES (?, ?)", batch)
 batch = [(k, json.dumps(v)) for k, v in objs.items()]
+print("Inserting objs")
 cursor.executemany("INSERT INTO objs VALUES (?, ?)", batch)
+print("Inserting objs_cit")
 cursor.executemany("INSERT INTO objs_cit VALUES (?, ?, ?)", notations)
 db.commit()
