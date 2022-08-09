@@ -1,10 +1,11 @@
+#!/usr/bin/env python
 import os, argparse
 import xml.etree.ElementTree as ET
 import textbase
 from rich.progress import track
 
 
-def parse(CIT_data, filename, HIM):
+def parse(CIT_data, filename, HIM, image_files={}):
     # Note, parsing file: CIT export_inOrder_04.03.2019.xml 20190312 gives error in XML on lines 781763 and 781765 encountering character  '\x02' embedded in file.
     # Looks like all the source have this so do a search and replace to fix it.
     # Object with <sys_id>O1455666</sys_id> has no vanda_museum_number ?
@@ -92,7 +93,7 @@ def parse(CIT_data, filename, HIM):
             if val is not None and val.text:
                 obj[field] = list(filter(None, val.text.split("\n")))
 
-        # For the NPM and MET the REF fiekd contains the URL.IMAGE,
+        # For the NPM and MET the REF field contains the URL.IMAGE,
         # For VandA entries it should be
         # 'http://collections.vam.ac.uk/item/' + sys_id.text
         if HIM == "VANDA":
@@ -111,6 +112,13 @@ def parse(CIT_data, filename, HIM):
             vanda_museum_number_image = f"{vanda_museum_number}.jpg"
             obj["URL.IMAGE"] = [vanda_museum_number_image.strip()]
 
+        skip_object = True
+        for image_filename in obj.get("URL.IMAGE", []):
+            if image_filename in image_files:
+                skip_object = False
+        if skip_object:
+            continue
+
         objs.append(obj)
 
     return objs
@@ -126,7 +134,15 @@ def dump(filename, objs):
             F.write("$\n")
 
 
-def main(filepaths, collection):
+def main(filepaths, collection, imagespath):
+    images = {}
+    # Read in the image files
+    for line in open(imagespath):
+        tmp = line.split("\t")
+        if len(tmp) != 2:
+            continue
+        images[tmp[0]] = tmp[1]
+
     CIT_data = {}
     for x in textbase.parse("CIT.dmp"):
         CIT_data[x["ID"][0]] = x
@@ -137,7 +153,7 @@ def main(filepaths, collection):
             CAT_data[x["ID"][0]] = x
 
     for filepath in filepaths:
-        for x in parse(CIT_data, filepath, collection):
+        for x in parse(CIT_data, filepath, collection, images):
             CAT_data[x["ID"][0]] = x
 
     dump("CATALOG.dmp", CAT_data.values())
@@ -157,5 +173,12 @@ if __name__ == "__main__":
         help="Which Collection does this file belong to?",
         choices=["VANDA", "MET", "NPM", "HYL", "CMA"],
     )
+    argparser.add_argument(
+        "-i",
+        "--images",
+        required=True,
+        help="Location of the images file to load in (normally in ./data/images.txt)",
+    )
+
     args = argparser.parse_args()
-    main(args.inputfiles, args.collection)
+    main(args.inputfiles, args.collection, args.images)
