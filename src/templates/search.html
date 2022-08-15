@@ -66,17 +66,17 @@
                 <a title="Remove this Filter" data-remove="{{operator}}_COL_{{value}}" href="#">{{rmv()}}</a>            
                 <a href="#" style="display: inline" class="nav-link px-2 text-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{% if operator == "A" %}from the {% else %}except the {% endif %}</a>
                 <ul class="dropdown-menu" >
-                    <li><a data-remove="{{operator}}_COL_{{value}}" data-add="A_COL_{{value}}" href="#" class="dropdown-item">include</a></li>
-                    <li><a data-remove="{{operator}}_COL_{{value}}" data-add="N_COL_{{value}}" href="#" class="dropdown-item">exclude</a></li>
+                    <li><a data-remove="{{operator}}_COL_{{value}}" data-add="A_COL_{{value}}" href="#" class="dropdown-item">{{T('filter_include')}}</a></li>
+                    <li><a data-remove="{{operator}}_COL_{{value}}" data-add="N_COL_{{value}}" href="#" class="dropdown-item">{{T('filter_exclude')}}</a></li>
                 </ul>
                 &nbsp;{{COLLECTIONS[value]}} 
             {% endif %}
             {% if field == "CIT" %}
                 <div><a title="Remove this Filter" data-remove="{{operator}}_CIT_{{value}}" href="#">{{rmv()}}</a>
-                <a href="#" style="display: inline" class="nav-link px-2 text-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{% if operator == "A" %}must have {% else %}not have {% endif %}</a>
+                <a href="#" style="display: inline" class="nav-link px-2 text-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{% if operator == "A" %}{{T('filter_include')}} {% else %}{{T('filter_exclude')}} {% endif %}</a>
                 <ul class="dropdown-menu" >
-                    <li><a data-remove="{{operator}}_CIT_{{value}}" data-add="A_CIT_{{value}}" href="#" class="dropdown-item">include</a></li>
-                    <li><a data-remove="{{operator}}_CIT_{{value}}" data-add="N_CIT_{{value}}" href="#" class="dropdown-item">exclude</a></li>
+                    <li><a data-remove="{{operator}}_CIT_{{value}}" data-add="A_CIT_{{value}}" href="#" class="dropdown-item">{{T('filter_include')}}</a></li>
+                    <li><a data-remove="{{operator}}_CIT_{{value}}" data-add="N_CIT_{{value}}" href="#" class="dropdown-item">{{T('filter_exclude')}}</a></li>
                 </ul>
                  {{params_terms.get(value, {}).get("TERM_"+lang[:2].upper())[0] }}
                  <a href="/terms/{{value}}"><svg style="margin-left: 2ch" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
