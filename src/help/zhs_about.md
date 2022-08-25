@@ -34,11 +34,7 @@
 
 - 林逸欣，数据标准编辑
 
-# 技术团队
-
-- 艾蒂安·波斯蒂默斯（Etienne Posthumus），数字人文顾问
-
-- 汉斯·布兰德霍斯特（Hans Brandhorst），图像索引顾问
+- 刘炳君，数据标准编辑 
 
 # 特邀编辑
 
@@ -50,16 +46,8 @@
 
 - 王崇齐，国立台湾大学（台北）艺术史研究所博士
 
-# 维多利亚与艾伯特博物馆（V＆A）指导团队
+# 技术团队
 
-- 佐伊·霍林沃思（Zoë Hollingworth），藏品管理系统主管
+- 艾蒂安·波斯蒂默斯（Etienne Posthumus），数字人文顾问
 
-- 安娜·杰克逊（Anna Jackson），亚洲部主管
-
-- 卡娅·马尔切夫斯卡（Kaja Marczewska），V＆A 研究基金主管
-
-- 理查德·帕默（Richard Palmer），数字媒体与出版技术主管
-
-- 卡蒂·普莱斯（Kati Price），数字媒体与出版主管
-
-- 耶夫格尼娅·拉芙科娃（Jevgenija Ravcova），国际项目协调
+- 汉斯·布兰德霍斯特（Hans Brandhorst），图像索引顾问

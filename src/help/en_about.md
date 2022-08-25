@@ -22,7 +22,7 @@
 
 # Acknowledgement
 
-The Chinese Iconography Thesaurus database has been developed and is released in 2019 as a result of a three-year research grant awarded to the V&A by the UK government's Department of Digital, Culture, Media and Sport (DCMS).
+The Chinese Iconography Thesaurus database has been developed and is released in 2019 as a result of a three-year research grant awarded to the V&A by the UK government's Department of Digital, Culture, Media and Sport (DCMS), with subsequent sponsorship from the Bei Shan Tang Foundation.
 
 Please acknowledge your use of the CIT in your publications.
 
@@ -34,11 +34,7 @@ Please acknowledge your use of the CIT in your publications.
 
 - Yi-Hsin Lin, Data Standard Editor
 
-# Technical Team
-
-- Etienne Posthumus, Digital Humanities Consultant
-
-- Hans Brandhorst, Iconographic Indexing Consultant
+- Bingjun Liu, Data Standard Editor
 
 # Guest Editors
 
@@ -50,16 +46,8 @@ Please acknowledge your use of the CIT in your publications.
 
 - Chong-Ci Wang, Doctor, Graduate Institute of Art History, National Taiwan University, Taipei
 
-# V&A Steering Group
+# Technical Team
 
-- Zoë Hollingworth, Collections Systems Lead
+- Etienne Posthumus, Digital Humanities Consultant
 
-- Anna Jackson, Keeper of the Asian Department
-
-- Kaja Marczewska, Research Grants Manager
-
-- Richard Palmer, Technical Lead of Digital Media and Publishing
-
-- Kati Price, Head of Digital Media & Publishing
-
-- Jevgenija Ravcova, International Initiatives Coordinator
+- Hans Brandhorst, Iconographic Indexing Consultant
