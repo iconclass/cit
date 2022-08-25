@@ -12,6 +12,18 @@
 .wideslab {
  padding: 3vw; min-height: 27vh; text-align: center; width: 100vw
 }
+
+<!--for the section of terms&artwork-->
+.verticalLine {
+  border-left: solid white;
+  border-width: thin;
+}
+.container {
+  width: 30vmin;
+}
+.wrapper {
+  display: flex;
+}
 </style>
 <script src="/static/openseadragon-2.4.2/openseadragon.min.js"></script>
 {% endblock %}
@@ -40,7 +52,8 @@
     <div style="padding-left: 5vw; width: 30vw;">{{T('homepage_text7')}}</div>
     <div id="thedzi1" style="width:100%; height: 80vh"></div>
 </div>
-
+	
+<!--
 <div style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw">
     <div>
         <div>{{term_count}}</div>
@@ -51,7 +64,26 @@
         <div>{{T('artworks')}}</div>
     </div>
 </div>
-
+-->
+	
+<!--updated-->
+<div class="wrapper" style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 4vw">
+    <div class="container">
+        <a href="/terms/" style="color: #3B8B9C;text-decoration: none;">
+	<span class="num"  style="font-size: 170%">{{term_count}}</span>
+	</a></br>
+        <span class="text">{{T('terms')}}</span>
+    </div>	
+</br>
+<div class="verticalLine"> </div>
+	<div class="container">
+        <a href="/search/" style="color: #3B8B9C;text-decoration: none;">
+	<span class="num"  style="font-size: 170%">{{artwork_count}}</span>
+	</a></br>
+        <span class="text">{{T('artworks')}}</span>
+    </div>
+</div>	
+	
 <div style="font-size: 150%; text-align: center; padding: 2vh 10vw 3vh 10vw; font-weight: 800">
     <div style="text-align: center; margin-bottom: 2vh">{{T('sponsors')}}</div>
     
