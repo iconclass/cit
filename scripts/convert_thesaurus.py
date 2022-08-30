@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 from rich.progress import track
 import sys
 
+
 def getpath(data, obj):
     parent = obj.get("broader")
     if parent:
@@ -85,7 +86,7 @@ def main():
                 filter(None, [data.get(rr, {}).get("id") for rr in obj["r"]])
             )
 
-    dump(data, filepath="../data/CIT.dmp")
+    dump(data, filepath="CIT.dmp")
     return data
 
 

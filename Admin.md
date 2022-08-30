@@ -46,13 +46,44 @@ An XML dump of the thesaurus and catalog information is made, and then converted
 
 From the CIT.dmp file, we also create some further derivatives; a SQLITE database used for navigation and searching, and a SKOS version in JSON-LD.
 
-Ensure you have a thesarus exported datafile named `CIT.xml` in the same directory of the checked-out repository.
+Ensure you have a thesaurus exported datafile named `CIT.xml` in the same directory of the checked-out repository.
 To convert an XML thesaurus data file to the CIT format, run the following command:
 
 ```shell
-docker run --rm -it -v $(pwd):/home ghcr.io/iconclass/cit:latest python /home/scripts/convert_thesaurus.py /home/CIT.xml
+python ./src/scripts/convert_thesaurus.py CIT.xml
 ```
 
 this should all be on one line, exactly as shown.
 
-When this command runs, the file named `data/CIT.dmp` is overwritten with the latest data.
+When this command runs, the file named `CIT.dmp` is overwritten with the latest data.
+
+### Catalog Entries
+
+Once you have a CIT.dmp file, this can be used to convert the XML files as exported by the V&A CMS. First, make sure that you have a folder that contains all the .JPG images to be used, as a sub-folder of where the XML files are that you would like to import. The image files can be in separate folders, as long as they all have the same containing folder.
+
+For example, if you have a folder that looks similar to this:
+
+```
+.
+├── allimages
+├── CIT.dmp
+├── CMA.xml
+├── HYL.xml
+├── MET.xml
+├── NPM.xml
+├── VAM.xml
+```
+
+-- and in the `allimages` folder are all your JPG images.
+
+```shell
+python ./src/scripts/convert_catalog.py -i allimages -c CMA CMA.xml
+python ./src/scripts/convert_catalog.py -i allimages -c HYL HYL.xml
+python ./src/scripts/convert_catalog.py -i allimages -c MET MET.xml
+python ./src/scripts/convert_catalog.py -i allimages -c NPM NPM.xml
+python ./src/scripts/convert_catalog.py -i allimages -c VANDA VAM.xml
+```
+
+This needs to be run for each XML file, and the output will be a file named CATALOG.dmp.
+
+**NOTE** The correct collection abbreviation needs to be used to match the file. In the above example this is _VANDA_ while the file is named VAM.xml

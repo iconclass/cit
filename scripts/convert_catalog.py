@@ -5,7 +5,7 @@ import textbase
 from rich.progress import track
 
 
-def parse(CIT_data, filename, HIM, image_files={}):
+def parse(CIT_data, filename, HIM, images):
     # Note, parsing file: CIT export_inOrder_04.03.2019.xml 20190312 gives error in XML on lines 781763 and 781765 encountering character  '\x02' embedded in file.
     # Looks like all the source have this so do a search and replace to fix it.
     # Object with <sys_id>O1455666</sys_id> has no vanda_museum_number ?
@@ -114,7 +114,7 @@ def parse(CIT_data, filename, HIM, image_files={}):
 
         skip_object = True
         for image_filename in obj.get("URL.IMAGE", []):
-            if image_filename in image_files:
+            if image_filename in images:
                 skip_object = False
         if skip_object:
             continue
@@ -135,13 +135,13 @@ def dump(filename, objs):
 
 
 def main(filepaths, collection, imagespath):
-    images = {}
-    # Read in the image files
-    for line in open(imagespath):
-        tmp = line.split("\t")
-        if len(tmp) != 2:
-            continue
-        images[tmp[0]] = tmp[1]
+    images = set(
+        [
+            filename
+            for dirpath, dirnames, filenames in os.walk(imagespath)
+            for filename in filenames
+        ]
+    )
 
     CIT_data = {}
     for x in textbase.parse("CIT.dmp"):
@@ -152,9 +152,12 @@ def main(filepaths, collection, imagespath):
         for x in textbase.parse("CATALOG.dmp"):
             CAT_data[x["ID"][0]] = x
 
+    new_count = 0
     for filepath in filepaths:
         for x in parse(CIT_data, filepath, collection, images):
+            new_count += 1
             CAT_data[x["ID"][0]] = x
+    print(f"Read {new_count} for this file")
 
     dump("CATALOG.dmp", CAT_data.values())
 
@@ -177,7 +180,7 @@ if __name__ == "__main__":
         "-i",
         "--images",
         required=True,
-        help="Location of the images file to load in (normally in ./data/images.txt)",
+        help="Location of the images folder to check if a .jpg file exists",
     )
 
     args = argparser.parse_args()
