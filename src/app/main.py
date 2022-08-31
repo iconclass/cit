@@ -52,6 +52,7 @@ async def startup():
     )
     for col, name in tmp:
         COLLECTIONS[col] = name
+    print(COLLECTIONS)
 
 
 # import later for init reasons
@@ -77,7 +78,7 @@ async def homepage(request: Request, lang: str = Query(None)):
         "homepage.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "obj": obj,
             "T": get_T(lang),
             "term_count": term_count,
@@ -189,6 +190,7 @@ async def get_obj(anid: str, filled={}):
 
     results = await database.fetch_all(query)
     if not results:
+        print(anid)
         raise HTTPException(status_code=404)
 
     # The obj is in first column of results, and the
@@ -216,7 +218,7 @@ async def terms(request: Request, anid: str):
         "terms.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "anid": anid,
             "path": json.dumps(obj.get("P", [obj["ID"]])),
             "obj": obj,
@@ -286,7 +288,7 @@ async def search(
         f"search.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "q": q,
             "page": page,
             "results": results,
@@ -347,7 +349,7 @@ async def fragments_search(
         f"search_{tipe}.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "q": q,
             "results": results,
             "T": get_T(lang),
@@ -375,7 +377,7 @@ async def focus(request: Request, lang: str, anid: str):
         "focus.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "anid": anid,
             "obj": obj,
             "T": get_T(lang),
@@ -395,7 +397,7 @@ async def items(request: Request, anid: str = "", q: str = ""):
         "item.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "anid": anid,
             "obj": await get_obj(anid, {"CIT": "CIT"}),
             "T": get_T(lang),
@@ -424,7 +426,7 @@ async def help(request: Request, page: str):
         "help.html",
         {
             "request": request,
-            "lang": lang[:2],
+            "lang": lang,
             "page": page,
             "content": Markup(html),
             "T": get_T(lang),

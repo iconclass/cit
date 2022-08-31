@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}CIT {% if obj %}{{obj.get("TERM_"+lang.upper(), [""])[0][:80]}}{% endif %}{% endblock %}
+{% block title %}CIT {% if obj %}{{obj.get("TERM_"+lang[:2].upper(), [""])[0][:80]}}{% endif %}{% endblock %}
 
 {% block head_last%}
 <script>
-    document.LANG = "{{lang}}"
+    document.LANG = "{{lang[:2]}}"
     document.ROOT_ID = "{{ROOT_ID}}"
     document.PATH = {{path|safe}}
     document.anid = "{{anid}}"
