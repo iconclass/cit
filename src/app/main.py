@@ -412,9 +412,9 @@ async def items(request: Request, anid: str = "", q: str = ""):
 )
 async def help(request: Request, page: str):
     lang = request.cookies.get("lang") or "en"
-    lang = lang.split("_")[0]
+    help_lang = lang.split("_")[-1]
 
-    infilepath = os.path.join(HELP_PATH, f"{lang}_{page}.md")
+    infilepath = os.path.join(HELP_PATH, f"{help_lang}_{page}.md")
     if not os.path.exists(infilepath):
         raise HTTPException(status_code=404, detail=f"Page [{page}] not found")
     md = markdown.Markdown(
