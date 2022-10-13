@@ -4,6 +4,8 @@ import "@popperjs/core";
 import imagesLoaded from "imagesloaded";
 import Masonry from "masonry-layout";
 
+document.imagesLoaded = imagesLoaded;
+
 window.addEventListener("load", () => {
   let dropdownElementList = [].slice.call(
     document.querySelectorAll(".dropdown-toggle")
@@ -11,7 +13,6 @@ window.addEventListener("load", () => {
 
   let dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
     let X = new Dropdown(dropdownToggleEl);
-    console.log(X);
     return X;
   });
 

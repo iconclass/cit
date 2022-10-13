@@ -156,6 +156,10 @@ async def init():
                 op, field, val = vals
                 document.PARAMS.setdefault(op, {}).setdefault(field, []).append(val)
 
+    if document.imagesLoaded:
+        grid = document.querySelector(".grid")
+        document.imagesLoaded(grid, initmsnry)
+
 
 window.addEventListener("load", init)
 
@@ -165,7 +169,3 @@ def initmsnry():
         Masonry(grid, {"columnWidth": ".grid-item", "itemSelector": ".grid-item"})
     )
     msnry.layout()
-
-
-grid = document.querySelector(".grid")
-imagesLoaded(grid, initmsnry)
