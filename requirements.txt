@@ -14,3 +14,4 @@ httpx==0.21.1
 XlsxWriter==3.0.1
 openpyxl==3.0.9
 TextBase==0.15
+SQLAlchemy==1.4.27
