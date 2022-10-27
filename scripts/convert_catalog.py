@@ -113,11 +113,14 @@ def parse(CIT_data, filename, HIM, images):
             obj["URL.IMAGE"] = [vanda_museum_number_image.strip()]
 
         skip_object = True
-        for image_filename in obj.get("URL.IMAGE", []):
-            if image_filename in images:
-                skip_object = False
-        if skip_object:
+        images = [
+            image_filename
+            for image_filename in obj.get("URL.IMAGE", [])
+            if image_filename in images
+        ]
+        if len(images) < 1:
             continue
+        obj["URL.IMAGE"] = images
 
         objs.append(obj)
 
