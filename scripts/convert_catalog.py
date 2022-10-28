@@ -112,13 +112,12 @@ def parse(CIT_data, filename, HIM, images):
             vanda_museum_number_image = f"{vanda_museum_number}.jpg"
             obj["URL.IMAGE"] = [vanda_museum_number_image.strip()]
 
-        skip_object = True
-        images = [
+        local_images = [
             image_filename
             for image_filename in obj.get("URL.IMAGE", [])
             if image_filename in images
         ]
-        if len(images) < 1:
+        if len(local_images) < 1:
             continue
         obj["URL.IMAGE"] = images
 
