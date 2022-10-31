@@ -119,7 +119,7 @@ def parse(CIT_data, filename, HIM, images):
         ]
         if len(local_images) < 1:
             continue
-        obj["URL.IMAGE"] = images
+        obj["URL.IMAGE"] = local_images
 
         objs.append(obj)
 
