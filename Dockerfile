@@ -46,4 +46,9 @@ COPY --from=transcrypt /home/mirador /home/src/static/mirador
 
 WORKDIR /home/src
 
+COPY data/CIT.dmp /home/src/
+COPY data/CATALOG.dmp /home/src/
+
+RUN python /home/scripts/convert_todb.py CIT.dmp CATALOG.dmp
+
 CMD ["uvicorn", "--port", "8000", "--host", "0.0.0.0", "app:app"]
