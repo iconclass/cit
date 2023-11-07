@@ -97,6 +97,29 @@ async def id_json(request: Request, anid: str):
     return obj
 
 
+@app.get("/id/{anid:str}.jskos", response_class=JSONResponse)
+async def id_jskos(request: Request, anid: str):
+    obj = await get_obj(anid)
+    tmp = {
+        "notation": anid,
+        "uri": f"{SITE_URL}/id/{anid}",
+        "type": ["http://www.w3.org/2004/02/skos/core#Concept"],
+        "prefLabel": {},
+        "altLabel": {},
+    }
+    tmp["prefLabel"]["en"] = obj.get("TERM_EN", "English label missing")
+    tmp["prefLabel"]["zh"] = obj.get("TERM_ZH", "ZH label missing")
+    if "TERM_PINYIN" in obj:
+        tmp["altLabel"]["zh"] = obj["TERM_PINYIN"]
+    if "C" in obj:
+        tmp["narrower"] = [f"{SITE_URL}/id/{c}" for c in obj.get("C", [])]
+    if "BROADER" in obj:
+        tmp["broader"] = [f"{SITE_URL}/id/{c}" for c in obj.get("BROADER", [])]
+    if "R" in obj:
+        tmp["related"] = [f"{SITE_URL}/id/{c}" for c in obj.get("R", [])]
+    return tmp
+
+
 async def do_search_(q: str, tipe: str, params: dict = {}):
     if tipe == "image":
         return await search_images(q, params)
@@ -181,7 +204,6 @@ async def get_objs(anids: list):
 
 
 async def get_obj(anid: str, filled={}):
-
     query = (
         select(objs.c.obj, objs_cit.c.cit_id, objs_cit.c.exact)
         .select_from(objs.outerjoin(objs_cit, objs_cit.c.cit_id == objs.c.id))
