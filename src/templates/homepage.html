@@ -4,7 +4,6 @@
 <style>
 .parallax {
 	height: 60vh;
-	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -12,7 +11,6 @@
 .wideslab {
  padding: 3vw; min-height: 27vh; text-align: center; width: 100vw
 }
-
 .verticalLine {
   border-left: solid white;
   border-width: thin;
@@ -23,6 +21,37 @@
 .wrapper {
   display: flex;
 }
+.bulletSectionHeading {
+  padding-bottom: 30px;
+}
+.zoomSectionImage {
+    height: 60vh;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .bulletSection, .zoomSection {
+        display: flex;
+    }
+    .bulletSectionHeading {
+        width: 40vw;
+    }
+    .bulletSectionText {
+        margin-left: 8vw;
+    }
+    .zoomSectionText {
+        width: 30vw;
+    }
+    .zoomSectionImage {
+        height: 80vh;
+    }
+    .parallax {
+        background-attachment: fixed;
+    }
+}
+
+
 </style>
 <script src="/static/openseadragon-2.4.2/openseadragon.min.js"></script>
 {% endblock %}
@@ -39,17 +68,17 @@
 <div class="parallax" style="background-image: url(/static/homepage4.jpg);"></div>
 <div style="background-color: #D5DCD2; font-size: 150%; text-align: center; padding: 8vw">{{T('homepage_text4')}}</div>
 <div class="parallax" style="background-image: url(/static/homepage5.jpg)"></div>
-<div style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw; display: flex; align-items: center;">
-    <div style="font-weight: 800; width: 40vw">{{T('homepage_text5')}}</div>
-    <div style="text-align: left; margin-left: 8vw">{{T('homepage_text6')}}</div>
+<div class="bulletSection" style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 8vw; align-items: center;">
+    <div class="bulletSectionHeading" style="font-weight: 800">{{T('homepage_text5')}}</div>
+    <div class="bulletSectionText" style="text-align: left">{{T('homepage_text6')}}</div>
 </div>
 <div class="parallax" style="background-image: url(/static/homepage6.jpg)"></div>
 
 <div style="text-align: center; padding: 3vw"><p id="placeholder"></p></div>
 
-<div style="display: flex; align-items: center;">
-    <div style="padding-left: 5vw; width: 30vw;">{{T('homepage_text7')}}</div>
-    <div id="thedzi1" style="width:100%; height: 80vh"></div>
+<div class="zoomSection" style="align-items: center;">
+    <div class="zoomSectionText" style="padding-left: 5vw">{{T('homepage_text7')}}</div>
+    <div class="zoomSectionImage" id="thedzi1" style="width:100%"></div>
 </div>
 	
 <div class="wrapper" style="background-color: #C7CEBE; font-size: 150%; text-align: center; padding: 4vw">
