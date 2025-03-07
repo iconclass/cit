@@ -72,8 +72,8 @@ async def homepage(request: Request, lang: str = Query(None)):
     obj = await get_obj(ROOT_ID, {"C": "C"})
 
     # fetch the count of terms and artworks
-    term_count = 14627
-    artwork_count = 9273
+    term_count = 14844
+    artwork_count = 10857
     response = templates.TemplateResponse(
         "homepage.html",
         {
